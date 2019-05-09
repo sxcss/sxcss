@@ -285,6 +285,27 @@ ol li {
   text-align: right;
 }
 
+.font__size--xs {
+  font-size: 0.6rem;
+}
+.font__size--sm {
+  font-size: 1rem;
+}
+.font__size--ms {
+  font-size: 1.2rem;
+}
+.font__size--md {
+  font-size: 1.5rem;
+}
+.font__size--ml {
+  font-size: 1.8rem;
+}
+.font__size--lg {
+  font-size: 2.1rem;
+}
+.font__size--xl {
+  font-size: 2.7rem;
+}
 .font__weight--thin {
   font-weight: 100;
 }
