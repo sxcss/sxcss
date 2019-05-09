@@ -285,6 +285,34 @@ ol li {
   text-align: right;
 }
 
+.font__weight--thin {
+  font-weight: 100;
+}
+.font__weight--ultralight {
+  font-weight: 200;
+}
+.font__weight--light {
+  font-weight: 300;
+}
+.font__weight--normal {
+  font-weight: 400;
+}
+.font__weight--medium {
+  font-weight: 500;
+}
+.font__weight--semibold {
+  font-weight: 600;
+}
+.font__weight--bold {
+  font-weight: 700;
+}
+.font__weight--extrabold {
+  font-weight: 800;
+}
+.font__weight--black {
+  font-weight: 900;
+}
+
 .container {
   box-sizing: border-box;
   width: 100%;
