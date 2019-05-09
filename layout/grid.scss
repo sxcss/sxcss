@@ -1,0 +1,333 @@
+@import '../core/variables/variables.scss';
+
+.grid {
+
+  & {
+     /* Flex */
+    display: flex;
+    justify-content: space-between;
+    /* Grid */
+    display: grid;
+    grid-template-rows: 100%;
+
+    &__1-col {
+        @extend .grid;
+        grid-template-columns: repeat(1, 1fr);
+
+      &__auto {
+        grid-template-columns: repeat(1, auto);
+      }
+
+      > .column {
+        flex-basis: 100%;
+        @media all and (max-width: 980px) {
+          &__mobile--sm {
+            min-height: 30vh;
+          }
+          &__mobile--md {
+            min-height: 60vh;
+          }
+          &__mobile--lg {
+            min-height: 100vh;
+          }
+          &__mobile--50vh {
+            min-height: 50vh
+          }
+          &__mobile--100vh {
+            min-height: 100vh;
+          }
+        }
+        @media all and (max-width: 767px) {
+          &__mobile--sm {
+            min-height: 45vw;
+          }
+          &__mobile--md {
+            min-height: 90vw;
+          }
+          &__mobile--lg {
+            min-height: 120vw;
+          }
+          &__mobile--xl {
+            min-height: 150vw;
+          }
+          &__mobile--100vh {
+            min-height: 100vh;
+          }
+        }
+      }
+    }
+
+    &__2-col {
+        @extend .grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: $gap-md;
+        @media all and (max-width: 980px) {
+          grid-gap: $gap-sm;
+          grid-template-columns: 1fr;
+          justify-content: center;
+        }
+        @media all and (max-width: 767px) {
+          grid-gap: $gap-xs;
+        }
+
+        > .column {
+          flex-basis: calc(50% - #{$gap-sm});
+          @media all and (max-width: 980px) {
+            flex-basis: calc(50% - #{$gap-sm});
+            &__mobile--sm {
+              min-height: 30vh;
+            }
+            &__mobile--md {
+              min-height: 60vh;
+            }
+            &__mobile--lg {
+              min-height: 100vh;
+            }
+            &__mobile--50vh {
+              min-height: 50vh
+            }
+            &__mobile--100vh {
+              min-height: 100vh;
+            }
+          }
+          @media all and (max-width: 767px) {
+            flex-basis: 100%;
+            &__mobile--sm {
+              min-height: 45vw;
+            }
+            &__mobile--md {
+              min-height: 90vw;
+            }
+            &__mobile--lg {
+              min-height: 120vw;
+            }
+            &__mobile--xl {
+              min-height: 150vw;
+            }
+            &__mobile--100vh {
+              min-height: 100vh;
+            }
+          }
+        }
+
+      &__auto {
+        grid-template-columns: repeat(2, auto);
+      }
+    }
+
+    &__3-col {
+      @extend .grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: $gap-md;
+      @media all and (max-width: 980px) {
+        grid-gap: $gap-sm;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media all and (max-width: 767px) {
+        grid-gap: $gap-xs;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+      }
+      
+      > .column {
+        flex-basis:  calc(33.33% - 1.5 * #{$gap-sm});
+        @media all and (max-width: 980px) {
+          flex-basis: calc(50% - #{$gap-sm});
+          &__mobile--sm {
+            min-height: 30vh;
+          }
+          &__mobile--md {
+            min-height: 60vh;
+          }
+          &__mobile--lg {
+            min-height: 100vh;
+          }
+          &__mobile--50vh {
+            min-height: 50vh
+          }
+          &__mobile--100vh {
+            min-height: 100vh;
+          }
+          &:last-child {
+            flex-basis: 100%;
+            grid-column: 1/3;
+          }
+        }
+        @media all and (max-width: 767px) {
+          flex-basis: 100%;
+          &__mobile--sm {
+            min-height: 45vw;
+          }
+          &__mobile--md {
+            min-height: 90vw;
+          }
+          &__mobile--lg {
+            min-height: 120vw;
+          }
+          &__mobile--xl {
+            min-height: 150vw;
+          }
+          &__mobile--100vh {
+            min-height: 100vh;
+          }
+        }
+      }
+
+      &__auto {
+        grid-template-columns: repeat(3, auto);
+      }
+    }
+
+    &__4-col {
+        @extend .grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: $gap-md;
+        @media all and (max-width: 980px) {
+          grid-gap: $gap-sm;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @media all and (max-width: 767px) {
+          grid-gap: $gap-xs;
+          grid-template-columns: repeat(1, 1fr);
+          justify-content: center;
+        }
+        
+        > .column {
+          flex-basis:  calc(25% - 2 * #{$gap-sm});
+          @media all and (max-width: 980px) {
+            flex-basis: calc(50% - #{$gap-sm});
+            &__mobile--sm {
+              min-height: 30vh;
+            }
+            &__mobile--md {
+              min-height: 60vh;
+            }
+            &__mobile--lg {
+              min-height: 100vh;
+            }
+            &__mobile--50vh {
+              min-height: 50vh
+            }
+            &__mobile--100vh {
+              min-height: 100vh;
+            }
+          }
+          @media all and (max-width: 767px) {
+            flex-basis: 100%;
+            &__mobile--sm {
+              min-height: 45vw;
+            }
+            &__mobile--md {
+              min-height: 90vw;
+            }
+            &__mobile--lg {
+              min-height: 120vw;
+            }
+            &__mobile--xl {
+              min-height: 150vw;
+            }
+            &__mobile--100vh {
+              min-height: 100vh;
+            }
+          }
+        }
+
+      &__auto {
+        grid-template-columns: repeat(4, auto);
+      }
+    }
+
+    &__5-col {
+        @extend .grid;
+        grid-template-columns: repeat(5, 1fr);
+
+      &__auto {
+        grid-template-columns: repeat(5, auto);
+      }
+    }
+
+    &__6-col {
+        @extend .grid;
+        grid-template-columns: repeat(6, 1fr);
+
+      &__auto {
+        grid-template-columns: repeat(6, auto);
+      }
+    }
+
+    &__7-col {
+        @extend .grid;
+        grid-template-columns: repeat(7, 1fr);
+
+      &__auto {
+        grid-template-columns: repeat(7, auto);
+      }
+    }
+
+    &__8-col {
+        @extend .grid;
+        grid-template-columns: repeat(8, 1fr);
+
+      &__auto {
+        grid-template-columns: repeat(8, auto);
+      }
+    }
+
+    &__9-col {
+        @extend .grid;
+        grid-template-columns: repeat(9, 1fr);
+
+      &__auto {
+        grid-template-columns: repeat(9, auto);
+      }
+    }
+
+    &__10col {
+        grid-template-columns: repeat(10, 1fr);
+      &__auto 
+      {
+        grid-template-columns: repeat(auto 1fr);
+      }
+    }
+
+    &__11-col {
+        @extend .grid;
+        grid-template-columns: repeat(11, 1fr);
+      &__auto 
+      {
+        grid-template-columns: repeat(auto 1fr);
+      }
+    }
+
+    &__12-col {
+        @extend .grid;
+        grid-template-columns: repeat(12, 1fr);
+      &__auto 
+      {
+        grid-template-columns: repeat(auto 1fr);
+      }
+    }
+  }
+}
+
+.column {
+  width: 100%;
+}
+
+.one-col-layout {
+  @extend .grid__1-col;
+}
+
+.two-col-layout {
+  @extend .grid__2-col;
+}
+
+.three-col-layout {
+  @extend .grid__3-col;
+  
+}
+
+.four-col-layout {
+  @extend .grid__4-col;
+}

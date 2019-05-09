@@ -1,0 +1,94 @@
+@import '../variables/variables.scss';
+
+/*** Headings ***/
+
+h1,
+.h1 {
+  font-size: $font-size-lg;
+  margin: $gap-ms 0;
+}
+
+h2,
+.h2 {
+  font-size: $font-size-ml;
+  margin: $gap-ms 0;
+}
+
+h3,
+.h3 {
+  font-size: $font-size-md;
+  margin: $gap-ms 0;
+}
+
+h4,
+.h4 {
+  font-size: $font-size-ms;
+  margin: $gap-ms 0;
+}
+
+h5,
+.h5 {
+  font-size: $font-size-sm;
+  margin: $gap-ms 0;
+}
+
+/*** Paragraphs ***/
+
+p {
+  font-size: $font-size-sm;
+  line-height: $line-height-md;
+}
+
+/*** Lists ***/
+
+ul,
+ol {
+
+  li {
+    line-height: $line-height-lg;
+  }
+}
+
+// ol {
+
+//   li {
+//     margin-bottom: 1rem;
+//   }
+// }
+
+/*** Tables ***/
+
+table {
+  //
+}
+
+/*** Text Options ***/
+
+.text {
+
+  &__color {
+    
+    &--light {
+      color: $color-light;
+    }
+
+    &--dark {
+      color: $color-dark;
+    }
+  }
+
+  &__align {
+
+    &--left {
+      text-align: left;
+    }
+  
+    &_--center {
+      text-align: center;
+    }
+  
+    &--right {
+      text-align: right;
+    }
+  }
+}
