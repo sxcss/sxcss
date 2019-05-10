@@ -1,0 +1,49 @@
+@import '../variables/variables.scss';
+
+@mixin height--xs {
+  height: $height-xs;
+}
+
+@mixin height--sm {
+  height: $height-sm
+}
+
+@mixin height--ms {
+  height: $height-ms;
+}
+
+@mixin height--md {
+  height: $height-md;
+}
+
+@mixin height--ml {
+  height: $height-ml;
+}
+
+@mixin height--lg {
+  height: $height-lg;
+}
+
+@mixin height--xl {
+  height: $height-xl;
+}
+
+@mixin height--boxed {
+  height: $height-boxed;
+}
+
+@mixin height--50 {
+  height: $height-50;
+}
+
+@mixin height--100 {
+  height: $height-100;
+}
+
+@mixin height--50vw {
+  height: $height-50vw;
+}
+
+@mixin height--100vw {
+  height: $height-100vw;
+}

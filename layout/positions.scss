@@ -1,7 +1,7 @@
 .flex,
 .flex--wrap {
 
-  &.position-x {
+  &.position__x {
     &--left {
       justify-content: flex-start;
     }
@@ -13,7 +13,7 @@
     }
   }
 
-  &.position-y {
+  &.position__y {
     &--top {
       align-items: flex-start;
     }

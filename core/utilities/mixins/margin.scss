@@ -1,5 +1,9 @@
 @import '../variables/variables.scss';
 
+@mixin margin--auto {
+  margin: auto;
+}
+
 @mixin margin--xs {
   margin: $gap-xs;
 }

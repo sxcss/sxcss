@@ -1,0 +1,35 @@
+@mixin align__content--flex-start{
+  align-content: flex-start;
+}
+
+@mixin align__content--flex-end{
+  align-content: flex-end;
+}
+
+@mixin align__content--center{
+  align-content: center;
+}
+
+@mixin align__items--flex-start{
+  align-items: flex-start;
+}
+
+@mixin align__items--flex-end{
+  align-items: flex-end;
+}
+
+@mixin align__items--start{
+  align-items: start;
+}
+
+@mixin align__items--end{
+  align-items: end;
+}
+
+@mixin align__items--center{
+  align-items: center;
+}
+
+@mixin align__items--stretch {
+  align-items: stretch;
+}

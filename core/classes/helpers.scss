@@ -5,3 +5,14 @@
 .hidden {
   visibility: hidden;
 }
+
+.object-fit {
+
+  &--cover {
+    object-fit: cover;
+  }
+  
+  &--contain {
+    object-fit: contain;
+  }
+}

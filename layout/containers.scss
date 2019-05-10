@@ -1,20 +1,18 @@
-@import '../core/utilities/variables/variables.scss';
+@import '../core/utilities/utilities.scss';
 
 .container {
   box-sizing: border-box;
-  width: 100%;
+  @include width--100;
 
   &__inner {
-    // display: flex;
-    height: 100%;
-    width: 100%;
-    margin: auto;
+    @include height--100;
+    @include width--100;
+    @include margin--auto;
     
     &--boxed {
       width: calc(100% - #{$gap-lg});
-      margin: auto;
-      max-width: $width-boxed;
-      margin: auto;
+      @include margin--auto;
+      @include max-width--boxed;
       @media all and (max-width: 767px) {
         width: calc(100% - #{$gap-sm});
       }

@@ -1,0 +1,88 @@
+@mixin position__x--left {
+  @include justify__content--flex-start;
+}
+@mixin position__x--center {
+  @include justify__content--center;
+}
+@mixin position__x--right {
+  @include justify__content--flex-end;
+}
+
+@mixin position__y--top {
+  @include justify__content--flex-start;
+}
+@mixin position__y--center {
+  @include justify__content--flex-center;
+}
+@mixin position__y--bottom {
+  @include justify__content--flex-end;
+}
+
+/*** Position absolute **/
+
+@mixin position__absolute {
+  position: absolute;
+}
+
+@mixin position__absolute--center {
+  @include position__absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin position__absolute--center-top {
+  @include position__absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -100%);
+}
+
+@mixin position__absolute--center-bottom {
+  @include position__absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+@mixin position__absolute--left-top {
+  @include position__absolute;
+  left: 0;
+  top: 0%;
+  transform: translate(-100%, -100%);
+}
+
+@mixin position__absolute--left-center {
+  @include position__absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+@mixin position__absolute--left-bottom {
+  @include position__absolute;
+  left: 0;
+  top: 100%;
+  transform: translate(-100%, 0);
+}
+
+@mixin position__absolute--right-top {
+  @include position__absolute;
+  right: 0;
+  top: 0%;
+  transform: translate(-100%, -100%);
+}
+
+@mixin position__absolute--right-center {
+  @include position__absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+@mixin position__absolute--right-bottom {
+  @include position__absolute;
+  right: 0;
+  top: 100%;
+  transform: translate(-100%, 0);
+}
