@@ -125,32 +125,37 @@ input[type=number]::-webkit-outer-spin-button {
 /*** Text Align **/
 /*** Text Color **/
 /*** Text Transform **/
+/*** Font Size ***/
+/*** Font Weight ***/
+/*** Text Align **/
+/*** Text Color **/
+/*** Text Transform **/
 .background__size--cover {
   background-size: cover;
 }
 .background__size--contain {
-  background-size: cover;
+  background-size: contain;
 }
 .background__size--100 {
   background-size: 100%;
 }
 .background__position__x--left {
-  background-position-x: left;
+  background-position: left;
 }
 .background__position__x--center {
-  background-position-x: center;
+  background-position: center;
 }
 .background__position__x--right {
-  background-position-x: right;
+  background-position: right;
 }
 .background__position__y--top {
-  background-position-x: top;
+  background-position: top;
 }
 .background__position__y--center {
-  background-position-x: center;
+  background-position: center;
 }
 .background__position__y--bottom {
-  background-position-x: bottom;
+  background-position: bottom;
 }
 
 .flex {
@@ -232,121 +237,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .transition__ease-in-out--fast {
   transition: all 0.1s ease-in-out;
-}
-
-/*** Font Size ***/
-/*** Font Weight ***/
-/*** Text Align **/
-/*** Text Color **/
-/*** Text Transform **/
-/*** Headings ***/
-h1,
-.h1 {
-  font-size: 2.1rem;
-  margin: 2rem 0;
-}
-
-h2,
-.h2 {
-  font-size: 1.8rem;
-  margin: 2rem 0;
-}
-
-h3,
-.h3 {
-  font-size: 1.5rem;
-  margin: 2rem 0;
-}
-
-h4,
-.h4 {
-  font-size: 1.2rem;
-  margin: 2rem 0;
-}
-
-h5,
-.h5 {
-  font-size: 1rem;
-  margin: 2rem 0;
-}
-
-/*** Paragraphs ***/
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/*** Lists ***/
-ul li,
-ol li {
-  line-height: 2.1;
-}
-
-/*** Tables ***/
-/*** Text Options ***/
-.text__color--light {
-  color: #fff;
-}
-.text__color--dark {
-  color: #000;
-}
-.text__align--left {
-  text-align: left;
-}
-.text__align_--center {
-  text-align: center;
-}
-.text__align--right {
-  text-align: right;
-}
-
-.font__size--xs {
-  font-size: 0.6rem;
-}
-.font__size--sm {
-  font-size: 1rem;
-}
-.font__size--ms {
-  font-size: 1.2rem;
-}
-.font__size--md {
-  font-size: 1.5rem;
-}
-.font__size--ml {
-  font-size: 1.8rem;
-}
-.font__size--lg {
-  font-size: 2.1rem;
-}
-.font__size--xl {
-  font-size: 2.7rem;
-}
-.font__weight--thin {
-  font-weight: 100;
-}
-.font__weight--ultralight {
-  font-weight: 200;
-}
-.font__weight--light {
-  font-weight: 300;
-}
-.font__weight--normal {
-  font-weight: 400;
-}
-.font__weight--medium {
-  font-weight: 500;
-}
-.font__weight--semibold {
-  font-weight: 600;
-}
-.font__weight--bold {
-  font-weight: 700;
-}
-.font__weight--extrabold {
-  font-weight: 800;
-}
-.font__weight--black {
-  font-weight: 900;
 }
 
 .container {
@@ -488,7 +378,12 @@ ol li {
   }
 }
 
-.grid, .grid__12-col, .grid__11-col, .grid__9-col, .grid__8-col, .grid__7-col, .grid__6-col, .grid__5-col, .grid__4-col, .four-col-layout, .grid__3-col, .three-col-layout, .grid__2-col, .two-col-layout, .grid__1-col, .one-col-layout {
+/*** Font Size ***/
+/*** Font Weight ***/
+/*** Text Align **/
+/*** Text Color **/
+/*** Text Transform **/
+.grid {
   /* Flex */
   display: flex;
   justify-content: space-between;
@@ -497,6 +392,12 @@ ol li {
   grid-template-rows: 100%;
 }
 .grid__1-col, .one-col-layout {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(1, 1fr);
 }
 .grid__1-col__auto {
@@ -540,6 +441,12 @@ ol li {
   }
 }
 .grid__2-col, .two-col-layout {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3rem;
 }
@@ -602,6 +509,12 @@ ol li {
   grid-template-columns: repeat(2, auto);
 }
 .grid__3-col, .three-col-layout {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
 }
@@ -669,6 +582,12 @@ ol li {
   grid-template-columns: repeat(3, auto);
 }
 .grid__4-col, .four-col-layout {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3rem;
@@ -733,30 +652,60 @@ ol li {
   grid-template-columns: repeat(4, auto);
 }
 .grid__5-col {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(5, 1fr);
 }
 .grid__5-col__auto {
   grid-template-columns: repeat(5, auto);
 }
 .grid__6-col {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(6, 1fr);
 }
 .grid__6-col__auto {
   grid-template-columns: repeat(6, auto);
 }
 .grid__7-col {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(7, 1fr);
 }
 .grid__7-col__auto {
   grid-template-columns: repeat(7, auto);
 }
 .grid__8-col {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(8, 1fr);
 }
 .grid__8-col__auto {
   grid-template-columns: repeat(8, auto);
 }
 .grid__9-col {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(9, 1fr);
 }
 .grid__9-col__auto {
@@ -769,12 +718,24 @@ ol li {
   grid-template-columns: repeat(auto 1fr);
 }
 .grid__11-col {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(11, 1fr);
 }
 .grid__11-col__auto {
   grid-template-columns: repeat(auto 1fr);
 }
 .grid__12-col {
+  /* Flex */
+  display: flex;
+  justify-content: space-between;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   grid-template-columns: repeat(12, 1fr);
 }
 .grid__12-col__auto {

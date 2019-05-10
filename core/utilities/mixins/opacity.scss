@@ -1,0 +1,13 @@
+@import '../variables/variables.scss';
+
+@mixin opacity--sm {
+  opacity: $opacity-sm;
+}
+
+@mixin opacity--md {
+  opacity: $opacity-md;
+}
+
+@mixin opacity--lg {
+  opacity: $opacity-lg;
+}

@@ -1,17 +1,13 @@
-@import '../core/variables/variables.scss';
+@import '../core/utilities/variables/variables.scss';
+@import '../core/utilities/mixins/mixins.scss';
 
 .grid {
 
   & {
-     /* Flex */
-    display: flex;
-    justify-content: space-between;
-    /* Grid */
-    display: grid;
-    grid-template-rows: 100%;
+    @include grid;
 
     &__1-col {
-        @extend .grid;
+        @include grid;
         grid-template-columns: repeat(1, 1fr);
 
       &__auto {
@@ -58,7 +54,7 @@
     }
 
     &__2-col {
-        @extend .grid;
+        @include grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: $gap-md;
         @media all and (max-width: 980px) {
@@ -116,7 +112,7 @@
     }
 
     &__3-col {
-      @extend .grid;
+      @include grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: $gap-md;
       @media all and (max-width: 980px) {
@@ -179,7 +175,7 @@
     }
 
     &__4-col {
-        @extend .grid;
+        @include grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-columns: repeat(4, 1fr);
         grid-gap: $gap-md;
@@ -239,7 +235,7 @@
     }
 
     &__5-col {
-        @extend .grid;
+        @include grid;
         grid-template-columns: repeat(5, 1fr);
 
       &__auto {
@@ -248,7 +244,7 @@
     }
 
     &__6-col {
-        @extend .grid;
+        @include grid;
         grid-template-columns: repeat(6, 1fr);
 
       &__auto {
@@ -257,7 +253,7 @@
     }
 
     &__7-col {
-        @extend .grid;
+        @include grid;
         grid-template-columns: repeat(7, 1fr);
 
       &__auto {
@@ -266,7 +262,7 @@
     }
 
     &__8-col {
-        @extend .grid;
+        @include grid;
         grid-template-columns: repeat(8, 1fr);
 
       &__auto {
@@ -275,7 +271,7 @@
     }
 
     &__9-col {
-        @extend .grid;
+        @include grid;
         grid-template-columns: repeat(9, 1fr);
 
       &__auto {
@@ -292,7 +288,7 @@
     }
 
     &__11-col {
-        @extend .grid;
+        @include grid;
         grid-template-columns: repeat(11, 1fr);
       &__auto 
       {
@@ -301,7 +297,7 @@
     }
 
     &__12-col {
-        @extend .grid;
+        @include grid;
         grid-template-columns: repeat(12, 1fr);
       &__auto 
       {
