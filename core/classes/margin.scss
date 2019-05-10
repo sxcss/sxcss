@@ -1,0 +1,195 @@
+@import '../utilities/utilities.scss';
+
+.margin {
+
+  & {
+
+    &--xs {
+      @include margin--xs;
+    }
+
+    &--sm {
+      @include margin--sm;
+      @media all and (max-width: 767px) {
+        @include margin--xs;
+      }
+    }
+
+    &--md {
+      @include margin--md;
+      @media all and (max-width: 767px) {
+        @include margin--xs;
+      }
+    }
+
+    &--lg {
+      margin: $gap-lg;
+      @media all and (max-width: 767px) {
+        @include margin--sm;
+      }
+    }
+
+    &--xl {
+      margin: $gap-lg;
+      @media all and (max-width: 767px) {
+        @include margin--sm;
+      }
+    }
+  }
+
+  &__x {
+
+    &--sm {
+      @include margin__left--sm;
+      @include margin__right--sm;
+      @media all and (max-width: 767px) {
+        @include margin__left--xs;
+        @include margin__right--xs;
+      }
+    }
+
+    &--md {
+      @include margin__left--md;
+      @include margin__right--md;
+      @media all and (max-width: 767px) {
+        @include margin__left--xs;
+        @include margin__right--xs;
+      }
+    }
+
+    &--lg {
+      margin-left: $gap-lg;
+      margin-right: $gap-lg;
+      @media all and (max-width: 767px) {
+        @include margin__left--md;
+        @include margin__right--md;
+      }
+    }
+  }
+
+  &__y {
+
+    &--sm {
+      @include margin__top--sm;
+      @include margin__bottom--sm;
+      @media all and (max-width: 767px) {
+        @include margin__top--xs;
+        @include margin__bottom--xs;
+      }
+    }
+
+    &--md {
+      @include margin__top--md;
+      @include margin__bottom--md;
+      @media all and (max-width: 767px) {
+        @include margin__top--xs;
+        @include margin__bottom--xs;
+      }
+    }
+
+    &--lg {
+      @include margin__top--lg;
+      @include margin__bottom--lg;
+      @media all and (max-width: 767px) {
+        @include margin__top--md;
+        @include margin__bottom--md;
+      }
+    }
+  }
+
+  &__left {
+
+    &--sm {
+      @include margin__left--sm;
+      @media all and (max-width: 767px) {
+        @include margin__left--xs;
+      }
+    }
+
+    &--md {
+      @include margin__left--md;
+      @media all and (max-width: 767px) {
+        @include margin__left--xs;
+      }
+    }
+
+    &--lg {
+      margin-left: $gap-lg;
+      @media all and (max-width: 767px) {
+        @include margin__left--md;
+      }
+    }
+  }
+
+  &__right {
+
+    &--sm {
+      @include margin__right--sm;
+      @media all and (max-width: 767px) {
+        @include margin__right--xs;
+      }
+    }
+
+    &--md {
+      @include margin__right--md;
+      @media all and (max-width: 767px) {
+        @include margin__right--xs;
+      }
+    }
+
+    &--lg {
+      margin-right: $gap-lg;
+      @media all and (max-width: 767px) {
+        @include margin__right--md;
+      }
+    }
+  }
+
+  &__top {
+
+    &--sm {
+      @include margin__left--sm;
+      @media all and (max-width: 767px) {
+        @include margin__top--xs;
+      }
+    }
+
+    &--md {
+      @include margin__top--md;
+      @media all and (max-width: 767px) {
+        @include margin__top--xs;
+      }
+    }
+
+    &--lg {
+      @include margin__top--lg;
+      @media all and (max-width: 767px) {
+        @include margin__top--md;
+      }
+    }
+  }
+
+  &__bottom {
+
+    &--sm {
+      @include margin__bottom--sm;
+      @media all and (max-width: 767px) {
+        @include margin__bottom--xs;
+      }
+    }
+
+    &--md {
+      @include margin__bottom--md;
+      @media all and (max-width: 767px) {
+        @include margin__bottom--xs;
+      }
+    }
+
+    &--lg {
+      @include margin__bottom--lg;
+      @media all and (max-width: 767px) {
+        @include margin__bottom--md;
+      }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+@import '../utilities/utilities.scss';
+
+.padding {
+
+  & {
+
+    &--xs {
+      @include padding--xs;
+    }
+
+    &--sm {
+      @include padding--sm;
+      @media all and (max-width: 767px) {
+        @include padding--xs;
+      }
+    }
+
+    &--md {
+      @include padding--md;
+      @media all and (max-width: 767px) {
+        @include padding--xs;
+      }
+    }
+
+    &--lg {
+      padding: $gap-lg;
+      @media all and (max-width: 767px) {
+        @include padding--sm;
+      }
+    }
+
+    &--xl {
+      padding: $gap-lg;
+      @media all and (max-width: 767px) {
+        @include padding--sm;
+      }
+    }
+  }
+
+  &__x {
+
+    &--sm {
+      @include padding__left--sm;
+      @include padding__right--sm;
+      @media all and (max-width: 767px) {
+        @include padding__left--xs;
+        @include padding__right--xs;
+      }
+    }
+
+    &--md {
+      @include padding__left--md;
+      @include padding__right--md;
+      @media all and (max-width: 767px) {
+        @include padding__left--xs;
+        @include padding__right--xs;
+      }
+    }
+
+    &--lg {
+      padding-left: $gap-lg;
+      padding-right: $gap-lg;
+      @media all and (max-width: 767px) {
+        @include padding__left--md;
+        @include padding__right--md;
+      }
+    }
+  }
+
+  &__y {
+
+    &--sm {
+      @include padding__top--sm;
+      @include padding__bottom--sm;
+      @media all and (max-width: 767px) {
+        @include padding__top--xs;
+        @include padding__bottom--xs;
+      }
+    }
+
+    &--md {
+      @include padding__top--md;
+      @include padding__bottom--md;
+      @media all and (max-width: 767px) {
+        @include padding__top--xs;
+        @include padding__bottom--xs;
+      }
+    }
+
+    &--lg {
+      @include padding__top--lg;
+      @include padding__bottom--lg;
+      @media all and (max-width: 767px) {
+        @include padding__top--md;
+        @include padding__bottom--md;
+      }
+    }
+  }
+
+  &__left {
+
+    &--sm {
+      @include padding__left--sm;
+      @media all and (max-width: 767px) {
+        @include padding__left--xs;
+      }
+    }
+
+    &--md {
+      @include padding__left--md;
+      @media all and (max-width: 767px) {
+        @include padding__left--xs;
+      }
+    }
+
+    &--lg {
+      padding-left: $gap-lg;
+      @media all and (max-width: 767px) {
+        @include padding__left--md;
+      }
+    }
+  }
+
+  &__right {
+
+    &--sm {
+      @include padding__right--sm;
+      @media all and (max-width: 767px) {
+        @include padding__right--xs;
+      }
+    }
+
+    &--md {
+      @include padding__right--md;
+      @media all and (max-width: 767px) {
+        @include padding__right--xs;
+      }
+    }
+
+    &--lg {
+      padding-right: $gap-lg;
+      @media all and (max-width: 767px) {
+        @include padding__right--md;
+      }
+    }
+  }
+
+  &__top {
+
+    &--sm {
+      @include padding__left--sm;
+      @media all and (max-width: 767px) {
+        @include padding__top--xs;
+      }
+    }
+
+    &--md {
+      @include padding__top--md;
+      @media all and (max-width: 767px) {
+        @include padding__top--xs;
+      }
+    }
+
+    &--lg {
+      @include padding__top--lg;
+      @media all and (max-width: 767px) {
+        @include padding__top--md;
+      }
+    }
+  }
+
+  &__bottom {
+
+    &--sm {
+      @include padding__bottom--sm;
+      @media all and (max-width: 767px) {
+        @include padding__bottom--xs;
+      }
+    }
+
+    &--md {
+      @include padding__bottom--md;
+      @media all and (max-width: 767px) {
+        @include padding__bottom--xs;
+      }
+    }
+
+    &--lg {
+      @include padding__bottom--lg;
+      @media all and (max-width: 767px) {
+        @include padding__bottom--md;
+      }
+    }
+  }
+}
