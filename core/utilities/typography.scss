@@ -1,4 +1,5 @@
 @import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
 
 /*** Headings ***/
 
@@ -69,26 +70,26 @@ table {
   &__color {
     
     &--light {
-      color: $color-light;
+      @include text__color--light;
     }
 
     &--dark {
-      color: $color-dark;
+      @include text__color--dark;
     }
   }
 
   &__align {
 
     &--left {
-      text-align: left;
+      @include text__align--left;
     }
   
     &_--center {
-      text-align: center;
+      @include text__align--center;
     }
   
     &--right {
-      text-align: right;
+      @include text__align--right;
     }
   }
 }
@@ -98,64 +99,64 @@ table {
   &__size {
 
     &--xs {
-      font-size: $font-size-xs;
+      @include font__size--xs;
     }
     &--sm {
-      font-size: $font-size-sm;
+      @include font__size--sm;
     }
     &--ms {
-      font-size: $font-size-ms;
+      @include font__size--ms;
     }
     &--md {
-      font-size: $font-size-md;
+      @include font__size--md;
     }
     &--ml {
-      font-size: $font-size-ml;
+      @include font__size--ml;
     }
     &--lg {
-      font-size: $font-size-lg;
+      @include font__size--lg;
     }
     &--xl {
-      font-size: $font-size-xl;
+      @include font__size--xl;
     }
   }
 
   &__weight {
 
     &--thin {
-      font-weight: $font-weight-thin;  
+      @include font__weight--thin;  
     }
 
     &--ultralight {
-      font-weight: $font-weight-extralight;
+      @include font__weight--extralight;
     }
 
     &--light {
-      font-weight: $font-weight-light;
+      @include font__weight--light;
     }
 
     &--normal {
-      font-weight: $font-weight-normal;
+      @include font__weight--normal;
     }
 
     &--medium {
-      font-weight: $font-weight-medium;
+      @include font__weight--medium;
     }
 
     &--semibold {
-      font-weight: $font-weight-semibold;
+      @include font__weight--semibold;
     }
 
     &--bold {
-      font-weight: $font-weight-bold;
+      @include font__weight--bold;
     }
 
     &--extrabold {
-      font-weight: $font-weight-extrabold;
+      @include font__weight--extrabold;
     }
 
     &--black {
-      font-weight: $font-weight-black;
+      @include font__weight--black;
     }
   }
 }
