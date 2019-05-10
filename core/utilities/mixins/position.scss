@@ -1,21 +1,31 @@
 @mixin position__x--left {
-  @include justify__content--flex-start;
+  @include grid;
+  @include justify__content--start;
 }
+
 @mixin position__x--center {
+  @include grid;
   @include justify__content--center;
 }
+
 @mixin position__x--right {
-  @include justify__content--flex-end;
+  @include grid;
+  @include justify__content--end;
 }
 
 @mixin position__y--top {
-  @include justify__content--flex-start;
+  @include grid;
+  @include align__items--start;
 }
+
 @mixin position__y--center {
-  @include justify__content--flex-center;
+  @include grid;
+  @include align__items--center;
 }
+
 @mixin position__y--bottom {
-  @include justify__content--flex-end;
+  @include grid;
+  @include align__items--end;
 }
 
 /*** Position absolute **/

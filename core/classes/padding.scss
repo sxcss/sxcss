@@ -39,9 +39,27 @@
 
   &__x {
 
+    &--xs {
+      @include padding__left--xs;
+      @include padding__right--xs;
+      @media all and (max-width: 767px) {
+        @include padding__left--xs;
+        @include padding__right--xs;
+      }
+    }
+
     &--sm {
       @include padding__left--sm;
       @include padding__right--sm;
+      @media all and (max-width: 767px) {
+        @include padding__left--xs;
+        @include padding__right--xs;
+      }
+    }
+
+    &--ms {
+      @include padding__left--ms;
+      @include padding__right--ms;
       @media all and (max-width: 767px) {
         @include padding__left--xs;
         @include padding__right--xs;
@@ -69,9 +87,27 @@
 
   &__y {
 
+    &--xs {
+      @include padding__top--xs;
+      @include padding__bottom--xs;
+      @media all and (max-width: 767px) {
+        @include padding__top--xs;
+        @include padding__bottom--xs;
+      }
+    }
+
     &--sm {
       @include padding__top--sm;
       @include padding__bottom--sm;
+      @media all and (max-width: 767px) {
+        @include padding__top--xs;
+        @include padding__bottom--xs;
+      }
+    }
+
+    &--ms {
+      @include padding__top--ms;
+      @include padding__bottom--ms;
       @media all and (max-width: 767px) {
         @include padding__top--xs;
         @include padding__bottom--xs;
@@ -90,6 +126,15 @@
     &--lg {
       @include padding__top--lg;
       @include padding__bottom--lg;
+      @media all and (max-width: 767px) {
+        @include padding__top--md;
+        @include padding__bottom--md;
+      }
+    }
+
+    &--xl {
+      @include padding__top--xl;
+      @include padding__bottom--xl;
       @media all and (max-width: 767px) {
         @include padding__top--md;
         @include padding__bottom--md;

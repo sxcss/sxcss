@@ -1,0 +1,49 @@
+@import '../utilities/utilities.scss';
+
+.justify {
+
+  &__content {
+
+    &--start {
+      @include justify__content--start;
+    }
+
+    &--end {
+      @include justify__content--end;
+    }
+
+    &--center {
+      @include justify__content--center;
+    }
+  }
+
+  &__items {
+
+    &--start {
+      @include justify__items--start;
+    }
+
+    &--end {
+      @include justify__items--end;
+    }
+
+    &--center {
+      @include justify__items--center;
+    }
+  }
+
+  &__self {
+
+    &--start {
+      @include justify__self--start;
+    }
+
+    &--end {
+      @include justify__self--end;
+    }
+
+    &--center {
+      @include justify__self--center;
+    }
+  }
+}

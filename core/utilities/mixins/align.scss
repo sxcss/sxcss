@@ -6,6 +6,14 @@
   align-content: flex-end;
 }
 
+@mixin align__content--start{
+  align-content: start;
+}
+
+@mixin align__content--end{
+  align-content: end;
+}
+
 @mixin align__content--center{
   align-content: center;
 }
@@ -32,4 +40,24 @@
 
 @mixin align__items--stretch {
   align-items: stretch;
+}
+
+@mixin align__self--flex-start {
+  align-self: flex-start;
+}
+
+@mixin align__self--flex-end {
+  align-self: flex-end;
+}
+
+@mixin align__self--start {
+  align-self: start;
+}
+
+@mixin align__self--end {
+  align-self: end;
+}
+
+@mixin align__self--center {
+  align-self: center;
 }

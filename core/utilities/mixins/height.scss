@@ -47,3 +47,51 @@
 @mixin height--100vw {
   height: $height-100vw;
 }
+
+@mixin max-height--xs {
+  max-height: $height-xs;
+}
+
+@mixin max-height--sm {
+  max-height: $height-sm
+}
+
+@mixin max-height--ms {
+  max-height: $height-ms;
+}
+
+@mixin max-height--md {
+  max-height: $height-md;
+}
+
+@mixin max-height--ml {
+  max-height: $height-ml;
+}
+
+@mixin max-height--lg {
+  max-height: $height-lg;
+}
+
+@mixin max-height--xl {
+  max-height: $height-xl;
+}
+
+@mixin max-height--boxed {
+  max-height: $height-boxed;
+}
+
+@mixin max-height--50 {
+  max-height: $height-50;
+}
+
+@mixin max-height--100 {
+  max-height: $height-100;
+}
+
+@mixin max-height--50vw {
+  max-height: $height-50vw;
+}
+
+@mixin max-height--100vw {
+  max-height: $height-100vw;
+}

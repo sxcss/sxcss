@@ -1,0 +1,73 @@
+@import '../utilities/utilities.scss';
+
+.align {
+
+  &__content {
+    
+    &--flex--start {
+      @include align__content--flex-start;
+    }
+
+    &--flex-end {
+      @include align__content--flex-end;
+    }
+
+    &--start {
+      @include align__content--start;
+    }
+
+    &--end {
+      @include align__content--end;
+    }
+
+    &--center {
+      @include align__content--center;
+    }
+  }
+
+  &__items {
+    
+    &--flex--start {
+      @include align__items--flex-start;
+    }
+
+    &--flex-end {
+      @include align__items--flex-end;
+    }
+
+    &--start {
+      @include align__items--start;
+    }
+
+    &--end {
+      @include align__items--end;
+    }
+
+    &--center {
+      @include align__items--center;
+    }
+  }
+
+  &__self {
+    
+    &--flex--start {
+      @include align__self--flex-start;
+    }
+
+    &--flex-end {
+      @include align__self--flex-end;
+    }
+
+    &--start {
+      @include align__self--start;
+    }
+
+    &--end {
+      @include align__self--end;
+    }
+
+    &--center {
+      @include align__self--center;
+    }
+  }
+}

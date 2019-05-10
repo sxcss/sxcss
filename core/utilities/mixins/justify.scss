@@ -1,16 +1,38 @@
-@mixin justify__content--flex-start{
-  justify-content: flex-start;
+@mixin justify__items--start {
+  justify-items: flex-start;
+  justify-items: start;
 }
 
-@mixin justify__content--flex-end {
-  justify-content: flex-end;
+@mixin justify__items--end {
+  justify-items: flex-end;
+  justify-items: end;
+}
+
+@mixin justify__items--center {
+  justify-items: center;
+}
+
+@mixin justify__self--start {
+  justify-self: flex-start;
+  justify-self: start;
+}
+
+@mixin justify__self--end {
+  justify-self: flex-end;
+  justify-self: end;
+}
+
+@mixin justify__self--center {
+  justify-content: center;
 }
 
 @mixin justify__content--start {
+  justify-content: flex-start;
   justify-content: start;
 }
 
 @mixin justify__content--end {
+  justify-content: flex-end;
   justify-content: end;
 }
 
@@ -28,16 +50,4 @@
 
 @mixin justify__content--space-evenly {
   justify-content: space-evenly;
-}
-
-@mixin justify__items--center {
-  justify-items: center;
-}
-
-@mixin justify__items--start {
-  justify-items: start;
-}
-
-@mixin justify__items--end {
-  justify-items: end;
 }

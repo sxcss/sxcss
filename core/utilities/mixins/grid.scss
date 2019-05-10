@@ -1,7 +1,6 @@
 @mixin grid {
    /* Flex */
    display: flex;
-   justify-content: space-between;
    /* Grid */
    display: grid;
    grid-template-rows: 100%;

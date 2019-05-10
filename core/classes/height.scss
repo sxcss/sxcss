@@ -2,8 +2,26 @@
 
 .height {
 
+  &--50 {
+    @include height--50;
+  }
+
   &--100 {
     @include height--100;
+  }
+
+  &--50vh {
+    height: 50vh;
+    @media all and (max-width: 980px) {
+      min-height: $height-50vh;
+    }
+  }
+
+  &--100vh {
+    height: 100vh !important;
+    @media all and (max-width: 980px) {
+      min-height: $height-100vh;
+    }
   }
 
   &--xs {
@@ -55,18 +73,10 @@
       min-height: $height-lg;
     }
   }
+}
 
-  &--50vh {
-    height: 50vh;
-    @media all and (max-width: 980px) {
-      min-height: $height-50vh;
-    }
-  }
-
-  &--100vh {
-    height: 100vh !important;
-    @media all and (max-width: 980px) {
-      min-height: $height-100vh;
-    }
+.max-height {
+  &--100 {
+    @include max-height--100;
   }
 }
