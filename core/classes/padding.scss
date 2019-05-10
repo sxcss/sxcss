@@ -23,14 +23,14 @@
     }
 
     &--lg {
-      padding: $gap-lg;
+      @include padding--lg;
       @media all and (max-width: 767px) {
         @include padding--sm;
       }
     }
 
     &--xl {
-      padding: $gap-lg;
+      @include padding--lg;
       @media all and (max-width: 767px) {
         @include padding--sm;
       }
@@ -76,8 +76,8 @@
     }
 
     &--lg {
-      padding-left: $gap-lg;
-      padding-right: $gap-lg;
+      @include padding__left--lg;
+      @include padding__right--lg;
       @media all and (max-width: 767px) {
         @include padding__left--md;
         @include padding__right--md;
@@ -159,7 +159,7 @@
     }
 
     &--lg {
-      padding-left: $gap-lg;
+      @include padding__left--lg;
       @media all and (max-width: 767px) {
         @include padding__left--md;
       }
@@ -183,7 +183,7 @@
     }
 
     &--lg {
-      padding-right: $gap-lg;
+      @include padding__right--lg;
       @media all and (max-width: 767px) {
         @include padding__right--md;
       }
