@@ -13,7 +13,7 @@
         @include grid;
         grid-template-columns: repeat(1, auto);
       }
-
+ 
       > div {
         flex-basis: 100%;
         @media all and (max-width: 980px) {
@@ -31,7 +31,7 @@
       grid-gap: $gap-md;
       @media all and (max-width: 980px) {
         grid-gap: $gap-sm;
-        grid-template-columns: 1fr;
+        // grid-template-columns: 1fr;
         justify-content: center;
       }
       @media all and (max-width: 767px) {
