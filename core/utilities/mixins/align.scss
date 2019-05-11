@@ -1,16 +1,10 @@
-@mixin align__content--flex-start{
-  align-content: flex-start;
-}
-
-@mixin align__content--flex-end{
-  align-content: flex-end;
-}
-
 @mixin align__content--start{
+  align-content: flex-start;
   align-content: start;
 }
 
 @mixin align__content--end{
+  align-content: flex-end;
   align-content: end;
 }
 

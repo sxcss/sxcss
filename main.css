@@ -157,7 +157,7 @@ ol li {
 .text__align--left {
   text-align: left;
 }
-.text__align_--center {
+.text__align--center {
   text-align: center;
 }
 .text__align--right {
@@ -218,26 +218,16 @@ p {
   line-height: 1.5;
 }
 
-.align__content--flex--start {
-  align-content: flex-start;
-}
-.align__content--flex-end {
-  align-content: flex-end;
-}
 .align__content--start {
+  align-content: flex-start;
   align-content: start;
 }
 .align__content--end {
+  align-content: flex-end;
   align-content: end;
 }
 .align__content--center {
   align-content: center;
-}
-.align__items--flex--start {
-  align-items: flex-start;
-}
-.align__items--flex-end {
-  align-items: flex-end;
 }
 .align__items--start {
   align-items: start;
@@ -247,12 +237,6 @@ p {
 }
 .align__items--center {
   align-items: center;
-}
-.align__self--flex--start {
-  align-self: flex-start;
-}
-.align__self--flex-end {
-  align-self: flex-end;
 }
 .align__self--start {
   align-self: start;
@@ -867,7 +851,7 @@ p {
   justify-self: end;
 }
 .justify__self--center {
-  justify-content: center;
+  justify-self: center;
 }
 
 .margin--xs {
@@ -1306,6 +1290,16 @@ p {
     opacity: 0 !important;
     pointer-events: none !important;
   }
+}
+
+.opacity--sm {
+  opacity: 0.3;
+}
+.opacity--md {
+  opacity: 0.6;
+}
+.opacity--lg {
+  opacity: 0.9;
 }
 
 .padding--xs {

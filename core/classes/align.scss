@@ -3,14 +3,6 @@
 .align {
 
   &__content {
-    
-    &--flex--start {
-      @include align__content--flex-start;
-    }
-
-    &--flex-end {
-      @include align__content--flex-end;
-    }
 
     &--start {
       @include align__content--start;
@@ -26,14 +18,6 @@
   }
 
   &__items {
-    
-    &--flex--start {
-      @include align__items--flex-start;
-    }
-
-    &--flex-end {
-      @include align__items--flex-end;
-    }
 
     &--start {
       @include align__items--start;
@@ -49,14 +33,6 @@
   }
 
   &__self {
-    
-    &--flex--start {
-      @include align__self--flex-start;
-    }
-
-    &--flex-end {
-      @include align__self--flex-end;
-    }
 
     &--start {
       @include align__self--start;
