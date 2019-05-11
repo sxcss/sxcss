@@ -1,4 +1,4 @@
-@import '../utilities/utilities.scss';
+@import '../utilities/mixins/grid.scss';
 
 @mixin column__min-height--tablet {
   &__mobile--sm {

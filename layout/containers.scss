@@ -1,4 +1,4 @@
-@import '../core/utilities/utilities.scss';
+@import '../core/core.scss';
 
 .container {
   box-sizing: border-box;
@@ -16,6 +16,15 @@
       @media all and (max-width: 767px) {
         width: calc(100% - #{$gap-sm});
       }
+    }
+  }
+}
+
+.grid__1-col {
+  .container__inner--boxed {
+    @media all and (min-width: calc(#{$width-boxed} + 2.1rem)) {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
     }
   }
 }

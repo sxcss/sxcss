@@ -1,34 +1,9 @@
-@import '../utilities/utilities.scss';
+@import '../utilities/mixins/position.scss';
 
 .position {
 
-  &--center {
-    @include position__x--center;
-    @include position__y--center;
-  }
-
-  &__x {
-    &--left {
-      @include position__x--left;
-    }
-    &--center {
-      @include position__x--center;
-    }
-    &--right {
-      @include position__x--right;
-    }
-  }
-
-  &__y {
-    &--top {
-      @include position__y--top;
-    }
-    &--center {
-      @include position__y--center;
-    }
-    &--bottom {
-      @include position__y--bottom;
-    }
+  &__relative {
+    @include position__relative;
   }
 
   &__absolute {

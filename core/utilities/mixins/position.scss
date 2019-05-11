@@ -1,34 +1,6 @@
-@mixin position__x--left {
-  @include grid;
-  @include justify__content--start;
+@mixin position__relative {
+  position: relative;
 }
-
-@mixin position__x--center {
-  @include grid;
-  @include justify__content--center;
-}
-
-@mixin position__x--right {
-  @include grid;
-  @include justify__content--end;
-}
-
-@mixin position__y--top {
-  @include grid;
-  @include align__items--start;
-}
-
-@mixin position__y--center {
-  @include grid;
-  @include align__items--center;
-}
-
-@mixin position__y--bottom {
-  @include grid;
-  @include align__items--end;
-}
-
-/*** Position absolute **/
 
 @mixin position__absolute {
   position: absolute;
