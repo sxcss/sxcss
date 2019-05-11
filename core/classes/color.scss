@@ -1,0 +1,12 @@
+@import '../utilities/mixins/color.scss';
+
+.color {
+
+  &--dark {
+    @include color--dark;
+  }
+
+  &--light {
+  @include color--light;    
+  }
+}

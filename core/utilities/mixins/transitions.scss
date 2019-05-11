@@ -1,5 +1,3 @@
-@import '../variables/variables.scss';
-
 @mixin transition__ease-out--slow {
   transition: $transition-ease-out-slow;
 }

@@ -1,4 +1,3 @@
-/******* Core ******/
 html {
   box-sizing: border-box;
   height: 100%;
@@ -26,7 +25,6 @@ figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, t
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -120,6 +118,106 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+h1 {
+  font-size: 2.1rem;
+  margin: 2rem 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+h5 {
+  font-size: 1rem;
+  margin: 2rem 0;
+}
+
+ul li,
+ol li {
+  line-height: 2.1;
+}
+
+.text__color--light {
+  color: #fff;
+}
+.text__color--dark {
+  color: #000;
+}
+.text__align--left {
+  text-align: left;
+}
+.text__align_--center {
+  text-align: center;
+}
+.text__align--right {
+  text-align: right;
+}
+
+.font__size--xs {
+  font-size: 0.6rem;
+}
+.font__size--sm {
+  font-size: 1rem;
+}
+.font__size--ms {
+  font-size: 1.2rem;
+}
+.font__size--md {
+  font-size: 1.5rem;
+}
+.font__size--ml {
+  font-size: 1.8rem;
+}
+.font__size--lg {
+  font-size: 2.1rem;
+}
+.font__size--xl {
+  font-size: 2.7rem;
+}
+.font__weight--thin {
+  font-weight: 100;
+}
+.font__weight--ultralight {
+  font-weight: 200;
+}
+.font__weight--light {
+  font-weight: 300;
+}
+.font__weight--normal {
+  font-weight: 400;
+}
+.font__weight--medium {
+  font-weight: 500;
+}
+.font__weight--semibold {
+  font-weight: 600;
+}
+.font__weight--bold {
+  font-weight: 700;
+}
+.font__weight--extrabold {
+  font-weight: 800;
+}
+.font__weight--black {
+  font-weight: 900;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .align__content--flex--start {
   align-content: flex-start;
 }
@@ -166,6 +264,12 @@ input[type=number]::-webkit-outer-spin-button {
   align-self: center;
 }
 
+.background__color--dark {
+  background-color: #000;
+}
+.background__color--light {
+  background-color: #fff;
+}
 .background__size--cover {
   background-size: cover;
 }
@@ -192,6 +296,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .background__position__y--bottom {
   background-position: bottom;
+}
+
+.color--dark {
+  color: #000;
+}
+.color--light {
+  color: #fff;
 }
 
 .flex {
@@ -1778,136 +1889,6 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-/*** Font Size ***/
-/*** Font Weight ***/
-/*** Text Align **/
-/*** Text Color **/
-/*** Text Transform **/
-h1 {
-  font-size: 2.1rem;
-  margin: 2rem 0;
-}
-
-h2 {
-  font-size: 1.8rem;
-  margin: 2rem 0;
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin: 2rem 0;
-}
-
-h4 {
-  font-size: 1.2rem;
-  margin: 2rem 0;
-}
-
-h5 {
-  font-size: 1rem;
-  margin: 2rem 0;
-}
-
-/*** Font Size ***/
-/*** Font Weight ***/
-/*** Text Align **/
-/*** Text Color **/
-/*** Text Transform **/
-ul li,
-ol li {
-  line-height: 2.1;
-}
-
-/*** Font Size ***/
-/*** Font Weight ***/
-/*** Text Align **/
-/*** Text Color **/
-/*** Text Transform **/
-.text__color--light {
-  color: #fff;
-}
-.text__color--dark {
-  color: #000;
-}
-.text__align--left {
-  text-align: left;
-}
-.text__align_--center {
-  text-align: center;
-}
-.text__align--right {
-  text-align: right;
-}
-
-.font__size--xs {
-  font-size: 0.6rem;
-}
-.font__size--sm {
-  font-size: 1rem;
-}
-.font__size--ms {
-  font-size: 1.2rem;
-}
-.font__size--md {
-  font-size: 1.5rem;
-}
-.font__size--ml {
-  font-size: 1.8rem;
-}
-.font__size--lg {
-  font-size: 2.1rem;
-}
-.font__size--xl {
-  font-size: 2.7rem;
-}
-.font__weight--thin {
-  font-weight: 100;
-}
-.font__weight--ultralight {
-  font-weight: 200;
-}
-.font__weight--light {
-  font-weight: 300;
-}
-.font__weight--normal {
-  font-weight: 400;
-}
-.font__weight--medium {
-  font-weight: 500;
-}
-.font__weight--semibold {
-  font-weight: 600;
-}
-.font__weight--bold {
-  font-weight: 700;
-}
-.font__weight--extrabold {
-  font-weight: 800;
-}
-.font__weight--black {
-  font-weight: 900;
-}
-
-/*** Font Size ***/
-/*** Font Weight ***/
-/*** Text Align **/
-/*** Text Color **/
-/*** Text Transform **/
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-/*** Font Size ***/
-/*** Font Weight ***/
-/*** Text Align **/
-/*** Text Color **/
-/*** Text Transform **/
-/*** Font Size ***/
-/*** Font Weight ***/
-/*** Text Align **/
-/*** Text Color **/
-/*** Text Transform **/
 .container {
   box-sizing: border-box;
   width: 100%;
@@ -1935,11 +1916,6 @@ p {
   }
 }
 
-/*** Font Size ***/
-/*** Font Weight ***/
-/*** Text Align **/
-/*** Text Color **/
-/*** Text Transform **/
 .placement--center {
   place-content: center;
 }
