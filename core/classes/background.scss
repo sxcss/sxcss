@@ -2,6 +2,17 @@
 
 .background {
 
+  &__color {
+
+    &--dark {
+      @include background__color--dark;
+    }
+
+    &--light {
+      @include background__color--light;
+    }
+  }
+
   &__size {
 
     &--cover {

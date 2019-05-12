@@ -1,3 +1,11 @@
+@mixin background__color--dark {
+  background-color: $color-dark;
+}
+
+@mixin background__color--light {
+  background-color: $color-light;
+}
+
 @mixin background__position__x--left {
   background-position: left;
 }
