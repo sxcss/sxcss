@@ -1,3 +1,123 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  height: 100%;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button, input, textarea, select, option {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  appearance: none;
+  font-size: 1rem;
+}
+button:focus, button:active, input:focus, input:active, textarea:focus, textarea:active, select:focus, select:active, option:focus, option:active {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:focus, a:hover, a:active {
+  text-decoration: none;
+}
+a:focus::after, a:hover::after, a:active::after {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+input, textarea {
+  color: currentColor;
+  font: inherit;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+  display: none;
+}
+
+input[type=search]::-ms-clear {
+  display: none;
+}
+
+*,
+*:focus,
+*:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .align__content--start {
   align-content: flex-start;
   align-content: start;
@@ -290,6 +410,9 @@
   justify-self: center;
 }
 
+.margin--0 {
+  margin: 0;
+}
 .margin--xs {
   margin: 1rem;
 }
@@ -340,6 +463,10 @@
   .margin--xl {
     margin: 1.5rem;
   }
+}
+.margin__x--0 {
+  margin-left: 0;
+  margin-right: 0;
 }
 .margin__x--xs {
   margin-left: 1rem;
@@ -400,6 +527,24 @@
     margin-left: 3rem;
     margin-right: 3rem;
   }
+}
+.margin__x--xl {
+  margin-left: 9rem;
+  margin-right: 9rem;
+}
+@media all and (max-width: 767px) {
+  .margin__x--xl {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+.margin__y--0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.margin__y--auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .margin__y--xs {
   margin-top: 1rem;
@@ -471,6 +616,9 @@
     margin-bottom: 3rem;
   }
 }
+.margin__left--0 {
+  margin-left: 0;
+}
 .margin__left--xs {
   margin-left: 1rem;
 }
@@ -526,6 +674,9 @@
   .margin__left--xl {
     margin-left: 3rem;
   }
+}
+.margin__right--0 {
+  margin-right: 0;
 }
 .margin__right--xs {
   margin-right: 1rem;
@@ -583,6 +734,9 @@
     margin-right: 3rem;
   }
 }
+.margin__top--0 {
+  margin-top: 0;
+}
 .margin__top--xs {
   margin-top: 1rem;
 }
@@ -638,6 +792,9 @@
   .margin__top--xl {
     margin-top: 3rem;
   }
+}
+.margin__bottom--0 {
+  margin-bottom: 0;
 }
 .margin__bottom--xs {
   margin-bottom: 1rem;
@@ -1319,29 +1476,24 @@
   }
 }
 
-h1 {
+.h1 {
   font-size: 2.1rem;
-  margin: 2rem 0;
 }
 
-h2 {
+.h2 {
   font-size: 1.8rem;
-  margin: 2rem 0;
 }
 
-h3 {
+.h3 {
   font-size: 1.5rem;
-  margin: 2rem 0;
 }
 
-h4 {
+.h4 {
   font-size: 1.2rem;
-  margin: 2rem 0;
 }
 
-h5 {
+.h5 {
   font-size: 1rem;
-  margin: 2rem 0;
 }
 
 ul li,
@@ -2693,6 +2845,8 @@ p {
   grid-template-rows: 100%;
   justify-content: flex-start;
   justify-content: start;
+  justify-items: flex-start;
+  justify-items: start;
 }
 .placement__x--center {
   /* Flex */
@@ -2701,6 +2855,7 @@ p {
   display: grid;
   grid-template-rows: 100%;
   justify-content: center;
+  justify-items: center;
 }
 .placement__x--right {
   /* Flex */
@@ -2708,6 +2863,8 @@ p {
   /* Grid */
   display: grid;
   grid-template-rows: 100%;
+  justify-content: flex-end;
+  justify-content: end;
   justify-content: flex-end;
   justify-content: end;
 }
@@ -2738,30 +2895,75 @@ p {
   align-items: end;
 }
 .placement__xy--center {
+  /* Flex */
+  display: flex;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   place-content: center;
 }
 .placement__xy--center--top {
+  /* Flex */
+  display: flex;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   place-content: center start;
 }
 .placement__xy--center--bottom {
+  /* Flex */
+  display: flex;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   place-content: center end;
 }
 .placement__xy--left--top {
+  /* Flex */
+  display: flex;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   place-content: start;
 }
 .placement__xy--left--bottom {
+  /* Flex */
+  display: flex;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   place-content: start end;
 }
 .placement__xy--left--center {
+  /* Flex */
+  display: flex;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   place-content: start center;
 }
 .placement__xy--right--top {
+  /* Flex */
+  display: flex;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   place-content: end start;
 }
 .placement__xy--right--bottom {
+  /* Flex */
+  display: flex;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   place-content: end end;
 }
 .placement__xy--right--center {
+  /* Flex */
+  display: flex;
+  /* Grid */
+  display: grid;
+  grid-template-rows: 100%;
   place-content: end center;
 }
 
