@@ -101,3 +101,185 @@
 @mixin grid__template__columns__repeat--12-auto {
   grid-template-columns: repeat(12, auto);
 }
+
+@mixin grid__base {
+  @include grid;
+
+  &__1-col {
+    @include grid;
+    @include grid__template__columns__repeat--1-1fr;
+
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--1-auto;
+    }
+
+    > div {
+      @include flex__basis--1-col;
+    }
+  }
+
+  &__2-col {
+    @include grid;
+    @include grid__template__columns__repeat--2-1fr;
+    grid-gap: $gap-md;
+
+    > div {
+      @include flex__basis--2-col;
+    }
+
+    &__auto {
+      @include grid;
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+
+  &__3-col {
+    @include grid;
+    @include grid__template__columns__repeat--3-1fr;
+    grid-gap: $gap-md;
+    
+    > div {
+      @include flex__basis--3-col;
+    }
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--3-auto;
+    }
+  }      
+
+  &__4-col {
+    @include grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $gap-md;
+    
+    > div {
+      @include flex__basis--4-col;
+    }
+
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--4-auto;
+    }
+  }
+
+  &__5-col {
+    @include grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: $gap-md;
+    
+    > div {
+      @include flex__basis--5-col;
+    }
+
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--5-auto;
+    }
+  }
+
+  &__6-col {
+    @include grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: $gap-md;
+    
+    > div {
+      @include flex__basis--6-col;
+    }
+
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--6-auto;
+    }
+  }
+
+  &__7-col {
+    @include grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: $gap-md;
+    
+    > div {
+      @include flex__basis--7-col;
+    }
+
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--7-auto;
+    }
+  }
+
+  &__8-col {
+    @include grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: $gap-md;
+    
+    > div {
+      @include flex__basis--8-col;
+    }
+
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--8-auto;
+    }
+  }
+
+  &__9-col {
+    @include grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: $gap-md;
+    
+    > div {
+      @include flex__basis--9-col;
+    }
+
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--9-auto;
+    }
+  }
+
+  &__10-col {
+    @include grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: $gap-md;
+    
+    > div {
+      @include flex__basis--10-col;
+    }
+
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--10-auto;
+    }
+  }
+
+  &__11-col {
+    @include grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-gap: $gap-md;
+    
+    > div {
+      @include flex__basis--11-col;
+    }
+
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--11-auto;
+    }
+  }
+
+  &__12-col {
+    @include grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: $gap-md;
+    
+    > div {
+      @include flex__basis--12-col;
+    }
+
+    &__auto {
+      @include grid;
+      @include grid__template__columns__repeat--12-auto;
+    }
+  }
+}
