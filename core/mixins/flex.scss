@@ -1,3 +1,15 @@
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex__wrap--wrap {
+  flex-wrap: wrap;
+}
+
+@mixin flex__wrap--nowrap {
+  flex-wrap: nowrap;
+}
+
 @mixin flex__basis--1-col {
   flex-basis: 100%;
 }
@@ -7,41 +19,41 @@
 }
 
 @mixin flex__basis--3-col {
-  flex-basis:  calc(33.3333% - 1.5 * #{$gap-sm});  
+  flex-basis:  calc(33.3333% - 1.5 * #{$gap-sm});
 }
 
 @mixin flex__basis--4-col {
-  flex-basis: 25%;  
+  flex-basis:  calc(25% - 2 * #{$gap-sm});  
 }
 
 @mixin flex__basis--5-col {
-  flex-basis: 20%;  
+  flex-basis:  calc(25% - 2.5 * #{$gap-sm});
 }
 
 @mixin flex__basis--6-col {
-  flex-basis: 16.6667%;  
+  flex-basis:  calc(25% - 3 * #{$gap-sm});
 }
 
 @mixin flex__basis--7-col {
-  flex-basis: 14.2857%;  
+  flex-basis:  calc(14.2857% - 3.5 * #{$gap-sm});
 }
 
 @mixin flex__basis--8-col {
-  flex-basis: 12.5%;  
+  flex-basis:  calc(12.5% - 4 * #{$gap-sm});
 }
 
 @mixin flex__basis--9-col {
-  flex-basis: 11.11%;  
+  flex-basis:  calc(11.11% - 4.5 * #{$gap-sm});
 }
 
 @mixin flex__basis--10-col {
-  flex-basis: 10%;  
+  flex-basis:  calc(10% - 5 * #{$gap-sm});
 }
 
 @mixin flex__basis--11-col {
-  flex-basis: 9.0909%;  
+  flex-basis:  calc(9.0909% - 5.5 * #{$gap-sm});
 }
 
 @mixin flex__basis--12-col {
-  flex-basis: 8.3333%;  
+  flex-basis:  calc(8.3333% - 6 * #{$gap-sm});
 }

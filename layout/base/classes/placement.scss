@@ -3,10 +3,6 @@
 
 .placement {
 
-  &--center {
-    @include place__content--center;
-  }
-
   &__x {
 
     &--left {
@@ -40,6 +36,51 @@
     &--bottom {
       @include grid;
       @include align__items--end;
+    }
+  }
+
+  &__xy {
+
+    &--center {
+      @include place__content--center;
+  
+      &--top {
+        @include place__content--center--start;
+      }
+  
+      &--bottom {
+        @include place__content--center--end;
+      }
+    }
+  
+    &--left {
+  
+      &--top {
+        @include place__content--start;
+      }
+  
+      &--bottom {
+        @include place__content--start--end;
+      }
+  
+      &--center {
+        @include place__content--start--center;
+      }
+    }
+  
+    &--right {
+  
+      &--top {
+        @include place__content--end--start;
+      }
+  
+      &--bottom {
+        @include place__content--end;
+      }
+  
+      &--center {
+        @include place__content--end--center;
+      }
     }
   }
 }
