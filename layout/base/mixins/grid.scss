@@ -1,7 +1,7 @@
 @import '../../../core/mixins/flex.scss';
 @import '../../../core/mixins/grid.scss';
 
-@mixin grid__base {
+@mixin grid__layout {
   @include grid;
 
   &__1-col {
