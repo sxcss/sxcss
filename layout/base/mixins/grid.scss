@@ -8,7 +8,7 @@
     @include grid;
     @include grid__template__columns__repeat--1-1fr;
 
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--1-auto;
     }
@@ -27,9 +27,9 @@
       @include flex__basis--2-col;
     }
 
-    &__auto {
+    &--auto {
       @include grid;
-      grid-template-columns: repeat(2, auto);
+      @include grid__template__columns__repeat--2-auto;
     }
   }
 
@@ -41,7 +41,7 @@
     > div {
       @include flex__basis--3-col;
     }
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--3-auto;
     }
@@ -56,7 +56,7 @@
       @include flex__basis--4-col;
     }
 
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--4-auto;
     }
@@ -71,7 +71,7 @@
       @include flex__basis--5-col;
     }
 
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--5-auto;
     }
@@ -86,7 +86,7 @@
       @include flex__basis--6-col;
     }
 
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--6-auto;
     }
@@ -101,7 +101,7 @@
       @include flex__basis--7-col;
     }
 
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--7-auto;
     }
@@ -116,7 +116,7 @@
       @include flex__basis--8-col;
     }
 
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--8-auto;
     }
@@ -131,7 +131,7 @@
       @include flex__basis--9-col;
     }
 
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--9-auto;
     }
@@ -146,7 +146,7 @@
       @include flex__basis--10-col;
     }
 
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--10-auto;
     }
@@ -161,7 +161,7 @@
       @include flex__basis--11-col;
     }
 
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--11-auto;
     }
@@ -176,7 +176,7 @@
       @include flex__basis--12-col;
     }
 
-    &__auto {
+    &--auto {
       @include grid;
       @include grid__template__columns__repeat--12-auto;
     }
