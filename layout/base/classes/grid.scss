@@ -1,3 +1,4 @@
+@import '../../../core/mixins/flex.scss';
 @import '../../../core/mixins/grid.scss';
 
 .grid {
@@ -7,47 +8,45 @@
 
     &__1-col {
       @include grid;
-      grid-template-columns: repeat(1, 1fr);
+      @include grid__template__columns__repeat--1-1fr;
 
       &__auto {
         @include grid;
-        grid-template-columns: repeat(1, auto);
+        @include grid__template__columns__repeat--1-auto;
       }
  
       > div {
-        flex-basis: 100%;
+        @include flex__basis--1-col;
         @media all and (max-width: 980px) {
-          @include grid-column__min-heights__tablet;
+          // @include grid-column__min-heights__tablet;
         }
         @media all and (max-width: 767px) {
-          @include grid-column__min-heights__smartphone;
+          // @include grid-column__min-heights__smartphone;
         }
       }
     }
 
     &__2-col {
       @include grid;
-      grid-template-columns: repeat(2, 1fr);
+      @include grid__template__columns__repeat--2-1fr;
       grid-gap: $gap-md;
-      @media all and (max-width: 980px) {
-        grid-gap: $gap-sm;
-        // grid-template-columns: 1fr;
-        justify-content: center;
-      }
-      @media all and (max-width: 767px) {
-        grid-gap: $gap-xs;
-      }
+      // @media all and (max-width: 980px) {
+      //   grid-gap: $gap-sm;
+      //   // grid-template-columns: 1fr;
+      //   justify-content: center;
+      // }
+      // @media all and (max-width: 767px) {
+      //   grid-gap: $gap-xs;
+      // }
 
       > div {
-        flex-basis: calc(50% - #{$gap-sm});
-        @media all and (max-width: 980px) {
-          flex-basis: calc(50% - #{$gap-sm});
-          @include grid-column__min-heights__tablet;
-        }
-        @media all and (max-width: 767px) {
-          flex-basis: 100%;
-          @include grid-column__min-heights__smartphone;
-        }
+        @include flex__basis--2-col;
+        // @media all and (max-width: 980px) {
+        //   @include flex__basis--2-col;
+        // }
+        // @media all and (max-width: 767px) {
+        //   @include flex__basis--1-col;
+        // }
       }
 
       &__auto {
@@ -58,151 +57,154 @@
 
     &__3-col {
       @include grid;
-      grid-template-columns: repeat(3, 1fr);
+      @include grid__template__columns__repeat--3-1fr;
       grid-gap: $gap-md;
-      @media all and (max-width: 980px) {
-        grid-gap: $gap-sm;
-        grid-template-columns: repeat(2, 1fr);
-      }
-      @media all and (max-width: 767px) {
-        grid-gap: $gap-xs;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-      }
       
       > div {
-        flex-basis:  calc(33.33% - 1.5 * #{$gap-sm});
-        @media all and (max-width: 980px) {
-          flex-basis: calc(50% - #{$gap-sm});
-          @include grid-column__min-heights__tablet;
-          &:last-child {
-            flex-basis: 100%;
-            grid-column: 1/3;
-          }
-        }
-        @media all and (max-width: 767px) {
-          flex-basis: 100%;
-          grid-column: 1/3;
-          @include grid-column__min-heights__smartphone;
-        }
+        @include flex__basis--3-col;
       }
-
       &__auto {
         @include grid;
-        grid-template-columns: repeat(3, auto);
+        @include grid__template__columns__repeat--3-auto;
       }
-    }
+    }      
 
     &__4-col {
       @include grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-columns: repeat(4, 1fr);
       grid-gap: $gap-md;
-      @media all and (max-width: 980px) {
-        grid-gap: $gap-sm;
-        grid-template-columns: repeat(2, 1fr);
-      }
-      @media all and (max-width: 767px) {
-        grid-gap: $gap-xs;
-        @include justify__content--center;
-      }
       
       > div {
-        flex-basis:  calc(25% - 2 * #{$gap-sm});
-        @media all and (max-width: 980px) {
-          flex-basis: calc(50% - #{$gap-sm});
-          @include grid-column__min-heights__tablet;
-        }
-        @media all and (max-width: 767px) {
-          flex-basis: 100%;
-          @include grid-column__min-heights__smartphone;
-        }
+        @include flex__basis--4-col;
       }
 
       &__auto {
         @include grid;
-        grid-template-columns: repeat(4, auto);
+        @include grid__template__columns__repeat--4-auto;
       }
     }
 
     &__5-col {
       @include grid;
       grid-template-columns: repeat(5, 1fr);
+      grid-gap: $gap-md;
+      
+      > div {
+        @include flex__basis--5-col;
+      }
 
       &__auto {
         @include grid;
-        grid-template-columns: repeat(5, auto);
+        @include grid__template__columns__repeat--5-auto;
       }
     }
 
     &__6-col {
       @include grid;
       grid-template-columns: repeat(6, 1fr);
+      grid-gap: $gap-md;
+      
+      > div {
+        @include flex__basis--6-col;
+      }
 
       &__auto {
         @include grid;
-        grid-template-columns: repeat(6, auto);
+        @include grid__template__columns__repeat--6-auto;
       }
     }
 
     &__7-col {
       @include grid;
       grid-template-columns: repeat(7, 1fr);
+      grid-gap: $gap-md;
+      
+      > div {
+        @include flex__basis--7-col;
+      }
 
       &__auto {
         @include grid;
-        grid-template-columns: repeat(7, auto);
+        @include grid__template__columns__repeat--7-auto;
       }
     }
 
     &__8-col {
       @include grid;
       grid-template-columns: repeat(8, 1fr);
+      grid-gap: $gap-md;
+      
+      > div {
+        @include flex__basis--8-col;
+      }
 
       &__auto {
         @include grid;
-        grid-template-columns: repeat(8, auto);
+        @include grid__template__columns__repeat--8-auto;
       }
     }
 
     &__9-col {
       @include grid;
       grid-template-columns: repeat(9, 1fr);
+      grid-gap: $gap-md;
+      
+      > div {
+        @include flex__basis--9-col;
+      }
 
       &__auto {
         @include grid;
-        grid-template-columns: repeat(9, auto);
+        @include grid__template__columns__repeat--9-auto;
       }
     }
 
     &__10-col {
-        grid-template-columns: repeat(10, 1fr);
-      &__auto 
-      {
-        grid-template-columns: repeat(auto 1fr);
+      @include grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-gap: $gap-md;
+      
+      > div {
+        @include flex__basis--10-col;
+      }
+
+      &__auto {
+        @include grid;
+        @include grid__template__columns__repeat--10-auto;
       }
     }
 
     &__11-col {
       @include grid;
       grid-template-columns: repeat(11, 1fr);
-      &__auto 
-      {
-        grid-template-columns: repeat(auto 1fr);
+      grid-gap: $gap-md;
+      
+      > div {
+        @include flex__basis--11-col;
+      }
+
+      &__auto {
+        @include grid;
+        @include grid__template__columns__repeat--11-auto;
       }
     }
 
     &__12-col {
       @include grid;
       grid-template-columns: repeat(12, 1fr);
-      &__auto 
-      {
-        grid-template-columns: repeat(auto 1fr);
+      grid-gap: $gap-md;
+      
+      > div {
+        @include flex__basis--12-col;
+      }
+
+      &__auto {
+        @include grid;
+        @include grid__template__columns__repeat--12-auto;
       }
     }
   }
 }
-
 .column {
   width: 100%;
 }

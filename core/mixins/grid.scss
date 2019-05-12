@@ -6,39 +6,98 @@
    grid-template-rows: 100%;
 }
 
-@mixin grid-column__min-heights__tablet {
-  &.min-height__tablet--sm {
-    min-height: 30vh;
-  }
-  &.min-height__tablet--md {
-    min-height: 60vh;
-  }
-  &.min-height__tablet--lg {
-    min-height: 100vh;
-  }
-  &.min-height__tablet--50vh {
-    min-height: 50vh
-  }
-  &.min-height__tablet--100vh {
-    min-height: 100vh;
-  }
+@mixin grid__template__columns__repeat--1-1fr {
+  grid-template-columns: repeat(1, 1fr);
 }
 
-@mixin grid-column__min-heights__smartphone {
-  &.min-height__smartphone--sm {
-    min-height: 45vw;
-  }
-  &.min-height__smartphone--md {
-    min-height: 90vw;
-  }
-  &.min-height__smartphone--lg {
-    min-height: 120vw;
-  }
-  &.min-height__smartphone--xl {
-    min-height: 150vw;
-  }
-  &.min-height__smartphone--100vh {
-    min-height: 100vh;
-  }
+@mixin grid__template__columns__repeat--2-1fr {
+  grid-template-columns: repeat(2, 1fr);
 }
- 
+
+@mixin grid__template__columns__repeat--3-1fr {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin grid__template__columns__repeat--4-1fr {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@mixin grid__template__columns__repeat--5-1fr {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@mixin grid__template__columns__repeat--6-1fr {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+@mixin grid__template__columns__repeat--7-1fr {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+@mixin grid__template__columns__repeat--8-1fr {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+@mixin grid__template__columns__repeat--9-1fr {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+@mixin grid__template__columns__repeat--10-1fr {
+  grid-template-columns: repeat(10, 1fr);
+}
+
+@mixin grid__template__columns__repeat--11-1fr {
+  grid-template-columns: repeat(11, 1fr);
+}
+
+@mixin grid__template__columns__repeat--12-1fr {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin grid__template__columns__repeat--1-auto {
+  grid-template-columns: repeat(1, auto);
+}
+
+@mixin grid__template__columns__repeat--2-auto {
+  grid-template-columns: repeat(2, auto);
+}
+
+@mixin grid__template__columns__repeat--3-auto {
+  grid-template-columns: repeat(3, auto);
+}
+
+@mixin grid__template__columns__repeat--4-auto {
+  grid-template-columns: repeat(4, auto);
+}
+
+@mixin grid__template__columns__repeat--5-auto {
+  grid-template-columns: repeat(5, auto);
+}
+
+@mixin grid__template__columns__repeat--6-auto {
+  grid-template-columns: repeat(6, auto);
+}
+
+@mixin grid__template__columns__repeat--7-auto {
+  grid-template-columns: repeat(7, auto);
+}
+
+@mixin grid__template__columns__repeat--8-auto {
+  grid-template-columns: repeat(8, auto);
+}
+
+@mixin grid__template__columns__repeat--9-auto {
+  grid-template-columns: repeat(9, auto);
+}
+
+@mixin grid__template__columns__repeat--10-auto {
+  grid-template-columns: repeat(10, auto);
+}
+
+@mixin grid__template__columns__repeat--11-auto {
+  grid-template-columns: repeat(11, auto);
+}
+
+@mixin grid__template__columns__repeat--12-auto {
+  grid-template-columns: repeat(12, auto);
+}

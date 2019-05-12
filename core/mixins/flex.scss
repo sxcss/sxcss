@@ -1,0 +1,47 @@
+@mixin flex__basis--1-col {
+  flex-basis: 100%;
+}
+
+@mixin flex__basis--2-col {
+  flex-basis: calc(50% - #{$gap-sm}); 
+}
+
+@mixin flex__basis--3-col {
+  flex-basis:  calc(33.3333% - 1.5 * #{$gap-sm});  
+}
+
+@mixin flex__basis--4-col {
+  flex-basis: 25%;  
+}
+
+@mixin flex__basis--5-col {
+  flex-basis: 20%;  
+}
+
+@mixin flex__basis--6-col {
+  flex-basis: 16.6667%;  
+}
+
+@mixin flex__basis--7-col {
+  flex-basis: 14.2857%;  
+}
+
+@mixin flex__basis--8-col {
+  flex-basis: 12.5%;  
+}
+
+@mixin flex__basis--9-col {
+  flex-basis: 11.11%;  
+}
+
+@mixin flex__basis--10-col {
+  flex-basis: 10%;  
+}
+
+@mixin flex__basis--11-col {
+  flex-basis: 9.0909%;  
+}
+
+@mixin flex__basis--12-col {
+  flex-basis: 8.3333%;  
+}
