@@ -15,6 +15,14 @@
     &--center {
       @include justify__content--center;
     }
+
+    &--space-between {
+      @include justify__content--space-between;
+    }
+
+    &--space-around {
+      @include justify__content--space-around;
+    }
   }
 
   &__items {

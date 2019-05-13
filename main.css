@@ -387,6 +387,12 @@ input[type=number]::-webkit-outer-spin-button {
 .justify__content--center {
   justify-content: center;
 }
+.justify__content--space-between {
+  justify-content: space-between;
+}
+.justify__content--space-around {
+  justify-content: space-around;
+}
 .justify__items--start {
   justify-items: flex-start;
   justify-items: start;
