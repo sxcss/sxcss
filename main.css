@@ -21,6 +21,7 @@ figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, t
   border: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: inherit;
   font-weight: normal;
   vertical-align: baseline;
 }
@@ -416,8 +417,37 @@ input[type=number]::-webkit-outer-spin-button {
   justify-self: center;
 }
 
+.list-style--none {
+  list-style: none;
+}
+.list-style__position--inside {
+  list-style-position: inside;
+}
+.list-style__position--outside {
+  list-style-position: outside;
+}
+.list-style__type--circle {
+  list-style-type: circle;
+}
+.list-style__type--decimal {
+  list-style-type: decimal;
+}
+.list-style__type--latin {
+  list-style-type: upper-latin;
+  list-style-type: lower-latin;
+}
+.list-style__type--latin--roman {
+  list-style-type: upper-roman;
+}
+.list-style__type--roman {
+  list-style-type: lower-roman;
+}
+
 .margin--0 {
   margin: 0;
+}
+.margin--auto {
+  margin: auto;
 }
 .margin--xs {
   margin: 1rem;
@@ -473,6 +503,10 @@ input[type=number]::-webkit-outer-spin-button {
 .margin__x--0 {
   margin-left: 0;
   margin-right: 0;
+}
+.margin__x--auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 .margin__x--xs {
   margin-left: 1rem;
@@ -625,6 +659,9 @@ input[type=number]::-webkit-outer-spin-button {
 .margin__left--0 {
   margin-left: 0;
 }
+.margin__left--auto {
+  margin-left: auto;
+}
 .margin__left--xs {
   margin-left: 1rem;
 }
@@ -682,7 +719,10 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 .margin__right--0 {
-  margin-right: 0;
+  margin-left: 0;
+}
+.margin__right--auto {
+  margin-left: auto;
 }
 .margin__right--xs {
   margin-right: 1rem;

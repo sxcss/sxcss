@@ -8,6 +8,10 @@
       @include margin--0;
     }
 
+    &--auto {
+      @include margin--auto;
+    }
+
     &--xs {
       @include margin--xs;
     }
@@ -59,6 +63,10 @@
 
     &--0 {
       @include margin__x--0;
+    }
+
+    &--auto {
+      @include margin__x--auto;
     }
 
     &--xs {
@@ -174,7 +182,11 @@
   &__left {
 
     &--0 {
-      margin-left: 0;
+      @include margin__left--0;
+    }
+
+    &--auto {
+      @include margin__left--auto;
     }
 
     &--xs {
@@ -230,7 +242,11 @@
   &__right {
 
     &--0 {
-      margin-right: 0;
+      @include margin__left--0;
+    }
+
+    &--auto {
+      @include margin__left--auto;
     }
 
     &--xs {
