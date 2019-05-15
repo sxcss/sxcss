@@ -3,7 +3,8 @@
    display: flex;
    /* Grid */
    display: grid;
-   grid-template-rows: 100%;
+  //  grid-template-rows: 100%; Testing for the chrome
+  grid-template-rows: auto;
 }
 
 @mixin grid__gap {
