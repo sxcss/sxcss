@@ -6,4 +6,4 @@
 
 <br>
 
-Minimalist, universal and scalable SASS/CSS framework built as a starting point for UI libraries.
+Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠
