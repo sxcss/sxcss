@@ -20,7 +20,7 @@
     &--right {
       @include grid;
       @include justify__content--end;
-      @include justify__content--end;
+      @include justify__items--end;
     }
   }
 
