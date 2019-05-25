@@ -1,28 +1,28 @@
-@mixin align__content--start{
+@mixin align__content--start {
+  // align-content: start;
   align-content: flex-start;
-  align-content: start;
 }
 
-@mixin align__content--end{
+@mixin align__content--end {
+  // align-content: end;
   align-content: flex-end;
-  align-content: end;
 }
 
-@mixin align__content--center{
+@mixin align__content--center {
   align-content: center;
 }
 
-@mixin align__items--start{
+@mixin align__items--start {
+  // align-items: start;
   align-items: flex-start;
-  align-items: start;
 }
 
-@mixin align__items--end{
+@mixin align__items--end {
+  // align-items: end;
   align-items: flex-end;
-  align-items: end;
 }
 
-@mixin align__items--center{
+@mixin align__items--center {
   align-items: center;
 }
 
@@ -31,13 +31,13 @@
 }
 
 @mixin align__self--start {
+  // align-self: start;
   align-self: flex-start;
-  align-self: start;
 }
 
 @mixin align__self--end {
+  // align-self: end;
   align-self: flex-end;
-  align-self: end;
 }
 
 @mixin align__self--center {
