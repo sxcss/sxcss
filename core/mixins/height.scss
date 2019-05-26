@@ -1,5 +1,9 @@
 @import '../variables/proportions.scss';
 
+@mixin height--xxs {
+  height: $height-xxs;
+}
+
 @mixin height--xs {
   height: $height-xs;
 }
@@ -40,6 +44,10 @@
   height: $height-100;
 }
 
+@mixin height--50vh {
+  height: $height-50vh;
+}
+
 @mixin height--100vh {
   height: $height-100vh;
 }
@@ -50,6 +58,66 @@
 
 @mixin height--100vw {
   height: $height-100vw;
+}
+
+@mixin min-height--xxs {
+  min-height: $height-xxs;
+}
+
+@mixin min-height--xs {
+  min-height: $height-xs;
+}
+
+@mixin min-height--sm {
+  min-height: $height-sm
+}
+
+@mixin min-height--ms {
+  min-height: $height-ms;
+}
+
+@mixin min-height--md {
+  min-height: $height-md;
+}
+
+@mixin min-height--ml {
+  min-height: $height-ml;
+}
+
+@mixin min-height--lg {
+  min-height: $height-lg;
+}
+
+@mixin min-height--xl {
+  min-height: $height-xl;
+}
+
+@mixin min-height--boxed {
+  min-height: $height-boxed;
+}
+
+@mixin min-height--50 {
+  min-height: $height-50;
+}
+
+@mixin min-height--100 {
+  min-height: $height-100;
+}
+
+@mixin min-height--50vh {
+  min-height: $height-50vh;
+}
+
+@mixin min-height--100vh {
+  min-height: $height-100vh;
+}
+
+@mixin min-height--50vw {
+  min-height: $height-50vw;
+}
+
+@mixin min-height--100vw {
+  min-height: $height-100vw;
 }
 
 @mixin max-height--xs {
