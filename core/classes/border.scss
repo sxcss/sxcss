@@ -1,0 +1,85 @@
+@import '../mixins/border.scss';
+@import '../variables/border.scss';
+
+.border {
+
+  &-radius--xxs{
+    @include border-radius($border-radius-xxs);
+  }
+  
+  &-radius--xs{
+    @include border-radius($border-radius-xs);
+  }
+  
+  &-radius--sm {
+    @include border-radius($border-radius-sm);
+  }
+  
+  &-radius--ms {
+    @include border-radius($border-radius-ms);
+  }
+  
+  &-radius--md {
+    @include border-radius($border-radius-md);
+  }
+  
+  &-radius--ml {
+    @include border-radius($border-radius-ml);
+  }
+  
+  &-radius--lg {
+    @include border-radius($border-radius-lg);
+  }
+  
+  &-radius--xl {
+    @include border-radius($border-radius-xl);
+  }
+  
+  &-radius--xxl {
+    @include border-radius($border-radius-xxl);
+  }
+  
+  &-radius--50 {
+    @include border-radius(50%);
+  }
+  
+  &-radius--100 {
+    @include border-radius(100%);
+  }
+
+  &-width--xxs{
+    @include border-width($border-width-xxs);
+  }
+  
+  &-width--xs{
+    @include border-width($border-width-xs);
+  }
+  
+  &-width--sm {
+    @include border-width($border-width-sm);
+  }
+  
+  &-width--ms {
+    @include border-width($border-width-ms);
+  }
+  
+  &-width--md {
+    @include border-width($border-width-md);
+  }
+  
+  &-width--ml {
+    @include border-width($border-width-ml);
+  }
+  
+  &-width--lg {
+    @include border-width($border-width-lg);
+  }
+  
+  &-width--xl {
+    @include border-width($border-width-xl);
+  }
+  
+  &-width--xxl {
+    @include border-width($border-width-xxl);
+  }
+}

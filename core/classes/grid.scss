@@ -1,0 +1,104 @@
+@import '../mixins/grid.scss';
+
+.grid {
+  @include grid;
+
+  &-template {
+
+    &-columns {
+
+      &--repeat--2-1fr {
+        @include grid-template-columns(repeat(2, 1fr));
+      }
+      
+      &--repeat--3-1fr {
+        @include grid-template-columns(repeat(3, 1fr));
+      }
+      
+      &--repeat--4-1fr {
+        @include grid-template-columns(repeat(4, 1fr));
+      }
+      
+      &--repeat--5-1fr {
+        @include grid-template-columns(repeat(5, 1fr));
+      }
+      
+      &--repeat--6-1fr {
+        @include grid-template-columns(repeat(6, 1fr));
+      }
+      
+      &--repeat--7-1fr {
+        @include grid-template-columns(repeat(7, 1fr));
+      }
+      
+      &--repeat--8-1fr {
+        @include grid-template-columns(repeat(8, 1fr));
+      }
+      
+      &--repeat--9-1fr {
+        @include grid-template-columns(repeat(9, 1fr));
+      }
+      
+      &--repeat--10-1fr {
+        @include grid-template-columns(repeat(10, 1fr));
+      }
+      
+      &--repeat--11-1fr {
+        @include grid-template-columns(repeat(11, 1fr));
+      }
+      
+      &--repeat--12-1fr {
+        @include grid-template-columns(repeat(12, 1fr));
+      }
+      
+      &--repeat--1-auto {
+        @include grid-template-columns(repeat(1, auto));
+      }
+      
+      &--repeat--2-auto {
+        @include grid-template-columns(repeat(2, auto));
+      }
+      
+      &--repeat--3-auto {
+        @include grid-template-columns(repeat(3, auto));
+      }
+      
+      &--repeat--4-auto {
+        @include grid-template-columns(repeat(4, auto));
+      }
+      
+      &--repeat--5-auto {
+        @include grid-template-columns(repeat(5, auto));
+      }
+      
+      &--repeat--6-auto {
+        @include grid-template-columns(repeat(6, auto));
+      }
+      
+      &--repeat--7-auto {
+        @include grid-template-columns(repeat(7, auto));
+      }
+      
+      &--repeat--8-auto {
+        @include grid-template-columns(repeat(8, auto));
+      }
+      
+      &--repeat--9-auto {
+        @include grid-template-columns(repeat(9, auto));
+      }
+      
+      &--repeat--10-auto {
+        @include grid-template-columns(repeat(10, auto));
+      }
+      
+      &--repeat--11-auto {
+        @include grid-template-columns(repeat(11, auto));
+      }
+      
+      &--repeat--12-auto {
+        @include grid-template-columns(repeat(12, auto));
+      }
+      
+    }
+  }
+}

@@ -2,48 +2,48 @@
 
 .align {
 
-  &__content {
+  &-content {
 
     &--start {
-      @include align__content--start;
+      @include align-content(flex-start);
     }
 
     &--end {
-      @include align__content--end;
+      @include align-content(flex-end);
     }
 
     &--center {
-      @include align__content--center;
+      @include align-content(center);
     }
   }
 
-  &__items {
+  &-items {
 
     &--start {
-      @include align__items--start;
+      @include align-items(flex-start);
     }
 
     &--end {
-      @include align__items--end;
+      @include align-items(flex-end);
     }
 
     &--center {
-      @include align__items--center;
+      @include align-items(center);
     }
   }
 
-  &__self {
+  &-self {
 
     &--start {
-      @include align__self--start;
+      @include align-self(flex-start);
     }
 
     &--end {
-      @include align__self--end;
+      @include align-self(flex-end);
     }
 
     &--center {
-      @include align__self--center;
+      @include align-self(center);
     }
   }
 }

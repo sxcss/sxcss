@@ -2,48 +2,48 @@
 
 .transition {
 
-  &__ease-out {
+  &--ease-out {
 
     &--slow {
-      @include transition__ease-out--slow;
+      @include transition($transition-ease-out-slow);
     }
 
     &--medium {
-      @include transition__ease-out--medium;
+      @include transition($transition-ease-out-medium);
     }
 
     &--fast {
-      @include transition__ease-out--fast;
+      @include transition($transition-ease-out-fast);
     }
   }
 
-  &__ease-in {
+  &--ease-in {
 
     &--slow {
-      @include transition__ease-in--slow;
+      @include transition($transition-ease-in-slow);
     }
 
     &--medium {
-      @include transition__ease-in--medium;
+      @include transition($transition-ease-in-medium);
     }
 
     &--fast {
-      @include transition__ease-in--fast;
+      @include transition($transition-ease-in-fast);
     }
   }
 
-  &__ease-in-out {
+  &--ease-in-out {
 
     &--slow {
-      @include transition__ease-in-out--slow;
+      @include transition($transition-ease-in-out-slow);
     }
 
     &--medium {
-      @include transition__ease-in-out--medium;
+      @include transition($transition-ease-in-out-medium);
     }
 
     &--fast {
-      @include transition__ease-in-out--fast;
+      @include transition($transition-ease-in-out-fast);
     }
   }
 }
