@@ -1,3 +1,7 @@
+@mixin width--xxs {
+  width: $width-xxs;
+}
+
 @mixin width--xs {
   width: $width-xs;
 }
@@ -26,6 +30,10 @@
   width: $width-xl;
 }
 
+@mixin width--xxl {
+  width: $width-xl;
+}
+
 @mixin width--boxed {
   width: $width-boxed;
 }
@@ -48,6 +56,10 @@
 
 @mixin width--100vw {
   width: $width-100vw;
+}
+
+@mixin max-width--xxs {
+  max-width: $width-xxs;
 }
 
 @mixin max-width--xs {
@@ -78,6 +90,10 @@
   max-width: $width-xl;
 }
 
+@mixin max-width--xxl {
+  max-width: $width-xxl;
+}
+
 @mixin max-width--boxed {
   max-width: $width-boxed;
 }
@@ -96,4 +112,60 @@
 
 @mixin max-width--100vw {
   max-width: $width-100vw;
+}
+
+@mixin min-width--xxs {
+  min-width: $width-xxs;
+}
+
+@mixin min-width--xs {
+  min-width: $width-xs;
+}
+
+@mixin min-width--sm {
+  min-width: $width-sm
+}
+
+@mixin min-width--ms {
+  min-width: $width-ms;
+}
+
+@mixin min-width--md {
+  min-width: $width-md;
+}
+
+@mixin min-width--ml {
+  min-width: $width-ml;
+}
+
+@mixin min-width--lg {
+  min-width: $width-lg;
+}
+
+@mixin min-width--xl {
+  min-width: $width-xl;
+}
+
+@mixin min-width--xxl {
+  min-width: $width-xxl;
+}
+
+@mixin min-width--boxed {
+  min-width: $width-boxed;
+}
+
+@mixin min-width--50 {
+  min-width: $width-50;
+}
+
+@mixin min-width--100 {
+  min-width: $width-100;
+}
+
+@mixin min-width--50vw {
+  min-width: $width-50vw;
+}
+
+@mixin min-width--100vw {
+  min-width: $width-100vw;
 }

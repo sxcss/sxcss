@@ -1,34 +1,134 @@
+@import '../mixins/width.scss';
+
 .width {
 
-  &--auto {
-    width: auto;
-  }
-
   &--50 {
-    width: $width-50;
-    @media all and (max-width: 980px) {
-      min-width: $width-50;
-    }
+    @include width--50;
   }
 
   &--100 {
-    width: $width-100;
-    @media all and (max-width: 980px) {
-      min-width: $width-100;
-    }
+    @include width--100;
   }
 
   &--50vw {
-    width: 50vw;
-    @media all and (max-width: 980px) {
-      min-width: $width-50vw;
-    }
+    @include width--50vw;
   }
 
   &--100vw {
-    width: 100vh;
-    @media all and (max-width: 980px) {
-      min-width: $width-100vw;
-    }
+    @include width--100vw;
+  }
+
+  &--xxs {
+    @include width--xxs;
+  }
+
+  &--xs {
+    @include width--xs;
+  }
+
+  &--sm {
+    @include width--sm;
+  }
+
+  &--md {
+    @include width--md;
+  }
+
+  &--lg {
+    @include width--lg;
+  }
+
+  &--xl {
+    @include width--xl;
+  }
+
+  &--xxl {
+    @include width--xl;
+  }
+}
+
+.min-width {
+
+  &--50 {
+    @include min-width--50;
+  }
+
+  &--100 {
+    @include min-width--100;
+  }
+
+  &--50vw {
+    @include min-width--50vw;
+  }
+
+  &--100vw {
+    @include min-width--100vw;
+  }
+
+  &--xxs {
+    @include min-width--xxs;
+  }
+
+  &--xs {
+    @include min-width--xs;
+  }
+
+  &--sm {
+    @include min-width--sm;
+  }
+
+  &--md {
+    @include min-width--md;
+  }
+
+  &--lg {
+    @include min-width--lg;
+  }
+
+  &--xl {
+    @include min-width--xl;
+  }
+}
+
+.max-width {
+
+  &--50 {
+    @include max-width--50;
+  }
+
+  &--100 {
+    @include max-width--100;
+  }
+
+  &--50vw {
+    @include max-width--50vw;
+  }
+
+  &--100vw {
+    @include max-width--100vw;
+  }
+
+  &--xxs {
+    @include max-width--xxs;
+  }
+
+  &--xs {
+    @include max-width--xs;
+  }
+
+  &--sm {
+    @include max-width--sm;
+  }
+
+  &--md {
+    @include max-width--md;
+  }
+
+  &--lg {
+    @include max-width--lg;
+  }
+
+  &--xl {
+    @include max-width--xl;
   }
 }

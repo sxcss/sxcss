@@ -12,9 +12,6 @@
 
   &--50vh {
     @include height--50vh;
-    @media all and (max-width: 980px) {
-      height: $height-50vh;
-    }
   }
 
   &--100vh {
