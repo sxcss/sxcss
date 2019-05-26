@@ -3,132 +3,452 @@
 .width {
 
   &--50 {
-    @include width--50;
+    @include width(50%);
   }
 
   &--100 {
-    @include width--100;
+    @include width(100%);
   }
 
   &--50vw {
-    @include width--50vw;
+    @include width(50vw);
   }
 
   &--100vw {
-    @include width--100vw;
+    @include width(100vw);
+  }
+
+  &--boxed {
+    @include min-width($width-boxed);
   }
 
   &--xxs {
-    @include width--xxs;
+    @include width($width-xxs);
   }
 
   &--xs {
-    @include width--xs;
+    @include width($width-xs);
   }
 
   &--sm {
-    @include width--sm;
+    @include width($width-sm);
   }
 
   &--md {
-    @include width--md;
+    @include width($width-md);
+  }
+
+  &--ml {
+    @include width($width-ml);
   }
 
   &--lg {
-    @include width--lg;
+    @include width($width-lg);
   }
 
   &--xl {
-    @include width--xl;
+    @include width($width-xl);
   }
 
   &--xxl {
-    @include width--xl;
+    @include width($width-xxl);
+  }
+
+  &--2xxs {
+    @include width(calc( 2 * #{$width-xxs} ));
+  }
+
+  &--2xs {
+    @include width(calc( 2 * #{$width-xs} ));
+  }
+
+  &--2sm {
+    @include width(calc( 2 * #{$width-sm} ));
+  }
+
+  &--2md {
+    @include width(calc( 2 * #{$width-md} ));
+  }
+
+  &--2ml {
+    @include width(calc( 2 * #{$width-ml} ));
+  }
+
+  &--2lg {
+    @include width(calc( 2 * #{$width-lg} ));
+  }
+
+  &--2xl {
+    @include width(calc( 2 * #{$width-xl} ));
+  }
+
+  &--2xxl {
+    @include width(calc( 2 * #{$width-xxl} ));
+  }
+
+  &--3xxs {
+    @include width(calc( 3 * #{$width-xxs} ));
+  }
+
+  &--3xs {
+    @include width(calc( 3 * #{$width-xs} ));
+  }
+
+  &--3sm {
+    @include width(calc( 3 * #{$width-sm} ));
+  }
+
+  &--3md {
+    @include width(calc( 3 * #{$width-md} ));
+  }
+
+  &--3ml {
+    @include width(calc( 3 * #{$width-ml} ));
+  }
+
+  &--3lg {
+    @include width(calc( 3 * #{$width-lg} ));
+  }
+
+  &--3xl {
+    @include width(calc( 3 * #{$width-xl} ));
+  }
+
+  &--3xxl {
+    @include width(calc( 3 * #{$width-xxl} ));
+  }
+
+  &--4xxs {
+    @include width(calc( 4 * #{$width-xxs} ));
+  }
+
+  &--4xs {
+    @include width(calc( 4 * #{$width-xs} ));
+  }
+
+  &--4sm {
+    @include width(calc( 4 * #{$width-sm} ));
+  }
+
+  &--4md {
+    @include width(calc( 4 * #{$width-md} ));
+  }
+
+  &--4ml {
+    @include width(calc( 4 * #{$width-ml} ));
+  }
+
+  &--4lg {
+    @include width(calc( 4 * #{$width-lg} ));
+  }
+
+  &--4xl {
+    @include width(calc( 4 * #{$width-xl} ));
+  }
+
+  &--4xxl {
+    @include width(calc( 4 * #{$width-xxl} ));
   }
 }
 
 .min-width {
 
   &--50 {
-    @include min-width--50;
+    @include min-width(50%);
   }
 
   &--100 {
-    @include min-width--100;
+    @include min-width(100%);
   }
 
   &--50vw {
-    @include min-width--50vw;
+    @include min-width(50vw);
   }
 
   &--100vw {
-    @include min-width--100vw;
+    @include min-width(100vw);
+  }
+
+  &--boxed {
+    @include min-width($width-boxed);
   }
 
   &--xxs {
-    @include min-width--xxs;
+    @include min-width($width-xxs);
   }
 
   &--xs {
-    @include min-width--xs;
+    @include min-width($width-xs);
   }
 
   &--sm {
-    @include min-width--sm;
+    @include min-width($width-sm);
   }
 
   &--md {
-    @include min-width--md;
+    @include min-width($width-md);
+  }
+
+  &--ml {
+    @include min-width($width-ml);
   }
 
   &--lg {
-    @include min-width--lg;
+    @include min-width($width-lg);
   }
 
   &--xl {
-    @include min-width--xl;
+    @include min-width($width-xl);
+  }
+
+  &--xxl {
+    @include min-width($width-xxl);
+  }
+
+  &--2xxs {
+    @include min-width(calc( 2 * #{$width-xxs} ));
+  }
+
+  &--2xs {
+    @include min-width(calc( 2 * #{$width-xs} ));
+  }
+
+  &--2sm {
+    @include min-width(calc( 2 * #{$width-sm} ));
+  }
+
+  &--2md {
+    @include min-width(calc( 2 * #{$width-md} ));
+  }
+
+  &--2ml {
+    @include min-width(calc( 2 * #{$width-ml} ));
+  }
+
+  &--2lg {
+    @include min-width(calc( 2 * #{$width-lg} ));
+  }
+
+  &--2xl {
+    @include min-width(calc( 2 * #{$width-xl} ));
+  }
+
+  &--2xxl {
+    @include min-width(calc( 2 * #{$width-xxl} ));
+  }
+
+  &--3xxs {
+    @include min-width(calc( 3 * #{$width-xxs} ));
+  }
+
+  &--3xs {
+    @include min-width(calc( 3 * #{$width-xs} ));
+  }
+
+  &--3sm {
+    @include min-width(calc( 3 * #{$width-sm} ));
+  }
+
+  &--3md {
+    @include min-width(calc( 3 * #{$width-md} ));
+  }
+
+  &--3ml {
+    @include min-width(calc( 3 * #{$width-ml} ));
+  }
+
+  &--3lg {
+    @include min-width(calc( 3 * #{$width-lg} ));
+  }
+
+  &--3xl {
+    @include min-width(calc( 3 * #{$width-xl} ));
+  }
+
+  &--3xxl {
+    @include min-width(calc( 3 * #{$width-xxl} ));
+  }
+
+  &--4xxs {
+    @include min-width(calc( 4 * #{$width-xxs} ));
+  }
+
+  &--4xs {
+    @include min-width(calc( 4 * #{$width-xs} ));
+  }
+
+  &--4sm {
+    @include min-width(calc( 4 * #{$width-sm} ));
+  }
+
+  &--4md {
+    @include min-width(calc( 4 * #{$width-md} ));
+  }
+
+  &--4ml {
+    @include min-width(calc( 4 * #{$width-ml} ));
+  }
+
+  &--4lg {
+    @include min-width(calc( 4 * #{$width-lg} ));
+  }
+
+  &--4xl {
+    @include min-width(calc( 4 * #{$width-xl} ));
+  }
+
+  &--4xxl {
+    @include min-width(calc( 4 * #{$width-xxl} ));
   }
 }
 
 .max-width {
-
+  
   &--50 {
-    @include max-width--50;
+    @include max-width(50%);
   }
 
   &--100 {
-    @include max-width--100;
+    @include max-width(100%);
   }
 
   &--50vw {
-    @include max-width--50vw;
+    @include min-width(50vw);
   }
 
   &--100vw {
-    @include max-width--100vw;
+    @include min-width(100vw);
+  }
+
+  &--boxed {
+    @include min-width($width-boxed);
   }
 
   &--xxs {
-    @include max-width--xxs;
+    @include max-width($width-xxs);
   }
 
   &--xs {
-    @include max-width--xs;
+    @include max-width($width-xs);
   }
 
   &--sm {
-    @include max-width--sm;
+    @include max-width($width-sm);
   }
 
   &--md {
-    @include max-width--md;
+    @include max-width($width-md);
+  }
+
+  &--ml {
+    @include max-width($width-ml);
   }
 
   &--lg {
-    @include max-width--lg;
+    @include max-width($width-lg);
   }
 
   &--xl {
-    @include max-width--xl;
+    @include max-width($width-xl);
+  }
+
+  &--xxl {
+    @include max-width($width-xxl);
+  }
+
+  &--2xxs {
+    @include max-width(calc( 2 * #{$width-xxs} ));
+  }
+
+  &--2xs {
+    @include max-width(calc( 2 * #{$width-xs} ));
+  }
+
+  &--2sm {
+    @include max-width(calc( 2 * #{$width-sm} ));
+  }
+
+  &--2md {
+    @include max-width(calc( 2 * #{$width-md} ));
+  }
+
+  &--2ml {
+    @include max-width(calc( 2 * #{$width-ml} ));
+  }
+
+  &--2lg {
+    @include max-width(calc( 2 * #{$width-lg} ));
+  }
+
+  &--2xl {
+    @include max-width(calc( 2 * #{$width-xl} ));
+  }
+
+  &--2xxl {
+    @include max-width(calc( 2 * #{$width-xxl} ));
+  }
+
+  &--3xxs {
+    @include max-width(calc( 3 * #{$width-xxs} ));
+  }
+
+  &--3xs {
+    @include max-width(calc( 3 * #{$width-xs} ));
+  }
+
+  &--3sm {
+    @include max-width(calc( 3 * #{$width-sm} ));
+  }
+
+  &--3md {
+    @include max-width(calc( 3 * #{$width-md} ));
+  }
+
+  &--3ml {
+    @include max-width(calc( 3 * #{$width-ml} ));
+  }
+
+  &--3lg {
+    @include max-width(calc( 3 * #{$width-lg} ));
+  }
+
+  &--3xl {
+    @include max-width(calc( 3 * #{$width-xl} ));
+  }
+
+  &--3xxl {
+    @include max-width(calc( 3 * #{$width-xxl} ));
+  }
+
+  &--4xxs {
+    @include max-width(calc( 4 * #{$width-xxs} ));
+  }
+
+  &--4xs {
+    @include max-width(calc( 4 * #{$width-xs} ));
+  }
+
+  &--4sm {
+    @include max-width(calc( 4 * #{$width-sm} ));
+  }
+
+  &--4md {
+    @include max-width(calc( 4 * #{$width-md} ));
+  }
+
+  &--4ml {
+    @include max-width(calc( 4 * #{$width-ml} ));
+  }
+
+  &--4lg {
+    @include max-width(calc( 4 * #{$width-lg} ));
+  }
+
+  &--4xl {
+    @include max-width(calc( 4 * #{$width-xl} ));
+  }
+
+  &--4xxl {
+    @include max-width(calc( 4 * #{$width-xxl} ));
   }
 }

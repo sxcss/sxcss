@@ -5,409 +5,265 @@
   & {
 
     &--0 {
-      @include margin--0;
+      @include margin(0);
     }
 
     &--auto {
-      @include margin--auto;
+      @include margin(auto);
     }
 
     &--xs {
-      @include margin--xs;
+      @include margin($gap-xs);
     }
 
     &--sm {
-      @include margin--sm;
-      @media all and (max-width: 767px) {
-        @include margin--xs;
-      }
+      @include margin($gap-sm);
     }
 
     &--ms {
-      @include margin--ms;
-      @media all and (max-width: 767px) {
-        @include margin--xs;
-      }
+      @include margin($gap-ms);
     }
 
     &--md {
-      @include margin--md;
-      @media all and (max-width: 767px) {
-        @include margin--xs;
-      }
+      @include margin($gap-md);
     }
 
     &--ml {
-      @include margin--ml;
-      @media all and (max-width: 767px) {
-        @include margin--sm;
-      }
+      @include margin($gap-ml);
     }
 
     &--lg {
-      @include margin--lg;
-      @media all and (max-width: 767px) {
-        @include margin--sm;
-      }
+      @include margin($gap-lg);
     }
 
     &--xl {
-      @include margin--lg;
-      @media all and (max-width: 767px) {
-        @include margin--sm;
-      }
+      @include margin($gap-lg);
     }
   }
 
-  &__x {
+  &-x {
 
     &--0 {
-      @include margin__x--0;
+      @include margin-x(0);
     }
 
     &--auto {
-      @include margin__x--auto;
+      @include margin-x(auto);
     }
 
     &--xs {
-      @include margin__x--xs;
-      @media all and (max-width: 767px) {
-        @include margin__x--xs;
-      }
+      @include margin-x($gap-xs);
     }
 
     &--sm {
-      @include margin__x--sm;
-      @media all and (max-width: 767px) {
-        @include margin__x--xs;
-      }
+      @include margin-x($gap-sm);
     }
 
     &--ms {
-      @include margin__x--ms;
-      @media all and (max-width: 767px) {
-        @include margin__x--xs;
-      }
+      @include margin-x($gap-ms);
     }
 
     &--md {
-      @include margin__x--md;
-      @media all and (max-width: 767px) {
-        @include margin__x--xs;
-      }
+      @include margin-x($gap-md);
     }
 
     &--ml {
-      @include margin__x--ml;
-      @media all and (max-width: 767px) {
-        @include margin__x--sm;
-      }
+      @include margin-x($gap-ml);
     }
 
     &--lg {
-      @include margin__x--lg;
-      @media all and (max-width: 767px) {
-        @include margin__x--md;
-      }
+      @include margin-x($gap-lg);
     }
 
     &--xl {
-      @include margin__x--xl;
-      @media all and (max-width: 767px) {
-        @include margin__x--md;
-      }
+      @include margin-x($gap-xl);
     }
   }
 
-  &__y {
+  &-y {
 
     &--0 {
-      @include margin__y--0;
+      @include margin-y(0);
     }
 
     &--auto {
-      @include margin__y--auto;
+      @include margin-y(auto);
     }
 
     &--xs {
-      @include margin__y--xs;
-      @media all and (max-width: 767px) {
-        @include margin__y--xs;
-      }
+      @include margin-y($gap-xs);
     }
 
     &--sm {
-      @include margin__y--sm;
-      @media all and (max-width: 767px) {
-        @include margin__y--xs;
-      }
+      @include margin-y($gap-sm);
     }
 
     &--ms {
-      @include margin__y--ms;
-      @media all and (max-width: 767px) {
-        @include margin__y--xs;
-      }
+      @include margin-y($gap-ms);
     }
 
     &--md {
-      @include margin__y--md;
-      @media all and (max-width: 767px) {
-        @include margin__y--xs;
-      }
+      @include margin-y($gap-md);
     }
 
     &--ml {
-      @include margin__y--ml;
-      @media all and (max-width: 767px) {
-        @include margin__y--sm;
-      }
+      @include margin-y($gap-ml);
     }
 
     &--lg {
-      @include margin__y--lg;
-      @media all and (max-width: 767px) {
-        @include margin__y--md;
-      }
+      @include margin-y($gap-lg);
     }
 
     &--xl {
-      @include margin__y--xl;
-      @media all and (max-width: 767px) {
-        @include margin__y--md;
-      }
+      @include margin-y($gap-xl);
     }
   }
 
-  &__left {
+  &-left {
 
     &--0 {
-      @include margin__left--0;
+      @include margin-left(0);
     }
 
     &--auto {
-      @include margin__left--auto;
+      @include margin-left(auto);
     }
 
     &--xs {
-      @include margin__left--xs;
-      @media all and (max-width: 767px) {
-        @include margin__left--xs;
-      }
+      @include margin-left($gap-xs);
     }
 
     &--sm {
-      @include margin__left--sm;
-      @media all and (max-width: 767px) {
-        @include margin__left--xs;
-      }
+      @include margin-left($gap-sm);
     }
 
     &--ms {
-      @include margin__left--ms;
-      @media all and (max-width: 767px) {
-        @include margin__left--xs;
-      }
+      @include margin-left($gap-ms);
     }
 
     &--md {
-      @include margin__left--md;
-      @media all and (max-width: 767px) {
-        @include margin__left--xs;
-      }
+      @include margin-left($gap-md);
     }
 
     &--ml {
-      @include margin__left--ml;
-      @media all and (max-width: 767px) {
-        @include margin__left--sm;
-      }
+      @include margin-left($gap-ml);
     }
 
     &--lg {
-      @include margin__left--lg;
-      @media all and (max-width: 767px) {
-        @include margin__left--md;
-      }
+      @include margin-left($gap-lg);
     }
 
     &--xl {
-      @include margin__left--xl;
-      @media all and (max-width: 767px) {
-        @include margin__left--md;
-      }
+      @include margin-left($gap-xl);
     }
   }
 
-  &__right {
+  &-right {
 
     &--0 {
-      @include margin__left--0;
+      @include margin-right(0);
     }
 
     &--auto {
-      @include margin__left--auto;
+      @include margin-right(auto);
     }
 
     &--xs {
-      @include margin__right--xs;
-      @media all and (max-width: 767px) {
-        @include margin__right--xs;
-      }
+      @include margin-right($gap-xs);
     }
 
     &--sm {
-      @include margin__right--sm;
-      @media all and (max-width: 767px) {
-        @include margin__right--xs;
-      }
+      @include margin-right($gap-sm);
     }
 
     &--ms {
-      @include margin__right--ms;
-      @media all and (max-width: 767px) {
-        @include margin__right--xs;
-      }
+      @include margin-right($gap-ms);
     }
 
     &--md {
-      @include margin__right--md;
-      @media all and (max-width: 767px) {
-        @include margin__right--xs;
-      }
+      @include margin-right($gap-md);
     }
 
     &--ml {
-      @include margin__right--ml;
-      @media all and (max-width: 767px) {
-        @include margin__right--sm;
-      }
+      @include margin-right($gap-ml);
     }
 
     &--lg {
-      @include margin__right--lg;
-      @media all and (max-width: 767px) {
-        @include margin__right--md;
-      }
+      @include margin-right($gap-lg);
     }
 
     &--xl {
-      @include margin__right--xl;
-      @media all and (max-width: 767px) {
-        @include margin__right--md;
-      }
+      @include margin-right($gap-xl);
     }
   }
 
-  &__top {
+  &-top {
 
     &--0 {
       margin-top: 0;
     }
 
     &--xs {
-      @include margin__top--xs;
-      @media all and (max-width: 767px) {
-        @include margin__top--xs;
-      }
+      @include margin-top($gap-xs);
     }
 
     &--sm {
-      @include margin__top--sm;
-      @media all and (max-width: 767px) {
-        @include margin__top--xs;
-      }
+      @include margin-top($gap-sm);
     }
 
     &--ms {
-      @include margin__top--ms;
-      @media all and (max-width: 767px) {
-        @include margin__top--xs;
-      }
+      @include margin-top($gap-ms);
     }
 
     &--md {
-      @include margin__top--md;
-      @media all and (max-width: 767px) {
-        @include margin__top--xs;
-      }
+      @include margin-top($gap-md);
     }
 
     &--ml {
-      @include margin__top--ml;
-      @media all and (max-width: 767px) {
-        @include margin__top--sm;
-      }
+      @include margin-top($gap-ml);
     }
 
     &--lg {
-      @include margin__top--lg;
-      @media all and (max-width: 767px) {
-        @include margin__top--md;
-      }
+      @include margin-top($gap-lg);
     }
 
     &--xl {
-      @include margin__top--xl;
-      @media all and (max-width: 767px) {
-        @include margin__top--md;
-      }
+      @include margin-top($gap-xl);
     }
   }
 
-  &__bottom {
+  &-bottom {
     
     &--0 {
       margin-bottom: 0;
     }
 
     &--xs {
-      @include margin__bottom--xs;
-      @media all and (max-width: 767px) {
-        @include margin__bottom--xs;
-      }
+      @include margin-bottom($gap-xs);
     }
 
     &--sm {
-      @include margin__bottom--sm;
-      @media all and (max-width: 767px) {
-        @include margin__bottom--xs;
-      }
+      @include margin-bottom($gap-sm);
     }
 
     &--ms {
-      @include margin__bottom--ms;
-      @media all and (max-width: 767px) {
-        @include margin__bottom--xs;
-      }
+      @include margin-bottom($gap-ms);
     }
 
     &--md {
-      @include margin__bottom--md;
-      @media all and (max-width: 767px) {
-        @include margin__bottom--xs;
-      }
+      @include margin-bottom($gap-md);
     }
 
     &--ml {
-      @include margin__bottom--ml;
-      @media all and (max-width: 767px) {
-        @include margin__bottom--sm;
-      }
+      @include margin-bottom($gap-ml);
     }
 
     &--lg {
-      @include margin__bottom--lg;
-      @media all and (max-width: 767px) {
-        @include margin__bottom--md;
-      }
+      @include margin-bottom($gap-lg);
     }
 
     &--xl {
-      @include margin__bottom--xl;
-      @media all and (max-width: 767px) {
-        @include margin__bottom--md;
-      }
+      @include margin-bottom($gap-xl);
     }
   }
 }

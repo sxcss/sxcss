@@ -5,46 +5,46 @@
   &__color {
 
     &--black {
-      @include background__color--black;
+      @include background-color($color-black);
     }
 
     &--white {
-      @include background__color--white;
+      @include background-color($color-white);
     }
 
     &--primary {
-      @include background__color--primary;
+      @include background-color($color-primary);
     }
 
     &--secondary {
-      @include background__color--secondary;
+      @include background-color($color-secondary);
     }
 
     &--light-gray {
-      @include background__color--light-gray;
+      @include background-color($color-light-gray);
     }
 
     &--extra-light-gray {
-      @include background__color--extra-light-gray;
+      @include background-color($color-extra-light-gray);
     }
 
     &--dark-gray {
-      @include background__color--dark-gray;
+      @include background-color($color-dark-gray);
     }
   }
 
   &__size {
 
     &--cover {
-      @include background__size--cover;
+      @include background-size(cover);
     }
 
     &--contain {
-      @include background__size--contain;
+      @include background-size(contain);
     }
 
     &--100 {
-      @include background__size--100;
+      @include background-size(100);
     }
   }
 
@@ -53,30 +53,30 @@
     &__x {
       
       &--left {
-        @include background__position__x--left;
+        @include background-position-x(left);
       }
 
       &--center {
-        @include background__position__x--center;
+        @include background-position-x(center);
       }
 
       &--right {
-        @include background__position__x--right;
+        @include background-position-x(right);
       }
     }
 
     &__y {
       
       &--top {
-        @include background__position__y--top;
+        @include background-position-y(top);
       }
 
       &--center {
-        @include background__position__y--center;
+        @include background-position-y(center);
       }
 
       &--bottom {
-        @include background__position__y--bottom;
+        @include background-position-y(bottom);
       }
     }
   }
