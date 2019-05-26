@@ -5,265 +5,293 @@
   & {
 
     &--0 {
-      @include margin(0);
+      @include margin(0 !important);
     }
 
     &--auto {
-      @include margin(auto);
+      @include margin(auto !important);
+    }
+
+    &--xxs {
+      @include margin($gap-xxs !important);
     }
 
     &--xs {
-      @include margin($gap-xs);
+      @include margin($gap-xs !important);
     }
 
     &--sm {
-      @include margin($gap-sm);
+      @include margin($gap-sm !important);
     }
 
     &--ms {
-      @include margin($gap-ms);
+      @include margin($gap-ms !important);
     }
 
     &--md {
-      @include margin($gap-md);
+      @include margin($gap-md !important);
     }
 
     &--ml {
-      @include margin($gap-ml);
+      @include margin($gap-ml !important);
     }
 
     &--lg {
-      @include margin($gap-lg);
+      @include margin($gap-lg !important);
     }
 
     &--xl {
-      @include margin($gap-lg);
+      @include margin($gap-lg !important);
     }
   }
 
   &-x {
 
     &--0 {
-      @include margin-x(0);
+      @include margin-x(0 !important);
     }
 
     &--auto {
-      @include margin-x(auto);
+      @include margin-x(auto !important);
+    }
+
+    &--xxs {
+      @include margin-x($gap-xxs !important);
     }
 
     &--xs {
-      @include margin-x($gap-xs);
+      @include margin-x($gap-xs !important);
     }
 
     &--sm {
-      @include margin-x($gap-sm);
+      @include margin-x($gap-sm !important);
     }
 
     &--ms {
-      @include margin-x($gap-ms);
+      @include margin-x($gap-ms !important);
     }
 
     &--md {
-      @include margin-x($gap-md);
+      @include margin-x($gap-md !important);
     }
 
     &--ml {
-      @include margin-x($gap-ml);
+      @include margin-x($gap-ml !important);
     }
 
     &--lg {
-      @include margin-x($gap-lg);
+      @include margin-x($gap-lg !important);
     }
 
     &--xl {
-      @include margin-x($gap-xl);
+      @include margin-x($gap-xl !important);
     }
   }
 
   &-y {
 
     &--0 {
-      @include margin-y(0);
+      @include margin-y(0 !important);
     }
 
     &--auto {
-      @include margin-y(auto);
+      @include margin-y(auto !important);
+    }
+
+    &--xxs {
+      @include margin-y($gap-xxs !important);
     }
 
     &--xs {
-      @include margin-y($gap-xs);
+      @include margin-y($gap-xs !important);
     }
 
     &--sm {
-      @include margin-y($gap-sm);
+      @include margin-y($gap-sm !important);
     }
 
     &--ms {
-      @include margin-y($gap-ms);
+      @include margin-y($gap-ms !important);
     }
 
     &--md {
-      @include margin-y($gap-md);
+      @include margin-y($gap-md !important);
     }
 
     &--ml {
-      @include margin-y($gap-ml);
+      @include margin-y($gap-ml !important);
     }
 
     &--lg {
-      @include margin-y($gap-lg);
+      @include margin-y($gap-lg !important);
     }
 
     &--xl {
-      @include margin-y($gap-xl);
+      @include margin-y($gap-xl !important);
     }
   }
 
   &-left {
 
     &--0 {
-      @include margin-left(0);
+      @include margin-left(0 !important);
     }
 
     &--auto {
-      @include margin-left(auto);
+      @include margin-left(auto !important);
+    }
+
+    &--xxs {
+      @include margin-left($gap-xxs !important);
     }
 
     &--xs {
-      @include margin-left($gap-xs);
+      @include margin-left($gap-xs !important);
     }
 
     &--sm {
-      @include margin-left($gap-sm);
+      @include margin-left($gap-sm !important);
     }
 
     &--ms {
-      @include margin-left($gap-ms);
+      @include margin-left($gap-ms !important);
     }
 
     &--md {
-      @include margin-left($gap-md);
+      @include margin-left($gap-md !important);
     }
 
     &--ml {
-      @include margin-left($gap-ml);
+      @include margin-left($gap-ml !important);
     }
 
     &--lg {
-      @include margin-left($gap-lg);
+      @include margin-left($gap-lg !important);
     }
 
     &--xl {
-      @include margin-left($gap-xl);
+      @include margin-left($gap-xl !important);
     }
   }
 
   &-right {
 
     &--0 {
-      @include margin-right(0);
+      @include margin-right(0 !important);
     }
 
     &--auto {
-      @include margin-right(auto);
+      @include margin-right(auto !important);
+    }
+
+    &--xxs {
+      @include margin-right($gap-xxs !important);
     }
 
     &--xs {
-      @include margin-right($gap-xs);
+      @include margin-right($gap-xs !important);
     }
 
     &--sm {
-      @include margin-right($gap-sm);
+      @include margin-right($gap-sm !important);
     }
 
     &--ms {
-      @include margin-right($gap-ms);
+      @include margin-right($gap-ms !important);
     }
 
     &--md {
-      @include margin-right($gap-md);
+      @include margin-right($gap-md !important);
     }
 
     &--ml {
-      @include margin-right($gap-ml);
+      @include margin-right($gap-ml !important);
     }
 
     &--lg {
-      @include margin-right($gap-lg);
+      @include margin-right($gap-lg !important);
     }
 
     &--xl {
-      @include margin-right($gap-xl);
+      @include margin-right($gap-xl !important);
     }
   }
 
   &-top {
 
     &--0 {
-      margin-top: 0;
+      @include margin-top(0 !important);
+    }
+
+    &--xxs {
+      @include margin-top($gap-xxs !important);
     }
 
     &--xs {
-      @include margin-top($gap-xs);
+      @include margin-top($gap-xs !important);
     }
 
     &--sm {
-      @include margin-top($gap-sm);
+      @include margin-top($gap-sm !important);
     }
 
     &--ms {
-      @include margin-top($gap-ms);
+      @include margin-top($gap-ms !important);
     }
 
     &--md {
-      @include margin-top($gap-md);
+      @include margin-top($gap-md !important);
     }
 
     &--ml {
-      @include margin-top($gap-ml);
+      @include margin-top($gap-ml !important);
     }
 
     &--lg {
-      @include margin-top($gap-lg);
+      @include margin-top($gap-lg !important);
     }
 
     &--xl {
-      @include margin-top($gap-xl);
+      @include margin-top($gap-xl !important);
     }
   }
 
   &-bottom {
     
     &--0 {
-      margin-bottom: 0;
+      @include margin-bottom(0 !important);
+    }
+
+    &--xxs {
+      @include margin-bottom($gap-xxs !important);
     }
 
     &--xs {
-      @include margin-bottom($gap-xs);
+      @include margin-bottom($gap-xs !important);
     }
 
     &--sm {
-      @include margin-bottom($gap-sm);
+      @include margin-bottom($gap-sm !important);
     }
 
     &--ms {
-      @include margin-bottom($gap-ms);
+      @include margin-bottom($gap-ms !important);
     }
 
     &--md {
-      @include margin-bottom($gap-md);
+      @include margin-bottom($gap-md !important);
     }
 
     &--ml {
-      @include margin-bottom($gap-ml);
+      @include margin-bottom($gap-ml !important);
     }
 
     &--lg {
-      @include margin-bottom($gap-lg);
+      @include margin-bottom($gap-lg !important);
     }
 
     &--xl {
-      @include margin-bottom($gap-xl);
+      @include margin-bottom($gap-xl !important);
     }
   }
 }

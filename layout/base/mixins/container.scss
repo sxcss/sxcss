@@ -10,8 +10,8 @@
 }
 
 @mixin fullwidth {
-  width: 100%;
-  max-width: 100vw;
+  @include width(100%);
+  @include max-width(100vw);
 }
 
 @mixin container {

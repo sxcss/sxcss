@@ -3,26 +3,26 @@
 .color {
 
   &--black {
-    @include color--black;
+    @include color($color-black);
   }
 
   &--white {
-  @include color--white;    
+  @include color($color-white);    
   }
 
   &--primary {
-    @include color--primary;
+    @include color($color-primary);
   }
 
   &--secondary {
-    @include color--secondary;
+    @include color($color-secondary);
   }
 
   &--light-gray {
-    @include color--light-gray;
+    @include color($color-light-gray);
   }
 
   &--dark-gray {
-    @include color--dark-gray;
+    @include color($color-dark-gray);
   }
 }
