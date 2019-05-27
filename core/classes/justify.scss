@@ -1,10 +1,12 @@
 @import '../mixins/justify.scss';
 
-.justify {
+.justify,
+.jsf {
 
-  &-content {
+  &-content,
+  &-cnt {
 
-    &--start {
+    &--start, &--str {
       @include justify-content(flex-start);
     }
 
@@ -12,22 +14,22 @@
       @include justify-content(flex-end);
     }
 
-    &--center {
+    &--center, &--ctr {
       @include justify-content(center);
     }
 
-    &--space-between {
+    &--space-between, &--spc--btw {
       @include justify-content(space-between);
     }
 
-    &--space-around {
+    &--space-around, &--spc-ard {
       @include justify-content(space-around);
     }
   }
 
   &-items {
 
-    &--start {
+    &--start, &--str {
       @include justify-items(flex-start);
     }
 
@@ -35,14 +37,14 @@
       @include justify-items(flex-end);
     }
 
-    &--center {
+    &--center, &--ctr {
       @include justify-items(center);
     }
   }
 
   &-self {
 
-    &--start {
+    &--start, &--str {
       @include justify-self(flex-start);
     }
 
@@ -50,7 +52,7 @@
       @include justify-self(flex-end);
     }
 
-    &--center {
+    &--center, &--ctr {
       @include justify-self(center);
     }
   }

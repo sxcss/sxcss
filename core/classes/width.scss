@@ -1,6 +1,7 @@
 @import '../mixins/width.scss';
 
-.width {
+.width,
+.w {
 
   &--50 {
     @include width(50%);
@@ -151,7 +152,8 @@
   }
 }
 
-.min-width {
+.min-width,
+.min-w {
 
   &--50 {
     @include min-width(50%);
@@ -302,7 +304,8 @@
   }
 }
 
-.max-width {
+.max-width,
+.max-w {
   
   &--50 {
     @include max-width(50%);

@@ -1,59 +1,63 @@
 @import '../mixins/position.scss';
 
-.position {
+.position,
+.pos {
 
-  &-relative {
+  &-relative,
+  &-rel {
     @include position(relative);
   }
 
-  &-fixed {
+  &-fixed,
+  &-fix {
     @include position(fixed);
 
     &--top {
       @include position--fixed($top: 0);
     }
 
-    &--bottom {
+    &--right, &--btm {
       @include position--fixed($bottom: 0);
     }
   }
 
-  &-absolute {
+  &-absolute,
+  &-abs {
     @include position(absolute);
 
-    &--center {
+    &--center, &--ctr {
       @include position--absolute(50%, 50%, translate(-50%, -50%));
     }
 
-    &--center-top {
+    &--center-top, &--ctr-top {
       @include position--absolute(50%, 0, translate(-50%, -100%));
     }
 
-    &--center-bottom {
+    &--center-bottom, &--ctr-btm {
       @include position--absolute(50%, 100%, translate(-50%, 0));
     }
 
-    &--left-top {
+    &--left-top, &--lft-top {
       @include position--absolute(0, 0, translate(-100%, -100%));
     }
 
-    &--left-bottom {
+    &--left-bottom, &--lft-btm {
       @include position--absolute(0, 100%, translate(-100%, 0));
     }
     
-    &--left-center {
+    &--left-center, &--lft-ctr {
       @include position--absolute(0, 50%, translate(-100%, -50%));
     }
 
-    &--right-top {
+    &--right-top, &--rgt-top {
       @include position--absolute(100%, 0, translate(-100%, -100%));
     }
 
-    &--right-bottom {
+    &--right-bottom, &--rgt-btm {
       @include position--absolute(100%, 100%, translate(-100%, 0));
     }
     
-    &--right-center {
+    &--right-center, &--rgt-ctr {
       @include position--absolute(100%, 50%, translate(-100%, -50%));
     }
   }

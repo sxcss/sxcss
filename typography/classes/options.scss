@@ -5,26 +5,26 @@
 
   &-color {
     
-    &--white {
+    &--white, &--wht {
       @include color(white);
     }
 
-    &--black {
+    &--black, &--blk {
       @include color(black);
     }
   }
 
   &__align {
 
-    &--left {
+    &--left, &-lft {
       @include text-align(left);
     }
   
-    &--center {
+    &--center, &--ctr {
       @include text-align(center);
     }
   
-    &--right {
+    &--right, &--rgt {
       @include text-align(right);
     }
   }
@@ -32,7 +32,7 @@
 
 .font {
 
-  &-size {
+  &-size, &-sz {
 
     &--xs {
       @include font-size(map-get($font-size, xs));
@@ -91,7 +91,7 @@
       @include font-weight(map-get($font-weight, extrabold));
     }
 
-    &--black {
+    &--black, &--blk {
       @include font-weight(map-get($font-weight, black));
     }
   }

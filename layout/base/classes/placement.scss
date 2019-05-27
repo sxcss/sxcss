@@ -5,19 +5,19 @@
 
   &__x {
 
-    &--left {
+    &--left, &-lft {
       @include grid;
       @include justify-content(flex-start);
       @include justify-items(flex-start);
     }
 
-    &--center {
+    &--center, &--ctr {
       @include grid;
       @include justify-content(center);
       @include justify-items(center);
     }
 
-    &--right {
+    &--right, &--rgt {
       @include grid;
       @include justify-content(flex-end);
       @include justify-items(flex-end);
@@ -31,12 +31,12 @@
       @include align-items(flex-start);
     }
 
-    &--center {
+    &--center, &--ctr {
       @include grid;
       @include align-items(center);
     }
 
-    &--bottom {
+    &--right, &--btm {
       @include grid;
       @include align-items(flex-end);
     }
@@ -44,7 +44,7 @@
 
   &__xy {
 
-    &--center {
+    &--center, &--ctr {
       @include grid;
       @include place-content(center);
   
@@ -53,43 +53,43 @@
         @include place-content(center flex-start);
       }
   
-      &--bottom {
+      &--right, &--btm {
         @include grid;
         @include place-content(center flex-end);
       }
     }
   
-    &--left {
+    &--left, &-lft {
   
       &--top {
         @include grid;
         @include place-content(flex-start);
       }
   
-      &--bottom {
+      &--right, &--btm {
         @include grid;
         @include place-content(flex-start flex-end);
       }
   
-      &--center {
+      &--center, &--ctr {
         @include grid;
         @include place-content(flex-start center);
       }
     }
   
-    &--right {
+    &--right, &--rgt {
   
       &--top {
         @include grid;
         @include place-content(flex-end flex-start);
       }
   
-      &--bottom {
+      &--right, &--btm {
         @include grid;
         @include place-content(flex-end);
       }
   
-      &--center {
+      &--center, &--ctr {
         @include grid;
         @include place-content(flex-end center);
       }

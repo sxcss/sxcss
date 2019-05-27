@@ -1,49 +1,61 @@
 @import '../mixins/border.scss';
 @import '../variables/border.scss';
 
-.border {
+.border,
+.bdr {
 
-  &-radius--xxs{
+  &-radius--xxs,
+  &-rds--xxs{
     @include border-radius(map-get($border-radius, xxs));
   }
   
-  &-radius--xs{
+  &-radius--xs,
+  &-rds--xs{
     @include border-radius(map-get($border-radius, xs));
   }
   
-  &-radius--sm {
+  &-radius--sm,
+  &-rds--sm {
     @include border-radius(map-get($border-radius, sm));
   }
   
-  &-radius--ms {
+  &-radius--ms,
+  &-rds--ms {
     @include border-radius(map-get($border-radius, ms));
   }
   
-  &-radius--md {
+  &-radius--md,
+  &-rds--md {
     @include border-radius(map-get($border-radius, md));
   }
   
-  &-radius--ml {
+  &-radius--ml,
+  &-rds--ml {
     @include border-radius(map-get($border-radius, ml));
   }
   
-  &-radius--lg {
+  &-radius--lg,
+  &-rds--lg {
     @include border-radius(map-get($border-radius, lg));
   }
   
-  &-radius--xl {
+  &-radius--xl,
+  &-rds--xl {
     @include border-radius(map-get($border-radius, xl));
   }
   
-  &-radius--xxl {
+  &-radius--xxl,
+  &-rds--xxl {
     @include border-radius(map-get($border-radius, xxl));
   }
   
-  &-radius--50 {
+  &-radius--50,
+  &-rds--50 {
     @include border-radius(50%);
   }
   
-  &-radius--100 {
+  &-radius--100,
+  &-rds--100 {
     @include border-radius(100%);
   }
 

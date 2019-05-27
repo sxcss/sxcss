@@ -1,6 +1,7 @@
 @import '../mixins/height.scss';
 
-.height {
+.height,
+.h {
 
   &--50 {
     @include height(50% !important);
@@ -147,7 +148,8 @@
   }
 }
 
-.min-height {
+.min-height,
+.min-h {
 
   &--50 {
     @include min-height(50% !important);
@@ -294,7 +296,8 @@
   }
 }
 
-.max-height {
+.max-height,
+.max-h {
   
   &--50 {
     @include max-height(50% !important);

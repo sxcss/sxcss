@@ -23,11 +23,11 @@
 
 .object-fit {
 
-  &--cover {
+  &--cover, &--cvr {
     object-fit: cover;
   }
   
-  &--contain {
+  &--contain, &--ctn {
     object-fit: contain;
   }
 }

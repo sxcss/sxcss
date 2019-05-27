@@ -1,45 +1,47 @@
 @import '../mixins/background.scss';
 
-.background {
+.background,
+.bg {
 
-  &-color {
+  &-color,
+  &-cl {
 
-    &--black {
+    &--black, &--blk {
       @include background-color(map-get($color, black));
     }
 
-    &--white {
+    &--white, &--wht {
       @include background-color(map-get($color, white));
     }
 
-    &--primary {
+    &--primary, &--pry {
       @include background-color(map-get($color, primary));
     }
 
-    &--secondary {
+    &--secondary, &--scd {
       @include background-color(map-get($color, secondary));
     }
 
-    &--light-gray {
+    &--light-gray, &--lt-gr {
       @include background-color(map-get($color, light-gray));
     }
 
-    &--extra-light-gray {
+    &--extra-light-gray, &xtr--lt-gr {
       @include background-color(map-get($color, extra-light-gray));
     }
 
-    &--dark-gray {
+    &--dark-gray, &--drk-gr {
       @include background-color(map-get($color, dark-gray));
     }
   }
 
-  &-size {
+  &-size, &-sz {
 
-    &--cover {
+    &--cover, &--cvr {
       @include background-size(cover);
     }
 
-    &--contain {
+    &--contain, &--ctn {
       @include background-size(contain);
     }
 
@@ -52,15 +54,15 @@
 
     &-x {
       
-      &--left {
+      &--left, &-lft {
         @include background-position-x(left);
       }
 
-      &--center {
+      &--center, &--ctr {
         @include background-position-x(center);
       }
 
-      &--right {
+      &--right, &--rgt {
         @include background-position-x(right);
       }
     }
@@ -71,11 +73,11 @@
         @include background-position-y(top);
       }
 
-      &--center {
+      &--center, &--ctr {
         @include background-position-y(center);
       }
 
-      &--bottom {
+      &--right, &--btm {
         @include background-position-y(bottom);
       }
     }

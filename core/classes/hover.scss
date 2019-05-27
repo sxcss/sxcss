@@ -1,8 +1,10 @@
 @import '../mixins/hover.scss';
 
-.hover {
+.hover,
+.hvr {
   
-  &-opacity {
+  &-opacity,
+  &-opc {
 
     &--xxs {
       @include hover($hover-opacity: map-get($opacity, xxs));
@@ -41,7 +43,8 @@
     }
   }
 
-  &-transform {
+  &-transform,
+  &-tfm {
 
     &--xxs {
       @include hover($hover-transform: map-get($gap, xxs));
@@ -80,7 +83,8 @@
     }
   }
 
-  &-scale {
+  &-scale,
+  &-scl {
 
     &--xxs {
       @include hover($hover-scale: map-get($gap, xxs));

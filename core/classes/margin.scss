@@ -1,6 +1,7 @@
 @import '../mixins/margin.scss';
 
-.margin {
+.margin,
+.m {
 
   & {
 
@@ -131,7 +132,8 @@
     }
   }
 
-  &-left {
+  &-left,
+  &-l {
 
     &--0 {
       @include margin-left(0 !important);
@@ -174,7 +176,8 @@
     }
   }
 
-  &-right {
+  &-right,
+  &-r {
 
     &--0 {
       @include margin-right(0 !important);
@@ -217,7 +220,8 @@
     }
   }
 
-  &-top {
+  &-top,
+  &-t {
 
     &--0 {
       @include margin-top(0 !important);
@@ -256,7 +260,8 @@
     }
   }
 
-  &-bottom {
+  &-bottom,
+  &-b {
     
     &--0 {
       @include margin-bottom(0 !important);

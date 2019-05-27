@@ -1,48 +1,61 @@
 @import '../mixins/align.scss';
 
-.align {
+.align,
+.an {
 
-  &-content {
+  &-content,
+  &-ct {
 
-    &--start {
+    &--start,
+    &--s {
       @include align-content(flex-start);
     }
 
-    &--end {
+    &--end,
+    &--e {
       @include align-content(flex-end);
     }
 
-    &--center {
+    &--center,
+    &--c {
       @include align-content(center);
     }
   }
 
-  &-items {
+  &-items,
+  &--is {
 
-    &--start {
+    &--start,
+    &--s {
       @include align-items(flex-start);
     }
 
-    &--end {
+    &--end,
+    &--e {
       @include align-items(flex-end);
     }
 
-    &--center {
+    &--center,
+    &--c {
       @include align-items(center);
     }
   }
 
-  &-self {
+  &-self,
+  &-sf {
 
-    &--start {
+    &--start,
+    &--s {
       @include align-self(flex-start);
     }
 
-    &--end {
+    &--end,
+    &--e {
       @include align-self(flex-end);
     }
 
-    &--center {
+    &--center,
+    &--c {
       @include align-self(center);
     }
   }
