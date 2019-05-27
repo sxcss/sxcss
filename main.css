@@ -1403,6 +1403,9 @@ input[type=number]::-webkit-outer-spin-button {
 .position-relative {
   position: relative;
 }
+.position-fixed {
+  position: fixed;
+}
 .position-absolute {
   position: absolute;
 }

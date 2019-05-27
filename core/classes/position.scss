@@ -6,6 +6,10 @@
     @include position(relative);
   }
 
+  &-fixed {
+    @include position(fixed);
+  }
+
   &-absolute {
     @include position(absolute);
 
