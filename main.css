@@ -146,52 +146,52 @@ input[type=number]::-webkit-outer-spin-button {
   align-self: center;
 }
 
-.background__color--black {
+.background-color--black {
   background-color: #000;
 }
-.background__color--white {
+.background-color--white {
   background-color: #fff;
 }
-.background__color--primary {
+.background-color--primary {
   background-color: #0073a8;
 }
-.background__color--secondary {
+.background-color--secondary {
   background-color: #005075;
 }
-.background__color--light-gray {
+.background-color--light-gray {
   background-color: #767676;
 }
-.background__color--extra-light-gray {
+.background-color--extra-light-gray {
   background-color: #fafafa;
 }
-.background__color--dark-gray {
+.background-color--dark-gray {
   background-color: #111;
 }
-.background__size--cover {
+.background-size--cover {
   background-size: cover;
 }
-.background__size--contain {
+.background-size--contain {
   background-size: contain;
 }
-.background__size--100 {
+.background-size--100 {
   background-size: 100;
 }
-.background__position__x--left {
+.background-position-x--left {
   background-position-x: left;
 }
-.background__position__x--center {
+.background-position-x--center {
   background-position-x: center;
 }
-.background__position__x--right {
+.background-position-x--right {
   background-position-x: right;
 }
-.background__position__y--top {
+.background-position-y--top {
   background-position-y: top;
 }
-.background__position__y--center {
+.background-position-y--center {
   background-position-y: center;
 }
-.background__position__y--bottom {
+.background-position-y--bottom {
   background-position-y: bottom;
 }
 
@@ -1322,82 +1322,82 @@ input[type=number]::-webkit-outer-spin-button {
   place-content: center;
 }
 .place__content--center--start {
-  place-content: center start;
+  place-content: center flex-start;
 }
 .place__content--center--end {
-  place-content: center end;
+  place-content: center flex-end;
 }
 .place__content--start {
-  place-content: start;
+  place-content: flex-start;
 }
 .place__content--start--center {
-  place-content: start center;
+  place-content: flex-start center;
 }
 .place__content--start--end {
-  place-content: start end;
+  place-content: flex-start flex-end;
 }
 .place__content--end {
-  place-content: end;
+  place-items: flex-end;
 }
-.place__content--end--end {
-  place-content: end;
+.place__content--end--start {
+  place-items: flex-end flex-start;
 }
-.place__content--end--end {
-  place-content: end;
+.place__content--end--center {
+  place-items: flex-end center;
 }
 .place__items--center {
   place-items: center;
 }
 .place__items--center--start {
-  place-items: center start;
+  place-items: center flex-start;
 }
 .place__items--center--end {
-  place-items: center end;
+  place-items: center flex-end;
 }
 .place__items--start {
-  place-items: start;
+  place-items: flex-start;
 }
 .place__items--start--center {
-  place-items: start center;
+  place-items: flex-start center;
 }
 .place__items--start--end {
-  place-items: start end;
+  place-items: flex-start flex-end;
 }
 .place__items--end {
-  place-items: end;
+  place-items: flex-end;
 }
-.place__items--end--end {
-  place-items: end;
+.place__items--end--start {
+  place-items: flex-end flex-start;
 }
-.place__items--end--end {
-  place-items: end;
+.place__items--end--center {
+  place-items: flex-end center;
 }
 .place_self--center {
   place-self: center;
 }
 .place_self--center--start {
-  place-self: center start;
+  place-self: center flex-start;
 }
 .place_self--center--end {
-  place-self: center end;
+  place-self: center flex-end;
 }
 .place_self--start {
-  place-self: start;
+  place-self: flex-start;
 }
 .place_self--start--center {
-  place-self: start center;
+  place-self: flex-start center;
 }
 .place_self--start--end {
-  place-self: start end;
+  place-self: flex-start flex-end;
 }
 .place_self--end {
-  place-self: end;
+  place-items: flex-end;
 }
-.place_self--end--end {
-  place-self: end;
+.place_self--end--start {
+  place-items: flex-end flex-start;
 }
-.place_self--end--end {
-  place-self: end;
+.place_self--end--center {
+  place-items: flex-end center;
 }
 
 .position-relative {
@@ -1869,52 +1869,52 @@ ol li {
   text-align: right;
 }
 
-.font__size--xs {
+.font-size--xs {
   font-size: 0.6rem;
 }
-.font__size--sm {
+.font-size--sm {
   font-size: 1rem;
 }
-.font__size--ms {
+.font-size--ms {
   font-size: 1.2rem;
 }
-.font__size--md {
+.font-size--md {
   font-size: 1.8rem;
 }
-.font__size--ml {
+.font-size--ml {
   font-size: 2.1rem;
 }
-.font__size--lg {
+.font-size--lg {
   font-size: 2.4rem;
 }
-.font__size--xl {
+.font-size--xl {
   font-size: 3rem;
 }
-.font__weight--thin {
+.font-weight--thin {
   font-weight: 100;
 }
-.font__weight--ultralight {
+.font-weight--ultralight {
   font-weight: 200;
 }
-.font__weight--light {
+.font-weight--light {
   font-weight: 300;
 }
-.font__weight--normal {
+.font-weight--normal {
   font-weight: 400;
 }
-.font__weight--medium {
+.font-weight--medium {
   font-weight: 500;
 }
-.font__weight--semibold {
+.font-weight--semibold {
   font-weight: 600;
 }
-.font__weight--bold {
+.font-weight--bold {
   font-weight: 700;
 }
-.font__weight--extrabold {
+.font-weight--extrabold {
   font-weight: 800;
 }
-.font__weight--black {
+.font-weight--black {
   font-weight: 900;
 }
 
