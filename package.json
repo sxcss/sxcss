@@ -1,6 +1,6 @@
 {
   "name": "fantastic-css",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "🎮 Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠",
   "main": "main.scss",
   "scripts": {
