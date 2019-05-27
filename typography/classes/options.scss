@@ -3,29 +3,29 @@
 
 .text {
 
-  &__color {
+  &-color {
     
-    &--light {
-      @include text__color--light;
+    &--white {
+      @include color(white);
     }
 
-    &--dark {
-      @include text__color--dark;
+    &--black {
+      @include color(black);
     }
   }
 
   &__align {
 
     &--left {
-      @include text__align--left;
+      @include text-align(left);
     }
   
     &--center {
-      @include text__align--center;
+      @include text-align(center);
     }
   
     &--right {
-      @include text__align--right;
+      @include text-align(right);
     }
   }
 }
@@ -35,64 +35,64 @@
   &__size {
 
     &--xs {
-      @include font__size--xs;
+      @include font-size($font-size-xs);
     }
     &--sm {
-      @include font__size--sm;
+      @include font-size($font-size-sm);
     }
     &--ms {
-      @include font__size--ms;
+      @include font-size($font-size-ms);
     }
     &--md {
-      @include font__size--md;
+      @include font-size($font-size-md);
     }
     &--ml {
-      @include font__size--ml;
+      @include font-size($font-size-ml);
     }
     &--lg {
-      @include font__size--lg;
+      @include font-size($font-size-lg);
     }
     &--xl {
-      @include font__size--xl;
+      @include font-size($font-size-xl);
     }
   }
 
   &__weight {
 
     &--thin {
-      @include font__weight--thin;  
+      @include font-weight($font-weight-thin); 
     }
 
     &--ultralight {
-      @include font__weight--extralight;
+      @include font-weight($font-weight-extralight);
     }
 
     &--light {
-      @include font__weight--light;
+      @include font-weight($font-weight-light);
     }
 
     &--normal {
-      @include font__weight--normal;
+      @include font-weight($font-weight-normal);
     }
 
     &--medium {
-      @include font__weight--medium;
+      @include font-weight($font-weight-medium);
     }
 
     &--semibold {
-      @include font__weight--semibold;
+      @include font-weight($font-weight-semibold);
     }
 
     &--bold {
-      @include font__weight--bold;
+      @include font-weight($font-weight-bold);
     }
 
     &--extrabold {
-      @include font__weight--extrabold;
+      @include font-weight($font-weight-extrabold);
     }
 
     &--black {
-      @include font__weight--black;
+      @include font-weight($font-weight-black);
     }
   }
 }

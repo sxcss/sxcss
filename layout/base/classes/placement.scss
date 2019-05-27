@@ -7,20 +7,20 @@
 
     &--left {
       @include grid;
-      @include justify__content--start;
-      @include justify__items--start;
+      @include justify-content(flex-start);
+      @include justify-items(flex-start);
     }
 
     &--center {
       @include grid;
-      @include justify__content--center;
-      @include justify__items--center;
+      @include justify-content(center);
+      @include justify-items(center);
     }
 
     &--right {
       @include grid;
-      @include justify__content--end;
-      @include justify__items--end;
+      @include justify-content(flex-end);
+      @include justify-items(flex-end);
     }
   }
 
@@ -28,17 +28,17 @@
 
     &--top {
       @include grid;
-      @include align__items--start;
+      @include align-items(flex-start);
     }
 
     &--center {
       @include grid;
-      @include align__items--center;
+      @include align-items(center);
     }
 
     &--bottom {
       @include grid;
-      @include align__items--end;
+      @include align-items(flex-end);
     }
   }
 
@@ -46,16 +46,16 @@
 
     &--center {
       @include grid;
-      @include place__content--center;
+      @include place-content(center);
   
       &--top {
         @include grid;
-        @include place__content--center--start;
+        @include place-content(center flex-start);
       }
   
       &--bottom {
         @include grid;
-        @include place__content--center--end;
+        @include place-content(center flex-end);
       }
     }
   
@@ -63,17 +63,17 @@
   
       &--top {
         @include grid;
-        @include place__content--start;
+        @include place-content(flex-start);
       }
   
       &--bottom {
         @include grid;
-        @include place__content--start--end;
+        @include place-content(flex-start flex-end);
       }
   
       &--center {
         @include grid;
-        @include place__content--start--center;
+        @include place-content(flex-start center);
       }
     }
   
@@ -81,17 +81,17 @@
   
       &--top {
         @include grid;
-        @include place__content--end--start;
+        @include place-content(flex-end flex-start);
       }
   
       &--bottom {
         @include grid;
-        @include place__content--end;
+        @include place-content(flex-end);
       }
   
       &--center {
         @include grid;
-        @include place__content--end--center;
+        @include place-content(flex-end center);
       }
     }
   }

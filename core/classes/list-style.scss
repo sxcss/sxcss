@@ -5,44 +5,44 @@
   & {
     
     &--none {
-      @include list-style--none;
+      @include list-style(none);
     }
 
     &__position {
 
       &--inside {
-        @include list-style__positon--inside;
+        @include list-style-positon(inside);
       }
 
       &--outside {
-        @include list-style__positon--outside;
+        @include list-style-positon(outside);
       }
     }
 
     &__type {
 
       &--circle {
-        @include list-style__type--circle;
+        @include list-style-type(circle);
       }
 
       &--decimal {
-        @include list-style__type--decimal;
+        @include list-style-type(decimal);
       }
 
       &--latin {
-        @include list-style__type--upper-latin;
+        @include list-style-type(upper-latin);
         
         &--roman {
-          @include list-style__type--upper-roman;
+          @include list-style-type(upper-roman);
         }
         
         &--latin {
+          @include list-style-type(lower-latin);
         }
-        @include list-style__type--lower-latin;
       }
 
       &--roman {
-        @include list-style__type--lower-roman;
+        @include list-style-type(lower-roman);
       }
     }
   }

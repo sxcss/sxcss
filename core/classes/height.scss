@@ -3,95 +3,440 @@
 .height {
 
   &--50 {
-    @include height--50;
+    @include height(50% !important);
   }
 
   &--100 {
-    @include height--100;
+    @include height(100% !important);
   }
 
-  &--50vh {
-    @include height--50vh;
+  &--50vw {
+    @include height(50vw !important);
   }
 
-  &--100vh {
-    @include height--100vh;
+  &--100vw {
+    @include height(100vw !important);
   }
 
   &--xxs {
-    @include height--xxs;
+    @include height($height-xxs !important);
   }
 
   &--xs {
-    @include height--xs;
+    @include height($height-xs !important);
   }
 
   &--sm {
-    @include height--sm;
+    @include height($height-sm !important);
   }
 
   &--md {
-    @include height--md;
+    @include height($height-md !important);
+  }
+
+  &--ml {
+    @include height($height-ml !important);
   }
 
   &--lg {
-    @include height--lg;
+    @include height($height-lg !important);
   }
 
   &--xl {
-    @include height--xl;
+    @include height($height-xl !important);
   }
 
   &--xxl {
-    @include height--xl;
+    @include height($height-xxl !important);
+  }
+
+  &--2xxs {
+    @include height(calc( 2 * #{$height-xxs} ) !important);
+  }
+
+  &--2xs {
+    @include height(calc( 2 * #{$height-xs} ) !important);
+  }
+
+  &--2sm {
+    @include height(calc( 2 * #{$height-sm} ) !important);
+  }
+
+  &--2md {
+    @include height(calc( 2 * #{$height-md} ) !important);
+  }
+
+  &--2ml {
+    @include height(calc( 2 * #{$height-ml} ) !important);
+  }
+
+  &--2lg {
+    @include height(calc( 2 * #{$height-lg} ) !important);
+  }
+
+  &--2xl {
+    @include height(calc( 2 * #{$height-xl} ) !important);
+  }
+
+  &--2xxl {
+    @include height(calc( 2 * #{$height-xxl} ) !important);
+  }
+
+  &--3xxs {
+    @include height(calc( 3 * #{$height-xxs} ) !important);
+  }
+
+  &--3xs {
+    @include height(calc( 3 * #{$height-xs} ) !important);
+  }
+
+  &--3sm {
+    @include height(calc( 3 * #{$height-sm} ) !important);
+  }
+
+  &--3md {
+    @include height(calc( 3 * #{$height-md} ) !important);
+  }
+
+  &--3ml {
+    @include height(calc( 3 * #{$height-ml} ) !important);
+  }
+
+  &--3lg {
+    @include height(calc( 3 * #{$height-lg} ) !important);
+  }
+
+  &--3xl {
+    @include height(calc( 3 * #{$height-xl} ) !important);
+  }
+
+  &--3xxl {
+    @include height(calc( 3 * #{$height-xxl} ) !important);
+  }
+
+  &--4xxs {
+    @include height(calc( 4 * #{$height-xxs} ) !important);
+  }
+
+  &--4xs {
+    @include height(calc( 4 * #{$height-xs} ) !important);
+  }
+
+  &--4sm {
+    @include height(calc( 4 * #{$height-sm} ) !important);
+  }
+
+  &--4md {
+    @include height(calc( 4 * #{$height-md} ) !important);
+  }
+
+  &--4ml {
+    @include height(calc( 4 * #{$height-ml} ) !important);
+  }
+
+  &--4lg {
+    @include height(calc( 4 * #{$height-lg} ) !important);
+  }
+
+  &--4xl {
+    @include height(calc( 4 * #{$height-xl} ) !important);
+  }
+
+  &--4xxl {
+    @include height(calc( 4 * #{$height-xxl} ) !important);
   }
 }
 
 .min-height {
 
   &--50 {
-    @include min-height--50;
+    @include min-height(50% !important);
   }
 
   &--100 {
-    @include min-height--100;
+    @include min-height(100% !important);
   }
 
-  &--50vh {
-    @include min-height--50vh;
+  &--50vw {
+    @include min-height(50vw !important);
   }
 
-  &--100vh {
-    @include min-height--100vh;
+  &--100vw {
+    @include min-height(100vw !important);
   }
 
   &--xxs {
-    @include min-height--xxs;
+    @include min-height($height-xxs !important);
   }
 
   &--xs {
-    @include min-height--xs;
+    @include min-height($height-xs !important);
   }
 
   &--sm {
-    @include min-height--sm;
+    @include min-height($height-sm !important);
   }
 
   &--md {
-    @include min-height--md;
+    @include min-height($height-md !important);
+  }
+
+  &--ml {
+    @include min-height($height-ml !important);
   }
 
   &--lg {
-    @include min-height--lg;
+    @include min-height($height-lg !important);
   }
 
   &--xl {
-    @include min-height--xl;
+    @include min-height($height-xl !important);
+  }
+
+  &--xxl {
+    @include min-height($height-xxl !important);
+  }
+
+  &--2xxs {
+    @include min-height(calc( 2 * #{$height-xxs} ) !important);
+  }
+
+  &--2xs {
+    @include min-height(calc( 2 * #{$height-xs} ) !important);
+  }
+
+  &--2sm {
+    @include min-height(calc( 2 * #{$height-sm} ) !important);
+  }
+
+  &--2md {
+    @include min-height(calc( 2 * #{$height-md} ) !important);
+  }
+
+  &--2ml {
+    @include min-height(calc( 2 * #{$height-ml} ) !important);
+  }
+
+  &--2lg {
+    @include min-height(calc( 2 * #{$height-lg} ) !important);
+  }
+
+  &--2xl {
+    @include min-height(calc( 2 * #{$height-xl} ) !important);
+  }
+
+  &--2xxl {
+    @include min-height(calc( 2 * #{$height-xxl} ) !important);
+  }
+
+  &--3xxs {
+    @include min-height(calc( 3 * #{$height-xxs} ) !important);
+  }
+
+  &--3xs {
+    @include min-height(calc( 3 * #{$height-xs} ) !important);
+  }
+
+  &--3sm {
+    @include min-height(calc( 3 * #{$height-sm} ) !important);
+  }
+
+  &--3md {
+    @include min-height(calc( 3 * #{$height-md} ) !important);
+  }
+
+  &--3ml {
+    @include min-height(calc( 3 * #{$height-ml} ) !important);
+  }
+
+  &--3lg {
+    @include min-height(calc( 3 * #{$height-lg} ) !important);
+  }
+
+  &--3xl {
+    @include min-height(calc( 3 * #{$height-xl} ) !important);
+  }
+
+  &--3xxl {
+    @include min-height(calc( 3 * #{$height-xxl} ) !important);
+  }
+
+  &--4xxs {
+    @include min-height(calc( 4 * #{$height-xxs} ) !important);
+  }
+
+  &--4xs {
+    @include min-height(calc( 4 * #{$height-xs} ) !important);
+  }
+
+  &--4sm {
+    @include min-height(calc( 4 * #{$height-sm} ) !important);
+  }
+
+  &--4md {
+    @include min-height(calc( 4 * #{$height-md} ) !important);
+  }
+
+  &--4ml {
+    @include min-height(calc( 4 * #{$height-ml} ) !important);
+  }
+
+  &--4lg {
+    @include min-height(calc( 4 * #{$height-lg} ) !important);
+  }
+
+  &--4xl {
+    @include min-height(calc( 4 * #{$height-xl} ) !important);
+  }
+
+  &--4xxl {
+    @include min-height(calc( 4 * #{$height-xxl} ) !important);
   }
 }
 
 .max-height {
+  
+  &--50 {
+    @include max-height(50% !important);
+  }
+
   &--100 {
-    @include max-height--100;
+    @include max-height(100% !important);
+  }
+
+  &--50vw {
+    @include min-height(50vw !important);
+  }
+
+  &--100vw {
+    @include min-height(100vw !important);
+  }
+
+  &--xxs {
+    @include max-height($height-xxs !important);
+  }
+
+  &--xs {
+    @include max-height($height-xs !important);
+  }
+
+  &--sm {
+    @include max-height($height-sm !important);
+  }
+
+  &--md {
+    @include max-height($height-md !important);
+  }
+
+  &--ml {
+    @include max-height($height-ml !important);
+  }
+
+  &--lg {
+    @include max-height($height-lg !important);
+  }
+
+  &--xl {
+    @include max-height($height-xl !important);
+  }
+
+  &--xxl {
+    @include max-height($height-xxl !important);
+  }
+
+  &--2xxs {
+    @include max-height(calc( 2 * #{$height-xxs} ) !important);
+  }
+
+  &--2xs {
+    @include max-height(calc( 2 * #{$height-xs} ) !important);
+  }
+
+  &--2sm {
+    @include max-height(calc( 2 * #{$height-sm} ) !important);
+  }
+
+  &--2md {
+    @include max-height(calc( 2 * #{$height-md} ) !important);
+  }
+
+  &--2ml {
+    @include max-height(calc( 2 * #{$height-ml} ) !important);
+  }
+
+  &--2lg {
+    @include max-height(calc( 2 * #{$height-lg} ) !important);
+  }
+
+  &--2xl {
+    @include max-height(calc( 2 * #{$height-xl} ) !important);
+  }
+
+  &--2xxl {
+    @include max-height(calc( 2 * #{$height-xxl} ) !important);
+  }
+
+  &--3xxs {
+    @include max-height(calc( 3 * #{$height-xxs} ) !important);
+  }
+
+  &--3xs {
+    @include max-height(calc( 3 * #{$height-xs} ) !important);
+  }
+
+  &--3sm {
+    @include max-height(calc( 3 * #{$height-sm} ) !important);
+  }
+
+  &--3md {
+    @include max-height(calc( 3 * #{$height-md} ) !important);
+  }
+
+  &--3ml {
+    @include max-height(calc( 3 * #{$height-ml} ) !important);
+  }
+
+  &--3lg {
+    @include max-height(calc( 3 * #{$height-lg} ) !important);
+  }
+
+  &--3xl {
+    @include max-height(calc( 3 * #{$height-xl} ) !important);
+  }
+
+  &--3xxl {
+    @include max-height(calc( 3 * #{$height-xxl} ) !important);
+  }
+
+  &--4xxs {
+    @include max-height(calc( 4 * #{$height-xxs} ) !important);
+  }
+
+  &--4xs {
+    @include max-height(calc( 4 * #{$height-xs} ) !important);
+  }
+
+  &--4sm {
+    @include max-height(calc( 4 * #{$height-sm} ) !important);
+  }
+
+  &--4md {
+    @include max-height(calc( 4 * #{$height-md} ) !important);
+  }
+
+  &--4ml {
+    @include max-height(calc( 4 * #{$height-ml} ) !important);
+  }
+
+  &--4lg {
+    @include max-height(calc( 4 * #{$height-lg} ) !important);
+  }
+
+  &--4xl {
+    @include max-height(calc( 4 * #{$height-xl} ) !important);
+  }
+
+  &--4xxl {
+    @include max-height(calc( 4 * #{$height-xxl} ) !important);
   }
 }

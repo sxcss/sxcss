@@ -5,38 +5,38 @@
   &__content {
 
     &--center {
-      @include place__content--center;
+      @include place-content(center);
 
       &--start {
-        @include place__content--center--start;
+        @include place-content(center flex-start);
       }
 
       &--end {
-        @include place__content--center--end;
+        @include place-content(center flex-end);
       }
     }
 
     &--start {
-      @include place__content--start;
+      @include place-content(flex-start);
 
       &--center {
-        @include place__content--start--center;
+        @include place-content(flex-start center);
       }
 
       &--end {
-        @include place__content--start--end;
+        @include place-content(flex-start flex-end);
       }
     }
 
     &--end {
-      @include place__content--end;
+      @include place-items(flex-end);
 
-      &--end {
-        @include place__content--end;
+      &--start {
+        @include place-items(flex-end flex-start);
       }
 
-      &--end {
-        @include place__content--end;
+      &--center {
+        @include place-items(flex-end center);
       }
     }
   }
@@ -44,38 +44,38 @@
   &__items {
 
     &--center {
-      @include place__items--center;
+      @include place-items(center);
 
       &--start {
-        @include place__items--center--start;
+        @include place-items(center flex-start);
       }
 
       &--end {
-        @include place__items--center--end;
+        @include place-items(center flex-end);
       }
     }
 
     &--start {
-      @include place__items--start;
+      @include place-items(flex-start);
 
       &--center {
-        @include place__items--start--center;
+        @include place-items(flex-start center);
       }
 
       &--end {
-        @include place__items--start--end;
+        @include place-items(flex-start flex-end);
       }
     }
 
     &--end {
-      @include place__items--end;
+      @include place-items(flex-end);
 
-      &--end {
-        @include place__items--end;
+      &--start {
+        @include place-items(flex-end flex-start);
       }
 
-      &--end {
-        @include place__items--end;
+      &--center {
+        @include place-items(flex-end center);
       }
     }
   }
@@ -83,38 +83,38 @@
   &_self {
 
     &--center {
-      @include place__self--center;
+      @include place-self(center);
 
       &--start {
-        @include place__self--center--start;
+        @include place-self(center flex-start);
       }
 
       &--end {
-        @include place__self--center--end;
+        @include place-self(center flex-end);
       }
     }
 
     &--start {
-      @include place__self--start;
+      @include place-self(flex-start);
 
       &--center {
-        @include place__self--start--center;
+        @include place-self(flex-start center);
       }
 
       &--end {
-        @include place__self--start--end;
+        @include place-self(flex-start flex-end);
       }
     }
 
     &--end {
-      @include place__self--end;
+      @include place-items(flex-end);
 
-      &--end {
-        @include place__self--end;
+      &--start {
+        @include place-items(flex-end flex-start);
       }
 
-      &--end {
-        @include place__self--end;
+      &--center {
+        @include place-items(flex-end center);
       }
     }
   }

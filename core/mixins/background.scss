@@ -1,69 +1,21 @@
 @import '../variables/variables.scss';
 
-@mixin background__color--black {
-  background-color: $color-black;
+@mixin background-color($background-color) {
+  background-color: $background-color;
 }
 
-@mixin background__color--white {
-  background-color: $color-white;
+@mixin background-position-x($background-position-x) {
+  background-position-x: $background-position-x;
 }
 
-@mixin background__color--dark-gray {
-  background-color: $color-dark-gray;
+@mixin background-position-y($background-position-y) {
+  background-position-y: $background-position-y;
 }
 
-@mixin background__color--light-gray {
-  background-color: $color-light-gray;
+@mixin background-size($background-size) {
+  background-size: $background-size;
 }
 
-@mixin background__color--extra-light-gray {
-  background-color: $color-extra-light-gray;
-}
-
-@mixin background__color--primary {
-  background-color: $color-primary;
-}
-
-@mixin background__color--secondary {
-  background-color: $color-secondary;
-}
-
-@mixin background__position__x--left {
-  background-position: left;
-}
-
-@mixin background__position__x--center {
-    background-position: center;
-}
-
-@mixin background__position__x--right {
-    background-position: right;
-}
-
-@mixin background__position__y--top{
-    background-position: top;
-}
-
-@mixin background__position__y--center {
-    background-position: center;
-}
-
-@mixin background__position__y--bottom {
-    background-position: bottom;
-}
-
-@mixin background__size--cover {
-  background-size: cover;
-}
-
-@mixin background__size--contain {
-  background-size: contain;
-}
-
-@mixin background__size--100 {
-  background-size: 100%;
-}
-
-@mixin background__repeat--no-repeat {
-  background-repeat: no-repeat;
+@mixin background-repeat($background-repeat) {
+  background-repeat: $background-repeat;
 }

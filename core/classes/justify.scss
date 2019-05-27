@@ -2,56 +2,56 @@
 
 .justify {
 
-  &__content {
+  &-content {
 
     &--start {
-      @include justify__content--start;
+      @include justify-content(flex-start);
     }
 
     &--end {
-      @include justify__content--end;
+      @include justify-content(flex-end);
     }
 
     &--center {
-      @include justify__content--center;
+      @include justify-content(center);
     }
 
     &--space-between {
-      @include justify__content--space-between;
+      @include justify-content(space-between);
     }
 
     &--space-around {
-      @include justify__content--space-around;
+      @include justify-content(space-around);
     }
   }
 
-  &__items {
+  &-items {
 
     &--start {
-      @include justify__items--start;
+      @include justify-items(flex-start);
     }
 
     &--end {
-      @include justify__items--end;
+      @include justify-items(flex-end);
     }
 
     &--center {
-      @include justify__items--center;
+      @include justify-items(center);
     }
   }
 
-  &__self {
+  &-self {
 
     &--start {
-      @include justify__self--start;
+      @include justify-self(flex-start);
     }
 
     &--end {
-      @include justify__self--end;
+      @include justify-self(flex-end);
     }
 
     &--center {
-      @include justify__self--center;
+      @include justify-self(center);
     }
   }
 }

@@ -2,12 +2,16 @@
 
 .position {
 
-  &__relative {
-    @include position__relative;
+  &-relative {
+    @include position(relative);
   }
 
-  &__absolute {
-    @include position__absolute;
+  &-fixed {
+    @include position(fixed);
+  }
+
+  &-absolute {
+    @include position(absolute);
 
     &--center {
       @include position__absolute--center;
