@@ -1,6 +1,6 @@
 {
   "name": "hajime",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "始 - Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠",
   "main": "main.scss",
   "scripts": {
