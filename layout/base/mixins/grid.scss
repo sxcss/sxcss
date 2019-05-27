@@ -2,9 +2,10 @@
 @import '../../../core/mixins/grid.scss';
 @import '../../../core/variables/variables.scss';
 
-@mixin grid-layout($grid-cols: 1, $grid-fr: 1fr) {
+@mixin grid-layout($grid-cols: 1, $grid-fr: 1fr, $grid-gap: $gap-xxs) {
   @include grid;
   @include grid-template-columns(repeat($grid-cols, $grid-fr));
+  @include grid-gap($grid-gap);
 
   > div {
     @include flex-basis($grid-cols);
