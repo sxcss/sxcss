@@ -5,3 +5,7 @@
 @mixin text-transform($text-transform) {
   text-transform: $text-transform;
 }
+
+@mixin line-height($line-height) {
+  line-height: $line-height;
+}

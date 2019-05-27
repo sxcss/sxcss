@@ -1,11 +1,11 @@
-$transition-ease-out-fast: all .1s ease-out;
-$transition-ease-out-medium: all .3s ease-out;
-$transition-ease-out-slow: all .5s ease-out;
-
-$transition-ease-in-fast: all .1s ease-in;
-$transition-ease-in-medium: all .3s ease-in;
-$transition-ease-in-slow: all .5s ease-in;
-
-$transition-ease-in-out-fast: all .1s ease-in-out;
-$transition-ease-in-out-medium: all .3s ease-in-out;
-$transition-ease-in-out-slow: all .5s ease-in-out;
+$transition-time: (
+  xxs: .1s,
+  xs: .2s,
+  sm: .3s,
+  ms: .4s,
+  md: .5s,
+  ml: .6s,
+  lg: .7s,
+  xl: .8s,
+  xxl: .9s
+);

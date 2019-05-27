@@ -1,19 +1,23 @@
-$border-radius-xxs: .5rem;
-$border-radius-xs: 1rem;
-$border-radius-sm: 1.5rem;
-$border-radius-ms: 2rem;
-$border-radius-md: 3rem;
-$border-radius-ml: 4rem;
-$border-radius-lg: 5rem;
-$border-radius-xl: 6rem;
-$border-radius-xxl: 8rem;
+$border-radius: (
+  xxs: .5rem,
+  xs: 1rem,
+  sm: 1.5rem,
+  ms: 2rem,
+  md: 3rem,
+  ml: 4rem,
+  lg: 5rem,
+  xl: 6rem,
+  xxl: 8rem,
+);
 
-$border-width-xxs: .5rem;
-$border-width-xs: 1rem;
-$border-width-sm: 1.5rem;
-$border-width-ms: 2rem;
-$border-width-md: 3rem;
-$border-width-ml: 4rem;
-$border-width-lg: 5rem;
-$border-width-xl: 6rem;
-$border-width-xxl: 8rem;
+$border-width: (
+  xxs: .5rem,
+  xs: 1rem,
+  sm: 1.5rem,
+  ms: 2rem,
+  md: 3rem,
+  ml: 4rem,
+  lg: 5rem,
+  xl: 6rem,
+  xxl: 8rem,
+)

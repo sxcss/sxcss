@@ -1,11 +1,11 @@
 @import '../../../core/mixins/mixins.scss';
 
-@mixin boxed($boxed-width: calc(100% - #{$gap-lg}), $boxed-max-width: $width-boxed) {
+@mixin boxed($boxed-width: calc(100% - map-get($gap, sm)), $boxed-max-width: map-get($width, boxed)) {
   width: $boxed-width;
   max-width: $boxed-max-width;
   @include margin(auto);
   @media all and (max-width: 767px) {
-    width: calc(100% - #{$gap-sm});
+    width: calc(100% - map-get($gap, sm));
   }
 }
 

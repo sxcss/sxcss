@@ -4,39 +4,39 @@
 .border {
 
   &-radius--xxs{
-    @include border-radius($border-radius-xxs);
+    @include border-radius(map-get($border-radius, xxs));
   }
   
   &-radius--xs{
-    @include border-radius($border-radius-xs);
+    @include border-radius(map-get($border-radius, xs));
   }
   
   &-radius--sm {
-    @include border-radius($border-radius-sm);
+    @include border-radius(map-get($border-radius, sm));
   }
   
   &-radius--ms {
-    @include border-radius($border-radius-ms);
+    @include border-radius(map-get($border-radius, ms));
   }
   
   &-radius--md {
-    @include border-radius($border-radius-md);
+    @include border-radius(map-get($border-radius, md));
   }
   
   &-radius--ml {
-    @include border-radius($border-radius-ml);
+    @include border-radius(map-get($border-radius, ml));
   }
   
   &-radius--lg {
-    @include border-radius($border-radius-lg);
+    @include border-radius(map-get($border-radius, lg));
   }
   
   &-radius--xl {
-    @include border-radius($border-radius-xl);
+    @include border-radius(map-get($border-radius, xl));
   }
   
   &-radius--xxl {
-    @include border-radius($border-radius-xxl);
+    @include border-radius(map-get($border-radius, xxl));
   }
   
   &-radius--50 {
@@ -48,38 +48,38 @@
   }
 
   &-width--xxs{
-    @include border-width($border-width-xxs);
+    @include border-width(map-get($border-width, xxs));
   }
   
   &-width--xs{
-    @include border-width($border-width-xs);
+    @include border-width(map-get($border-width, xs));
   }
   
   &-width--sm {
-    @include border-width($border-width-sm);
+    @include border-width(map-get($border-width, sm));
   }
   
   &-width--ms {
-    @include border-width($border-width-ms);
+    @include border-width(map-get($border-width, ms));
   }
   
   &-width--md {
-    @include border-width($border-width-md);
+    @include border-width(map-get($border-width, md));
   }
   
   &-width--ml {
-    @include border-width($border-width-ml);
+    @include border-width(map-get($border-width, ml));
   }
   
   &-width--lg {
-    @include border-width($border-width-lg);
+    @include border-width(map-get($border-width, lg));
   }
   
   &-width--xl {
-    @include border-width($border-width-xl);
+    @include border-width(map-get($border-width, xl));
   }
   
   &-width--xxl {
-    @include border-width($border-width-xxl);
+    @include border-width(map-get($border-width, xxl));
   }
 }

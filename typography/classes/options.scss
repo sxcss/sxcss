@@ -35,64 +35,64 @@
   &-size {
 
     &--xs {
-      @include font-size($font-size-xs);
+      @include font-size(map-get($font-size, xs));
     }
     &--sm {
-      @include font-size($font-size-sm);
+      @include font-size(map-get($font-size, sm));
     }
     &--ms {
-      @include font-size($font-size-ms);
+      @include font-size(map-get($font-size, ms));
     }
     &--md {
-      @include font-size($font-size-md);
+      @include font-size(map-get($font-size, md));
     }
     &--ml {
-      @include font-size($font-size-ml);
+      @include font-size(map-get($font-size, ml));
     }
     &--lg {
-      @include font-size($font-size-lg);
+      @include font-size(map-get($font-size, lg));
     }
     &--xl {
-      @include font-size($font-size-xl);
+      @include font-size(map-get($font-size, xl));
     }
   }
 
   &-weight {
 
     &--thin {
-      @include font-weight($font-weight-thin); 
+      @include font-weight(map-get($font-weight, thin)); 
     }
 
     &--ultralight {
-      @include font-weight($font-weight-extralight);
+      @include font-weight(map-get($font-weight, extralight));
     }
 
     &--light {
-      @include font-weight($font-weight-light);
+      @include font-weight(map-get($font-weight, light));
     }
 
     &--normal {
-      @include font-weight($font-weight-normal);
+      @include font-weight(map-get($font-weight, norma)l);
     }
 
     &--medium {
-      @include font-weight($font-weight-medium);
+      @include font-weight(map-get($font-weight, medium));
     }
 
     &--semibold {
-      @include font-weight($font-weight-semibold);
+      @include font-weight(map-get($font-weight, semibold));
     }
 
     &--bold {
-      @include font-weight($font-weight-bold);
+      @include font-weight(map-get($font-weight, bold));
     }
 
     &--extrabold {
-      @include font-weight($font-weight-extrabold);
+      @include font-weight(map-get($font-weight, extrabold));
     }
 
     &--black {
-      @include font-weight($font-weight-black);
+      @include font-weight(map-get($font-weight, black));
     }
   }
 }

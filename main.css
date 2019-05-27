@@ -290,37 +290,37 @@ input[type=number]::-webkit-outer-spin-button {
   flex-basis: 100%;
 }
 .flex-basis--2-col {
-  flex-basis: calc(50% - 1.5rem / 2);
+  flex-basis: calc(50% - map-get($gap, sm) / 2);
 }
 .flex-basis--3-col {
-  flex-basis: calc(33.3333% - 1.5 * 1.5rem / 3);
+  flex-basis: calc(33.3333% - 1.5 * map-get($gap, sm) / 3);
 }
 .flex-basis--4-col {
-  flex-basis: calc(25% - 2 * 1.5rem / 4);
+  flex-basis: calc(25% - 2 * map-get($gap, sm) / 4);
 }
 .flex-basis--5-col {
-  flex-basis: calc(25% - 2.5 * 1.5rem/ 5);
+  flex-basis: calc(25% - 2.5 * map-get($gap, sm)/ 5);
 }
 .flex-basis--6-col {
-  flex-basis: calc(25% - 3 * 1.5rem / 6);
+  flex-basis: calc(25% - 3 * map-get($gap, sm) / 6);
 }
 .flex-basis--7-col {
-  flex-basis: calc(14.2857% - 3.5 * 1.5rem / 7);
+  flex-basis: calc(14.2857% - 3.5 * map-get($gap, sm) / 7);
 }
 .flex-basis--8-col {
-  flex-basis: calc(12.5% - 4 * 1.5rem / 8);
+  flex-basis: calc(12.5% - 4 * map-get($gap, sm) / 8);
 }
 .flex-basis--9-col {
-  flex-basis: calc(11.11% - 4.5 * 1.5rem / 9);
+  flex-basis: calc(11.11% - 4.5 * map-get($gap, sm) / 9);
 }
 .flex-basis--10-col {
-  flex-basis: calc(10% - 5 * 1.5rem / 10);
+  flex-basis: calc(10% - 5 * map-get($gap, sm) / 10);
 }
 .flex-basis--11-col {
-  flex-basis: calc(9.0909% - 5.5 * 1.5rem / 11);
+  flex-basis: calc(9.0909% - 5.5 * map-get($gap, sm) / 11);
 }
 .flex-basis--12-col {
-  flex-basis: calc(8.3333% - 6 * 1.5rem / 12);
+  flex-basis: calc(8.3333% - 6 * map-get($gap, sm) / 12);
 }
 
 .grid {
@@ -413,7 +413,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 100vw !important;
 }
 .height--xxs {
-  height: 9rem !important;
+  height: s !important;
 }
 .height--xs {
   height: 12rem !important;
@@ -434,79 +434,79 @@ input[type=number]::-webkit-outer-spin-button {
   height: 33rem !important;
 }
 .height--xxl {
-  height: 39rem !important;
+  height: l !important;
 }
 .height--2xxs {
-  height: calc( 2 * 9rem ) !important;
+  height: calc( 2 * map-get($height, xxs)) !important;
 }
 .height--2xs {
-  height: calc( 2 * 12rem ) !important;
+  height: calc( 2 * map-get($height, xs) ) !important;
 }
 .height--2sm {
-  height: calc( 2 * 15rem ) !important;
+  height: calc( 2 * map-get($height, sm) ) !important;
 }
 .height--2md {
-  height: calc( 2 * 21rem ) !important;
+  height: calc( 2 * map-get($height, md) ) !important;
 }
 .height--2ml {
-  height: calc( 2 * 24rem ) !important;
+  height: calc( 2 * map-get($height, ml) ) !important;
 }
 .height--2lg {
-  height: calc( 2 * 27rem ) !important;
+  height: calc( 2 * map-get($height, lg) ) !important;
 }
 .height--2xl {
-  height: calc( 2 * 33rem ) !important;
+  height: calc( 2 * map-get($height, xl) ) !important;
 }
 .height--2xxl {
-  height: calc( 2 * 39rem ) !important;
+  height: calc( 2 * map-get($height, xxl) ) !important;
 }
 .height--3xxs {
-  height: calc( 3 * 9rem ) !important;
+  height: calc( 3 * map-get($height, xxl) ) !important;
 }
 .height--3xs {
-  height: calc( 3 * 12rem ) !important;
+  height: calc( 3 * map-get($height, xs) ) !important;
 }
 .height--3sm {
-  height: calc( 3 * 15rem ) !important;
+  height: calc( 3 * map-get($height, sm) ) !important;
 }
 .height--3md {
-  height: calc( 3 * 21rem ) !important;
+  height: calc( 3 * map-get($height, md) ) !important;
 }
 .height--3ml {
-  height: calc( 3 * 24rem ) !important;
+  height: calc( 3 * map-get($height, ml) ) !important;
 }
 .height--3lg {
-  height: calc( 3 * 27rem ) !important;
+  height: calc( 3 * map-get($height, lg) ) !important;
 }
 .height--3xl {
-  height: calc( 3 * 33rem ) !important;
+  height: calc( 3 * map-get($height, xl) ) !important;
 }
 .height--3xxl {
-  height: calc( 3 * 39rem ) !important;
+  height: calc( 3 * map-get($height, xxl) ) !important;
 }
 .height--4xxs {
-  height: calc( 4 * 9rem ) !important;
+  height: calc( 4 * map-get($height, xxl) ) !important;
 }
 .height--4xs {
-  height: calc( 4 * 12rem ) !important;
+  height: calc( 4 * map-get($height, xs) ) !important;
 }
 .height--4sm {
-  height: calc( 4 * 15rem ) !important;
+  height: calc( 4 * map-get($height, sm) ) !important;
 }
 .height--4md {
-  height: calc( 4 * 21rem ) !important;
+  height: calc( 4 * map-get($height, md) ) !important;
 }
 .height--4ml {
-  height: calc( 4 * 24rem ) !important;
+  height: calc( 4 * map-get($height, ml) ) !important;
 }
 .height--4lg {
-  height: calc( 4 * 27rem ) !important;
+  height: calc( 4 * map-get($height, lg) ) !important;
 }
 .height--4xl {
-  height: calc( 4 * 33rem ) !important;
+  height: calc( 4 * map-get($height, xl) ) !important;
 }
 .height--4xxl {
-  height: calc( 4 * 39rem ) !important;
+  height: calc( 4 * map-get($height, xxl) ) !important;
 }
 
 .min-height--50 {
@@ -522,7 +522,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 100vw !important;
 }
 .min-height--xxs {
-  height: 9rem !important;
+  height: s !important;
 }
 .min-height--xs {
   height: 12rem !important;
@@ -543,79 +543,79 @@ input[type=number]::-webkit-outer-spin-button {
   height: 33rem !important;
 }
 .min-height--xxl {
-  height: 39rem !important;
+  height: l !important;
 }
 .min-height--2xxs {
-  height: calc( 2 * 9rem ) !important;
+  height: calc( 2 * map-get($height, xxl) ) !important;
 }
 .min-height--2xs {
-  height: calc( 2 * 12rem ) !important;
+  height: calc( 2 * map-get($height, xs) ) !important;
 }
 .min-height--2sm {
-  height: calc( 2 * 15rem ) !important;
+  height: calc( 2 * map-get($height, sm) ) !important;
 }
 .min-height--2md {
-  height: calc( 2 * 21rem ) !important;
+  height: calc( 2 * map-get($height, md) ) !important;
 }
 .min-height--2ml {
-  height: calc( 2 * 24rem ) !important;
+  height: calc( 2 * map-get($height, ml) ) !important;
 }
 .min-height--2lg {
-  height: calc( 2 * 27rem ) !important;
+  height: calc( 2 * map-get($height, lg) ) !important;
 }
 .min-height--2xl {
-  height: calc( 2 * 33rem ) !important;
+  height: calc( 2 * map-get($height, xl) ) !important;
 }
 .min-height--2xxl {
-  height: calc( 2 * 39rem ) !important;
+  height: calc( 2 * map-get($height, xxl) ) !important;
 }
 .min-height--3xxs {
-  height: calc( 3 * 9rem ) !important;
+  height: calc( 3 * map-get($height, xxl) ) !important;
 }
 .min-height--3xs {
-  height: calc( 3 * 12rem ) !important;
+  height: calc( 3 * map-get($height, xs) ) !important;
 }
 .min-height--3sm {
-  height: calc( 3 * 15rem ) !important;
+  height: calc( 3 * map-get($height, sm) ) !important;
 }
 .min-height--3md {
-  height: calc( 3 * 21rem ) !important;
+  height: calc( 3 * map-get($height, md) ) !important;
 }
 .min-height--3ml {
-  height: calc( 3 * 24rem ) !important;
+  height: calc( 3 * map-get($height, ml) ) !important;
 }
 .min-height--3lg {
-  height: calc( 3 * 27rem ) !important;
+  height: calc( 3 * map-get($height, lg) ) !important;
 }
 .min-height--3xl {
-  height: calc( 3 * 33rem ) !important;
+  height: calc( 3 * map-get($height, xl) ) !important;
 }
 .min-height--3xxl {
-  height: calc( 3 * 39rem ) !important;
+  height: calc( 3 * map-get($height, xxl) ) !important;
 }
 .min-height--4xxs {
-  height: calc( 4 * 9rem ) !important;
+  height: calc( 4 * map-get($height, xxl) ) !important;
 }
 .min-height--4xs {
-  height: calc( 4 * 12rem ) !important;
+  height: calc( 4 * map-get($height, xs) ) !important;
 }
 .min-height--4sm {
-  height: calc( 4 * 15rem ) !important;
+  height: calc( 4 * map-get($height, sm) ) !important;
 }
 .min-height--4md {
-  height: calc( 4 * 21rem ) !important;
+  height: calc( 4 * map-get($height, md) ) !important;
 }
 .min-height--4ml {
-  height: calc( 4 * 24rem ) !important;
+  height: calc( 4 * map-get($height, ml) ) !important;
 }
 .min-height--4lg {
-  height: calc( 4 * 27rem ) !important;
+  height: calc( 4 * map-get($height, lg) ) !important;
 }
 .min-height--4xl {
-  height: calc( 4 * 33rem ) !important;
+  height: calc( 4 * map-get($height, xl) ) !important;
 }
 .min-height--4xxl {
-  height: calc( 4 * 39rem ) !important;
+  height: calc( 4 * map-get($height, xxl) ) !important;
 }
 
 .max-height--50 {
@@ -631,7 +631,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 100vw !important;
 }
 .max-height--xxs {
-  height: 9rem !important;
+  height: s !important;
 }
 .max-height--xs {
   height: 12rem !important;
@@ -652,79 +652,79 @@ input[type=number]::-webkit-outer-spin-button {
   height: 33rem !important;
 }
 .max-height--xxl {
-  height: 39rem !important;
+  height: l !important;
 }
 .max-height--2xxs {
-  height: calc( 2 * 9rem ) !important;
+  height: calc( 2 * map-get($height, xxl) ) !important;
 }
 .max-height--2xs {
-  height: calc( 2 * 12rem ) !important;
+  height: calc( 2 * map-get($height, xs) ) !important;
 }
 .max-height--2sm {
-  height: calc( 2 * 15rem ) !important;
+  height: calc( 2 * map-get($height, sm) ) !important;
 }
 .max-height--2md {
-  height: calc( 2 * 21rem ) !important;
+  height: calc( 2 * map-get($height, md) ) !important;
 }
 .max-height--2ml {
-  height: calc( 2 * 24rem ) !important;
+  height: calc( 2 * map-get($height, ml) ) !important;
 }
 .max-height--2lg {
-  height: calc( 2 * 27rem ) !important;
+  height: calc( 2 * map-get($height, lg) ) !important;
 }
 .max-height--2xl {
-  height: calc( 2 * 33rem ) !important;
+  height: calc( 2 * map-get($height, xl) ) !important;
 }
 .max-height--2xxl {
-  height: calc( 2 * 39rem ) !important;
+  height: calc( 2 * map-get($height, xxl) ) !important;
 }
 .max-height--3xxs {
-  height: calc( 3 * 9rem ) !important;
+  height: calc( 3 * map-get($height, xxl) ) !important;
 }
 .max-height--3xs {
-  height: calc( 3 * 12rem ) !important;
+  height: calc( 3 * map-get($height, xs) ) !important;
 }
 .max-height--3sm {
-  height: calc( 3 * 15rem ) !important;
+  height: calc( 3 * map-get($height, sm) ) !important;
 }
 .max-height--3md {
-  height: calc( 3 * 21rem ) !important;
+  height: calc( 3 * map-get($height, md) ) !important;
 }
 .max-height--3ml {
-  height: calc( 3 * 24rem ) !important;
+  height: calc( 3 * map-get($height, ml) ) !important;
 }
 .max-height--3lg {
-  height: calc( 3 * 27rem ) !important;
+  height: calc( 3 * map-get($height, lg) ) !important;
 }
 .max-height--3xl {
-  height: calc( 3 * 33rem ) !important;
+  height: calc( 3 * map-get($height, xl) ) !important;
 }
 .max-height--3xxl {
-  height: calc( 3 * 39rem ) !important;
+  height: calc( 3 * map-get($height, xxl) ) !important;
 }
 .max-height--4xxs {
-  height: calc( 4 * 9rem ) !important;
+  height: calc( 4 * map-get($height, xxl) ) !important;
 }
 .max-height--4xs {
-  height: calc( 4 * 12rem ) !important;
+  height: calc( 4 * map-get($height, xs) ) !important;
 }
 .max-height--4sm {
-  height: calc( 4 * 15rem ) !important;
+  height: calc( 4 * map-get($height, sm) ) !important;
 }
 .max-height--4md {
-  height: calc( 4 * 21rem ) !important;
+  height: calc( 4 * map-get($height, md) ) !important;
 }
 .max-height--4ml {
-  height: calc( 4 * 24rem ) !important;
+  height: calc( 4 * map-get($height, ml) ) !important;
 }
 .max-height--4lg {
-  height: calc( 4 * 27rem ) !important;
+  height: calc( 4 * map-get($height, lg) ) !important;
 }
 .max-height--4xl {
-  height: calc( 4 * 33rem ) !important;
+  height: calc( 4 * map-get($height, xl) ) !important;
 }
 .max-height--4xxl {
-  height: calc( 4 * 39rem ) !important;
+  height: calc( 4 * map-get($height, xxl) ) !important;
 }
 
 .no-scroll {
@@ -756,10 +756,10 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 0.3;
 }
 .hover__opacity--md:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .hover__opacity--lg:hover {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .justify-content--start {
@@ -1088,13 +1088,31 @@ input[type=number]::-webkit-outer-spin-button {
   object-fit: contain;
 }
 
+.opacity--xxs {
+  opacity: 0.1;
+}
+.opacity--xs {
+  opacity: 0.2;
+}
 .opacity--sm {
   opacity: 0.3;
 }
+.opacity--ms {
+  opacity: 0.4;
+}
 .opacity--md {
+  opacity: 0.5;
+}
+.opacity--ml {
   opacity: 0.6;
 }
 .opacity--lg {
+  opacity: 0.7;
+}
+.opacity--xl {
+  opacity: 0.8;
+}
+.opacity--xxl {
   opacity: 0.9;
 }
 
@@ -1452,32 +1470,147 @@ input[type=number]::-webkit-outer-spin-button {
   transform: translate(-100%, -50%);
 }
 
-.transition--ease-out--slow {
-  transition: all 0.5s ease-out;
+.line-height--1 {
+  line-height: 1 !important;
 }
-.transition--ease-out--medium {
-  transition: all 0.3s ease-out;
+.line-height--1-1 {
+  line-height: 1.1 !important;
 }
-.transition--ease-out--fast {
+.line-height--1-2 {
+  line-height: 1.2 !important;
+}
+.line-height--1-3 {
+  line-height: 1.33 !important;
+}
+.line-height--1-5 {
+  line-height: 1.5 !important;
+}
+.line-height--1-8 {
+  line-height: 1.8 !important;
+}
+.line-height--2 {
+  line-height: 2 !important;
+}
+.line-height--2-4 {
+  line-height: 2.4 !important;
+}
+.line-height--2-7 {
+  line-height: 2.7 !important;
+}
+.line-height--3 {
+  line-height: 3 !important;
+}
+.line-height--4 {
+  line-height: 4 !important;
+}
+.line-height--xxs {
+  line-height: 9rem !important;
+}
+.line-height--xs {
+  line-height: 12rem !important;
+}
+.line-height--sm {
+  line-height: 15rem !important;
+}
+.line-height--ms {
+  line-height: 18rem !important;
+}
+.line-height--md {
+  line-height: 21rem !important;
+}
+.line-height--ml {
+  line-height: 24rem !important;
+}
+.line-height--lg {
+  line-height: 27rem !important;
+}
+.line-height--xl {
+  line-height: 33rem !important;
+}
+.line-height--xxl {
+  line-height: 9rem !important;
+}
+
+.transition--ease-out--xxs {
   transition: all 0.1s ease-out;
 }
-.transition--ease-in--slow {
-  transition: all 0.5s ease-in;
+.transition--ease-out--xs {
+  transition: all 0.2s ease-out;
 }
-.transition--ease-in--medium {
-  transition: all 0.3s ease-in;
+.transition--ease-out--sm {
+  transition: all 0.3s ease-out;
 }
-.transition--ease-in--fast {
+.transition--ease-out--ms {
+  transition: all 0.4s ease-out;
+}
+.transition--ease-out--md {
+  transition: all 0.5s ease-out;
+}
+.transition--ease-out--ml {
+  transition: all 0.6s ease-out;
+}
+.transition--ease-out--lg {
+  transition: all 0.7s ease-out;
+}
+.transition--ease-out--xl {
+  transition: all 0.8s ease-out;
+}
+.transition--ease-out--xxl {
+  transition: all 0.9s ease-out;
+}
+.transition--ease-in--xxs {
   transition: all 0.1s ease-in;
 }
-.transition--ease-in-out--slow {
-  transition: all 0.5s ease-in-out;
+.transition--ease-in--xs {
+  transition: all 0.2s ease-in;
 }
-.transition--ease-in-out--medium {
+.transition--ease-in--sm {
+  transition: all 0.3s ease-in;
+}
+.transition--ease-in--ms {
+  transition: all 0.4s ease-in;
+}
+.transition--ease-in--md {
+  transition: all 0.5s ease-in;
+}
+.transition--ease-in--ml {
+  transition: all 0.6s ease-in;
+}
+.transition--ease-in--lg {
+  transition: all 0.7s ease-in;
+}
+.transition--ease-in--xl {
+  transition: all 0.8s ease-in;
+}
+.transition--ease-in--xxl {
+  transition: all 0.9s ease-in;
+}
+.transition--ease-in-out--xxs {
+  transition: all 0.1s ease-in-out;
+}
+.transition--ease-in-out--xs {
+  transition: all 0.2s ease-in-out;
+}
+.transition--ease-in-out--sm {
   transition: all 0.3s ease-in-out;
 }
-.transition--ease-in-out--fast {
-  transition: all 0.1s ease-in-out;
+.transition--ease-in-out--ms {
+  transition: all 0.4s ease-in-out;
+}
+.transition--ease-in-out--md {
+  transition: all 0.5s ease-in-out;
+}
+.transition--ease-in-out--ml {
+  transition: all 0.6s ease-in-out;
+}
+.transition--ease-in-out--lg {
+  transition: all 0.7s ease-in-out;
+}
+.transition--ease-in-out--xl {
+  transition: all 0.8s ease-in-out;
+}
+.transition--ease-in-out--xxl {
+  transition: all 0.9s ease-in-out;
 }
 
 .width--50 {
@@ -1520,76 +1653,76 @@ input[type=number]::-webkit-outer-spin-button {
   width: 39rem;
 }
 .width--2xxs {
-  width: calc( 2 * 9rem );
+  width: calc( 2 * map-get($width, xxs) );
 }
 .width--2xs {
-  width: calc( 2 * 12rem );
+  width: calc( 2 * map-get($width, xs) );
 }
 .width--2sm {
-  width: calc( 2 * 15rem );
+  width: calc( 2 * map-get($width, sm) );
 }
 .width--2md {
-  width: calc( 2 * 21rem );
+  width: calc( 2 * map-get($width, md) );
 }
 .width--2ml {
-  width: calc( 2 * 24rem );
+  width: calc( 2 * map-get($width, ml) );
 }
 .width--2lg {
-  width: calc( 2 * 27rem );
+  width: calc( 2 * map-get($width, lg) );
 }
 .width--2xl {
-  width: calc( 2 * 33rem );
+  width: calc( 2 * map-get($width, xl) );
 }
 .width--2xxl {
-  width: calc( 2 * 39rem );
+  width: calc( 2 * map-get($width, xxl) );
 }
 .width--3xxs {
-  width: calc( 3 * 9rem );
+  width: calc( 3 * map-get($width, xxs) );
 }
 .width--3xs {
-  width: calc( 3 * 12rem );
+  width: calc( 3 * map-get($width, xs) );
 }
 .width--3sm {
-  width: calc( 3 * 15rem );
+  width: calc( 3 * map-get($width, sm) );
 }
 .width--3md {
-  width: calc( 3 * 21rem );
+  width: calc( 3 * map-get($width, md) );
 }
 .width--3ml {
-  width: calc( 3 * 24rem );
+  width: calc( 3 * map-get($width, ml) );
 }
 .width--3lg {
-  width: calc( 3 * 27rem );
+  width: calc( 3 * map-get($width, lg) );
 }
 .width--3xl {
-  width: calc( 3 * 33rem );
+  width: calc( 3 * map-get($width, xl) );
 }
 .width--3xxl {
-  width: calc( 3 * 39rem );
+  width: calc( 3 * map-get($width, xxl) );
 }
 .width--4xxs {
-  width: calc( 4 * 9rem );
+  width: calc( 4 * map-get($width, xxs) );
 }
 .width--4xs {
-  width: calc( 4 * 12rem );
+  width: calc( 4 * map-get($width, xs) );
 }
 .width--4sm {
-  width: calc( 4 * 15rem );
+  width: calc( 4 * map-get($width, sm) );
 }
 .width--4md {
-  width: calc( 4 * 21rem );
+  width: calc( 4 * map-get($width, md) );
 }
 .width--4ml {
-  width: calc( 4 * 24rem );
+  width: calc( 4 * map-get($width, ml) );
 }
 .width--4lg {
-  width: calc( 4 * 27rem );
+  width: calc( 4 * map-get($width, lg) );
 }
 .width--4xl {
-  width: calc( 4 * 33rem );
+  width: calc( 4 * map-get($width, xl) );
 }
 .width--4xxl {
-  width: calc( 4 * 39rem );
+  width: calc( 4 * map-get($width, xxl) );
 }
 
 .min-width--50 {
@@ -1632,76 +1765,76 @@ input[type=number]::-webkit-outer-spin-button {
   width: 39rem;
 }
 .min-width--2xxs {
-  width: calc( 2 * 9rem );
+  width: calc( 2 * map-get($width, xxs) );
 }
 .min-width--2xs {
-  width: calc( 2 * 12rem );
+  width: calc( 2 * map-get($width, xs) );
 }
 .min-width--2sm {
-  width: calc( 2 * 15rem );
+  width: calc( 2 * map-get($width, sm) );
 }
 .min-width--2md {
-  width: calc( 2 * 21rem );
+  width: calc( 2 * map-get($width, md) );
 }
 .min-width--2ml {
-  width: calc( 2 * 24rem );
+  width: calc( 2 * map-get($width, ml) );
 }
 .min-width--2lg {
-  width: calc( 2 * 27rem );
+  width: calc( 2 * map-get($width, lg) );
 }
 .min-width--2xl {
-  width: calc( 2 * 33rem );
+  width: calc( 2 * map-get($width, xl) );
 }
 .min-width--2xxl {
-  width: calc( 2 * 39rem );
+  width: calc( 2 * map-get($width, xxl) );
 }
 .min-width--3xxs {
-  width: calc( 3 * 9rem );
+  width: calc( 3 * map-get($width, xxs) );
 }
 .min-width--3xs {
-  width: calc( 3 * 12rem );
+  width: calc( 3 * map-get($width, xs) );
 }
 .min-width--3sm {
-  width: calc( 3 * 15rem );
+  width: calc( 3 * map-get($width, sm) );
 }
 .min-width--3md {
-  width: calc( 3 * 21rem );
+  width: calc( 3 * map-get($width, md) );
 }
 .min-width--3ml {
-  width: calc( 3 * 24rem );
+  width: calc( 3 * map-get($width, ml) );
 }
 .min-width--3lg {
-  width: calc( 3 * 27rem );
+  width: calc( 3 * map-get($width, lg) );
 }
 .min-width--3xl {
-  width: calc( 3 * 33rem );
+  width: calc( 3 * map-get($width, xl) );
 }
 .min-width--3xxl {
-  width: calc( 3 * 39rem );
+  width: calc( 3 * map-get($width, xxl) );
 }
 .min-width--4xxs {
-  width: calc( 4 * 9rem );
+  width: calc( 4 * map-get($width, xxs) );
 }
 .min-width--4xs {
-  width: calc( 4 * 12rem );
+  width: calc( 4 * map-get($width, xs) );
 }
 .min-width--4sm {
-  width: calc( 4 * 15rem );
+  width: calc( 4 * map-get($width, sm) );
 }
 .min-width--4md {
-  width: calc( 4 * 21rem );
+  width: calc( 4 * map-get($width, md) );
 }
 .min-width--4ml {
-  width: calc( 4 * 24rem );
+  width: calc( 4 * map-get($width, ml) );
 }
 .min-width--4lg {
-  width: calc( 4 * 27rem );
+  width: calc( 4 * map-get($width, lg) );
 }
 .min-width--4xl {
-  width: calc( 4 * 33rem );
+  width: calc( 4 * map-get($width, xl) );
 }
 .min-width--4xxl {
-  width: calc( 4 * 39rem );
+  width: calc( 4 * map-get($width, xxl) );
 }
 
 .max-width--50 {
@@ -1744,76 +1877,76 @@ input[type=number]::-webkit-outer-spin-button {
   width: 39rem;
 }
 .max-width--2xxs {
-  width: calc( 2 * 9rem );
+  width: calc( 2 * map-get($width, xxs) );
 }
 .max-width--2xs {
-  width: calc( 2 * 12rem );
+  width: calc( 2 * map-get($width, xs) );
 }
 .max-width--2sm {
-  width: calc( 2 * 15rem );
+  width: calc( 2 * map-get($width, sm) );
 }
 .max-width--2md {
-  width: calc( 2 * 21rem );
+  width: calc( 2 * map-get($width, md) );
 }
 .max-width--2ml {
-  width: calc( 2 * 24rem );
+  width: calc( 2 * map-get($width, ml) );
 }
 .max-width--2lg {
-  width: calc( 2 * 27rem );
+  width: calc( 2 * map-get($width, lg) );
 }
 .max-width--2xl {
-  width: calc( 2 * 33rem );
+  width: calc( 2 * map-get($width, xl) );
 }
 .max-width--2xxl {
-  width: calc( 2 * 39rem );
+  width: calc( 2 * map-get($width, xxl) );
 }
 .max-width--3xxs {
-  width: calc( 3 * 9rem );
+  width: calc( 3 * map-get($width, xxs) );
 }
 .max-width--3xs {
-  width: calc( 3 * 12rem );
+  width: calc( 3 * map-get($width, xs) );
 }
 .max-width--3sm {
-  width: calc( 3 * 15rem );
+  width: calc( 3 * map-get($width, sm) );
 }
 .max-width--3md {
-  width: calc( 3 * 21rem );
+  width: calc( 3 * map-get($width, md) );
 }
 .max-width--3ml {
-  width: calc( 3 * 24rem );
+  width: calc( 3 * map-get($width, ml) );
 }
 .max-width--3lg {
-  width: calc( 3 * 27rem );
+  width: calc( 3 * map-get($width, lg) );
 }
 .max-width--3xl {
-  width: calc( 3 * 33rem );
+  width: calc( 3 * map-get($width, xl) );
 }
 .max-width--3xxl {
-  width: calc( 3 * 39rem );
+  width: calc( 3 * map-get($width, xxl) );
 }
 .max-width--4xxs {
-  width: calc( 4 * 9rem );
+  width: calc( 4 * map-get($width, xxs) );
 }
 .max-width--4xs {
-  width: calc( 4 * 12rem );
+  width: calc( 4 * map-get($width, xs) );
 }
 .max-width--4sm {
-  width: calc( 4 * 15rem );
+  width: calc( 4 * map-get($width, sm) );
 }
 .max-width--4md {
-  width: calc( 4 * 21rem );
+  width: calc( 4 * map-get($width, md) );
 }
 .max-width--4ml {
-  width: calc( 4 * 24rem );
+  width: calc( 4 * map-get($width, ml) );
 }
 .max-width--4lg {
-  width: calc( 4 * 27rem );
+  width: calc( 4 * map-get($width, lg) );
 }
 .max-width--4xl {
-  width: calc( 4 * 33rem );
+  width: calc( 4 * map-get($width, xl) );
 }
 .max-width--4xxl {
-  width: calc( 4 * 39rem );
+  width: calc( 4 * map-get($width, xxl) );
 }
 
 .h1 {
@@ -1858,7 +1991,7 @@ ol li {
 }
 
 .font-size--xs {
-  font-size: 0.6rem;
+  font-size: 0.84rem;
 }
 .font-size--sm {
   font-size: 1rem;
@@ -1888,7 +2021,7 @@ ol li {
   font-weight: 300;
 }
 .font-weight--normal {
-  font-weight: 400;
+  font-weight: l;
 }
 .font-weight--medium {
   font-weight: 500;
@@ -1921,17 +2054,17 @@ p {
   margin: auto;
 }
 .container__inner--boxed {
-  width: calc(100% - 6rem);
+  width: calc(100% - map-get($gap, sm));
   max-width: 118rem;
   margin: auto;
 }
 @media all and (max-width: 767px) {
   .container__inner--boxed {
-    width: calc(100% - 1.5rem);
+    width: calc(100% - map-get($gap, sm));
   }
 }
 
-@media all and (min-width: calc(118rem + 2.1rem)) {
+@media all and (min-width: calc(map-get($width, boxed) + 2.1rem)) {
   .grid__1-col .container__inner--boxed {
     padding-left: 0 !important;
     padding-right: 0 !important;

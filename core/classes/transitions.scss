@@ -4,46 +4,118 @@
 
   &--ease-out {
 
-    &--slow {
-      @include transition($transition-ease-out-slow);
+    &--xxs {
+      @include transition(all map-get($transition-time, xxs) ease-out);
     }
 
-    &--medium {
-      @include transition($transition-ease-out-medium);
+    &--xs {
+      @include transition(all map-get($transition-time, xs) ease-out);
     }
 
-    &--fast {
-      @include transition($transition-ease-out-fast);
+    &--sm {
+      @include transition(all map-get($transition-time, sm) ease-out);
+    }
+
+    &--ms {
+      @include transition(all map-get($transition-time, ms) ease-out);
+    }
+
+    &--md {
+      @include transition(all map-get($transition-time, md) ease-out);
+    }
+
+    &--ml {
+      @include transition(all map-get($transition-time, ml) ease-out);
+    }
+
+    &--lg {
+      @include transition(all map-get($transition-time, lg) ease-out);
+    }
+
+    &--xl {
+      @include transition(all map-get($transition-time, xl) ease-out);
+    }
+
+    &--xxl {
+      @include transition(all map-get($transition-time, xxl) ease-out);
     }
   }
 
   &--ease-in {
 
-    &--slow {
-      @include transition($transition-ease-in-slow);
+    &--xxs {
+      @include transition(all map-get($transition-time, xxs) ease-in);
     }
 
-    &--medium {
-      @include transition($transition-ease-in-medium);
+    &--xs {
+      @include transition(all map-get($transition-time, xs) ease-in);
     }
 
-    &--fast {
-      @include transition($transition-ease-in-fast);
+    &--sm {
+      @include transition(all map-get($transition-time, sm) ease-in);
+    }
+
+    &--ms {
+      @include transition(all map-get($transition-time, ms) ease-in);
+    }
+
+    &--md {
+      @include transition(all map-get($transition-time, md) ease-in);
+    }
+
+    &--ml {
+      @include transition(all map-get($transition-time, ml) ease-in);
+    }
+
+    &--lg {
+      @include transition(all map-get($transition-time, lg) ease-in);
+    }
+
+    &--xl {
+      @include transition(all map-get($transition-time, xl) ease-in);
+    }
+
+    &--xxl {
+      @include transition(all map-get($transition-time, xxl) ease-in);
     }
   }
 
   &--ease-in-out {
 
-    &--slow {
-      @include transition($transition-ease-in-out-slow);
+    &--xxs {
+      @include transition(all map-get($transition-time, xxs) ease-in-out);
     }
 
-    &--medium {
-      @include transition($transition-ease-in-out-medium);
+    &--xs {
+      @include transition(all map-get($transition-time, xs) ease-in-out);
     }
 
-    &--fast {
-      @include transition($transition-ease-in-out-fast);
+    &--sm {
+      @include transition(all map-get($transition-time, sm) ease-in-out);
+    }
+
+    &--ms {
+      @include transition(all map-get($transition-time, ms) ease-in-out);
+    }
+
+    &--md {
+      @include transition(all map-get($transition-time, md) ease-in-out);
+    }
+
+    &--ml {
+      @include transition(all map-get($transition-time, ml) ease-in-out);
+    }
+
+    &--lg {
+      @include transition(all map-get($transition-time, lg) ease-in-out);
+    }
+
+    &--xl {
+      @include transition(all map-get($transition-time, xl) ease-in-out);
+    }
+
+    &--xxl {
+      @include transition(all map-get($transition-time, xxl) ease-in-out);
     }
   }
 }

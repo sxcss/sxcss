@@ -6,7 +6,7 @@
 
 .grid__1-col {
   .container__inner--boxed {
-    @media all and (min-width: calc(#{$width-boxed} + 2.1rem)) {
+    @media all and (min-width: calc(map-get($width, boxed) + 2.1rem)) {
       padding-left: 0 !important;
       padding-right: 0 !important;
     }

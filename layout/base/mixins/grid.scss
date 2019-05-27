@@ -2,7 +2,7 @@
 @import '../../../core/mixins/grid.scss';
 @import '../../../core/variables/variables.scss';
 
-@mixin grid-layout($grid-cols: 1, $grid-fr: 1fr, $grid-gap: $gap-xxs) {
+@mixin grid-layout($grid-cols: 1, $grid-fr: 1fr, $grid-gap: map-get($gap, xxs)) {
   @include grid;
   @include grid-template-columns(repeat($grid-cols, $grid-fr));
   @include grid-gap($grid-gap);

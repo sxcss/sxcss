@@ -13,35 +13,35 @@
     }
 
     &--xxs {
-      @include margin($gap-xxs !important);
+      @include margin(map-get($gap, xxs) !important);
     }
 
     &--xs {
-      @include margin($gap-xs !important);
+      @include margin(map-get($gap, xs)!important);
     }
 
     &--sm {
-      @include margin($gap-sm !important);
+      @include margin(map-get($gap, sm)!important);
     }
 
     &--ms {
-      @include margin($gap-ms !important);
+      @include margin(map-get($gap, ms)!important);
     }
 
     &--md {
-      @include margin($gap-md !important);
+      @include margin(map-get($gap, md)!important);
     }
 
     &--ml {
-      @include margin($gap-ml !important);
+      @include margin(map-get($gap, ml)!important);
     }
 
     &--lg {
-      @include margin($gap-lg !important);
+      @include margin(map-get($gap, lg)!important);
     }
 
     &--xl {
-      @include margin($gap-lg !important);
+      @include margin(map-get($gap, lg)!important);
     }
   }
 
@@ -56,35 +56,35 @@
     }
 
     &--xxs {
-      @include margin-x($gap-xxs !important);
+      @include margin-x(map-get($gap, xxs) !important);
     }
 
     &--xs {
-      @include margin-x($gap-xs !important);
+      @include margin-x(map-get($gap, xs)!important);
     }
 
     &--sm {
-      @include margin-x($gap-sm !important);
+      @include margin-x(map-get($gap, sm)!important);
     }
 
     &--ms {
-      @include margin-x($gap-ms !important);
+      @include margin-x(map-get($gap, ms)!important);
     }
 
     &--md {
-      @include margin-x($gap-md !important);
+      @include margin-x(map-get($gap, md)!important);
     }
 
     &--ml {
-      @include margin-x($gap-ml !important);
+      @include margin-x(map-get($gap, ml)!important);
     }
 
     &--lg {
-      @include margin-x($gap-lg !important);
+      @include margin-x(map-get($gap, lg)!important);
     }
 
     &--xl {
-      @include margin-x($gap-xl !important);
+      @include margin-x(map-get($gap, xl)!important);
     }
   }
 
@@ -99,35 +99,35 @@
     }
 
     &--xxs {
-      @include margin-y($gap-xxs !important);
+      @include margin-y(map-get($gap, xxs) !important);
     }
 
     &--xs {
-      @include margin-y($gap-xs !important);
+      @include margin-y(map-get($gap, xs)!important);
     }
 
     &--sm {
-      @include margin-y($gap-sm !important);
+      @include margin-y(map-get($gap, sm)!important);
     }
 
     &--ms {
-      @include margin-y($gap-ms !important);
+      @include margin-y(map-get($gap, ms)!important);
     }
 
     &--md {
-      @include margin-y($gap-md !important);
+      @include margin-y(map-get($gap, md)!important);
     }
 
     &--ml {
-      @include margin-y($gap-ml !important);
+      @include margin-y(map-get($gap, ml)!important);
     }
 
     &--lg {
-      @include margin-y($gap-lg !important);
+      @include margin-y(map-get($gap, lg)!important);
     }
 
     &--xl {
-      @include margin-y($gap-xl !important);
+      @include margin-y(map-get($gap, xl)!important);
     }
   }
 
@@ -142,35 +142,35 @@
     }
 
     &--xxs {
-      @include margin-left($gap-xxs !important);
+      @include margin-left(map-get($gap, xxs) !important);
     }
 
     &--xs {
-      @include margin-left($gap-xs !important);
+      @include margin-left(map-get($gap, xs)!important);
     }
 
     &--sm {
-      @include margin-left($gap-sm !important);
+      @include margin-left(map-get($gap, sm)!important);
     }
 
     &--ms {
-      @include margin-left($gap-ms !important);
+      @include margin-left(map-get($gap, ms)!important);
     }
 
     &--md {
-      @include margin-left($gap-md !important);
+      @include margin-left(map-get($gap, md)!important);
     }
 
     &--ml {
-      @include margin-left($gap-ml !important);
+      @include margin-left(map-get($gap, ml)!important);
     }
 
     &--lg {
-      @include margin-left($gap-lg !important);
+      @include margin-left(map-get($gap, lg)!important);
     }
 
     &--xl {
-      @include margin-left($gap-xl !important);
+      @include margin-left(map-get($gap, xl)!important);
     }
   }
 
@@ -185,35 +185,35 @@
     }
 
     &--xxs {
-      @include margin-right($gap-xxs !important);
+      @include margin-right(map-get($gap, xxs) !important);
     }
 
     &--xs {
-      @include margin-right($gap-xs !important);
+      @include margin-right(map-get($gap, xs)!important);
     }
 
     &--sm {
-      @include margin-right($gap-sm !important);
+      @include margin-right(map-get($gap, sm)!important);
     }
 
     &--ms {
-      @include margin-right($gap-ms !important);
+      @include margin-right(map-get($gap, ms)!important);
     }
 
     &--md {
-      @include margin-right($gap-md !important);
+      @include margin-right(map-get($gap, md)!important);
     }
 
     &--ml {
-      @include margin-right($gap-ml !important);
+      @include margin-right(map-get($gap, ml)!important);
     }
 
     &--lg {
-      @include margin-right($gap-lg !important);
+      @include margin-right(map-get($gap, lg)!important);
     }
 
     &--xl {
-      @include margin-right($gap-xl !important);
+      @include margin-right(map-get($gap, xl)!important);
     }
   }
 
@@ -224,35 +224,35 @@
     }
 
     &--xxs {
-      @include margin-top($gap-xxs !important);
+      @include margin-top(map-get($gap, xxs) !important);
     }
 
     &--xs {
-      @include margin-top($gap-xs !important);
+      @include margin-top(map-get($gap, xs)!important);
     }
 
     &--sm {
-      @include margin-top($gap-sm !important);
+      @include margin-top(map-get($gap, sm)!important);
     }
 
     &--ms {
-      @include margin-top($gap-ms !important);
+      @include margin-top(map-get($gap, ms)!important);
     }
 
     &--md {
-      @include margin-top($gap-md !important);
+      @include margin-top(map-get($gap, md)!important);
     }
 
     &--ml {
-      @include margin-top($gap-ml !important);
+      @include margin-top(map-get($gap, ml)!important);
     }
 
     &--lg {
-      @include margin-top($gap-lg !important);
+      @include margin-top(map-get($gap, lg)!important);
     }
 
     &--xl {
-      @include margin-top($gap-xl !important);
+      @include margin-top(map-get($gap, xl)!important);
     }
   }
 
@@ -263,35 +263,35 @@
     }
 
     &--xxs {
-      @include margin-bottom($gap-xxs !important);
+      @include margin-bottom(map-get($gap, xxs) !important);
     }
 
     &--xs {
-      @include margin-bottom($gap-xs !important);
+      @include margin-bottom(map-get($gap, xs)!important);
     }
 
     &--sm {
-      @include margin-bottom($gap-sm !important);
+      @include margin-bottom(map-get($gap, sm)!important);
     }
 
     &--ms {
-      @include margin-bottom($gap-ms !important);
+      @include margin-bottom(map-get($gap, ms)!important);
     }
 
     &--md {
-      @include margin-bottom($gap-md !important);
+      @include margin-bottom(map-get($gap, md)!important);
     }
 
     &--ml {
-      @include margin-bottom($gap-ml !important);
+      @include margin-bottom(map-get($gap, ml)!important);
     }
 
     &--lg {
-      @include margin-bottom($gap-lg !important);
+      @include margin-bottom(map-get($gap, lg)!important);
     }
 
     &--xl {
-      @include margin-bottom($gap-xl !important);
+      @include margin-bottom(map-get($gap, xl)!important);
     }
   }
 }

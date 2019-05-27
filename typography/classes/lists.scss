@@ -4,6 +4,6 @@ ul,
 ol {
 
   li {
-    line-height: $line-height-lg;
+    line-height: map-get($line-height, lg);
   }
 }

@@ -5,31 +5,31 @@
   &-color {
 
     &--black {
-      @include background-color($color-black);
+      @include background-color(map-get($color, black));
     }
 
     &--white {
-      @include background-color($color-white);
+      @include background-color(map-get($color, white));
     }
 
     &--primary {
-      @include background-color($color-primary);
+      @include background-color(map-get($color, primary));
     }
 
     &--secondary {
-      @include background-color($color-secondary);
+      @include background-color(map-get($color, secondary));
     }
 
     &--light-gray {
-      @include background-color($color-light-gray);
+      @include background-color(map-get($color, light-gray));
     }
 
     &--extra-light-gray {
-      @include background-color($color-extra-light-gray);
+      @include background-color(map-get($color, extra-light-gray));
     }
 
     &--dark-gray {
-      @include background-color($color-dark-gray);
+      @include background-color(map-get($color, dark-gray));
     }
   }
 

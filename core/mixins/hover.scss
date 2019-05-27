@@ -2,19 +2,18 @@
 
 @mixin hover__opacity--sm {
   &:hover {
-    @include opacity--sm;
+    @include opacity(map-get($opacity, sm));
   }
 }
 
 @mixin hover__opacity--md {
   &:hover {
-    @include opacity--md;
+    @include opacity(map-get($opacity, md));
   }
 }
 
 @mixin hover__opacity--lg {
   &:hover {
-    @include opacity--lg;
+    @include opacity(map-get($opacity, lg));
   }
 }
-

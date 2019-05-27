@@ -3,26 +3,26 @@
 .color {
 
   &--black {
-    @include color($color-black);
+    @include color(map-get($color, black));
   }
 
   &--white {
-  @include color($color-white);    
+  @include color(map-get($color, white));    
   }
 
   &--primary {
-    @include color($color-primary);
+    @include color(map-get($color, primary));
   }
 
   &--secondary {
-    @include color($color-secondary);
+    @include color(map-get($color, secondary));
   }
 
   &--light-gray {
-    @include color($color-light-gray);
+    @include color(map-get($color, light-gray));
   }
 
   &--dark-gray {
-    @include color($color-dark-gray);
+    @include color(map-get($color, dark-gray));
   }
 }
