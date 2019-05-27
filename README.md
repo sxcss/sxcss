@@ -2,4 +2,4 @@
 
 <br>
 
-🧩 Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠
+🎮 Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠
