@@ -1,31 +1,36 @@
 {
-  "name": "hajime",
-  "version": "1.0.11",
-  "description": "始 - Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠",
+  "name": "fantastic-css",
+  "version": "1.0.0",
+  "description": "🎮 Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠",
   "main": "main.scss",
   "scripts": {
     "test": "sass main.scss main.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/new-fantastic/hajime.git"
+    "url": "git+https://github.com/new-fantastic/fantastic-css.git"
   },
   "keywords": [
-    "hajime",
     "css",
     "sass",
     "scss",
+    "framework",
     "ui",
+    "library",
+    "styles",
+    "style",
     "styling",
-    "stylesheet",
-    "molecular",
-    "atomic",
-    "semantic"
+    "grid",
+    "flexbox",
+    "flex",
+    "sassy",
+    "scalable",
+    "universal"
   ],
-  "author": "Aleksander Grygier",
+  "author": "Aleksander Grygier <alek@newfantastic.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/new-fantastic/hajime/issues"
+    "url": "https://github.com/new-fantastic/fantastic-css/issues"
   },
-  "homepage": "https://github.com/new-fantastic/hajime#readme"
+  "homepage": "https://github.com/new-fantastic/fantastic-css#readme"
 }
