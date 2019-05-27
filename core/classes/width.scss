@@ -55,99 +55,99 @@
   }
 
   &--2xxs {
-    @include width(calc( 2 * map-get($width, xxs) ));
+    @include width(calc( 2 * #{map-get($width, xxs)} ));
   }
 
   &--2xs {
-    @include width(calc( 2 * map-get($width, xs) ));
+    @include width(calc( 2 * #{map-get($width, xs)} ));
   }
 
   &--2sm {
-    @include width(calc( 2 * map-get($width, sm) ));
+    @include width(calc( 2 * #{map-get($width, sm)} ));
   }
 
   &--2md {
-    @include width(calc( 2 * map-get($width, md) ));
+    @include width(calc( 2 * #{map-get($width, md)} ));
   }
 
   &--2ml {
-    @include width(calc( 2 * map-get($width, ml) ));
+    @include width(calc( 2 * #{map-get($width, ml)} ));
   }
 
   &--2lg {
-    @include width(calc( 2 * map-get($width, lg) ));
+    @include width(calc( 2 * #{map-get($width, lg)} ));
   }
 
   &--2xl {
-    @include width(calc( 2 * map-get($width, xl) ));
+    @include width(calc( 2 * #{map-get($width, xl)} ));
   }
 
   &--2xxl {
-    @include width(calc( 2 * map-get($width, xxl) ));
+    @include width(calc( 2 * #{map-get($width, xxl)} ));
   }
 
   &--3xxs {
-    @include width(calc( 3 * map-get($width, xxs) ));
+    @include width(calc( 3 * #{map-get($width, xxs)} ));
   }
 
   &--3xs {
-    @include width(calc( 3 * map-get($width, xs) ));
+    @include width(calc( 3 * #{map-get($width, xs)} ));
   }
 
   &--3sm {
-    @include width(calc( 3 * map-get($width, sm) ));
+    @include width(calc( 3 * #{map-get($width, sm)} ));
   }
 
   &--3md {
-    @include width(calc( 3 * map-get($width, md) ));
+    @include width(calc( 3 * #{map-get($width, md)} ));
   }
 
   &--3ml {
-    @include width(calc( 3 * map-get($width, ml) ));
+    @include width(calc( 3 * #{map-get($width, ml)} ));
   }
 
   &--3lg {
-    @include width(calc( 3 * map-get($width, lg) ));
+    @include width(calc( 3 * #{map-get($width, lg)} ));
   }
 
   &--3xl {
-    @include width(calc( 3 * map-get($width, xl) ));
+    @include width(calc( 3 * #{map-get($width, xl)} ));
   }
 
   &--3xxl {
-    @include width(calc( 3 * map-get($width, xxl) ));
+    @include width(calc( 3 * #{map-get($width, xxl)} ));
   }
 
   &--4xxs {
-    @include width(calc( 4 * map-get($width, xxs) ));
+    @include width(calc( 4 * #{map-get($width, xxs)} ));
   }
 
   &--4xs {
-    @include width(calc( 4 * map-get($width, xs) ));
+    @include width(calc( 4 * #{map-get($width, xs)} ));
   }
 
   &--4sm {
-    @include width(calc( 4 * map-get($width, sm) ));
+    @include width(calc( 4 * #{map-get($width, sm)} ));
   }
 
   &--4md {
-    @include width(calc( 4 * map-get($width, md) ));
+    @include width(calc( 4 * #{map-get($width, md)} ));
   }
 
   &--4ml {
-    @include width(calc( 4 * map-get($width, ml) ));
+    @include width(calc( 4 * #{map-get($width, ml)} ));
   }
 
   &--4lg {
-    @include width(calc( 4 * map-get($width, lg) ));
+    @include width(calc( 4 * #{map-get($width, lg)} ));
   }
 
   &--4xl {
-    @include width(calc( 4 * map-get($width, xl) ));
+    @include width(calc( 4 * #{map-get($width, xl)} ));
   }
 
   &--4xxl {
-    @include width(calc( 4 * map-get($width, xxl) ));
+    @include width(calc( 4 * #{map-get($width, xxl)} ));
   }
 }
 
@@ -206,99 +206,99 @@
   }
 
   &--2xxs {
-    @include min-width(calc( 2 * map-get($width, xxs) ));
+    @include min-width(calc( 2 * #{map-get($width, xxs)} ));
   }
 
   &--2xs {
-    @include min-width(calc( 2 * map-get($width, xs) ));
+    @include min-width(calc( 2 * #{map-get($width, xs)} ));
   }
 
   &--2sm {
-    @include min-width(calc( 2 * map-get($width, sm) ));
+    @include min-width(calc( 2 * #{map-get($width, sm)} ));
   }
 
   &--2md {
-    @include min-width(calc( 2 * map-get($width, md) ));
+    @include min-width(calc( 2 * #{map-get($width, md)} ));
   }
 
   &--2ml {
-    @include min-width(calc( 2 * map-get($width, ml) ));
+    @include min-width(calc( 2 * #{map-get($width, ml)} ));
   }
 
   &--2lg {
-    @include min-width(calc( 2 * map-get($width, lg) ));
+    @include min-width(calc( 2 * #{map-get($width, lg)} ));
   }
 
   &--2xl {
-    @include min-width(calc( 2 * map-get($width, xl) ));
+    @include min-width(calc( 2 * #{map-get($width, xl)} ));
   }
 
   &--2xxl {
-    @include min-width(calc( 2 * map-get($width, xxl) ));
+    @include min-width(calc( 2 * #{map-get($width, xxl)} ));
   }
 
   &--3xxs {
-    @include min-width(calc( 3 * map-get($width, xxs) ));
+    @include min-width(calc( 3 * #{map-get($width, xxs)} ));
   }
 
   &--3xs {
-    @include min-width(calc( 3 * map-get($width, xs) ));
+    @include min-width(calc( 3 * #{map-get($width, xs)} ));
   }
 
   &--3sm {
-    @include min-width(calc( 3 * map-get($width, sm) ));
+    @include min-width(calc( 3 * #{map-get($width, sm)} ));
   }
 
   &--3md {
-    @include min-width(calc( 3 * map-get($width, md) ));
+    @include min-width(calc( 3 * #{map-get($width, md)} ));
   }
 
   &--3ml {
-    @include min-width(calc( 3 * map-get($width, ml) ));
+    @include min-width(calc( 3 * #{map-get($width, ml)} ));
   }
 
   &--3lg {
-    @include min-width(calc( 3 * map-get($width, lg) ));
+    @include min-width(calc( 3 * #{map-get($width, lg)} ));
   }
 
   &--3xl {
-    @include min-width(calc( 3 * map-get($width, xl) ));
+    @include min-width(calc( 3 * #{map-get($width, xl)} ));
   }
 
   &--3xxl {
-    @include min-width(calc( 3 * map-get($width, xxl) ));
+    @include min-width(calc( 3 * #{map-get($width, xxl)} ));
   }
 
   &--4xxs {
-    @include min-width(calc( 4 * map-get($width, xxs) ));
+    @include min-width(calc( 4 * #{map-get($width, xxs)} ));
   }
 
   &--4xs {
-    @include min-width(calc( 4 * map-get($width, xs) ));
+    @include min-width(calc( 4 * #{map-get($width, xs)} ));
   }
 
   &--4sm {
-    @include min-width(calc( 4 * map-get($width, sm) ));
+    @include min-width(calc( 4 * #{map-get($width, sm)} ));
   }
 
   &--4md {
-    @include min-width(calc( 4 * map-get($width, md) ));
+    @include min-width(calc( 4 * #{map-get($width, md)} ));
   }
 
   &--4ml {
-    @include min-width(calc( 4 * map-get($width, ml) ));
+    @include min-width(calc( 4 * #{map-get($width, ml)} ));
   }
 
   &--4lg {
-    @include min-width(calc( 4 * map-get($width, lg) ));
+    @include min-width(calc( 4 * #{map-get($width, lg)} ));
   }
 
   &--4xl {
-    @include min-width(calc( 4 * map-get($width, xl) ));
+    @include min-width(calc( 4 * #{map-get($width, xl)} ));
   }
 
   &--4xxl {
-    @include min-width(calc( 4 * map-get($width, xxl) ));
+    @include min-width(calc( 4 * #{map-get($width, xxl)} ));
   }
 }
 
@@ -357,98 +357,98 @@
   }
 
   &--2xxs {
-    @include max-width(calc( 2 * map-get($width, xxs) ));
+    @include max-width(calc( 2 * #{map-get($width, xxs)} ));
   }
 
   &--2xs {
-    @include max-width(calc( 2 * map-get($width, xs) ));
+    @include max-width(calc( 2 * #{map-get($width, xs)} ));
   }
 
   &--2sm {
-    @include max-width(calc( 2 * map-get($width, sm) ));
+    @include max-width(calc( 2 * #{map-get($width, sm)} ));
   }
 
   &--2md {
-    @include max-width(calc( 2 * map-get($width, md) ));
+    @include max-width(calc( 2 * #{map-get($width, md)} ));
   }
 
   &--2ml {
-    @include max-width(calc( 2 * map-get($width, ml) ));
+    @include max-width(calc( 2 * #{map-get($width, ml)} ));
   }
 
   &--2lg {
-    @include max-width(calc( 2 * map-get($width, lg) ));
+    @include max-width(calc( 2 * #{map-get($width, lg)} ));
   }
 
   &--2xl {
-    @include max-width(calc( 2 * map-get($width, xl) ));
+    @include max-width(calc( 2 * #{map-get($width, xl)} ));
   }
 
   &--2xxl {
-    @include max-width(calc( 2 * map-get($width, xxl) ));
+    @include max-width(calc( 2 * #{map-get($width, xxl)} ));
   }
 
   &--3xxs {
-    @include max-width(calc( 3 * map-get($width, xxs) ));
+    @include max-width(calc( 3 * #{map-get($width, xxs)} ));
   }
 
   &--3xs {
-    @include max-width(calc( 3 * map-get($width, xs) ));
+    @include max-width(calc( 3 * #{map-get($width, xs)} ));
   }
 
   &--3sm {
-    @include max-width(calc( 3 * map-get($width, sm) ));
+    @include max-width(calc( 3 * #{map-get($width, sm)} ));
   }
 
   &--3md {
-    @include max-width(calc( 3 * map-get($width, md) ));
+    @include max-width(calc( 3 * #{map-get($width, md)} ));
   }
 
   &--3ml {
-    @include max-width(calc( 3 * map-get($width, ml) ));
+    @include max-width(calc( 3 * #{map-get($width, ml)} ));
   }
 
   &--3lg {
-    @include max-width(calc( 3 * map-get($width, lg) ));
+    @include max-width(calc( 3 * #{map-get($width, lg)} ));
   }
 
   &--3xl {
-    @include max-width(calc( 3 * map-get($width, xl) ));
+    @include max-width(calc( 3 * #{map-get($width, xl)} ));
   }
 
   &--3xxl {
-    @include max-width(calc( 3 * map-get($width, xxl) ));
+    @include max-width(calc( 3 * #{map-get($width, xxl)} ));
   }
 
   &--4xxs {
-    @include max-width(calc( 4 * map-get($width, xxs) ));
+    @include max-width(calc( 4 * #{map-get($width, xxs)} ));
   }
 
   &--4xs {
-    @include max-width(calc( 4 * map-get($width, xs) ));
+    @include max-width(calc( 4 * #{map-get($width, xs)} ));
   }
 
   &--4sm {
-    @include max-width(calc( 4 * map-get($width, sm) ));
+    @include max-width(calc( 4 * #{map-get($width, sm)} ));
   }
 
   &--4md {
-    @include max-width(calc( 4 * map-get($width, md) ));
+    @include max-width(calc( 4 * #{map-get($width, md)} ));
   }
 
   &--4ml {
-    @include max-width(calc( 4 * map-get($width, ml) ));
+    @include max-width(calc( 4 * #{map-get($width, ml)} ));
   }
 
   &--4lg {
-    @include max-width(calc( 4 * map-get($width, lg) ));
+    @include max-width(calc( 4 * #{map-get($width, lg)} ));
   }
 
   &--4xl {
-    @include max-width(calc( 4 * map-get($width, xl) ));
+    @include max-width(calc( 4 * #{map-get($width, xl)} ));
   }
 
   &--4xxl {
-    @include max-width(calc( 4 * map-get($width, xxl) ));
+    @include max-width(calc( 4 * #{map-get($width, xxl)} ));
   }
 }
