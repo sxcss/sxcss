@@ -6,6 +6,10 @@
   "scripts": {
     "test": "sass main.scss main.css"
   },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/new-fantastic/fantastic-css.git"
