@@ -6,8 +6,8 @@
   flex-wrap: $flex-wrap;
 }
 
-@mixin flex-basis($flex-basis) {
-  flex-basis: $flex-basis;
+@mixin flex-basis($flex-basis-cols) {
+  flex-basis: map-get($flex-basis, $flex-basis-cols);
 }
 
 @mixin flex-direction($flex-direction) {

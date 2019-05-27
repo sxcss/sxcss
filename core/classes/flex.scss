@@ -19,63 +19,51 @@
   &-basis {
 
     &--1-col {
-      @include flex;
-      @include flex-basis($flex-basis-1-col);
+      @include flex-basis(1);
     }
 
     &--2-col {
-      @include flex;
-      @include flex-basis($flex-basis-2-col);
+      @include flex-basis(2);
     }
 
     &--3-col {
-      @include flex;
-      @include flex-basis($flex-basis-3-col);
+      @include flex-basis(3);
     }
 
     &--4-col {
-      @include flex;
-      @include flex-basis($flex-basis-4-col);
+      @include flex-basis(4);
     }
 
     &--5-col {
-      @include flex;
-      @include flex-basis($flex-basis-5-col);
+      @include flex-basis(5);
     }
 
     &--6-col {
-      @include flex;
-      @include flex-basis($flex-basis-6-col);
+      @include flex-basis(6);
     }
 
     &--7-col {
-      @include flex;
-      @include flex-basis($flex-basis-7-col);
+      @include flex-basis(7);
     }
 
     &--8-col {
-      @include flex;
-      @include flex-basis($flex-basis-8-col);
+      @include flex-basis(8);
     }
 
     &--9-col {
-      @include flex;
-      @include flex-basis($flex-basis-9-col);
+      @include flex-basis(9);
     }
 
     &--10-col {
-      @include flex;
-      @include flex-basis($flex-basis-10-col);
+      @include flex-basis(10);
     }
 
     &--11-col {
-      @include flex;
-      @include flex-basis($flex-basis-11-col);
+      @include flex-basis(11);
     }
 
     &--12-col {
-      @include flex;
-      @include flex-basis($flex-basis-12-col);
+      @include flex-basis(12);
     }
   }
 }

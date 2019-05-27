@@ -287,51 +287,39 @@ input[type=number]::-webkit-outer-spin-button {
   flex-wrap: nowrap;
 }
 .flex-basis--1-col {
-  display: flex;
   flex-basis: 100%;
 }
 .flex-basis--2-col {
-  display: flex;
   flex-basis: calc(50% - 1.5rem / 2);
 }
 .flex-basis--3-col {
-  display: flex;
   flex-basis: calc(33.3333% - 1.5 * 1.5rem / 3);
 }
 .flex-basis--4-col {
-  display: flex;
   flex-basis: calc(25% - 2 * 1.5rem / 4);
 }
 .flex-basis--5-col {
-  display: flex;
   flex-basis: calc(25% - 2.5 * 1.5rem/ 5);
 }
 .flex-basis--6-col {
-  display: flex;
   flex-basis: calc(25% - 3 * 1.5rem / 6);
 }
 .flex-basis--7-col {
-  display: flex;
   flex-basis: calc(14.2857% - 3.5 * 1.5rem / 7);
 }
 .flex-basis--8-col {
-  display: flex;
   flex-basis: calc(12.5% - 4 * 1.5rem / 8);
 }
 .flex-basis--9-col {
-  display: flex;
   flex-basis: calc(11.11% - 4.5 * 1.5rem / 9);
 }
 .flex-basis--10-col {
-  display: flex;
   flex-basis: calc(10% - 5 * 1.5rem / 10);
 }
 .flex-basis--11-col {
-  display: flex;
   flex-basis: calc(9.0909% - 5.5 * 1.5rem / 11);
 }
 .flex-basis--12-col {
-  display: flex;
   flex-basis: calc(8.3333% - 6 * 1.5rem / 12);
 }
 
@@ -843,7 +831,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: auto !important;
 }
 .margin--xxs {
-  margin: 0.5rem !important;
+  margin: 10px !important;
 }
 .margin--xs {
   margin: 1rem !important;
@@ -875,8 +863,8 @@ input[type=number]::-webkit-outer-spin-button {
   margin-right: auto !important;
 }
 .margin-x--xxs {
-  margin-left: 0.5rem !important;
-  margin-right: 0.5rem !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
 }
 .margin-x--xs {
   margin-left: 1rem !important;
@@ -915,8 +903,8 @@ input[type=number]::-webkit-outer-spin-button {
   margin-bottom: auto !important;
 }
 .margin-y--xxs {
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
 .margin-y--xs {
   margin-top: 1rem !important;
@@ -953,7 +941,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-left: auto !important;
 }
 .margin-left--xxs {
-  margin-left: 0.5rem !important;
+  margin-left: 10px !important;
 }
 .margin-left--xs {
   margin-left: 1rem !important;
@@ -983,7 +971,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-right: auto !important;
 }
 .margin-right--xxs {
-  margin-right: 0.5rem !important;
+  margin-right: 10px !important;
 }
 .margin-right--xs {
   margin-right: 1rem !important;
@@ -1010,7 +998,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-top: 0 !important;
 }
 .margin-top--xxs {
-  margin-top: 0.5rem !important;
+  margin-top: 10px !important;
 }
 .margin-top--xs {
   margin-top: 1rem !important;
@@ -1037,7 +1025,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-bottom: 0 !important;
 }
 .margin-bottom--xxs {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 10px !important;
 }
 .margin-bottom--xs {
   margin-bottom: 1rem !important;
@@ -1114,7 +1102,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 0 !important;
 }
 .padding--xxs {
-  padding: 0.5rem !important;
+  padding: 10px !important;
 }
 .padding--xs {
   padding: 1rem !important;
@@ -1142,8 +1130,8 @@ input[type=number]::-webkit-outer-spin-button {
   padding-right: 0 !important;
 }
 .padding-x--xxs {
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 .padding-x--xs {
   padding-left: 1rem !important;
@@ -1178,8 +1166,8 @@ input[type=number]::-webkit-outer-spin-button {
   padding-bottom: 0 !important;
 }
 .padding-y--xxs {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 .padding-y--xs {
   padding-top: 1rem !important;
@@ -1213,7 +1201,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding-left: 0 !important;
 }
 .padding-left--xxs {
-  padding-left: 0.5rem !important;
+  padding-left: 10px !important;
 }
 .padding-left--xs {
   padding-left: 1rem !important;
@@ -1240,7 +1228,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding-right: 0 !important;
 }
 .padding-right--xxs {
-  padding-right: 0.5rem !important;
+  padding-right: 10px !important;
 }
 .padding-right--xs {
   padding-right: 1rem !important;
@@ -1267,7 +1255,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding-top: 0 !important;
 }
 .padding-top--xxs {
-  padding-top: 0.5rem !important;
+  padding-top: 10px !important;
 }
 .padding-top--xs {
   padding-top: 1rem !important;
@@ -1294,7 +1282,7 @@ input[type=number]::-webkit-outer-spin-button {
   padding-bottom: 0 !important;
 }
 .padding-bottom--xxs {
-  padding-bottom: 0.5rem !important;
+  padding-bottom: 10px !important;
 }
 .padding-bottom--xs {
   padding-bottom: 1rem !important;
