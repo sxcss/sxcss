@@ -32,7 +32,7 @@
 
 .font {
 
-  &__size {
+  &-size {
 
     &--xs {
       @include font-size($font-size-xs);
@@ -57,7 +57,7 @@
     }
   }
 
-  &__weight {
+  &-weight {
 
     &--thin {
       @include font-weight($font-weight-thin); 

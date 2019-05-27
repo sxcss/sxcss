@@ -2,7 +2,7 @@
 
 .background {
 
-  &__color {
+  &-color {
 
     &--black {
       @include background-color($color-black);
@@ -33,7 +33,7 @@
     }
   }
 
-  &__size {
+  &-size {
 
     &--cover {
       @include background-size(cover);
@@ -48,9 +48,9 @@
     }
   }
 
-  &__position {
+  &-position {
 
-    &__x {
+    &-x {
       
       &--left {
         @include background-position-x(left);
@@ -65,7 +65,7 @@
       }
     }
 
-    &__y {
+    &-y {
       
       &--top {
         @include background-position-y(top);
