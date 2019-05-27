@@ -399,6 +399,75 @@ input[type=number]::-webkit-outer-spin-button {
 .grid-template-columns--repeat--12-auto {
   grid-template-columns: repeat(12, auto);
 }
+.grid-template-rows--repeat--2-1fr {
+  grid-template-rows: repeat(2, 1fr);
+}
+.grid-template-rows--repeat--3-1fr {
+  grid-template-rows: repeat(3, 1fr);
+}
+.grid-template-rows--repeat--4-1fr {
+  grid-template-rows: repeat(4, 1fr);
+}
+.grid-template-rows--repeat--5-1fr {
+  grid-template-rows: repeat(5, 1fr);
+}
+.grid-template-rows--repeat--6-1fr {
+  grid-template-rows: repeat(6, 1fr);
+}
+.grid-template-rows--repeat--7-1fr {
+  grid-template-rows: repeat(7, 1fr);
+}
+.grid-template-rows--repeat--8-1fr {
+  grid-template-rows: repeat(8, 1fr);
+}
+.grid-template-rows--repeat--9-1fr {
+  grid-template-rows: repeat(9, 1fr);
+}
+.grid-template-rows--repeat--10-1fr {
+  grid-template-rows: repeat(10, 1fr);
+}
+.grid-template-rows--repeat--11-1fr {
+  grid-template-rows: repeat(11, 1fr);
+}
+.grid-template-rows--repeat--12-1fr {
+  grid-template-rows: repeat(12, 1fr);
+}
+.grid-template-rows--repeat--1-auto {
+  grid-template-rows: repeat(1, auto);
+}
+.grid-template-rows--repeat--2-auto {
+  grid-template-rows: repeat(2, auto);
+}
+.grid-template-rows--repeat--3-auto {
+  grid-template-rows: repeat(3, auto);
+}
+.grid-template-rows--repeat--4-auto {
+  grid-template-rows: repeat(4, auto);
+}
+.grid-template-rows--repeat--5-auto {
+  grid-template-rows: repeat(5, auto);
+}
+.grid-template-rows--repeat--6-auto {
+  grid-template-rows: repeat(6, auto);
+}
+.grid-template-rows--repeat--7-auto {
+  grid-template-rows: repeat(7, auto);
+}
+.grid-template-rows--repeat--8-auto {
+  grid-template-rows: repeat(8, auto);
+}
+.grid-template-rows--repeat--9-auto {
+  grid-template-rows: repeat(9, auto);
+}
+.grid-template-rows--repeat--10-auto {
+  grid-template-rows: repeat(10, auto);
+}
+.grid-template-rows--repeat--11-auto {
+  grid-template-rows: repeat(11, auto);
+}
+.grid-template-rows--repeat--12-auto {
+  grid-template-rows: repeat(12, auto);
+}
 
 .height--50 {
   height: 50% !important;
@@ -752,14 +821,194 @@ input[type=number]::-webkit-outer-spin-button {
   object-fit: contain;
 }
 
-.hover__opacity--sm:hover {
+@media all and (max-width: 980px) {
+  .hide--desktop {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+@media all and (min-width: 981px) {
+  .hide--mobile {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 980px) {
+  .hide--tablet {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+@media all and (max-width: 767px) {
+  .hide--phone {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+.hover-opacity--xxs:hover {
+  opacity: 0.1;
+  transform: unset;
+  scale: unset;
+  animation: unset;
+}
+.hover-opacity--xs:hover {
+  opacity: 0.2;
+  transform: unset;
+  scale: unset;
+  animation: unset;
+}
+.hover-opacity--sm:hover {
   opacity: 0.3;
+  transform: unset;
+  scale: unset;
+  animation: unset;
 }
-.hover__opacity--md:hover {
+.hover-opacity--ms:hover {
+  opacity: 0.4;
+  transform: unset;
+  scale: unset;
+  animation: unset;
+}
+.hover-opacity--md:hover {
   opacity: 0.5;
+  transform: unset;
+  scale: unset;
+  animation: unset;
 }
-.hover__opacity--lg:hover {
+.hover-opacity--ml:hover {
+  opacity: 0.6;
+  transform: unset;
+  scale: unset;
+  animation: unset;
+}
+.hover-opacity--lg:hover {
   opacity: 0.7;
+  transform: unset;
+  scale: unset;
+  animation: unset;
+}
+.hover-opacity--xl:hover {
+  opacity: 0.8;
+  transform: unset;
+  scale: unset;
+  animation: unset;
+}
+.hover-opacity--xxl:hover {
+  opacity: 0.9;
+  transform: unset;
+  scale: unset;
+  animation: unset;
+}
+.hover-transform--xxs:hover {
+  opacity: unset;
+  transform: 10px;
+  scale: unset;
+  animation: unset;
+}
+.hover-transform--xs:hover {
+  opacity: unset;
+  transform: 1rem;
+  scale: unset;
+  animation: unset;
+}
+.hover-transform--sm:hover {
+  opacity: unset;
+  transform: 1.5rem;
+  scale: unset;
+  animation: unset;
+}
+.hover-transform--ms:hover {
+  opacity: unset;
+  transform: 2rem;
+  scale: unset;
+  animation: unset;
+}
+.hover-transform--md:hover {
+  opacity: unset;
+  transform: 3rem;
+  scale: unset;
+  animation: unset;
+}
+.hover-transform--ml:hover {
+  opacity: unset;
+  transform: 4.5rem;
+  scale: unset;
+  animation: unset;
+}
+.hover-transform--lg:hover {
+  opacity: unset;
+  transform: 6rem;
+  scale: unset;
+  animation: unset;
+}
+.hover-transform--xl:hover {
+  opacity: unset;
+  transform: 9rem;
+  scale: unset;
+  animation: unset;
+}
+.hover-transform--xxl:hover {
+  opacity: unset;
+  scale: unset;
+  animation: unset;
+}
+.hover-scale--xxs:hover {
+  opacity: unset;
+  transform: unset;
+  scale: 10px;
+  animation: unset;
+}
+.hover-scale--xs:hover {
+  opacity: unset;
+  transform: unset;
+  scale: 1rem;
+  animation: unset;
+}
+.hover-scale--sm:hover {
+  opacity: unset;
+  transform: unset;
+  scale: 1.5rem;
+  animation: unset;
+}
+.hover-scale--ms:hover {
+  opacity: unset;
+  transform: unset;
+  scale: 2rem;
+  animation: unset;
+}
+.hover-scale--md:hover {
+  opacity: unset;
+  transform: unset;
+  scale: 3rem;
+  animation: unset;
+}
+.hover-scale--ml:hover {
+  opacity: unset;
+  transform: unset;
+  scale: 4.5rem;
+  animation: unset;
+}
+.hover-scale--lg:hover {
+  opacity: unset;
+  transform: unset;
+  scale: 6rem;
+  animation: unset;
+}
+.hover-scale--xl:hover {
+  opacity: unset;
+  transform: unset;
+  scale: 9rem;
+  animation: unset;
+}
+.hover-scale--xxl:hover {
+  opacity: unset;
+  transform: unset;
+  animation: unset;
 }
 
 .justify-content--start {
@@ -1047,38 +1296,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .margin-bottom--xl {
   margin-bottom: 9rem !important;
-}
-
-@media all and (max-width: 980px) {
-  .desktop--hidden {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-}
-
-@media all and (min-width: 981px) {
-  .mobile--hidden {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 980px) {
-  .tablet--hidden {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-}
-
-@media all and (max-width: 767px) {
-  .phone--hidden {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
 }
 
 .object-fit--cover {
@@ -1412,6 +1629,20 @@ input[type=number]::-webkit-outer-spin-button {
 .position-fixed {
   position: fixed;
 }
+.position-fixed--top {
+  position: fixed;
+  left: unset;
+  right: unset;
+  top: 0;
+  bottom: unset;
+}
+.position-fixed--bottom {
+  position: fixed;
+  left: unset;
+  right: unset;
+  top: unset;
+  bottom: 0;
+}
 .position-absolute {
   position: absolute;
 }
@@ -1424,19 +1655,19 @@ input[type=number]::-webkit-outer-spin-button {
 .position-absolute--center-top {
   position: absolute;
   left: 50%;
-  top: 0%;
+  top: 0;
   transform: translate(-50%, -100%);
 }
 .position-absolute--center-bottom {
   position: absolute;
   left: 50%;
-  top: 0;
+  top: 100%;
   transform: translate(-50%, 0);
 }
 .position-absolute--left-top {
   position: absolute;
   left: 0;
-  top: 0%;
+  top: 0;
   transform: translate(-100%, -100%);
 }
 .position-absolute--left-bottom {
@@ -1453,19 +1684,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .position-absolute--right-top {
   position: absolute;
-  right: 0;
-  top: 0%;
+  left: 100%;
+  top: 0;
   transform: translate(-100%, -100%);
 }
 .position-absolute--right-bottom {
   position: absolute;
-  right: 0;
+  left: 100%;
   top: 100%;
   transform: translate(-100%, 0);
 }
 .position-absolute--right-center {
   position: absolute;
-  right: 0;
+  left: 100%;
   top: 50%;
   transform: translate(-100%, -50%);
 }

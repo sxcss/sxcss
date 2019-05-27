@@ -8,45 +8,53 @@
 
   &-fixed {
     @include position(fixed);
+
+    &--top {
+      @include position--fixed($top: 0);
+    }
+
+    &--bottom {
+      @include position--fixed($bottom: 0);
+    }
   }
 
   &-absolute {
     @include position(absolute);
 
     &--center {
-      @include position__absolute--center;
+      @include position--absolute(50%, 50%, translate(-50%, -50%));
     }
 
     &--center-top {
-      @include position__absolute--center-top;
+      @include position--absolute(50%, 0, translate(-50%, -100%));
     }
 
     &--center-bottom {
-      @include position__absolute--center-bottom;
+      @include position--absolute(50%, 100%, translate(-50%, 0));
     }
 
     &--left-top {
-      @include position__absolute--left-top;
+      @include position--absolute(0, 0, translate(-100%, -100%));
     }
 
     &--left-bottom {
-      @include position__absolute--left-bottom;
+      @include position--absolute(0, 100%, translate(-100%, 0));
     }
     
     &--left-center {
-      @include position__absolute--left-center;
+      @include position--absolute(0, 50%, translate(-100%, -50%));
     }
 
     &--right-top {
-      @include position__absolute--right-top;
-    }
-    
-    &--right-bottom {
-      @include position__absolute--right-bottom;
+      @include position--absolute(100%, 0, translate(-100%, -100%));
     }
 
+    &--right-bottom {
+      @include position--absolute(100%, 100%, translate(-100%, 0));
+    }
+    
     &--right-center {
-      @include position__absolute--right-center;
+      @include position--absolute(100%, 50%, translate(-100%, -50%));
     }
   }
 }

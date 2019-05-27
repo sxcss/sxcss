@@ -1,19 +1,10 @@
 @import 'opacity.scss';
 
-@mixin hover__opacity--sm {
+@mixin hover($hover-opacity: unset, $hover-transform: unset, $hover-scale: unset, $hover-animation: unset) {
   &:hover {
-    @include opacity(map-get($opacity, sm));
-  }
-}
-
-@mixin hover__opacity--md {
-  &:hover {
-    @include opacity(map-get($opacity, md));
-  }
-}
-
-@mixin hover__opacity--lg {
-  &:hover {
-    @include opacity(map-get($opacity, lg));
+    opacity: $hover-opacity;
+    transform: $hover-transform;
+    scale: $hover-scale;
+    animation: $hover-animation;
   }
 }

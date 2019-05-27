@@ -2,65 +2,25 @@
   position: $position;
 }
 
-@mixin position--absolute--center {
+@mixin position--absolute($left, $top, $transform) {
   @include position(absolute);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: $left;
+  top: $top;
+  transform: $transform;
 }
 
-@mixin position--absolute--center-top {
-  @include position(absolute);
-  left: 50%;
-  top: 0%;
-  transform: translate(-50%, -100%);
+@mixin position--relative($left: unset, $right: unset,  $top: unset, $bottom: unset) {
+  @include position(relative);
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
 }
 
-@mixin position--absolute--center-bottom {
-  @include position(absolute);
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, 0);
-}
-
-@mixin position--absolute--left-top {
-  @include position(absolute);
-  left: 0;
-  top: 0%;
-  transform: translate(-100%, -100%);
-}
-
-@mixin position--absolute--left-center {
-  @include position(absolute);
-  left: 0;
-  top: 50%;
-  transform: translate(-100%, -50%);
-}
-
-@mixin position--absolute--left-bottom {
-  @include position(absolute);
-  left: 0;
-  top: 100%;
-  transform: translate(-100%, 0);
-}
-
-@mixin position--absolute--right-top {
-  @include position(absolute);
-  right: 0;
-  top: 0%;
-  transform: translate(-100%, -100%);
-}
-
-@mixin position--absolute--right-center {
-  @include position(absolute);
-  right: 0;
-  top: 50%;
-  transform: translate(-100%, -50%);
-}
-
-@mixin position--absolute--right-bottom {
-  @include position(absolute);
-  right: 0;
-  top: 100%;
-  transform: translate(-100%, 0);
+@mixin position--fixed($left: unset, $right: unset,  $top: unset, $bottom: unset) {
+  @include position(fixed);
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
 }
