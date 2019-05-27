@@ -2,7 +2,7 @@
 
 $flex-basis: (
   1: 100%,
-  2: calc(50% - #{$gap-sm} / 2),
+  2: calc(51% - #{$gap-sm} / 2),
   3: calc(33.3333% - 1.5 * #{$gap-sm} / 3),
   4: calc(25% - 2 * #{$gap-sm} / 4),
   5: calc(25% - 2.5 * #{$gap-sm}/ 5),
