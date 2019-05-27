@@ -1,6 +1,7 @@
 @import '../variables/variables.scss';
 
-.opacity {
+.opacity,
+.opc {
 
   &--xxs {
     opacity: map-get($opacity, xxs);

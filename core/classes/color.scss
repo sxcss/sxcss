@@ -1,28 +1,30 @@
 @import '../mixins/color.scss';
 
-.color {
+.color,
+.clr {
 
-  &--black {
+  &--black, &--blk {
     @include color(map-get($color, black));
   }
 
-  &--white {
+  &--white, &--wht {
   @include color(map-get($color, white));    
   }
 
-  &--primary {
+  &--primary,
+  &--pry {
     @include color(map-get($color, primary));
   }
 
-  &--secondary {
+  &--secondary, &--scd {
     @include color(map-get($color, secondary));
   }
 
-  &--light-gray {
+  &--light-gray, &--lt-gr {
     @include color(map-get($color, light-gray));
   }
 
-  &--dark-gray {
+  &--dark-gray, &--drk-gr {
     @include color(map-get($color, dark-gray));
   }
 }

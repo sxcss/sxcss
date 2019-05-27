@@ -1,8 +1,9 @@
 @import '../mixins/transitions.scss';
 
-.transition {
+.transition,
+.tsn {
 
-  &--ease-out {
+  &--ease-out, &--e-o {
 
     &--xxs {
       @include transition(all map-get($transition-time, xxs) ease-out);
@@ -41,7 +42,7 @@
     }
   }
 
-  &--ease-in {
+  &--ease-in, &--e-i {
 
     &--xxs {
       @include transition(all map-get($transition-time, xxs) ease-in);
@@ -80,7 +81,7 @@
     }
   }
 
-  &--ease-in-out {
+  &--ease-in-out, &--e-i-o {
 
     &--xxs {
       @include transition(all map-get($transition-time, xxs) ease-in-out);

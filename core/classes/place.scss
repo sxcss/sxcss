@@ -2,12 +2,13 @@
 
 .place {
 
-  &__content {
+  &-content,
+  &-cnt {
 
-    &--center {
+    &--center, &--ctr {
       @include place-content(center);
 
-      &--start {
+      &--start, &--str {
         @include place-content(center flex-start);
       }
 
@@ -16,10 +17,10 @@
       }
     }
 
-    &--start {
+    &--start, &--str {
       @include place-content(flex-start);
 
-      &--center {
+      &--center, &--ctr {
         @include place-content(flex-start center);
       }
 
@@ -31,22 +32,23 @@
     &--end {
       @include place-items(flex-end);
 
-      &--start {
+      &--start, &--str {
         @include place-items(flex-end flex-start);
       }
 
-      &--center {
+      &--center, &--ctr {
         @include place-items(flex-end center);
       }
     }
   }
 
-  &__items {
+  &-items,
+  &-its {
 
-    &--center {
+    &--center, &--ctr {
       @include place-items(center);
 
-      &--start {
+      &--start, &--str {
         @include place-items(center flex-start);
       }
 
@@ -55,10 +57,10 @@
       }
     }
 
-    &--start {
+    &--start, &--str {
       @include place-items(flex-start);
 
-      &--center {
+      &--center, &--ctr {
         @include place-items(flex-start center);
       }
 
@@ -70,22 +72,23 @@
     &--end {
       @include place-items(flex-end);
 
-      &--start {
+      &--start, &--str {
         @include place-items(flex-end flex-start);
       }
 
-      &--center {
+      &--center, &--ctr {
         @include place-items(flex-end center);
       }
     }
   }
 
-  &_self {
+  &-self,
+  &-slf {
 
-    &--center {
+    &--center, &--ctr {
       @include place-self(center);
 
-      &--start {
+      &--start, &--str {
         @include place-self(center flex-start);
       }
 
@@ -94,10 +97,10 @@
       }
     }
 
-    &--start {
+    &--start, &--str {
       @include place-self(flex-start);
 
-      &--center {
+      &--center, &--ctr {
         @include place-self(flex-start center);
       }
 
@@ -109,11 +112,11 @@
     &--end {
       @include place-items(flex-end);
 
-      &--start {
+      &--start, &--str {
         @include place-items(flex-end flex-start);
       }
 
-      &--center {
+      &--center, &--ctr {
         @include place-items(flex-end center);
       }
     }

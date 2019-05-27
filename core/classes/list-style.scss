@@ -1,6 +1,7 @@
 @import '../mixins/list-style.scss';
 
-.list-style {
+.list-style,
+.lst-st {
 
   & {
     
@@ -8,40 +9,50 @@
       @include list-style(none);
     }
 
-    &__position {
+    &__position,
+    &__pos {
 
-      &--inside {
+      &--inside,
+      &--ins {
         @include list-style-positon(inside);
       }
 
-      &--outside {
+      &--outside,
+      &--out {
         @include list-style-positon(outside);
       }
     }
 
-    &__type {
+    &__type,
+    &__typ {
 
-      &--circle {
+      &--circle,
+      &--ccl {
         @include list-style-type(circle);
       }
 
-      &--decimal {
+      &--decimal,
+      &--dec {
         @include list-style-type(decimal);
       }
 
-      &--latin {
+      &--latin,
+      &--lat {
         @include list-style-type(upper-latin);
         
-        &--roman {
+        &--roman,
+        &--rom {
           @include list-style-type(upper-roman);
         }
         
-        &--latin {
+        &--latin,
+        &--lat {
           @include list-style-type(lower-latin);
         }
       }
 
-      &--roman {
+      &--roman,
+      &--rom {
         @include list-style-type(lower-roman);
       }
     }

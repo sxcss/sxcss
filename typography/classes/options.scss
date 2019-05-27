@@ -1,38 +1,42 @@
 @import '../../core/mixins/text.scss';
 @import '../../core/mixins/font.scss';
 
-.text {
+.text,
+.txt {
 
-  &-color {
+  &-color,
+  &-clr {
     
-    &--white {
+    &--white, &--wht {
       @include color(white);
     }
 
-    &--black {
+    &--black, &--blk {
       @include color(black);
     }
   }
 
-  &__align {
+  &-align,
+  &-agn {
 
-    &--left {
+    &--left, &-lft {
       @include text-align(left);
     }
   
-    &--center {
+    &--center, &--ctr {
       @include text-align(center);
     }
   
-    &--right {
+    &--right, &--rgt {
       @include text-align(right);
     }
   }
 }
 
-.font {
+.font,
+.fnt {
 
-  &-size {
+  &-size, &-sz {
 
     &--xs {
       @include font-size(map-get($font-size, xs));
@@ -57,7 +61,8 @@
     }
   }
 
-  &-weight {
+  &-weight,
+  &-wgt {
 
     &--thin {
       @include font-weight(map-get($font-weight, thin)); 
@@ -91,7 +96,7 @@
       @include font-weight(map-get($font-weight, extrabold));
     }
 
-    &--black {
+    &--black, &--blk {
       @include font-weight(map-get($font-weight, black));
     }
   }

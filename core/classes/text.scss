@@ -1,6 +1,7 @@
 @import '../mixins/text.scss';
 
-.line-height {
+.line-height,
+.ln-h {
 
   &--1 {
     @include line-height(1 !important);
