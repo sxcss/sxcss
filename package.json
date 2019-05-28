@@ -4,11 +4,15 @@
   "description": "🎮 Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠",
   "main": "main.scss",
   "scripts": {
-    "test": "sass main.scss main.css"
+    "dev": "sass --watch main.scss main.css",
+    "test": "sass --watch main.scss main.css",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "vuepress": "^0.14.11"
   },
   "repository": {
     "type": "git",
