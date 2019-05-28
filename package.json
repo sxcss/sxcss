@@ -4,15 +4,17 @@
   "description": "🎮 Universal, scalable and 100% customizable SCSS framework built for rapid UI development 🛠",
   "main": "main.scss",
   "scripts": {
-    "dev": "sass --watch main.scss main.css",
-    "test": "sass main.scss main.css",
-    "build": "sass main.scss main.css && uglifycss main.css > main.min.css",
+    "dev": "bash scripts/dev.sh",
+    "test": "bash scripts/test.sh",
+    "build": "bash scripts/build.sh",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "devDependencies": {
+  "dependencies": {
     "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^7.1.0"
+  },
+  "devDependencies": {
     "uglifycss": "^0.0.29",
     "vuepress": "^0.14.11"
   },
