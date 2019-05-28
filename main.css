@@ -435,77 +435,77 @@ input[type=number]::-webkit-outer-spin-button {
 .flx-basis--2,
 .flx-bas--2-col,
 .flx-bas--2 {
-  flex-basis: calc(50% - map-get($gap, sm) / 2);
+  flex-basis: calc(50% - 1.5rem / 2);
 }
 .flex-basis--3-col, .flex-basis--3, .flex-bas--3-col, .flex-bas--3,
 .flx-basis--3-col,
 .flx-basis--3,
 .flx-bas--3-col,
 .flx-bas--3 {
-  flex-basis: calc(33.3333% - 1.5 * map-get($gap, sm) / 3);
+  flex-basis: calc(33.3333% - 1.5 * 1.5rem / 3);
 }
 .flex-basis--4-col, .flex-basis--4, .flex-bas--4-col, .flex-bas--4,
 .flx-basis--4-col,
 .flx-basis--4,
 .flx-bas--4-col,
 .flx-bas--4 {
-  flex-basis: calc(25% - 2 * map-get($gap, sm) / 4);
+  flex-basis: calc(25% - 2 * 1.5rem / 4);
 }
 .flex-basis--5-col, .flex-basis--5, .flex-bas--5-col, .flex-bas--5,
 .flx-basis--5-col,
 .flx-basis--5,
 .flx-bas--5-col,
 .flx-bas--5 {
-  flex-basis: calc(25% - 2.5 * map-get($gap, sm)/ 5);
+  flex-basis: calc(25% - 2.5 * 1.5rem / 5);
 }
 .flex-basis--6-col, .flex-basis--6, .flex-bas--6-col, .flex-bas--6,
 .flx-basis--6-col,
 .flx-basis--6,
 .flx-bas--6-col,
 .flx-bas--6 {
-  flex-basis: calc(25% - 3 * map-get($gap, sm) / 6);
+  flex-basis: calc(25% - 3 * 1.5rem / 6);
 }
 .flex-basis--7-col, .flex-basis--7, .flex-bas--7-col, .flex-bas--7,
 .flx-basis--7-col,
 .flx-basis--7,
 .flx-bas--7-col,
 .flx-bas--7 {
-  flex-basis: calc(14.2857% - 3.5 * map-get($gap, sm) / 7);
+  flex-basis: calc(14.2857% - 3.5 * 1.5rem / 7);
 }
 .flex-basis--8-col, .flex-basis--8, .flex-bas--8-col, .flex-bas--8,
 .flx-basis--8-col,
 .flx-basis--8,
 .flx-bas--8-col,
 .flx-bas--8 {
-  flex-basis: calc(12.5% - 4 * map-get($gap, sm) / 8);
+  flex-basis: calc(12.5% - 4 * 1.5rem / 8);
 }
 .flex-basis--9-col, .flex-basis--9, .flex-bas--9-col, .flex-bas--9,
 .flx-basis--9-col,
 .flx-basis--9,
 .flx-bas--9-col,
 .flx-bas--9 {
-  flex-basis: calc(11.11% - 4.5 * map-get($gap, sm) / 9);
+  flex-basis: calc(11.11% - 4.5 * 1.5rem / 9);
 }
 .flex-basis--10-col, .flex-basis--10, .flex-bas--10-col, .flex-bas--10,
 .flx-basis--10-col,
 .flx-basis--10,
 .flx-bas--10-col,
 .flx-bas--10 {
-  flex-basis: calc(10% - 5 * map-get($gap, sm) / 10);
+  flex-basis: calc(10% - 5 * 1.5rem / 10);
 }
 .flex-basis--11-col, .flex-basis--11, .flex-bas--11-col, .flex-bas--11,
 .flx-basis--11-col,
 .flx-basis--11,
 .flx-bas--11-col,
 .flx-bas--11 {
-  flex-basis: calc(9.0909% - 5.5 * map-get($gap, sm) / 11);
+  flex-basis: calc(9.0909% - 5.5 * 1.5rem / 11);
 }
 .flex-basis--12-col, .flex-basis--12, .flex-bas--12-col, .flex-bas--12,
 .flx-basis--12-col,
 .flx-basis--12,
 .flx-bas--12-col,
 .flx-bas--12 {
-  flex-basis: calc(8.3333% - 6 * map-get($gap, sm) / 12);
+  flex-basis: calc(8.3333% - 6 * 1.5rem / 12);
 }
 
 .grid,
@@ -3486,18 +3486,18 @@ p {
 }
 .container__inner--boxed,
 .ctnr__inner--boxed {
-  width: calc(100% - map-get($gap, sm));
+  width: calc(100% - 1.5rem);
   max-width: 118rem;
   margin: auto;
 }
 @media all and (max-width: 767px) {
   .container__inner--boxed,
 .ctnr__inner--boxed {
-    width: calc(100% - map-get($gap, sm));
+    width: calc(100% - 1.5rem);
   }
 }
 
-@media all and (min-width: calc(map-get($width, boxed) + 2.1rem)) {
+@media all and (min-width: calc( 118rem + 2.1rem)) {
   .grid__1-col .container__inner--boxed,
 .grid__1-col .ctnr__inn__box,
 .grd__1-col .container__inner--boxed,
