@@ -5,13 +5,15 @@
   "main": "main.scss",
   "scripts": {
     "dev": "sass --watch main.scss main.css",
-    "test": "sass --watch main.scss main.css",
+    "test": "sass main.scss main.css",
+    "build": "sass main.scss main.css && uglifycss main.css > main.min.css",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
+    "uglifycss": "^0.0.29",
     "vuepress": "^0.14.11"
   },
   "repository": {
