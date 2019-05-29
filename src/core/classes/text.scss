@@ -1,3 +1,4 @@
+@import '../variables/size.scss';
 @import '../mixins/text.scss';
 
 .line-height,
@@ -48,38 +49,38 @@
   }
 
   &--xxs {
-    @include line-height(map-get($height, xxs) !important);
+    @include line-height(map-get($size, xxs) !important);
   }
 
   &--xs {
-    @include line-height(map-get($height, xs) !important);
+    @include line-height(map-get($size, xs) !important);
   }
 
   &--sm {
-    @include line-height(map-get($height, sm) !important);
+    @include line-height(map-get($size, sm) !important);
   }
 
   &--ms {
-    @include line-height(map-get($height, ms) !important);
+    @include line-height(map-get($size, ms) !important);
   }
 
   &--md {
-    @include line-height(map-get($height, md) !important);
+    @include line-height(map-get($size, md) !important);
   }
 
   &--ml {
-    @include line-height(map-get($height, ml) !important);
+    @include line-height(map-get($size, ml) !important);
   }
 
   &--lg {
-    @include line-height(map-get($height, lg) !important);
+    @include line-height(map-get($size, lg) !important);
   }
 
   &--xl {
-    @include line-height(map-get($height, xl) !important);
+    @include line-height(map-get($size, xl) !important);
   }
 
   &--xxl {
-    @include line-height(map-get($height, xxs) !important);
+    @include line-height(map-get($size, xxs) !important);
   }
 }

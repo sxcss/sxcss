@@ -1,445 +1,107 @@
+@import '../variables/size.scss';
 @import '../mixins/height.scss';
 
-.height,
-.h {
+.height, .h {
 
-  &--50 {
-    @include height(50% !important);
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include height(map-get($size, $key));
+    }
   }
 
-  &--100 {
-    @include height(100% !important);
-  }
-
-  &--50vw {
-    @include height(50vw !important);
-  }
-
-  &--100vw {
-    @include height(100vw !important);
-  }
-
-  &--xxs {
-    @include height(map-get($height, xxs) !important);
-  }
-
-  &--xs {
-    @include height(map-get($height, xs) !important);
-  }
-
-  &--sm {
-    @include height(map-get($height, sm) !important);
-  }
-
-  &--md {
-    @include height(map-get($height, md) !important);
-  }
-
-  &--ml {
-    @include height(map-get($height, ml) !important);
-  }
-
-  &--lg {
-    @include height(map-get($height, lg) !important);
-  }
-
-  &--xl {
-    @include height(map-get($height, xl) !important);
-  }
-
-  &--xxl {
-    @include height(map-get($height, xxl) !important);
-  }
-
-  &--2xxs {
-    @include height(calc( 2 * #{map-get($height, xxs)} ) !important);
-  }
-
-  &--2xs {
-    @include height(calc( 2 * #{map-get($height, xs)} ) !important);
-  }
-
-  &--2sm {
-    @include height(calc( 2 * #{map-get($height, sm)} ) !important);
-  }
-
-  &--2md {
-    @include height(calc( 2 * #{map-get($height, md)} ) !important);
-  }
-
-  &--2ml {
-    @include height(calc( 2 * #{map-get($height, ml)} ) !important);
-  }
-
-  &--2lg {
-    @include height(calc( 2 * #{map-get($height, lg)} ) !important);
-  }
-
-  &--2xl {
-    @include height(calc( 2 * #{map-get($height, xl)} ) !important);
-  }
-
-  &--2xxl {
-    @include height(calc( 2 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--3xxs {
-    @include height(calc( 3 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--3xs {
-    @include height(calc( 3 * #{map-get($height, xs)} ) !important);
-  }
-
-  &--3sm {
-    @include height(calc( 3 * #{map-get($height, sm)} ) !important);
-  }
-
-  &--3md {
-    @include height(calc( 3 * #{map-get($height, md)} ) !important);
-  }
-
-  &--3ml {
-    @include height(calc( 3 * #{map-get($height, ml)} ) !important);
-  }
-
-  &--3lg {
-    @include height(calc( 3 * #{map-get($height, lg)} ) !important);
-  }
-
-  &--3xl {
-    @include height(calc( 3 * #{map-get($height, xl)} ) !important);
-  }
-
-  &--3xxl {
-    @include height(calc( 3 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--4xxs {
-    @include height(calc( 4 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--4xs {
-    @include height(calc( 4 * #{map-get($height, xs)} ) !important);
-  }
-
-  &--4sm {
-    @include height(calc( 4 * #{map-get($height, sm)} ) !important);
-  }
-
-  &--4md {
-    @include height(calc( 4 * #{map-get($height, md)} ) !important);
-  }
-
-  &--4ml {
-    @include height(calc( 4 * #{map-get($height, ml)} ) !important);
-  }
-
-  &--4lg {
-    @include height(calc( 4 * #{map-get($height, lg)} ) !important);
-  }
-
-  &--4xl {
-    @include height(calc( 4 * #{map-get($height, xl)} ) !important);
-  }
-
-  &--4xxl {
-    @include height(calc( 4 * #{map-get($height, xxl)} ) !important);
+  @for $i from 2 through 10 {
+    @each $key, $value  in $size {
+      @if $key != 10 
+      and $key != 20
+      and $key != 25
+      and $key != 33
+      and $key != 40
+      and $key != 45
+      and $key != 50
+      and $key != 60
+      and $key != 67
+      and $key != 75
+      and $key != 80
+      and $key != 90
+      and $key != 100
+      and $key != 50vh
+      and $key != 100vh 
+      and $key != 50vw
+      and $key != 100vw { 
+        &--#{$i}#{$key} {
+          @include height(calc(#{$i} * #{map-get($size, $key)}));
+        }
+      }
+    }
   }
 }
 
-.min-height,
-.min-h {
+.min-height, .min-h {
 
-  &--50 {
-    @include min-height(50% !important);
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include min-height(map-get($size, $key));
+    }
   }
 
-  &--100 {
-    @include min-height(100% !important);
-  }
-
-  &--50vw {
-    @include min-height(50vw !important);
-  }
-
-  &--100vw {
-    @include min-height(100vw !important);
-  }
-
-  &--xxs {
-    @include min-height(map-get($height, xxs) !important);
-  }
-
-  &--xs {
-    @include min-height(map-get($height, xs) !important);
-  }
-
-  &--sm {
-    @include min-height(map-get($height, sm) !important);
-  }
-
-  &--md {
-    @include min-height(map-get($height, md) !important);
-  }
-
-  &--ml {
-    @include min-height(map-get($height, ml) !important);
-  }
-
-  &--lg {
-    @include min-height(map-get($height, lg) !important);
-  }
-
-  &--xl {
-    @include min-height(map-get($height, xl) !important);
-  }
-
-  &--xxl {
-    @include min-height(map-get($height, xxl) !important);
-  }
-
-  &--2xxs {
-    @include min-height(calc( 2 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--2xs {
-    @include min-height(calc( 2 * #{map-get($height, xs)} ) !important);
-  }
-
-  &--2sm {
-    @include min-height(calc( 2 * #{map-get($height, sm)} ) !important);
-  }
-
-  &--2md {
-    @include min-height(calc( 2 * #{map-get($height, md)} ) !important);
-  }
-
-  &--2ml {
-    @include min-height(calc( 2 * #{map-get($height, ml)} ) !important);
-  }
-
-  &--2lg {
-    @include min-height(calc( 2 * #{map-get($height, lg)} ) !important);
-  }
-
-  &--2xl {
-    @include min-height(calc( 2 * #{map-get($height, xl)} ) !important);
-  }
-
-  &--2xxl {
-    @include min-height(calc( 2 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--3xxs {
-    @include min-height(calc( 3 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--3xs {
-    @include min-height(calc( 3 * #{map-get($height, xs)} ) !important);
-  }
-
-  &--3sm {
-    @include min-height(calc( 3 * #{map-get($height, sm)} ) !important);
-  }
-
-  &--3md {
-    @include min-height(calc( 3 * #{map-get($height, md)} ) !important);
-  }
-
-  &--3ml {
-    @include min-height(calc( 3 * #{map-get($height, ml)} ) !important);
-  }
-
-  &--3lg {
-    @include min-height(calc( 3 * #{map-get($height, lg)} ) !important);
-  }
-
-  &--3xl {
-    @include min-height(calc( 3 * #{map-get($height, xl)} ) !important);
-  }
-
-  &--3xxl {
-    @include min-height(calc( 3 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--4xxs {
-    @include min-height(calc( 4 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--4xs {
-    @include min-height(calc( 4 * #{map-get($height, xs)} ) !important);
-  }
-
-  &--4sm {
-    @include min-height(calc( 4 * #{map-get($height, sm)} ) !important);
-  }
-
-  &--4md {
-    @include min-height(calc( 4 * #{map-get($height, md)} ) !important);
-  }
-
-  &--4ml {
-    @include min-height(calc( 4 * #{map-get($height, ml)} ) !important);
-  }
-
-  &--4lg {
-    @include min-height(calc( 4 * #{map-get($height, lg)} ) !important);
-  }
-
-  &--4xl {
-    @include min-height(calc( 4 * #{map-get($height, xl)} ) !important);
-  }
-
-  &--4xxl {
-    @include min-height(calc( 4 * #{map-get($height, xxl)} ) !important);
+  @for $i from 2 through 10 {
+    @each $key, $value  in $size {
+      @if $key != 10 
+      and $key != 20
+      and $key != 25
+      and $key != 33
+      and $key != 40
+      and $key != 45
+      and $key != 50
+      and $key != 60
+      and $key != 67
+      and $key != 75
+      and $key != 80
+      and $key != 90
+      and $key != 100
+      and $key != 50vh
+      and $key != 100vh 
+      and $key != 50vw
+      and $key != 100vw { 
+        &--#{$i}#{$key} {
+          @include min-height(calc(#{$i} * #{map-get($size, $key)}));
+        }
+      }
+    }
   }
 }
 
-.max-height,
-.max-h {
-  
-  &--50 {
-    @include max-height(50% !important);
+.max-height, .max-h {
+
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include max-height(map-get($size, $key));
+    }
   }
 
-  &--100 {
-    @include max-height(100% !important);
-  }
-
-  &--50vw {
-    @include min-height(50vw !important);
-  }
-
-  &--100vw {
-    @include min-height(100vw !important);
-  }
-
-  &--xxs {
-    @include max-height(map-get($height, xxs) !important);
-  }
-
-  &--xs {
-    @include max-height(map-get($height, xs) !important);
-  }
-
-  &--sm {
-    @include max-height(map-get($height, sm) !important);
-  }
-
-  &--md {
-    @include max-height(map-get($height, md) !important);
-  }
-
-  &--ml {
-    @include max-height(map-get($height, ml) !important);
-  }
-
-  &--lg {
-    @include max-height(map-get($height, lg) !important);
-  }
-
-  &--xl {
-    @include max-height(map-get($height, xl) !important);
-  }
-
-  &--xxl {
-    @include max-height(map-get($height, xxl) !important);
-  }
-
-  &--2xxs {
-    @include max-height(calc( 2 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--2xs {
-    @include max-height(calc( 2 * #{map-get($height, xs)} ) !important);
-  }
-
-  &--2sm {
-    @include max-height(calc( 2 * #{map-get($height, sm)} ) !important);
-  }
-
-  &--2md {
-    @include max-height(calc( 2 * #{map-get($height, md)} ) !important);
-  }
-
-  &--2ml {
-    @include max-height(calc( 2 * #{map-get($height, ml)} ) !important);
-  }
-
-  &--2lg {
-    @include max-height(calc( 2 * #{map-get($height, lg)} ) !important);
-  }
-
-  &--2xl {
-    @include max-height(calc( 2 * #{map-get($height, xl)} ) !important);
-  }
-
-  &--2xxl {
-    @include max-height(calc( 2 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--3xxs {
-    @include max-height(calc( 3 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--3xs {
-    @include max-height(calc( 3 * #{map-get($height, xs)} ) !important);
-  }
-
-  &--3sm {
-    @include max-height(calc( 3 * #{map-get($height, sm)} ) !important);
-  }
-
-  &--3md {
-    @include max-height(calc( 3 * #{map-get($height, md)} ) !important);
-  }
-
-  &--3ml {
-    @include max-height(calc( 3 * #{map-get($height, ml)} ) !important);
-  }
-
-  &--3lg {
-    @include max-height(calc( 3 * #{map-get($height, lg)} ) !important);
-  }
-
-  &--3xl {
-    @include max-height(calc( 3 * #{map-get($height, xl)} ) !important);
-  }
-
-  &--3xxl {
-    @include max-height(calc( 3 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--4xxs {
-    @include max-height(calc( 4 * #{map-get($height, xxl)} ) !important);
-  }
-
-  &--4xs {
-    @include max-height(calc( 4 * #{map-get($height, xs)} ) !important);
-  }
-
-  &--4sm {
-    @include max-height(calc( 4 * #{map-get($height, sm)} ) !important);
-  }
-
-  &--4md {
-    @include max-height(calc( 4 * #{map-get($height, md)} ) !important);
-  }
-
-  &--4ml {
-    @include max-height(calc( 4 * #{map-get($height, ml)} ) !important);
-  }
-
-  &--4lg {
-    @include max-height(calc( 4 * #{map-get($height, lg)} ) !important);
-  }
-
-  &--4xl {
-    @include max-height(calc( 4 * #{map-get($height, xl)} ) !important);
-  }
-
-  &--4xxl {
-    @include max-height(calc( 4 * #{map-get($height, xxl)} ) !important);
+  @for $i from 2 through 10 {
+    @each $key, $value  in $size {
+      @if $key != 10 
+      and $key != 20
+      and $key != 25
+      and $key != 33
+      and $key != 40
+      and $key != 45
+      and $key != 50
+      and $key != 60
+      and $key != 67
+      and $key != 75
+      and $key != 80
+      and $key != 90
+      and $key != 100
+      and $key != 50vh
+      and $key != 100vh 
+      and $key != 50vw
+      and $key != 100vw { 
+        &--#{$i}#{$key} {
+          @include max-height(calc(#{$i} * #{map-get($size, $key)}));
+        }
+      }
+    }
   }
 }

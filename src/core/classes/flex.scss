@@ -20,64 +20,11 @@
   &-basis,
   &-bas {
 
-    &--1-col,
-    &--1 {
-      @include flex-basis(1);
-    }
-
-    &--2-col,
-    &--2 {
-      @include flex-basis(2);
-    }
-
-    &--3-col,
-    &--3 {
-      @include flex-basis(3);
-    }
-
-    &--4-col,
-    &--4 {
-      @include flex-basis(4);
-    }
-
-    &--5-col,
-    &--5 {
-      @include flex-basis(5);
-    }
-
-    &--6-col,
-    &--6 {
-      @include flex-basis(6);
-    }
-
-    &--7-col,
-    &--7 {
-      @include flex-basis(7);
-    }
-
-    &--8-col,
-    &--8 {
-      @include flex-basis(8);
-    }
-
-    &--9-col,
-    &--9 {
-      @include flex-basis(9);
-    }
-
-    &--10-col,
-    &--10 {
-      @include flex-basis(10);
-    }
-
-    &--11-col,
-    &--11 {
-      @include flex-basis(11);
-    }
-
-    &--12-col,
-    &--12 {
-      @include flex-basis(12);
+    @for $i from 1 through 12 {
+      &--#{$i}-col,
+      &--#{$i} {
+        @include flex-basis($i);
+      }
     }
   }
 }

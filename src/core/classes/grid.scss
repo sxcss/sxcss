@@ -7,240 +7,31 @@
   &-template,
   &-tmp {
 
-    &-columns,
-    &-cols {
+    &-columns, &-cols {
 
-      &__repeat--2-1fr,
-      &__rpt--2-1fr {
-        @include grid-template-columns(repeat(2, 1fr));
-      }
-      
-      &__repeat--3-1fr,
-      &__rpt--3-1fr {
-        @include grid-template-columns(repeat(3, 1fr));
-      }
-      
-      &__repeat--4-1fr,
-      &__rpt--4-1fr {
-        @include grid-template-columns(repeat(4, 1fr));
-      }
-      
-      &__repeat--5-1fr,
-      &__rpt--5-1fr {
-        @include grid-template-columns(repeat(5, 1fr));
-      }
-      
-      &__repeat--6-1fr,
-      &__rpt--6-1fr {
-        @include grid-template-columns(repeat(6, 1fr));
-      }
-      
-      &__repeat--7-1fr,
-      &__rpt--7-1fr {
-        @include grid-template-columns(repeat(7, 1fr));
-      }
-      
-      &__repeat--8-1fr,
-      &__rpt--8-1fr {
-        @include grid-template-columns(repeat(8, 1fr));
-      }
-      
-      &__repeat--9-1fr,
-      &__rpt--9-1fr {
-        @include grid-template-columns(repeat(9, 1fr));
-      }
-      
-      &__repeat--10-1fr,
-      &__rpt--10-1fr {
-        @include grid-template-columns(repeat(10, 1fr));
-      }
-      
-      &__repeat--11-1fr,
-      &__rpt--11-1fr {
-        @include grid-template-columns(repeat(11, 1fr));
-      }
-      
-      &__repeat--12-1fr,
-      &__rpt--12-1fr {
-        @include grid-template-columns(repeat(12, 1fr));
-      }
-      
-      &__repeat--1-auto,
-      &__rpt--1-auto {
-        @include grid-template-columns(repeat(1, auto));
-      }
-      
-      &__repeat--2-auto,
-      &__rpt--2-auto {
-        @include grid-template-columns(repeat(2, auto));
-      }
-      
-      &__repeat--3-auto,
-      &__rpt--3-auto {
-        @include grid-template-columns(repeat(3, auto));
-      }
-      
-      &__repeat--4-auto,
-      &__rpt--4-auto {
-        @include grid-template-columns(repeat(4, auto));
-      }
-      
-      &__repeat--5-auto,
-      &__rpt--5-auto {
-        @include grid-template-columns(repeat(5, auto));
-      }
-      
-      &__repeat--6-auto,
-      &__rpt--6-auto {
-        @include grid-template-columns(repeat(6, auto));
-      }
-      
-      &__repeat--7-auto,
-      &__rpt--7-auto {
-        @include grid-template-columns(repeat(7, auto));
-      }
-      
-      &__repeat--8-auto,
-      &__rpt--8-auto {
-        @include grid-template-columns(repeat(8, auto));
-      }
-      
-      &__repeat--9-auto,
-      &__rpt--9-auto {
-        @include grid-template-columns(repeat(9, auto));
-      }
-      
-      &__repeat--10-auto,
-      &__rpt--10-auto {
-        @include grid-template-columns(repeat(10, auto));
-      }
-      
-      &__repeat--11-auto,
-      &__rpt--11-auto {
-        @include grid-template-columns(repeat(11, auto));
-      }
-      
-      &__repeat--12-auto,
-      &__rpt--12-auto {
-        @include grid-template-columns(repeat(12, auto));
+      @for $i from 1 through 12 {
+        &--#{repeat}-#{$i}-#{1fr},
+        &--rpt-#{$i}-#{1fr} {
+          @include grid-template-columns(repeat($i, 1fr));
+        }
+        &--#{repeat}-#{$i}-#{auto},
+        &--rpt-#{$i}-#{auto} {
+          @include grid-template-columns(repeat($i, auto));
+        }
       }
     }
 
     &-rows {
 
-      &__repeat--2-1fr,
-      &__rpt--2-1fr {
-        @include grid-template-rows(repeat(2, 1fr));
-      }
-      
-      &__repeat--3-1fr,
-      &__rpt--3-1fr {
-        @include grid-template-rows(repeat(3, 1fr));
-      }
-      
-      &__repeat--4-1fr,
-      &__rpt--4-1fr {
-        @include grid-template-rows(repeat(4, 1fr));
-      }
-      
-      &__repeat--5-1fr,
-      &__rpt--5-1fr {
-        @include grid-template-rows(repeat(5, 1fr));
-      }
-      
-      &__repeat--6-1fr,
-      &__rpt--6-1fr {
-        @include grid-template-rows(repeat(6, 1fr));
-      }
-      
-      &__repeat--7-1fr,
-      &__rpt--7-1fr {
-        @include grid-template-rows(repeat(7, 1fr));
-      }
-      
-      &__repeat--8-1fr,
-      &__rpt--8-1fr {
-        @include grid-template-rows(repeat(8, 1fr));
-      }
-      
-      &__repeat--9-1fr,
-      &__rpt--9-1fr {
-        @include grid-template-rows(repeat(9, 1fr));
-      }
-      
-      &__repeat--10-1fr,
-      &__rpt--10-1fr {
-        @include grid-template-rows(repeat(10, 1fr));
-      }
-      
-      &__repeat--11-1fr,
-      &__rpt--11-1fr {
-        @include grid-template-rows(repeat(11, 1fr));
-      }
-      
-      &__repeat--12-1fr,
-      &__rpt--12-1fr {
-        @include grid-template-rows(repeat(12, 1fr));
-      }
-      
-      &__repeat--1-auto,
-      &__rpt--1-auto {
-        @include grid-template-rows(repeat(1, auto));
-      }
-      
-      &__repeat--2-auto,
-      &__rpt--2-auto {
-        @include grid-template-rows(repeat(2, auto));
-      }
-      
-      &__repeat--3-auto,
-      &__rpt--3-auto {
-        @include grid-template-rows(repeat(3, auto));
-      }
-      
-      &__repeat--4-auto,
-      &__rpt--4-auto {
-        @include grid-template-rows(repeat(4, auto));
-      }
-      
-      &__repeat--5-auto,
-      &__rpt--5-auto {
-        @include grid-template-rows(repeat(5, auto));
-      }
-      
-      &__repeat--6-auto,
-      &__rpt--6-auto {
-        @include grid-template-rows(repeat(6, auto));
-      }
-      
-      &__repeat--7-auto,
-      &__rpt--7-auto {
-        @include grid-template-rows(repeat(7, auto));
-      }
-      
-      &__repeat--8-auto,
-      &__rpt--8-auto {
-        @include grid-template-rows(repeat(8, auto));
-      }
-      
-      &__repeat--9-auto,
-      &__rpt--9-auto {
-        @include grid-template-rows(repeat(9, auto));
-      }
-      
-      &__repeat--10-auto,
-      &__rpt--10-auto {
-        @include grid-template-rows(repeat(10, auto));
-      }
-      
-      &__repeat--11-auto,
-      &__rpt--11-auto {
-        @include grid-template-rows(repeat(11, auto));
-      }
-      
-      &__repeat--12-auto,
-      &__rpt--12-auto {
-        @include grid-template-rows(repeat(12, auto));
+      @for $i from 1 through 12 {
+        &--#{repeat}-#{$i}-#{1fr},
+        &--rpt-#{$i}-#{1fr} {
+          @include grid-template-rows(repeat($i, 1fr));
+        }
+        &--#{repeat}-#{$i}-#{auto},
+        &--rpt-#{$i}-#{auto} {
+          @include grid-template-rows(repeat($i, auto));
+        }
       }
     }
   }

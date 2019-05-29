@@ -1,457 +1,107 @@
+@import '../variables/size.scss';
 @import '../mixins/width.scss';
 
-.width,
-.w {
+.width, .h {
 
-  &--50 {
-    @include width(50%);
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include width(map-get($size, $key));
+    }
   }
 
-  &--100 {
-    @include width(100%);
-  }
-
-  &--50vw {
-    @include width(50vw);
-  }
-
-  &--100vw {
-    @include width(100vw);
-  }
-
-  &--boxed {
-    @include min-width(map-get($width, boxed));
-  }
-
-  &--xxs {
-    @include width(map-get($width, xxs));
-  }
-
-  &--xs {
-    @include width(map-get($width, xs));
-  }
-
-  &--sm {
-    @include width(map-get($width, sm));
-  }
-
-  &--md {
-    @include width(map-get($width, md));
-  }
-
-  &--ml {
-    @include width(map-get($width, ml));
-  }
-
-  &--lg {
-    @include width(map-get($width, lg));
-  }
-
-  &--xl {
-    @include width(map-get($width, xl));
-  }
-
-  &--xxl {
-    @include width(map-get($width, xxl));
-  }
-
-  &--2xxs {
-    @include width(calc( 2 * #{map-get($width, xxs)} ));
-  }
-
-  &--2xs {
-    @include width(calc( 2 * #{map-get($width, xs)} ));
-  }
-
-  &--2sm {
-    @include width(calc( 2 * #{map-get($width, sm)} ));
-  }
-
-  &--2md {
-    @include width(calc( 2 * #{map-get($width, md)} ));
-  }
-
-  &--2ml {
-    @include width(calc( 2 * #{map-get($width, ml)} ));
-  }
-
-  &--2lg {
-    @include width(calc( 2 * #{map-get($width, lg)} ));
-  }
-
-  &--2xl {
-    @include width(calc( 2 * #{map-get($width, xl)} ));
-  }
-
-  &--2xxl {
-    @include width(calc( 2 * #{map-get($width, xxl)} ));
-  }
-
-  &--3xxs {
-    @include width(calc( 3 * #{map-get($width, xxs)} ));
-  }
-
-  &--3xs {
-    @include width(calc( 3 * #{map-get($width, xs)} ));
-  }
-
-  &--3sm {
-    @include width(calc( 3 * #{map-get($width, sm)} ));
-  }
-
-  &--3md {
-    @include width(calc( 3 * #{map-get($width, md)} ));
-  }
-
-  &--3ml {
-    @include width(calc( 3 * #{map-get($width, ml)} ));
-  }
-
-  &--3lg {
-    @include width(calc( 3 * #{map-get($width, lg)} ));
-  }
-
-  &--3xl {
-    @include width(calc( 3 * #{map-get($width, xl)} ));
-  }
-
-  &--3xxl {
-    @include width(calc( 3 * #{map-get($width, xxl)} ));
-  }
-
-  &--4xxs {
-    @include width(calc( 4 * #{map-get($width, xxs)} ));
-  }
-
-  &--4xs {
-    @include width(calc( 4 * #{map-get($width, xs)} ));
-  }
-
-  &--4sm {
-    @include width(calc( 4 * #{map-get($width, sm)} ));
-  }
-
-  &--4md {
-    @include width(calc( 4 * #{map-get($width, md)} ));
-  }
-
-  &--4ml {
-    @include width(calc( 4 * #{map-get($width, ml)} ));
-  }
-
-  &--4lg {
-    @include width(calc( 4 * #{map-get($width, lg)} ));
-  }
-
-  &--4xl {
-    @include width(calc( 4 * #{map-get($width, xl)} ));
-  }
-
-  &--4xxl {
-    @include width(calc( 4 * #{map-get($width, xxl)} ));
+  @for $i from 2 through 10 {
+    @each $key, $value  in $size {
+      @if $key != 10 
+      and $key != 20
+      and $key != 25
+      and $key != 33
+      and $key != 40
+      and $key != 45
+      and $key != 50
+      and $key != 60
+      and $key != 67
+      and $key != 75
+      and $key != 80
+      and $key != 90
+      and $key != 100
+      and $key != 50vh
+      and $key != 100vh 
+      and $key != 50vw
+      and $key != 100vw { 
+        &--#{$i}#{$key} {
+          @include width(calc(#{$i} * #{map-get($size, $key)}));
+        }
+      }
+    }
   }
 }
 
-.min-width,
-.min-w {
+.min-width, .min-h {
 
-  &--50 {
-    @include min-width(50%);
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include min-width(map-get($size, $key));
+    }
   }
 
-  &--100 {
-    @include min-width(100%);
-  }
-
-  &--50vw {
-    @include min-width(50vw);
-  }
-
-  &--100vw {
-    @include min-width(100vw);
-  }
-
-  &--boxed {
-    @include min-width(map-get($width, boxed));
-  }
-
-  &--xxs {
-    @include min-width(map-get($width, xxs));
-  }
-
-  &--xs {
-    @include min-width(map-get($width, xs));
-  }
-
-  &--sm {
-    @include min-width(map-get($width, sm));
-  }
-
-  &--md {
-    @include min-width(map-get($width, md));
-  }
-
-  &--ml {
-    @include min-width(map-get($width, ml));
-  }
-
-  &--lg {
-    @include min-width(map-get($width, lg));
-  }
-
-  &--xl {
-    @include min-width(map-get($width, xl));
-  }
-
-  &--xxl {
-    @include min-width(map-get($width, xxl));
-  }
-
-  &--2xxs {
-    @include min-width(calc( 2 * #{map-get($width, xxs)} ));
-  }
-
-  &--2xs {
-    @include min-width(calc( 2 * #{map-get($width, xs)} ));
-  }
-
-  &--2sm {
-    @include min-width(calc( 2 * #{map-get($width, sm)} ));
-  }
-
-  &--2md {
-    @include min-width(calc( 2 * #{map-get($width, md)} ));
-  }
-
-  &--2ml {
-    @include min-width(calc( 2 * #{map-get($width, ml)} ));
-  }
-
-  &--2lg {
-    @include min-width(calc( 2 * #{map-get($width, lg)} ));
-  }
-
-  &--2xl {
-    @include min-width(calc( 2 * #{map-get($width, xl)} ));
-  }
-
-  &--2xxl {
-    @include min-width(calc( 2 * #{map-get($width, xxl)} ));
-  }
-
-  &--3xxs {
-    @include min-width(calc( 3 * #{map-get($width, xxs)} ));
-  }
-
-  &--3xs {
-    @include min-width(calc( 3 * #{map-get($width, xs)} ));
-  }
-
-  &--3sm {
-    @include min-width(calc( 3 * #{map-get($width, sm)} ));
-  }
-
-  &--3md {
-    @include min-width(calc( 3 * #{map-get($width, md)} ));
-  }
-
-  &--3ml {
-    @include min-width(calc( 3 * #{map-get($width, ml)} ));
-  }
-
-  &--3lg {
-    @include min-width(calc( 3 * #{map-get($width, lg)} ));
-  }
-
-  &--3xl {
-    @include min-width(calc( 3 * #{map-get($width, xl)} ));
-  }
-
-  &--3xxl {
-    @include min-width(calc( 3 * #{map-get($width, xxl)} ));
-  }
-
-  &--4xxs {
-    @include min-width(calc( 4 * #{map-get($width, xxs)} ));
-  }
-
-  &--4xs {
-    @include min-width(calc( 4 * #{map-get($width, xs)} ));
-  }
-
-  &--4sm {
-    @include min-width(calc( 4 * #{map-get($width, sm)} ));
-  }
-
-  &--4md {
-    @include min-width(calc( 4 * #{map-get($width, md)} ));
-  }
-
-  &--4ml {
-    @include min-width(calc( 4 * #{map-get($width, ml)} ));
-  }
-
-  &--4lg {
-    @include min-width(calc( 4 * #{map-get($width, lg)} ));
-  }
-
-  &--4xl {
-    @include min-width(calc( 4 * #{map-get($width, xl)} ));
-  }
-
-  &--4xxl {
-    @include min-width(calc( 4 * #{map-get($width, xxl)} ));
+  @for $i from 2 through 10 {
+    @each $key, $value  in $size {
+      @if $key != 10 
+      and $key != 20
+      and $key != 25
+      and $key != 33
+      and $key != 40
+      and $key != 45
+      and $key != 50
+      and $key != 60
+      and $key != 67
+      and $key != 75
+      and $key != 80
+      and $key != 90
+      and $key != 100
+      and $key != 50vh
+      and $key != 100vh 
+      and $key != 50vw
+      and $key != 100vw { 
+        &--#{$i}#{$key} {
+          @include min-width(calc(#{$i} * #{map-get($size, $key)}));
+        }
+      }
+    }
   }
 }
 
-.max-width,
-.max-w {
-  
-  &--50 {
-    @include max-width(50%);
+.max-width, .max-h {
+
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include max-width(map-get($size, $key));
+    }
   }
 
-  &--100 {
-    @include max-width(100%);
-  }
-
-  &--50vw {
-    @include min-width(50vw);
-  }
-
-  &--100vw {
-    @include min-width(100vw);
-  }
-
-  &--boxed {
-    @include min-width(map-get($width, boxed));
-  }
-
-  &--xxs {
-    @include max-width(map-get($width, xxs));
-  }
-
-  &--xs {
-    @include max-width(map-get($width, xs));
-  }
-
-  &--sm {
-    @include max-width(map-get($width, sm));
-  }
-
-  &--md {
-    @include max-width(map-get($width, md));
-  }
-
-  &--ml {
-    @include max-width(map-get($width, ml));
-  }
-
-  &--lg {
-    @include max-width(map-get($width, lg));
-  }
-
-  &--xl {
-    @include max-width(map-get($width, xl));
-  }
-
-  &--xxl {
-    @include max-width(map-get($width, xxl));
-  }
-
-  &--2xxs {
-    @include max-width(calc( 2 * #{map-get($width, xxs)} ));
-  }
-
-  &--2xs {
-    @include max-width(calc( 2 * #{map-get($width, xs)} ));
-  }
-
-  &--2sm {
-    @include max-width(calc( 2 * #{map-get($width, sm)} ));
-  }
-
-  &--2md {
-    @include max-width(calc( 2 * #{map-get($width, md)} ));
-  }
-
-  &--2ml {
-    @include max-width(calc( 2 * #{map-get($width, ml)} ));
-  }
-
-  &--2lg {
-    @include max-width(calc( 2 * #{map-get($width, lg)} ));
-  }
-
-  &--2xl {
-    @include max-width(calc( 2 * #{map-get($width, xl)} ));
-  }
-
-  &--2xxl {
-    @include max-width(calc( 2 * #{map-get($width, xxl)} ));
-  }
-
-  &--3xxs {
-    @include max-width(calc( 3 * #{map-get($width, xxs)} ));
-  }
-
-  &--3xs {
-    @include max-width(calc( 3 * #{map-get($width, xs)} ));
-  }
-
-  &--3sm {
-    @include max-width(calc( 3 * #{map-get($width, sm)} ));
-  }
-
-  &--3md {
-    @include max-width(calc( 3 * #{map-get($width, md)} ));
-  }
-
-  &--3ml {
-    @include max-width(calc( 3 * #{map-get($width, ml)} ));
-  }
-
-  &--3lg {
-    @include max-width(calc( 3 * #{map-get($width, lg)} ));
-  }
-
-  &--3xl {
-    @include max-width(calc( 3 * #{map-get($width, xl)} ));
-  }
-
-  &--3xxl {
-    @include max-width(calc( 3 * #{map-get($width, xxl)} ));
-  }
-
-  &--4xxs {
-    @include max-width(calc( 4 * #{map-get($width, xxs)} ));
-  }
-
-  &--4xs {
-    @include max-width(calc( 4 * #{map-get($width, xs)} ));
-  }
-
-  &--4sm {
-    @include max-width(calc( 4 * #{map-get($width, sm)} ));
-  }
-
-  &--4md {
-    @include max-width(calc( 4 * #{map-get($width, md)} ));
-  }
-
-  &--4ml {
-    @include max-width(calc( 4 * #{map-get($width, ml)} ));
-  }
-
-  &--4lg {
-    @include max-width(calc( 4 * #{map-get($width, lg)} ));
-  }
-
-  &--4xl {
-    @include max-width(calc( 4 * #{map-get($width, xl)} ));
-  }
-
-  &--4xxl {
-    @include max-width(calc( 4 * #{map-get($width, xxl)} ));
+  @for $i from 2 through 10 {
+    @each $key, $value  in $size {
+      @if $key != 10 
+      and $key != 20
+      and $key != 25
+      and $key != 33
+      and $key != 40
+      and $key != 45
+      and $key != 50
+      and $key != 60
+      and $key != 67
+      and $key != 75
+      and $key != 80
+      and $key != 90
+      and $key != 100
+      and $key != 50vh
+      and $key != 100vh 
+      and $key != 50vw
+      and $key != 100vw { 
+        &--#{$i}#{$key} {
+          @include max-width(calc(#{$i} * #{map-get($size, $key)}));
+        }
+      }
+    }
   }
 }

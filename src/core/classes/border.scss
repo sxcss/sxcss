@@ -1,97 +1,20 @@
+@import '../variables/size.scss';
 @import '../mixins/border.scss';
-@import '../variables/border.scss';
 
 .border,
 .bdr {
 
-  &-radius--xxs,
-  &-rds--xxs{
-    @include border-radius(map-get($border-radius, xxs));
-  }
-  
-  &-radius--xs,
-  &-rds--xs{
-    @include border-radius(map-get($border-radius, xs));
-  }
-  
-  &-radius--sm,
-  &-rds--sm {
-    @include border-radius(map-get($border-radius, sm));
-  }
-  
-  &-radius--ms,
-  &-rds--ms {
-    @include border-radius(map-get($border-radius, ms));
-  }
-  
-  &-radius--md,
-  &-rds--md {
-    @include border-radius(map-get($border-radius, md));
-  }
-  
-  &-radius--ml,
-  &-rds--ml {
-    @include border-radius(map-get($border-radius, ml));
-  }
-  
-  &-radius--lg,
-  &-rds--lg {
-    @include border-radius(map-get($border-radius, lg));
-  }
-  
-  &-radius--xl,
-  &-rds--xl {
-    @include border-radius(map-get($border-radius, xl));
-  }
-  
-  &-radius--xxl,
-  &-rds--xxl {
-    @include border-radius(map-get($border-radius, xxl));
-  }
-  
-  &-radius--50,
-  &-rds--50 {
-    @include border-radius(50%);
-  }
-  
-  &-radius--100,
-  &-rds--100 {
-    @include border-radius(100%);
+  @each $key, $value  in $size {
+    &-radius--#{$key},
+    &-rds--#{$key} {
+      @include border-radius(map-get($size, $key));
+    }
   }
 
-  &-width--xxs{
-    @include border-width(map-get($border-width, xxs));
-  }
-  
-  &-width--xs{
-    @include border-width(map-get($border-width, xs));
-  }
-  
-  &-width--sm {
-    @include border-width(map-get($border-width, sm));
-  }
-  
-  &-width--ms {
-    @include border-width(map-get($border-width, ms));
-  }
-  
-  &-width--md {
-    @include border-width(map-get($border-width, md));
-  }
-  
-  &-width--ml {
-    @include border-width(map-get($border-width, ml));
-  }
-  
-  &-width--lg {
-    @include border-width(map-get($border-width, lg));
-  }
-  
-  &-width--xl {
-    @include border-width(map-get($border-width, xl));
-  }
-  
-  &-width--xxl {
-    @include border-width(map-get($border-width, xxl));
+  @each $key, $value  in $size {
+    &-width--#{$key},
+    &-w--#{$key} {
+      @include border-width(map-get($size, $key));
+    }
   }
 }
