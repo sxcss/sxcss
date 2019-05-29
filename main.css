@@ -564,7 +564,7 @@ input[type=number]::-webkit-outer-spin-button {
 .flx-basis--2,
 .flx-bas--2-col,
 .flx-bas--2 {
-  flex-basis: calc(50% - 1.5rem / 2);
+  flex-basis: calc(51% - 1.5rem / 2);
 }
 .flex-basis--3-col, .flex-basis--3, .flex-bas--3-col, .flex-bas--3,
 .flx-basis--3-col,

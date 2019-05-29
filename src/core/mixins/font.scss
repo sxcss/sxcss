@@ -1,3 +1,7 @@
+@mixin font-family($font-family) {
+  font-family: $font-family;  
+}
+
 @mixin font-size($font-size) {
   font-size: $font-size;
 }
@@ -5,3 +9,4 @@
 @mixin font-weight($font-weight) {
   font-weight: $font-weight;  
 }
+

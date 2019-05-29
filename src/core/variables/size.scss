@@ -23,5 +23,5 @@ $size: (
   xxl: 10rem
 );
 
-$sizes-names: map-keys($size);
-$sizes-values: map-values($size);
+$size-keys: map-keys($size);
+$size-values: map-values($size);
