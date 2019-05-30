@@ -47,39 +47,39 @@
   &-tfm {
 
     &--xxs {
-      @include hover($hover-transform: map-get($gap, xxs));
+      @include hover($hover-transform: map-get($gaps, xxs));
     }
 
     &--xs {
-      @include hover($hover-transform: map-get($gap, xs));
+      @include hover($hover-transform: map-get($gaps, xs));
     }
 
     &--sm {
-      @include hover($hover-transform: map-get($gap, sm));
+      @include hover($hover-transform: map-get($gaps, sm));
     }
 
     &--ms {
-      @include hover($hover-transform: map-get($gap, ms));
+      @include hover($hover-transform: map-get($gaps, ms));
     }
 
     &--md {
-      @include hover($hover-transform: map-get($gap, md));
+      @include hover($hover-transform: map-get($gaps, md));
     }
 
     &--ml {
-      @include hover($hover-transform: map-get($gap, ml));
+      @include hover($hover-transform: map-get($gaps, ml));
     }
 
     &--lg {
-      @include hover($hover-transform: map-get($gap, lg));
+      @include hover($hover-transform: map-get($gaps, lg));
     }
 
     &--xl {
-      @include hover($hover-transform: map-get($gap, xl));
+      @include hover($hover-transform: map-get($gaps, xl));
     }
 
     &--xxl {
-      @include hover($hover-transform: map-get($gap, xxl));
+      @include hover($hover-transform: map-get($gaps, xxl));
     }
   }
 
@@ -87,39 +87,39 @@
   &-scl {
 
     &--xxs {
-      @include hover($hover-scale: map-get($gap, xxs));
+      @include hover($hover-scale: map-get($gaps, xxs));
     }
 
     &--xs {
-      @include hover($hover-scale: map-get($gap, xs));
+      @include hover($hover-scale: map-get($gaps, xs));
     }
 
     &--sm {
-      @include hover($hover-scale: map-get($gap, sm));
+      @include hover($hover-scale: map-get($gaps, sm));
     }
 
     &--ms {
-      @include hover($hover-scale: map-get($gap, ms));
+      @include hover($hover-scale: map-get($gaps, ms));
     }
 
     &--md {
-      @include hover($hover-scale: map-get($gap, md));
+      @include hover($hover-scale: map-get($gaps, md));
     }
 
     &--ml {
-      @include hover($hover-scale: map-get($gap, ml));
+      @include hover($hover-scale: map-get($gaps, ml));
     }
 
     &--lg {
-      @include hover($hover-scale: map-get($gap, lg));
+      @include hover($hover-scale: map-get($gaps, lg));
     }
 
     &--xl {
-      @include hover($hover-scale: map-get($gap, xl));
+      @include hover($hover-scale: map-get($gaps, xl));
     }
 
     &--xxl {
-      @include hover($hover-scale: map-get($gap, xxl));
+      @include hover($hover-scale: map-get($gaps, xxl));
     }
   }
 }

@@ -10,35 +10,35 @@
     }
 
     &--xxs {
-      @include padding(map-get($gap, xxs) !important);
+      @include padding(map-get($gaps, xxs) !important);
     }
 
     &--xs {
-      @include padding(map-get($gap, xs)!important);
+      @include padding(map-get($gaps, xs)!important);
     }
 
     &--sm {
-      @include padding(map-get($gap, sm)!important);
+      @include padding(map-get($gaps, sm)!important);
     }
 
     &--ms {
-      @include padding(map-get($gap, ms)!important);
+      @include padding(map-get($gaps, ms)!important);
     }
 
     &--md {
-      @include padding(map-get($gap, md)!important);
+      @include padding(map-get($gaps, md)!important);
     }
 
     &--ml {
-      @include padding(map-get($gap, ml)!important);
+      @include padding(map-get($gaps, ml)!important);
     }
 
     &--lg {
-      @include padding(map-get($gap, lg)!important);
+      @include padding(map-get($gaps, lg)!important);
     }
 
     &--xl {
-      @include padding(map-get($gap, lg)!important);
+      @include padding(map-get($gaps, lg)!important);
     }
   }
 
@@ -49,35 +49,35 @@
     }
 
     &--xxs {
-      @include padding-x(map-get($gap, xxs) !important);
+      @include padding-x(map-get($gaps, xxs) !important);
     }
 
     &--xs {
-      @include padding-x(map-get($gap, xs)!important);
+      @include padding-x(map-get($gaps, xs)!important);
     }
 
     &--sm {
-      @include padding-x(map-get($gap, sm)!important);
+      @include padding-x(map-get($gaps, sm)!important);
     }
 
     &--ms {
-      @include padding-x(map-get($gap, ms)!important);
+      @include padding-x(map-get($gaps, ms)!important);
     }
 
     &--md {
-      @include padding-x(map-get($gap, md)!important);
+      @include padding-x(map-get($gaps, md)!important);
     }
 
     &--ml {
-      @include padding-x(map-get($gap, ml)!important);
+      @include padding-x(map-get($gaps, ml)!important);
     }
 
     &--lg {
-      @include padding-x(map-get($gap, lg)!important);
+      @include padding-x(map-get($gaps, lg)!important);
     }
 
     &--xl {
-      @include padding-x(map-get($gap, xl)!important);
+      @include padding-x(map-get($gaps, xl)!important);
     }
   }
 
@@ -88,35 +88,35 @@
     }
 
     &--xxs {
-      @include padding-y(map-get($gap, xxs) !important);
+      @include padding-y(map-get($gaps, xxs) !important);
     }
 
     &--xs {
-      @include padding-y(map-get($gap, xs)!important);
+      @include padding-y(map-get($gaps, xs)!important);
     }
 
     &--sm {
-      @include padding-y(map-get($gap, sm)!important);
+      @include padding-y(map-get($gaps, sm)!important);
     }
 
     &--ms {
-      @include padding-y(map-get($gap, ms)!important);
+      @include padding-y(map-get($gaps, ms)!important);
     }
 
     &--md {
-      @include padding-y(map-get($gap, md)!important);
+      @include padding-y(map-get($gaps, md)!important);
     }
 
     &--ml {
-      @include padding-y(map-get($gap, ml)!important);
+      @include padding-y(map-get($gaps, ml)!important);
     }
 
     &--lg {
-      @include padding-y(map-get($gap, lg)!important);
+      @include padding-y(map-get($gaps, lg)!important);
     }
 
     &--xl {
-      @include padding-y(map-get($gap, xl)!important);
+      @include padding-y(map-get($gaps, xl)!important);
     }
   }
 
@@ -128,35 +128,35 @@
     }
 
     &--xxs {
-      @include padding-left(map-get($gap, xxs) !important);
+      @include padding-left(map-get($gaps, xxs) !important);
     }
 
     &--xs {
-      @include padding-left(map-get($gap, xs)!important);
+      @include padding-left(map-get($gaps, xs)!important);
     }
 
     &--sm {
-      @include padding-left(map-get($gap, sm)!important);
+      @include padding-left(map-get($gaps, sm)!important);
     }
 
     &--ms {
-      @include padding-left(map-get($gap, ms)!important);
+      @include padding-left(map-get($gaps, ms)!important);
     }
 
     &--md {
-      @include padding-left(map-get($gap, md)!important);
+      @include padding-left(map-get($gaps, md)!important);
     }
 
     &--ml {
-      @include padding-left(map-get($gap, ml)!important);
+      @include padding-left(map-get($gaps, ml)!important);
     }
 
     &--lg {
-      @include padding-left(map-get($gap, lg)!important);
+      @include padding-left(map-get($gaps, lg)!important);
     }
 
     &--xl {
-      @include padding-left(map-get($gap, xl)!important);
+      @include padding-left(map-get($gaps, xl)!important);
     }
   }
 
@@ -168,35 +168,35 @@
     }
 
     &--xxs {
-      @include padding-right(map-get($gap, xxs) !important);
+      @include padding-right(map-get($gaps, xxs) !important);
     }
 
     &--xs {
-      @include padding-right(map-get($gap, xs)!important);
+      @include padding-right(map-get($gaps, xs)!important);
     }
 
     &--sm {
-      @include padding-right(map-get($gap, sm)!important);
+      @include padding-right(map-get($gaps, sm)!important);
     }
 
     &--ms {
-      @include padding-right(map-get($gap, ms)!important);
+      @include padding-right(map-get($gaps, ms)!important);
     }
 
     &--md {
-      @include padding-right(map-get($gap, md)!important);
+      @include padding-right(map-get($gaps, md)!important);
     }
 
     &--ml {
-      @include padding-right(map-get($gap, ml)!important);
+      @include padding-right(map-get($gaps, ml)!important);
     }
 
     &--lg {
-      @include padding-right(map-get($gap, lg)!important);
+      @include padding-right(map-get($gaps, lg)!important);
     }
 
     &--xl {
-      @include padding-right(map-get($gap, xl)!important);
+      @include padding-right(map-get($gaps, xl)!important);
     }
   }
 
@@ -208,35 +208,35 @@
     }
 
     &--xxs {
-      @include padding-top(map-get($gap, xxs) !important);
+      @include padding-top(map-get($gaps, xxs) !important);
     }
 
     &--xs {
-      @include padding-top(map-get($gap, xs)!important);
+      @include padding-top(map-get($gaps, xs)!important);
     }
 
     &--sm {
-      @include padding-top(map-get($gap, sm)!important);
+      @include padding-top(map-get($gaps, sm)!important);
     }
 
     &--ms {
-      @include padding-top(map-get($gap, ms)!important);
+      @include padding-top(map-get($gaps, ms)!important);
     }
 
     &--md {
-      @include padding-top(map-get($gap, md)!important);
+      @include padding-top(map-get($gaps, md)!important);
     }
 
     &--ml {
-      @include padding-top(map-get($gap, ml)!important);
+      @include padding-top(map-get($gaps, ml)!important);
     }
 
     &--lg {
-      @include padding-top(map-get($gap, lg)!important);
+      @include padding-top(map-get($gaps, lg)!important);
     }
 
     &--xl {
-      @include padding-top(map-get($gap, xl)!important);
+      @include padding-top(map-get($gaps, xl)!important);
     }
   }
 
@@ -248,35 +248,35 @@
     }
 
     &--xxs {
-      @include padding-bottom(map-get($gap, xxs) !important);
+      @include padding-bottom(map-get($gaps, xxs) !important);
     }
 
     &--xs {
-      @include padding-bottom(map-get($gap, xs)!important);
+      @include padding-bottom(map-get($gaps, xs)!important);
     }
 
     &--sm {
-      @include padding-bottom(map-get($gap, sm)!important);
+      @include padding-bottom(map-get($gaps, sm)!important);
     }
 
     &--ms {
-      @include padding-bottom(map-get($gap, ms)!important);
+      @include padding-bottom(map-get($gaps, ms)!important);
     }
 
     &--md {
-      @include padding-bottom(map-get($gap, md)!important);
+      @include padding-bottom(map-get($gaps, md)!important);
     }
 
     &--ml {
-      @include padding-bottom(map-get($gap, ml)!important);
+      @include padding-bottom(map-get($gaps, ml)!important);
     }
 
     &--lg {
-      @include padding-bottom(map-get($gap, lg)!important);
+      @include padding-bottom(map-get($gaps, lg)!important);
     }
 
     &--xl {
-      @include padding-bottom(map-get($gap, xl)!important);
+      @include padding-bottom(map-get($gaps, xl)!important);
     }
   }
 }
