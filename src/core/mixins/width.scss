@@ -5,9 +5,9 @@
 }
 
 @mixin min-width($width) {
-  width: $width;
+  min-width: $width;
 }
 
 @mixin max-width($width) {
-  width: $width;
+  max-width: $width;
 }
