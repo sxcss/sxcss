@@ -1,5 +1,9 @@
-@mixin position($position) {
+@mixin position($position: unset, $top: unset, $right: unset, $bottom: unset, $left: unset) {
   position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 
 @mixin position--absolute($left, $top, $transform) {
