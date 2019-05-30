@@ -38,8 +38,14 @@
 
 @for $i from 1 through 12 {
   @each $gap-key, $gap-value in $gaps {
-    .grid-layout--#{$i}-cols--gap--#{$gap-key} {
-      @include grid-layout($grid-cols: $i, $grid-fr: 1fr, $grid-gap: map-get($gaps, $gap-key));
+    @if $gap-key == 'xs' {
+      .grid-layout--#{$i}-col {
+        @include grid-layout($grid-cols: $i, $grid-fr: 1fr, $grid-gap: map-get($gaps, $gap-key));
+      }
+     } @else {
+      .grid-layout--#{$i}-col--gap--#{$gap-key} {
+        @include grid-layout($grid-cols: $i, $grid-fr: 1fr);
+      }
     }
   }
 }

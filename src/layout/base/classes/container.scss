@@ -4,14 +4,3 @@
 .ctnr {
   @include container;
 }
-
-.grid__1-col,
-.grd__1-col {
-  .container__inner--boxed,
-  .ctnr__inn__box {
-    @media all and (min-width: calc( #{map-get($width, boxed)} + 2.1rem)) {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-  }
-}
