@@ -1,4 +1,342 @@
-@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -3830,623 +4168,623 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .min-width--10, .min-h--10 {
-  width: 10%;
+  min-width: 10%;
 }
 .min-width--20, .min-h--20 {
-  width: 20%;
+  min-width: 20%;
 }
 .min-width--25, .min-h--25 {
-  width: 25%;
+  min-width: 25%;
 }
 .min-width--33, .min-h--33 {
-  width: 33%;
+  min-width: 33%;
 }
 .min-width--40, .min-h--40 {
-  width: 40%;
+  min-width: 40%;
 }
 .min-width--45, .min-h--45 {
-  width: 45%;
+  min-width: 45%;
 }
 .min-width--50, .min-h--50 {
-  width: 50%;
+  min-width: 50%;
 }
 .min-width--60, .min-h--60 {
-  width: 60%;
+  min-width: 60%;
 }
 .min-width--67, .min-h--67 {
-  width: 66.67%;
+  min-width: 66.67%;
 }
 .min-width--75, .min-h--75 {
-  width: 75%;
+  min-width: 75%;
 }
 .min-width--80, .min-h--80 {
-  width: 80%;
+  min-width: 80%;
 }
 .min-width--90, .min-h--90 {
-  width: 90%;
+  min-width: 90%;
 }
 .min-width--100, .min-h--100 {
-  width: 100%;
+  min-width: 100%;
 }
 .min-width--xxs, .min-h--xxs {
-  width: 0.5rem;
+  min-width: 0.5rem;
 }
 .min-width--xs, .min-h--xs {
-  width: 1rem;
+  min-width: 1rem;
 }
 .min-width--sm, .min-h--sm {
-  width: 1.5rem;
+  min-width: 1.5rem;
 }
 .min-width--ms, .min-h--ms {
-  width: 2rem;
+  min-width: 2rem;
 }
 .min-width--md, .min-h--md {
-  width: 3rem;
+  min-width: 3rem;
 }
 .min-width--ml, .min-h--ml {
-  width: 5rem;
+  min-width: 5rem;
 }
 .min-width--lg, .min-h--lg {
-  width: 6rem;
+  min-width: 6rem;
 }
 .min-width--xl, .min-h--xl {
-  width: 8rem;
+  min-width: 8rem;
 }
 .min-width--xxl, .min-h--xxl {
-  width: 10rem;
+  min-width: 10rem;
 }
 .min-width--2xxs, .min-h--2xxs {
-  width: calc(2 * 0.5rem);
+  min-width: calc(2 * 0.5rem);
 }
 .min-width--2xs, .min-h--2xs {
-  width: calc(2 * 1rem);
+  min-width: calc(2 * 1rem);
 }
 .min-width--2sm, .min-h--2sm {
-  width: calc(2 * 1.5rem);
+  min-width: calc(2 * 1.5rem);
 }
 .min-width--2ms, .min-h--2ms {
-  width: calc(2 * 2rem);
+  min-width: calc(2 * 2rem);
 }
 .min-width--2md, .min-h--2md {
-  width: calc(2 * 3rem);
+  min-width: calc(2 * 3rem);
 }
 .min-width--2ml, .min-h--2ml {
-  width: calc(2 * 5rem);
+  min-width: calc(2 * 5rem);
 }
 .min-width--2lg, .min-h--2lg {
-  width: calc(2 * 6rem);
+  min-width: calc(2 * 6rem);
 }
 .min-width--2xl, .min-h--2xl {
-  width: calc(2 * 8rem);
+  min-width: calc(2 * 8rem);
 }
 .min-width--2xxl, .min-h--2xxl {
-  width: calc(2 * 10rem);
+  min-width: calc(2 * 10rem);
 }
 .min-width--3xxs, .min-h--3xxs {
-  width: calc(3 * 0.5rem);
+  min-width: calc(3 * 0.5rem);
 }
 .min-width--3xs, .min-h--3xs {
-  width: calc(3 * 1rem);
+  min-width: calc(3 * 1rem);
 }
 .min-width--3sm, .min-h--3sm {
-  width: calc(3 * 1.5rem);
+  min-width: calc(3 * 1.5rem);
 }
 .min-width--3ms, .min-h--3ms {
-  width: calc(3 * 2rem);
+  min-width: calc(3 * 2rem);
 }
 .min-width--3md, .min-h--3md {
-  width: calc(3 * 3rem);
+  min-width: calc(3 * 3rem);
 }
 .min-width--3ml, .min-h--3ml {
-  width: calc(3 * 5rem);
+  min-width: calc(3 * 5rem);
 }
 .min-width--3lg, .min-h--3lg {
-  width: calc(3 * 6rem);
+  min-width: calc(3 * 6rem);
 }
 .min-width--3xl, .min-h--3xl {
-  width: calc(3 * 8rem);
+  min-width: calc(3 * 8rem);
 }
 .min-width--3xxl, .min-h--3xxl {
-  width: calc(3 * 10rem);
+  min-width: calc(3 * 10rem);
 }
 .min-width--4xxs, .min-h--4xxs {
-  width: calc(4 * 0.5rem);
+  min-width: calc(4 * 0.5rem);
 }
 .min-width--4xs, .min-h--4xs {
-  width: calc(4 * 1rem);
+  min-width: calc(4 * 1rem);
 }
 .min-width--4sm, .min-h--4sm {
-  width: calc(4 * 1.5rem);
+  min-width: calc(4 * 1.5rem);
 }
 .min-width--4ms, .min-h--4ms {
-  width: calc(4 * 2rem);
+  min-width: calc(4 * 2rem);
 }
 .min-width--4md, .min-h--4md {
-  width: calc(4 * 3rem);
+  min-width: calc(4 * 3rem);
 }
 .min-width--4ml, .min-h--4ml {
-  width: calc(4 * 5rem);
+  min-width: calc(4 * 5rem);
 }
 .min-width--4lg, .min-h--4lg {
-  width: calc(4 * 6rem);
+  min-width: calc(4 * 6rem);
 }
 .min-width--4xl, .min-h--4xl {
-  width: calc(4 * 8rem);
+  min-width: calc(4 * 8rem);
 }
 .min-width--4xxl, .min-h--4xxl {
-  width: calc(4 * 10rem);
+  min-width: calc(4 * 10rem);
 }
 .min-width--5xxs, .min-h--5xxs {
-  width: calc(5 * 0.5rem);
+  min-width: calc(5 * 0.5rem);
 }
 .min-width--5xs, .min-h--5xs {
-  width: calc(5 * 1rem);
+  min-width: calc(5 * 1rem);
 }
 .min-width--5sm, .min-h--5sm {
-  width: calc(5 * 1.5rem);
+  min-width: calc(5 * 1.5rem);
 }
 .min-width--5ms, .min-h--5ms {
-  width: calc(5 * 2rem);
+  min-width: calc(5 * 2rem);
 }
 .min-width--5md, .min-h--5md {
-  width: calc(5 * 3rem);
+  min-width: calc(5 * 3rem);
 }
 .min-width--5ml, .min-h--5ml {
-  width: calc(5 * 5rem);
+  min-width: calc(5 * 5rem);
 }
 .min-width--5lg, .min-h--5lg {
-  width: calc(5 * 6rem);
+  min-width: calc(5 * 6rem);
 }
 .min-width--5xl, .min-h--5xl {
-  width: calc(5 * 8rem);
+  min-width: calc(5 * 8rem);
 }
 .min-width--5xxl, .min-h--5xxl {
-  width: calc(5 * 10rem);
+  min-width: calc(5 * 10rem);
 }
 .min-width--6xxs, .min-h--6xxs {
-  width: calc(6 * 0.5rem);
+  min-width: calc(6 * 0.5rem);
 }
 .min-width--6xs, .min-h--6xs {
-  width: calc(6 * 1rem);
+  min-width: calc(6 * 1rem);
 }
 .min-width--6sm, .min-h--6sm {
-  width: calc(6 * 1.5rem);
+  min-width: calc(6 * 1.5rem);
 }
 .min-width--6ms, .min-h--6ms {
-  width: calc(6 * 2rem);
+  min-width: calc(6 * 2rem);
 }
 .min-width--6md, .min-h--6md {
-  width: calc(6 * 3rem);
+  min-width: calc(6 * 3rem);
 }
 .min-width--6ml, .min-h--6ml {
-  width: calc(6 * 5rem);
+  min-width: calc(6 * 5rem);
 }
 .min-width--6lg, .min-h--6lg {
-  width: calc(6 * 6rem);
+  min-width: calc(6 * 6rem);
 }
 .min-width--6xl, .min-h--6xl {
-  width: calc(6 * 8rem);
+  min-width: calc(6 * 8rem);
 }
 .min-width--6xxl, .min-h--6xxl {
-  width: calc(6 * 10rem);
+  min-width: calc(6 * 10rem);
 }
 .min-width--7xxs, .min-h--7xxs {
-  width: calc(7 * 0.5rem);
+  min-width: calc(7 * 0.5rem);
 }
 .min-width--7xs, .min-h--7xs {
-  width: calc(7 * 1rem);
+  min-width: calc(7 * 1rem);
 }
 .min-width--7sm, .min-h--7sm {
-  width: calc(7 * 1.5rem);
+  min-width: calc(7 * 1.5rem);
 }
 .min-width--7ms, .min-h--7ms {
-  width: calc(7 * 2rem);
+  min-width: calc(7 * 2rem);
 }
 .min-width--7md, .min-h--7md {
-  width: calc(7 * 3rem);
+  min-width: calc(7 * 3rem);
 }
 .min-width--7ml, .min-h--7ml {
-  width: calc(7 * 5rem);
+  min-width: calc(7 * 5rem);
 }
 .min-width--7lg, .min-h--7lg {
-  width: calc(7 * 6rem);
+  min-width: calc(7 * 6rem);
 }
 .min-width--7xl, .min-h--7xl {
-  width: calc(7 * 8rem);
+  min-width: calc(7 * 8rem);
 }
 .min-width--7xxl, .min-h--7xxl {
-  width: calc(7 * 10rem);
+  min-width: calc(7 * 10rem);
 }
 .min-width--8xxs, .min-h--8xxs {
-  width: calc(8 * 0.5rem);
+  min-width: calc(8 * 0.5rem);
 }
 .min-width--8xs, .min-h--8xs {
-  width: calc(8 * 1rem);
+  min-width: calc(8 * 1rem);
 }
 .min-width--8sm, .min-h--8sm {
-  width: calc(8 * 1.5rem);
+  min-width: calc(8 * 1.5rem);
 }
 .min-width--8ms, .min-h--8ms {
-  width: calc(8 * 2rem);
+  min-width: calc(8 * 2rem);
 }
 .min-width--8md, .min-h--8md {
-  width: calc(8 * 3rem);
+  min-width: calc(8 * 3rem);
 }
 .min-width--8ml, .min-h--8ml {
-  width: calc(8 * 5rem);
+  min-width: calc(8 * 5rem);
 }
 .min-width--8lg, .min-h--8lg {
-  width: calc(8 * 6rem);
+  min-width: calc(8 * 6rem);
 }
 .min-width--8xl, .min-h--8xl {
-  width: calc(8 * 8rem);
+  min-width: calc(8 * 8rem);
 }
 .min-width--8xxl, .min-h--8xxl {
-  width: calc(8 * 10rem);
+  min-width: calc(8 * 10rem);
 }
 .min-width--9xxs, .min-h--9xxs {
-  width: calc(9 * 0.5rem);
+  min-width: calc(9 * 0.5rem);
 }
 .min-width--9xs, .min-h--9xs {
-  width: calc(9 * 1rem);
+  min-width: calc(9 * 1rem);
 }
 .min-width--9sm, .min-h--9sm {
-  width: calc(9 * 1.5rem);
+  min-width: calc(9 * 1.5rem);
 }
 .min-width--9ms, .min-h--9ms {
-  width: calc(9 * 2rem);
+  min-width: calc(9 * 2rem);
 }
 .min-width--9md, .min-h--9md {
-  width: calc(9 * 3rem);
+  min-width: calc(9 * 3rem);
 }
 .min-width--9ml, .min-h--9ml {
-  width: calc(9 * 5rem);
+  min-width: calc(9 * 5rem);
 }
 .min-width--9lg, .min-h--9lg {
-  width: calc(9 * 6rem);
+  min-width: calc(9 * 6rem);
 }
 .min-width--9xl, .min-h--9xl {
-  width: calc(9 * 8rem);
+  min-width: calc(9 * 8rem);
 }
 .min-width--9xxl, .min-h--9xxl {
-  width: calc(9 * 10rem);
+  min-width: calc(9 * 10rem);
 }
 .min-width--10xxs, .min-h--10xxs {
-  width: calc(10 * 0.5rem);
+  min-width: calc(10 * 0.5rem);
 }
 .min-width--10xs, .min-h--10xs {
-  width: calc(10 * 1rem);
+  min-width: calc(10 * 1rem);
 }
 .min-width--10sm, .min-h--10sm {
-  width: calc(10 * 1.5rem);
+  min-width: calc(10 * 1.5rem);
 }
 .min-width--10ms, .min-h--10ms {
-  width: calc(10 * 2rem);
+  min-width: calc(10 * 2rem);
 }
 .min-width--10md, .min-h--10md {
-  width: calc(10 * 3rem);
+  min-width: calc(10 * 3rem);
 }
 .min-width--10ml, .min-h--10ml {
-  width: calc(10 * 5rem);
+  min-width: calc(10 * 5rem);
 }
 .min-width--10lg, .min-h--10lg {
-  width: calc(10 * 6rem);
+  min-width: calc(10 * 6rem);
 }
 .min-width--10xl, .min-h--10xl {
-  width: calc(10 * 8rem);
+  min-width: calc(10 * 8rem);
 }
 .min-width--10xxl, .min-h--10xxl {
-  width: calc(10 * 10rem);
+  min-width: calc(10 * 10rem);
 }
 
 .max-width--10, .max-h--10 {
-  width: 10%;
+  max-width: 10%;
 }
 .max-width--20, .max-h--20 {
-  width: 20%;
+  max-width: 20%;
 }
 .max-width--25, .max-h--25 {
-  width: 25%;
+  max-width: 25%;
 }
 .max-width--33, .max-h--33 {
-  width: 33%;
+  max-width: 33%;
 }
 .max-width--40, .max-h--40 {
-  width: 40%;
+  max-width: 40%;
 }
 .max-width--45, .max-h--45 {
-  width: 45%;
+  max-width: 45%;
 }
 .max-width--50, .max-h--50 {
-  width: 50%;
+  max-width: 50%;
 }
 .max-width--60, .max-h--60 {
-  width: 60%;
+  max-width: 60%;
 }
 .max-width--67, .max-h--67 {
-  width: 66.67%;
+  max-width: 66.67%;
 }
 .max-width--75, .max-h--75 {
-  width: 75%;
+  max-width: 75%;
 }
 .max-width--80, .max-h--80 {
-  width: 80%;
+  max-width: 80%;
 }
 .max-width--90, .max-h--90 {
-  width: 90%;
+  max-width: 90%;
 }
 .max-width--100, .max-h--100 {
-  width: 100%;
+  max-width: 100%;
 }
 .max-width--xxs, .max-h--xxs {
-  width: 0.5rem;
+  max-width: 0.5rem;
 }
 .max-width--xs, .max-h--xs {
-  width: 1rem;
+  max-width: 1rem;
 }
 .max-width--sm, .max-h--sm {
-  width: 1.5rem;
+  max-width: 1.5rem;
 }
 .max-width--ms, .max-h--ms {
-  width: 2rem;
+  max-width: 2rem;
 }
 .max-width--md, .max-h--md {
-  width: 3rem;
+  max-width: 3rem;
 }
 .max-width--ml, .max-h--ml {
-  width: 5rem;
+  max-width: 5rem;
 }
 .max-width--lg, .max-h--lg {
-  width: 6rem;
+  max-width: 6rem;
 }
 .max-width--xl, .max-h--xl {
-  width: 8rem;
+  max-width: 8rem;
 }
 .max-width--xxl, .max-h--xxl {
-  width: 10rem;
+  max-width: 10rem;
 }
 .max-width--2xxs, .max-h--2xxs {
-  width: calc(2 * 0.5rem);
+  max-width: calc(2 * 0.5rem);
 }
 .max-width--2xs, .max-h--2xs {
-  width: calc(2 * 1rem);
+  max-width: calc(2 * 1rem);
 }
 .max-width--2sm, .max-h--2sm {
-  width: calc(2 * 1.5rem);
+  max-width: calc(2 * 1.5rem);
 }
 .max-width--2ms, .max-h--2ms {
-  width: calc(2 * 2rem);
+  max-width: calc(2 * 2rem);
 }
 .max-width--2md, .max-h--2md {
-  width: calc(2 * 3rem);
+  max-width: calc(2 * 3rem);
 }
 .max-width--2ml, .max-h--2ml {
-  width: calc(2 * 5rem);
+  max-width: calc(2 * 5rem);
 }
 .max-width--2lg, .max-h--2lg {
-  width: calc(2 * 6rem);
+  max-width: calc(2 * 6rem);
 }
 .max-width--2xl, .max-h--2xl {
-  width: calc(2 * 8rem);
+  max-width: calc(2 * 8rem);
 }
 .max-width--2xxl, .max-h--2xxl {
-  width: calc(2 * 10rem);
+  max-width: calc(2 * 10rem);
 }
 .max-width--3xxs, .max-h--3xxs {
-  width: calc(3 * 0.5rem);
+  max-width: calc(3 * 0.5rem);
 }
 .max-width--3xs, .max-h--3xs {
-  width: calc(3 * 1rem);
+  max-width: calc(3 * 1rem);
 }
 .max-width--3sm, .max-h--3sm {
-  width: calc(3 * 1.5rem);
+  max-width: calc(3 * 1.5rem);
 }
 .max-width--3ms, .max-h--3ms {
-  width: calc(3 * 2rem);
+  max-width: calc(3 * 2rem);
 }
 .max-width--3md, .max-h--3md {
-  width: calc(3 * 3rem);
+  max-width: calc(3 * 3rem);
 }
 .max-width--3ml, .max-h--3ml {
-  width: calc(3 * 5rem);
+  max-width: calc(3 * 5rem);
 }
 .max-width--3lg, .max-h--3lg {
-  width: calc(3 * 6rem);
+  max-width: calc(3 * 6rem);
 }
 .max-width--3xl, .max-h--3xl {
-  width: calc(3 * 8rem);
+  max-width: calc(3 * 8rem);
 }
 .max-width--3xxl, .max-h--3xxl {
-  width: calc(3 * 10rem);
+  max-width: calc(3 * 10rem);
 }
 .max-width--4xxs, .max-h--4xxs {
-  width: calc(4 * 0.5rem);
+  max-width: calc(4 * 0.5rem);
 }
 .max-width--4xs, .max-h--4xs {
-  width: calc(4 * 1rem);
+  max-width: calc(4 * 1rem);
 }
 .max-width--4sm, .max-h--4sm {
-  width: calc(4 * 1.5rem);
+  max-width: calc(4 * 1.5rem);
 }
 .max-width--4ms, .max-h--4ms {
-  width: calc(4 * 2rem);
+  max-width: calc(4 * 2rem);
 }
 .max-width--4md, .max-h--4md {
-  width: calc(4 * 3rem);
+  max-width: calc(4 * 3rem);
 }
 .max-width--4ml, .max-h--4ml {
-  width: calc(4 * 5rem);
+  max-width: calc(4 * 5rem);
 }
 .max-width--4lg, .max-h--4lg {
-  width: calc(4 * 6rem);
+  max-width: calc(4 * 6rem);
 }
 .max-width--4xl, .max-h--4xl {
-  width: calc(4 * 8rem);
+  max-width: calc(4 * 8rem);
 }
 .max-width--4xxl, .max-h--4xxl {
-  width: calc(4 * 10rem);
+  max-width: calc(4 * 10rem);
 }
 .max-width--5xxs, .max-h--5xxs {
-  width: calc(5 * 0.5rem);
+  max-width: calc(5 * 0.5rem);
 }
 .max-width--5xs, .max-h--5xs {
-  width: calc(5 * 1rem);
+  max-width: calc(5 * 1rem);
 }
 .max-width--5sm, .max-h--5sm {
-  width: calc(5 * 1.5rem);
+  max-width: calc(5 * 1.5rem);
 }
 .max-width--5ms, .max-h--5ms {
-  width: calc(5 * 2rem);
+  max-width: calc(5 * 2rem);
 }
 .max-width--5md, .max-h--5md {
-  width: calc(5 * 3rem);
+  max-width: calc(5 * 3rem);
 }
 .max-width--5ml, .max-h--5ml {
-  width: calc(5 * 5rem);
+  max-width: calc(5 * 5rem);
 }
 .max-width--5lg, .max-h--5lg {
-  width: calc(5 * 6rem);
+  max-width: calc(5 * 6rem);
 }
 .max-width--5xl, .max-h--5xl {
-  width: calc(5 * 8rem);
+  max-width: calc(5 * 8rem);
 }
 .max-width--5xxl, .max-h--5xxl {
-  width: calc(5 * 10rem);
+  max-width: calc(5 * 10rem);
 }
 .max-width--6xxs, .max-h--6xxs {
-  width: calc(6 * 0.5rem);
+  max-width: calc(6 * 0.5rem);
 }
 .max-width--6xs, .max-h--6xs {
-  width: calc(6 * 1rem);
+  max-width: calc(6 * 1rem);
 }
 .max-width--6sm, .max-h--6sm {
-  width: calc(6 * 1.5rem);
+  max-width: calc(6 * 1.5rem);
 }
 .max-width--6ms, .max-h--6ms {
-  width: calc(6 * 2rem);
+  max-width: calc(6 * 2rem);
 }
 .max-width--6md, .max-h--6md {
-  width: calc(6 * 3rem);
+  max-width: calc(6 * 3rem);
 }
 .max-width--6ml, .max-h--6ml {
-  width: calc(6 * 5rem);
+  max-width: calc(6 * 5rem);
 }
 .max-width--6lg, .max-h--6lg {
-  width: calc(6 * 6rem);
+  max-width: calc(6 * 6rem);
 }
 .max-width--6xl, .max-h--6xl {
-  width: calc(6 * 8rem);
+  max-width: calc(6 * 8rem);
 }
 .max-width--6xxl, .max-h--6xxl {
-  width: calc(6 * 10rem);
+  max-width: calc(6 * 10rem);
 }
 .max-width--7xxs, .max-h--7xxs {
-  width: calc(7 * 0.5rem);
+  max-width: calc(7 * 0.5rem);
 }
 .max-width--7xs, .max-h--7xs {
-  width: calc(7 * 1rem);
+  max-width: calc(7 * 1rem);
 }
 .max-width--7sm, .max-h--7sm {
-  width: calc(7 * 1.5rem);
+  max-width: calc(7 * 1.5rem);
 }
 .max-width--7ms, .max-h--7ms {
-  width: calc(7 * 2rem);
+  max-width: calc(7 * 2rem);
 }
 .max-width--7md, .max-h--7md {
-  width: calc(7 * 3rem);
+  max-width: calc(7 * 3rem);
 }
 .max-width--7ml, .max-h--7ml {
-  width: calc(7 * 5rem);
+  max-width: calc(7 * 5rem);
 }
 .max-width--7lg, .max-h--7lg {
-  width: calc(7 * 6rem);
+  max-width: calc(7 * 6rem);
 }
 .max-width--7xl, .max-h--7xl {
-  width: calc(7 * 8rem);
+  max-width: calc(7 * 8rem);
 }
 .max-width--7xxl, .max-h--7xxl {
-  width: calc(7 * 10rem);
+  max-width: calc(7 * 10rem);
 }
 .max-width--8xxs, .max-h--8xxs {
-  width: calc(8 * 0.5rem);
+  max-width: calc(8 * 0.5rem);
 }
 .max-width--8xs, .max-h--8xs {
-  width: calc(8 * 1rem);
+  max-width: calc(8 * 1rem);
 }
 .max-width--8sm, .max-h--8sm {
-  width: calc(8 * 1.5rem);
+  max-width: calc(8 * 1.5rem);
 }
 .max-width--8ms, .max-h--8ms {
-  width: calc(8 * 2rem);
+  max-width: calc(8 * 2rem);
 }
 .max-width--8md, .max-h--8md {
-  width: calc(8 * 3rem);
+  max-width: calc(8 * 3rem);
 }
 .max-width--8ml, .max-h--8ml {
-  width: calc(8 * 5rem);
+  max-width: calc(8 * 5rem);
 }
 .max-width--8lg, .max-h--8lg {
-  width: calc(8 * 6rem);
+  max-width: calc(8 * 6rem);
 }
 .max-width--8xl, .max-h--8xl {
-  width: calc(8 * 8rem);
+  max-width: calc(8 * 8rem);
 }
 .max-width--8xxl, .max-h--8xxl {
-  width: calc(8 * 10rem);
+  max-width: calc(8 * 10rem);
 }
 .max-width--9xxs, .max-h--9xxs {
-  width: calc(9 * 0.5rem);
+  max-width: calc(9 * 0.5rem);
 }
 .max-width--9xs, .max-h--9xs {
-  width: calc(9 * 1rem);
+  max-width: calc(9 * 1rem);
 }
 .max-width--9sm, .max-h--9sm {
-  width: calc(9 * 1.5rem);
+  max-width: calc(9 * 1.5rem);
 }
 .max-width--9ms, .max-h--9ms {
-  width: calc(9 * 2rem);
+  max-width: calc(9 * 2rem);
 }
 .max-width--9md, .max-h--9md {
-  width: calc(9 * 3rem);
+  max-width: calc(9 * 3rem);
 }
 .max-width--9ml, .max-h--9ml {
-  width: calc(9 * 5rem);
+  max-width: calc(9 * 5rem);
 }
 .max-width--9lg, .max-h--9lg {
-  width: calc(9 * 6rem);
+  max-width: calc(9 * 6rem);
 }
 .max-width--9xl, .max-h--9xl {
-  width: calc(9 * 8rem);
+  max-width: calc(9 * 8rem);
 }
 .max-width--9xxl, .max-h--9xxl {
-  width: calc(9 * 10rem);
+  max-width: calc(9 * 10rem);
 }
 .max-width--10xxs, .max-h--10xxs {
-  width: calc(10 * 0.5rem);
+  max-width: calc(10 * 0.5rem);
 }
 .max-width--10xs, .max-h--10xs {
-  width: calc(10 * 1rem);
+  max-width: calc(10 * 1rem);
 }
 .max-width--10sm, .max-h--10sm {
-  width: calc(10 * 1.5rem);
+  max-width: calc(10 * 1.5rem);
 }
 .max-width--10ms, .max-h--10ms {
-  width: calc(10 * 2rem);
+  max-width: calc(10 * 2rem);
 }
 .max-width--10md, .max-h--10md {
-  width: calc(10 * 3rem);
+  max-width: calc(10 * 3rem);
 }
 .max-width--10ml, .max-h--10ml {
-  width: calc(10 * 5rem);
+  max-width: calc(10 * 5rem);
 }
 .max-width--10lg, .max-h--10lg {
-  width: calc(10 * 6rem);
+  max-width: calc(10 * 6rem);
 }
 .max-width--10xl, .max-h--10xl {
-  width: calc(10 * 8rem);
+  max-width: calc(10 * 8rem);
 }
 .max-width--10xxl, .max-h--10xxl {
-  width: calc(10 * 10rem);
+  max-width: calc(10 * 10rem);
 }
 
 .h1 {
