@@ -1,7 +1,7 @@
 {
   "name": "fantastic-css",
   "version": "1.0.22",
-  "description": "🎮 Universal, scalable and 100% customizable SCSS framework built for rapid UI development 🛠",
+  "description": "🎮 Universal, scalable and 100% customizable SCSS library for rapid and organized UI development 🛠",
   "main": "main.scss",
   "scripts": {
     "dev": "bash scripts/dev.sh",
@@ -23,9 +23,14 @@
     "url": "git+https://github.com/new-fantastic/fantastic-css.git"
   },
   "keywords": [
-    "css",
     "sass",
     "scss",
+    "css",
+    "modular",
+    "molecular",
+    "organic",
+    "atomic",
+    "molecules",
     "framework",
     "ui",
     "library",
@@ -37,7 +42,8 @@
     "flex",
     "sassy",
     "scalable",
-    "universal"
+    "universal",
+    "fantastic"
   ],
   "author": "Aleksander Grygier <alek@newfantastic.com>",
   "license": "MIT",
