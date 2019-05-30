@@ -6,8 +6,15 @@
   @include grid;
   @include grid-template-columns(repeat($grid-cols, $grid-fr));
   @include grid-gap($grid-gap);
-
+  
+  
   > div {
     @include flex-basis($grid-cols);
+  }
+  @if $grid-cols == 1 {
+    @include flex-direction(column);
+    // > div {
+    //   @include flex-basis(unset !important);
+    // }
   }
 }
