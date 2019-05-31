@@ -1,3 +1,3 @@
 # /bin/bash
 
-sass main.scss main.css
+sass main.scss:main.css
