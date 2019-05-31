@@ -1,0 +1,13 @@
+@import '../mixins/object-fit.scss';
+
+.object-fit,
+.of {
+
+  &--cover, &--cvr {
+    @include object-fit(cover);
+  }
+
+  &--contain, &--ctn {
+    @include object-fit(contain);
+  }
+}

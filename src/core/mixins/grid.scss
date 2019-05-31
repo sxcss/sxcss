@@ -1,0 +1,24 @@
+@mixin grid {
+   /* Flex */
+   display: flex;
+   /* Grid */
+   display: grid;
+  //  grid-template-rows: 100%; Testing for the chrome
+  grid-template-rows: auto;
+}
+
+@mixin grid-gap($grid-gap) {
+  grid-gap: $grid-gap;
+}
+
+@mixin grid-template($grid-template) {
+  grid-template: $grid-template;
+}
+
+@mixin grid-template-columns($grid-template-columns) {
+  grid-template-columns: $grid-template-columns;
+}
+
+@mixin grid-template-rows($grid-template-rows) {
+  grid-template-rows: $grid-template-rows;
+}

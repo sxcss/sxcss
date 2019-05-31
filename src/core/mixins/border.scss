@@ -1,0 +1,11 @@
+@mixin border-radius($border-radius) {
+  border-radius: $border-radius;
+}
+
+@mixin border-width($border-width) {
+  border-width: $border-width;
+}
+
+@mixin border-style($border-style) {
+  border-style: $border-style;
+}

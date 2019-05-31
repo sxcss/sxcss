@@ -1,0 +1,26 @@
+@import '../../core/variables/variables.scss';
+
+.h1 {
+  font-size: map-get($font-size, xl);
+  // margin-top: $gap-ms;
+}
+
+.h2 {
+  font-size: map-get($font-size, lg);
+  // margin-top: $gap-ms;
+}
+
+.h3 {
+  font-size: map-get($font-size, ml);
+  // margin-top: $gap-ms;
+}
+
+.h4 {
+  font-size: map-get($font-size, md);
+  // margin-top: $gap-ms;
+}
+
+.h5 {
+  font-size: map-get($font-size, ms);
+  // margin-top: $gap-ms;
+}

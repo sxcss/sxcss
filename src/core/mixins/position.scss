@@ -1,0 +1,30 @@
+@mixin position($position: unset, $top: unset, $right: unset, $bottom: unset, $left: unset) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position--absolute($left, $top, $transform) {
+  @include position(absolute);
+  left: $left;
+  top: $top;
+  transform: $transform;
+}
+
+@mixin position--relative($left: unset, $right: unset,  $top: unset, $bottom: unset) {
+  @include position(relative);
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
+}
+
+@mixin position--fixed($left: unset, $right: unset,  $top: unset, $bottom: unset) {
+  @include position(fixed);
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
+}

@@ -1,0 +1,11 @@
+@mixin justify-content($justify-content) {
+  justify-content: $justify-content;
+}
+
+@mixin justify-items($justify-items) {
+  justify-items: $justify-items;
+}
+
+@mixin justify-self($justify-self) {
+  justify-self: $justify-self;
+}

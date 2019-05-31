@@ -1,0 +1,302 @@
+@import '../mixins/margin.scss';
+
+.margin,
+.m {
+
+  & {
+
+    &--0 {
+      @include margin(0 !important);
+    }
+
+    &--auto {
+      @include margin(auto !important);
+    }
+
+    &--xxs {
+      @include margin(map-get($gaps, xxs) !important);
+    }
+
+    &--xs {
+      @include margin(map-get($gaps, xs)!important);
+    }
+
+    &--sm {
+      @include margin(map-get($gaps, sm)!important);
+    }
+
+    &--ms {
+      @include margin(map-get($gaps, ms)!important);
+    }
+
+    &--md {
+      @include margin(map-get($gaps, md)!important);
+    }
+
+    &--ml {
+      @include margin(map-get($gaps, ml)!important);
+    }
+
+    &--lg {
+      @include margin(map-get($gaps, lg)!important);
+    }
+
+    &--xl {
+      @include margin(map-get($gaps, lg)!important);
+    }
+  }
+
+  &-x {
+
+    &--0 {
+      @include margin-x(0 !important);
+    }
+
+    &--auto {
+      @include margin-x(auto !important);
+    }
+
+    &--xxs {
+      @include margin-x(map-get($gaps, xxs) !important);
+    }
+
+    &--xs {
+      @include margin-x(map-get($gaps, xs)!important);
+    }
+
+    &--sm {
+      @include margin-x(map-get($gaps, sm)!important);
+    }
+
+    &--ms {
+      @include margin-x(map-get($gaps, ms)!important);
+    }
+
+    &--md {
+      @include margin-x(map-get($gaps, md)!important);
+    }
+
+    &--ml {
+      @include margin-x(map-get($gaps, ml)!important);
+    }
+
+    &--lg {
+      @include margin-x(map-get($gaps, lg)!important);
+    }
+
+    &--xl {
+      @include margin-x(map-get($gaps, xl)!important);
+    }
+  }
+
+  &-y {
+
+    &--0 {
+      @include margin-y(0 !important);
+    }
+
+    &--auto {
+      @include margin-y(auto !important);
+    }
+
+    &--xxs {
+      @include margin-y(map-get($gaps, xxs) !important);
+    }
+
+    &--xs {
+      @include margin-y(map-get($gaps, xs)!important);
+    }
+
+    &--sm {
+      @include margin-y(map-get($gaps, sm)!important);
+    }
+
+    &--ms {
+      @include margin-y(map-get($gaps, ms)!important);
+    }
+
+    &--md {
+      @include margin-y(map-get($gaps, md)!important);
+    }
+
+    &--ml {
+      @include margin-y(map-get($gaps, ml)!important);
+    }
+
+    &--lg {
+      @include margin-y(map-get($gaps, lg)!important);
+    }
+
+    &--xl {
+      @include margin-y(map-get($gaps, xl)!important);
+    }
+  }
+
+  &-left,
+  &-l {
+
+    &--0 {
+      @include margin-left(0 !important);
+    }
+
+    &--auto {
+      @include margin-left(auto !important);
+    }
+
+    &--xxs {
+      @include margin-left(map-get($gaps, xxs) !important);
+    }
+
+    &--xs {
+      @include margin-left(map-get($gaps, xs)!important);
+    }
+
+    &--sm {
+      @include margin-left(map-get($gaps, sm)!important);
+    }
+
+    &--ms {
+      @include margin-left(map-get($gaps, ms)!important);
+    }
+
+    &--md {
+      @include margin-left(map-get($gaps, md)!important);
+    }
+
+    &--ml {
+      @include margin-left(map-get($gaps, ml)!important);
+    }
+
+    &--lg {
+      @include margin-left(map-get($gaps, lg)!important);
+    }
+
+    &--xl {
+      @include margin-left(map-get($gaps, xl)!important);
+    }
+  }
+
+  &-right,
+  &-r {
+
+    &--0 {
+      @include margin-right(0 !important);
+    }
+
+    &--auto {
+      @include margin-right(auto !important);
+    }
+
+    &--xxs {
+      @include margin-right(map-get($gaps, xxs) !important);
+    }
+
+    &--xs {
+      @include margin-right(map-get($gaps, xs)!important);
+    }
+
+    &--sm {
+      @include margin-right(map-get($gaps, sm)!important);
+    }
+
+    &--ms {
+      @include margin-right(map-get($gaps, ms)!important);
+    }
+
+    &--md {
+      @include margin-right(map-get($gaps, md)!important);
+    }
+
+    &--ml {
+      @include margin-right(map-get($gaps, ml)!important);
+    }
+
+    &--lg {
+      @include margin-right(map-get($gaps, lg)!important);
+    }
+
+    &--xl {
+      @include margin-right(map-get($gaps, xl)!important);
+    }
+  }
+
+  &-top,
+  &-t {
+
+    &--0 {
+      @include margin-top(0 !important);
+    }
+
+    &--xxs {
+      @include margin-top(map-get($gaps, xxs) !important);
+    }
+
+    &--xs {
+      @include margin-top(map-get($gaps, xs)!important);
+    }
+
+    &--sm {
+      @include margin-top(map-get($gaps, sm)!important);
+    }
+
+    &--ms {
+      @include margin-top(map-get($gaps, ms)!important);
+    }
+
+    &--md {
+      @include margin-top(map-get($gaps, md)!important);
+    }
+
+    &--ml {
+      @include margin-top(map-get($gaps, ml)!important);
+    }
+
+    &--lg {
+      @include margin-top(map-get($gaps, lg)!important);
+    }
+
+    &--xl {
+      @include margin-top(map-get($gaps, xl)!important);
+    }
+  }
+
+  &-bottom,
+  &-b {
+    
+    &--0 {
+      @include margin-bottom(0 !important);
+    }
+
+    &--xxs {
+      @include margin-bottom(map-get($gaps, xxs) !important);
+    }
+
+    &--xs {
+      @include margin-bottom(map-get($gaps, xs)!important);
+    }
+
+    &--sm {
+      @include margin-bottom(map-get($gaps, sm)!important);
+    }
+
+    &--ms {
+      @include margin-bottom(map-get($gaps, ms)!important);
+    }
+
+    &--md {
+      @include margin-bottom(map-get($gaps, md)!important);
+    }
+
+    &--ml {
+      @include margin-bottom(map-get($gaps, ml)!important);
+    }
+
+    &--lg {
+      @include margin-bottom(map-get($gaps, lg)!important);
+    }
+
+    &--xl {
+      @include margin-bottom(map-get($gaps, xl)!important);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@mixin list-style($list-style) {
+  list-style: $list-style;
+}
+
+@mixin list-style-positon($list-style-position) {
+  list-style-position: $list-style-position;
+}
+
+@mixin list-style-type($list-style-type) {
+  list-style-type: $list-style-type;
+}

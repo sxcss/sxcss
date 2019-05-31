@@ -1,0 +1,125 @@
+@import '../mixins/hover.scss';
+
+.hover,
+.hvr {
+  
+  &-opacity,
+  &-opc {
+
+    &--xxs {
+      @include hover($hover-opacity: map-get($opacity, xxs));
+    }
+
+    &--xs {
+      @include hover($hover-opacity: map-get($opacity, xs));
+    }
+
+    &--sm {
+      @include hover($hover-opacity: map-get($opacity, sm));
+    }
+
+    &--ms {
+      @include hover($hover-opacity: map-get($opacity, ms));
+    }
+
+    &--md {
+      @include hover($hover-opacity: map-get($opacity, md));
+    }
+
+    &--ml {
+      @include hover($hover-opacity: map-get($opacity, ml));
+    }
+
+    &--lg {
+      @include hover($hover-opacity: map-get($opacity, lg));
+    }
+
+    &--xl {
+      @include hover($hover-opacity: map-get($opacity, xl));
+    }
+
+    &--xxl {
+      @include hover($hover-opacity: map-get($opacity, xxl));
+    }
+  }
+
+  &-transform,
+  &-tfm {
+
+    &--xxs {
+      @include hover($hover-transform: map-get($gaps, xxs));
+    }
+
+    &--xs {
+      @include hover($hover-transform: map-get($gaps, xs));
+    }
+
+    &--sm {
+      @include hover($hover-transform: map-get($gaps, sm));
+    }
+
+    &--ms {
+      @include hover($hover-transform: map-get($gaps, ms));
+    }
+
+    &--md {
+      @include hover($hover-transform: map-get($gaps, md));
+    }
+
+    &--ml {
+      @include hover($hover-transform: map-get($gaps, ml));
+    }
+
+    &--lg {
+      @include hover($hover-transform: map-get($gaps, lg));
+    }
+
+    &--xl {
+      @include hover($hover-transform: map-get($gaps, xl));
+    }
+
+    &--xxl {
+      @include hover($hover-transform: map-get($gaps, xxl));
+    }
+  }
+
+  &-scale,
+  &-scl {
+
+    &--xxs {
+      @include hover($hover-scale: map-get($gaps, xxs));
+    }
+
+    &--xs {
+      @include hover($hover-scale: map-get($gaps, xs));
+    }
+
+    &--sm {
+      @include hover($hover-scale: map-get($gaps, sm));
+    }
+
+    &--ms {
+      @include hover($hover-scale: map-get($gaps, ms));
+    }
+
+    &--md {
+      @include hover($hover-scale: map-get($gaps, md));
+    }
+
+    &--ml {
+      @include hover($hover-scale: map-get($gaps, ml));
+    }
+
+    &--lg {
+      @include hover($hover-scale: map-get($gaps, lg));
+    }
+
+    &--xl {
+      @include hover($hover-scale: map-get($gaps, xl));
+    }
+
+    &--xxl {
+      @include hover($hover-scale: map-get($gaps, xxl));
+    }
+  }
+}

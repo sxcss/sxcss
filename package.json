@@ -1,31 +1,54 @@
 {
-  "name": "hajime",
-  "version": "1.0.2",
-  "description": "始 - Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠",
+  "name": "fantastic-css",
+  "version": "1.0.28",
+  "description": "🎮 Universal, scalable and 100% customizable SCSS library for rapid and organized UI development 🛠",
   "main": "main.scss",
   "scripts": {
-    "test": "sass main.scss main.css"
+    "dev": "bash scripts/dev.sh",
+    "test": "bash scripts/test.sh",
+    "build": "bash scripts/build.sh",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0"
+  },
+  "devDependencies": {
+    "uglifycss": "^0.0.29",
+    "vuepress": "^0.14.11"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/new-fantastic/hajime.git"
+    "url": "git+https://github.com/new-fantastic/fantastic-css.git"
   },
   "keywords": [
-    "hajime",
-    "css",
     "sass",
     "scss",
-    "ui",
-    "styling",
-    "stylesheet",
+    "css",
+    "modular",
     "molecular",
+    "organic",
     "atomic",
-    "semantic"
+    "molecules",
+    "framework",
+    "ui",
+    "library",
+    "styles",
+    "style",
+    "styling",
+    "grid",
+    "flexbox",
+    "flex",
+    "sassy",
+    "scalable",
+    "universal",
+    "fantastic"
   ],
-  "author": "Aleksander Grygier",
+  "author": "Aleksander Grygier <alek@newfantastic.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/new-fantastic/hajime/issues"
+    "url": "https://github.com/new-fantastic/fantastic-css/issues"
   },
-  "homepage": "https://github.com/new-fantastic/hajime#readme"
+  "homepage": "https://github.com/new-fantastic/fantastic-css#readme"
 }

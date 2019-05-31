@@ -1,9 +1,5 @@
-# hajime
+# fantastic-css
 
 <br>
 
-始
-
-<br>
-
-Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠
+🎮 Universal, scalable and 100% customizable SCSS framework built for rapid UI development 🛠

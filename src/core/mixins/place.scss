@@ -1,0 +1,11 @@
+@mixin place-content($place-content) {
+  place-content: $place-content;
+}
+
+@mixin place-items($place-items) {
+  place-items: $place-items;
+}
+
+@mixin place-self($place-self) {
+  place-self: $place-self;
+}

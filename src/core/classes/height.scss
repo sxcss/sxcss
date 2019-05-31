@@ -1,0 +1,107 @@
+@import '../variables/size.scss';
+@import '../mixins/height.scss';
+
+.height, .h {
+
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include height(map-get($size, $key));
+    }
+  }
+
+  @for $i from 2 through 10 {
+    @each $key, $value  in $size {
+      @if $key != 10 
+      and $key != 20
+      and $key != 25
+      and $key != 33
+      and $key != 40
+      and $key != 45
+      and $key != 50
+      and $key != 60
+      and $key != 67
+      and $key != 75
+      and $key != 80
+      and $key != 90
+      and $key != 100
+      and $key != 50vh
+      and $key != 100vh 
+      and $key != 50vw
+      and $key != 100vw { 
+        &--#{$i}#{$key} {
+          @include height(calc(#{$i} * #{map-get($size, $key)}));
+        }
+      }
+    }
+  }
+}
+
+.min-height, .min-h {
+
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include min-height(map-get($size, $key));
+    }
+  }
+
+  @for $i from 2 through 10 {
+    @each $key, $value  in $size {
+      @if $key != 10 
+      and $key != 20
+      and $key != 25
+      and $key != 33
+      and $key != 40
+      and $key != 45
+      and $key != 50
+      and $key != 60
+      and $key != 67
+      and $key != 75
+      and $key != 80
+      and $key != 90
+      and $key != 100
+      and $key != 50vh
+      and $key != 100vh 
+      and $key != 50vw
+      and $key != 100vw { 
+        &--#{$i}#{$key} {
+          @include min-height(calc(#{$i} * #{map-get($size, $key)}));
+        }
+      }
+    }
+  }
+}
+
+.max-height, .max-h {
+
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include max-height(map-get($size, $key));
+    }
+  }
+
+  @for $i from 2 through 10 {
+    @each $key, $value  in $size {
+      @if $key != 10 
+      and $key != 20
+      and $key != 25
+      and $key != 33
+      and $key != 40
+      and $key != 45
+      and $key != 50
+      and $key != 60
+      and $key != 67
+      and $key != 75
+      and $key != 80
+      and $key != 90
+      and $key != 100
+      and $key != 50vh
+      and $key != 100vh 
+      and $key != 50vw
+      and $key != 100vw { 
+        &--#{$i}#{$key} {
+          @include max-height(calc(#{$i} * #{map-get($size, $key)}));
+        }
+      }
+    }
+  }
+}

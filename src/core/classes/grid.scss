@@ -1,0 +1,38 @@
+@import '../mixins/grid.scss';
+
+.grid,
+.grd {
+  @include grid;
+
+  &-template,
+  &-tmp {
+
+    &-columns, &-cols {
+
+      @for $i from 1 through 12 {
+        &--#{repeat}-#{$i}-#{1fr},
+        &--rpt-#{$i}-#{1fr} {
+          @include grid-template-columns(repeat($i, 1fr));
+        }
+        &--#{repeat}-#{$i}-#{auto},
+        &--rpt-#{$i}-#{auto} {
+          @include grid-template-columns(repeat($i, auto));
+        }
+      }
+    }
+
+    &-rows {
+
+      @for $i from 1 through 12 {
+        &--#{repeat}-#{$i}-#{1fr},
+        &--rpt-#{$i}-#{1fr} {
+          @include grid-template-rows(repeat($i, 1fr));
+        }
+        &--#{repeat}-#{$i}-#{auto},
+        &--rpt-#{$i}-#{auto} {
+          @include grid-template-rows(repeat($i, auto));
+        }
+      }
+    }
+  }
+}

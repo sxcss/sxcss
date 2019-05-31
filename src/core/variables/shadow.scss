@@ -1,0 +1,47 @@
+$shadow-offset-x: (
+  xxs: map-get($gaps, xxs),
+  xs: map-get($gaps, xs),
+  sm: map-get($gaps, sm),
+  ms: map-get($gaps, ms),
+  md: map-get($gaps, md),
+  ml: map-get($gaps, ml),
+  lg: map-get($gaps, lg),
+  xl: map-get($gaps, xl),
+  xxl: map-get($gaps, xxl) 
+);
+
+$shadow-offset-y: (
+  xxs: map-get($gaps, xxs),
+  xs: map-get($gaps, xs),
+  sm: map-get($gaps, sm),
+  ms: map-get($gaps, ms),
+  md: map-get($gaps, md),
+  ml: map-get($gaps, ml),
+  lg: map-get($gaps, lg),
+  xl: map-get($gaps, xl),
+  xxl: map-get($gaps, xxl) 
+);
+
+$shadow-blur-radius: (
+  xxs: map-get($gaps, xxs),
+  xs: map-get($gaps, xs),
+  sm: map-get($gaps, sm),
+  ms: map-get($gaps, ms),
+  md: map-get($gaps, md),
+  ml: map-get($gaps, ml),
+  lg: map-get($gaps, lg),
+  xl: map-get($gaps, xl),
+  xxl: map-get($gaps, xxl) 
+);
+
+$shadow-spread-radius: (
+  xxs: map-get($gaps, xxs),
+  xs: map-get($gaps, xs),
+  sm: map-get($gaps, sm),
+  ms: map-get($gaps, ms),
+  md: map-get($gaps, md),
+  ml: map-get($gaps, ml),
+  lg: map-get($gaps, lg),
+  xl: map-get($gaps, xl),
+  xxl: map-get($gaps, xxl) 
+);

@@ -1,0 +1,11 @@
+@mixin align-content($align-content) {
+  align-content: $align-content;
+}
+
+@mixin align-items($align-items) {
+  align-items: $align-items;
+}
+
+@mixin align-self($align-self) {
+  align-self: $align-self;
+}
