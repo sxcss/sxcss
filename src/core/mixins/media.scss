@@ -1,0 +1,340 @@
+$media: (
+  breakpoints: (
+    'xxs': 240px, // Nokia 8810 and other super small screens like Smart Watches
+    'xs': 375px, // Most of the smartsms including Galaxy S and ism 6/7/8/X,
+    'sm': 420px, // Large Smartsms like ism XS Max/XR/6 Plus/7 Plus/8 Plus or Galaxy Note 9
+    'ms': 767px, // All Devices smaller than Tablet,
+    'md': 980px, // Tablets,
+    'ml': 1080px, // iPad Pro & super small laptops
+    'ls': 1280px, // Small laptops like MacBook 12"
+    'lg': 1366px, // Most common laptop resolution
+    'll': 1440px, // 
+    'xl': 1580px,
+    'xxl': 1920px
+  ),
+  types: (
+    'screen': 'screen', 
+    'print': 'print', 
+    'handheld': 'handheld',
+  '2k': (
+    '()'
+  ),
+    'retina2x': (
+        '(-webkit-min-device-pixel-ratio: 2)', 
+        '(min-resolution: 192dpi)'
+    ), 
+    'retina3x': (
+        '(-webkit-min-device-pixel-ratio: 3)', 
+        '(min-resolution: 350dpi)'
+    )
+  )
+) !default;
+
+$unit-intervals: (
+	'px': 1, 
+	'em': 0.01, 
+	'rem': 0.1
+) !default;
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+      $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@function map-deep-has-key($map, $map-key, $keys...) {
+  @each $key in $keys {
+      $map-key: map-has-key($media, map-deep-get($map, $map-key, $key));
+  }
+  @return $map-key;
+}
+
+@mixin media($conditions...) {
+  @for $i from 1 through length($conditions) {
+    $conditions: set-nth($conditions, $i, parse-expression(nth($conditions, $i)));
+  }
+
+  $branches: get-query-branches($conditions);
+  $query: '';
+
+  @each $branch in $branches {
+    @if (str-length($query) != 0) {
+      $query: $query + ', ';
+    }
+
+    $query: $query + $branch;
+  }
+
+  @media #{$query} {
+    @content;
+  }
+}
+
+@function get-query-branches($types) {
+  $result: '';
+  $has-groups: false;
+
+  // Getting initial snapshot and looking for groups
+  @each $expression in $types {
+    @if (str-length($result) != 0) {
+      $result: $result + ' and ';
+    }
+
+    @if (type-of($expression) == 'string') {
+      $result: $result + $expression;
+    } @else if (type-of($expression) == 'list') {
+      $result: $result + nth($expression, 1);
+      $has-groups: true;
+    } @else {
+      @warn '#{$expression} is not a valid expression.';
+    }
+  }
+
+  // If we have groups, we have to create all possible combinations
+  @if $has-groups {
+    @each $expression in $types {
+      @if (type-of($expression) == 'list') {
+        $first: nth($expression, 1);
+
+        @each $member in $expression {
+          @if ($member != $first) {
+            @each $partial in $result {
+              $result: join($result, str-replace-first($first, $member, $partial));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @return $result;
+}
+
+@function parse-expression($expression) {
+  $operator: '';
+  $value: '';
+  $element: '';
+  $result: '';
+  $is-width: true;
+
+  @if (type-of($expression) != 'string') {
+    @warn 'Expression with type `#{type-of($expression)}` detected, string expected.';
+  }
+
+  // Separating the operator from the rest of the expression
+  @if (str-slice($expression, 2, 2) == '=') {
+    $operator: str-slice($expression, 1, 2);
+    $value: str-slice($expression, 3);
+  } @else {
+    $operator: str-slice($expression, 1, 1);
+    $value: str-slice($expression, 2);
+  }
+
+  // Checking what type of expression we're dealing with
+  @if map-deep-has-key($media, breakpoints, $value) {
+    $result: map-deep-get($media, breakpoints, $value);
+  } @else if map-deep-has-key($media, types, $expression) {
+    $result: map-deep-get($media, types, $expression);
+    $is-width: false;
+  }
+
+  @if ($is-width) {
+    $unit: unit($result);
+    $interval: 0;
+    
+    @if (map-has-key($unit-intervals, $unit)) {
+      $interval: map-get($unit-intervals, $unit);
+    } @else {
+      @warn 'Unknown unit: #{$unit}';
+    } 
+       
+    @if ($operator == '>') {
+      $element: '(min-width: #{$result + $interval})';
+    } @else if ($operator == '<') {
+      $element: '(max-width: #{$result - $interval})';
+    } @else if ($operator == '>=') {
+      $element: '(min-width: #{$result})';
+    } @else if ($operator == '<=') {
+      $element: '(max-width: #{$result})';
+    } @else {
+      @warn '#{$expression} is missing an operator.';
+    }
+  } @else {
+    $element: $result;
+  }
+
+  @return $element;
+}
+
+@function str-replace-first($search, $replace, $subject) {
+  $search-start: str-index($subject, $search);
+
+  @if $search-start == null {
+    @return $subject;
+  }
+
+  $result: str-slice($subject, 0, $search-start - 1);
+  $result: $result + $replace;
+  $result: $result + str-slice($subject, $search-start + str-length($search));
+
+  @return $result;
+}
+
+@function to-number($string) {
+  // Matrices
+  $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
+  $numbers:  0   1   2   3   4   5   6   7   8   9;
+  
+  // Result
+  $result: 0;
+  $divider: 0;
+  $minus: false;
+
+  // Looping through all characters
+  @for $i from 1 through str-length($string) {
+    $character: str-slice($string, $i, $i);
+    $index: index($strings, $character);
+    
+  
+    @if $character == '-' {
+      $minus: true;
+    }
+    
+    @else if $character == '.' {
+      $divider: 1;
+    }
+    
+    @else {
+      @if type-of($index) != 'number' {
+        $result: if($minus, $result * -1, $result);
+        @return _length($result, str-slice($string, $i));
+      }
+
+      $number: nth($numbers, $index);
+      
+      @if $divider == 0 {
+        $result: $result * 10;
+      }
+      
+      @else {
+        // Move the decimal dot to the left
+        $divider: $divider * 10;
+        $number: $number / $divider;
+      }
+      
+      $result: $result + $number;
+    }
+  }
+  
+  @return if($minus, $result * -1, $result);
+}
+
+@function _length($number, $unit) {
+  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
+  $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
+  $index: index($strings, $unit);
+  
+  @if type-of($index) != 'number' {
+    @warn 'Unknown unit `#{$unit}`.';
+    @return false;
+  }
+  
+  @return $number * nth($units, $index);
+}
+
+.include-media-test {
+  @include media("<=sm") {
+    background-color: #def;
+    
+    &:before {
+      content: "<=sm";
+    }
+  }
+
+  @include media(">sm") {
+    background-color: #abc;
+    
+    &:before {
+      content: ">sm";
+    }    
+  }
+
+  @include media(">=815px", "<md") {
+    background-color: #fed;
+    
+    &:before {
+      content: ">=815px, <md";
+    }    
+  }
+
+  @include media(">=ms") {
+    background-color: #fab;
+    
+    &:before {
+      content: ">=ms";
+    }
+  }
+  
+  @include media(">=md") {
+    background-color: #fab;
+    
+    &:before {
+      content: ">=md";
+    }
+  }
+
+  @include media(">=ml") {
+    background-color: #fab;
+    
+    &:before {
+      content: ">=ml";
+    }
+  }
+  
+  @include media(">=ls") {
+    background-color: #fab;
+    
+    &:before {
+      content: ">=ls";
+    }
+  }
+  
+  @include media(">=lg") {
+    background-color: #fab;
+    
+    &:before {
+      content: ">=lg";
+    }
+  }
+  
+  @include media(">=ll") {
+    background-color: #fab;
+    
+    &:before {
+      content: ">=ll";
+    }
+  }
+  
+  @include media(">=xl") {
+    background-color: #fab;
+    
+    &:before {
+      content: ">=xl";
+    }
+  }
+  
+  @include media(">=xxl") {
+    background-color: #fab;
+    
+    &:before {
+      content: ">=xxl";
+    }
+  }
+  
+  @include media("retina2x") {
+    &:after {
+      content: "Retina" !important;
+    }    
+  }
+}
