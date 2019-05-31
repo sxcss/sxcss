@@ -975,6 +975,8 @@ input[type=number]::-webkit-outer-spin-button {
   flex-basis: calc(8.3333% - 6 * 1.5rem / 12);
 }
 
+/*** Parent ***/
+/*** Children ***/
 .grid,
 .grd {
   /* Flex */
@@ -4992,168 +4994,12 @@ p {
   line-height: 1.5;
 }
 
-@media (max-width: 420px) {
-  .include-media-test:before {
-    content: "<=sm";
-  }
-}
-@media (min-width: 421px) {
-  .include-media-test:before {
-    content: ">sm";
-  }
-}
-@media (max-width: 979px) {
-  .include-media-test:before {
-    content: ">=815px, <md";
-  }
-}
-@media (min-width: 767px) {
-  .include-media-test:before {
-    content: ">=ms";
-  }
-}
-@media (min-width: 980px) {
-  .include-media-test:before {
-    content: ">=md";
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:before {
-    content: ">=ls";
-  }
-}
-@media (min-width: 1366px) {
-  .include-media-test:before {
-    content: ">=lg";
-  }
-}
-@media (min-width: 1440px) {
-  .include-media-test:before {
-    content: ">=ll";
-  }
-}
-@media (min-width: 1580px) {
-  .include-media-test:before {
-    content: ">=xl";
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:before {
-    content: ">=xxl";
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .include-media-test:after {
-    content: "Retina" !important;
-  }
-}
-@media (min-width: 640px) {
-  .include-media-test:after {
-    content: "/nHD" !important;
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:after {
-    content: "/HD" !important;
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:after {
-    content: "/FHD" !important;
-  }
-}
-@media (min-width: 2048px) {
-  .include-media-test:after {
-    content: "/2K" !important;
-  }
-}
-@media (min-width: 2560px) {
-  .include-media-test:after {
-    content: "/QHD" !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .include-media-test:before {
-    content: "<=sm";
-  }
-}
-@media (min-width: 421px) {
-  .include-media-test:before {
-    content: ">sm";
-  }
-}
-@media (max-width: 979px) {
-  .include-media-test:before {
-    content: ">=815px, <md";
-  }
-}
-@media (min-width: 767px) {
-  .include-media-test:before {
-    content: ">=ms";
-  }
-}
-@media (min-width: 980px) {
-  .include-media-test:before {
-    content: ">=md";
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:before {
-    content: ">=ls";
-  }
-}
-@media (min-width: 1366px) {
-  .include-media-test:before {
-    content: ">=lg";
-  }
-}
-@media (min-width: 1440px) {
-  .include-media-test:before {
-    content: ">=ll";
-  }
-}
-@media (min-width: 1580px) {
-  .include-media-test:before {
-    content: ">=xl";
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:before {
-    content: ">=xxl";
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .include-media-test:after {
-    content: "Retina" !important;
-  }
-}
-@media (min-width: 640px) {
-  .include-media-test:after {
-    content: "/nHD" !important;
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:after {
-    content: "/HD" !important;
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:after {
-    content: "/FHD" !important;
-  }
-}
-@media (min-width: 2048px) {
-  .include-media-test:after {
-    content: "/2K" !important;
-  }
-}
-@media (min-width: 2560px) {
-  .include-media-test:after {
-    content: "/QHD" !important;
-  }
-}
-
+/*** Parent ***/
+/*** Children ***/
+/*** Parent ***/
+/*** Children ***/
+/*** Parent ***/
+/*** Children ***/
 .container,
 .ctnr {
   box-sizing: border-box;
@@ -5178,6 +5024,8 @@ p {
   }
 }
 
+/*** Parent ***/
+/*** Children ***/
 .grid-layout--1-col--gap--xxs {
   /* Flex */
   display: flex;
@@ -6434,168 +6282,12 @@ p {
   flex-basis: calc(8.3333% - 6 * 1.5rem / 12);
 }
 
-@media (max-width: 420px) {
-  .include-media-test:before {
-    content: "<=sm";
-  }
-}
-@media (min-width: 421px) {
-  .include-media-test:before {
-    content: ">sm";
-  }
-}
-@media (max-width: 979px) {
-  .include-media-test:before {
-    content: ">=815px, <md";
-  }
-}
-@media (min-width: 767px) {
-  .include-media-test:before {
-    content: ">=ms";
-  }
-}
-@media (min-width: 980px) {
-  .include-media-test:before {
-    content: ">=md";
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:before {
-    content: ">=ls";
-  }
-}
-@media (min-width: 1366px) {
-  .include-media-test:before {
-    content: ">=lg";
-  }
-}
-@media (min-width: 1440px) {
-  .include-media-test:before {
-    content: ">=ll";
-  }
-}
-@media (min-width: 1580px) {
-  .include-media-test:before {
-    content: ">=xl";
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:before {
-    content: ">=xxl";
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .include-media-test:after {
-    content: "Retina" !important;
-  }
-}
-@media (min-width: 640px) {
-  .include-media-test:after {
-    content: "/nHD" !important;
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:after {
-    content: "/HD" !important;
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:after {
-    content: "/FHD" !important;
-  }
-}
-@media (min-width: 2048px) {
-  .include-media-test:after {
-    content: "/2K" !important;
-  }
-}
-@media (min-width: 2560px) {
-  .include-media-test:after {
-    content: "/QHD" !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .include-media-test:before {
-    content: "<=sm";
-  }
-}
-@media (min-width: 421px) {
-  .include-media-test:before {
-    content: ">sm";
-  }
-}
-@media (max-width: 979px) {
-  .include-media-test:before {
-    content: ">=815px, <md";
-  }
-}
-@media (min-width: 767px) {
-  .include-media-test:before {
-    content: ">=ms";
-  }
-}
-@media (min-width: 980px) {
-  .include-media-test:before {
-    content: ">=md";
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:before {
-    content: ">=ls";
-  }
-}
-@media (min-width: 1366px) {
-  .include-media-test:before {
-    content: ">=lg";
-  }
-}
-@media (min-width: 1440px) {
-  .include-media-test:before {
-    content: ">=ll";
-  }
-}
-@media (min-width: 1580px) {
-  .include-media-test:before {
-    content: ">=xl";
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:before {
-    content: ">=xxl";
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .include-media-test:after {
-    content: "Retina" !important;
-  }
-}
-@media (min-width: 640px) {
-  .include-media-test:after {
-    content: "/nHD" !important;
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:after {
-    content: "/HD" !important;
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:after {
-    content: "/FHD" !important;
-  }
-}
-@media (min-width: 2048px) {
-  .include-media-test:after {
-    content: "/2K" !important;
-  }
-}
-@media (min-width: 2560px) {
-  .include-media-test:after {
-    content: "/QHD" !important;
-  }
-}
-
+/*** Parent ***/
+/*** Children ***/
+/*** Parent ***/
+/*** Children ***/
+/*** Parent ***/
+/*** Children ***/
 .placement__x--left, .placement__x-lft,
 .plc__x--left,
 .plc__x-lft {
@@ -6759,168 +6451,12 @@ p {
   place-content: flex-end center;
 }
 
-@media (max-width: 420px) {
-  .include-media-test:before {
-    content: "<=sm";
-  }
-}
-@media (min-width: 421px) {
-  .include-media-test:before {
-    content: ">sm";
-  }
-}
-@media (max-width: 979px) {
-  .include-media-test:before {
-    content: ">=815px, <md";
-  }
-}
-@media (min-width: 767px) {
-  .include-media-test:before {
-    content: ">=ms";
-  }
-}
-@media (min-width: 980px) {
-  .include-media-test:before {
-    content: ">=md";
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:before {
-    content: ">=ls";
-  }
-}
-@media (min-width: 1366px) {
-  .include-media-test:before {
-    content: ">=lg";
-  }
-}
-@media (min-width: 1440px) {
-  .include-media-test:before {
-    content: ">=ll";
-  }
-}
-@media (min-width: 1580px) {
-  .include-media-test:before {
-    content: ">=xl";
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:before {
-    content: ">=xxl";
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .include-media-test:after {
-    content: "Retina" !important;
-  }
-}
-@media (min-width: 640px) {
-  .include-media-test:after {
-    content: "/nHD" !important;
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:after {
-    content: "/HD" !important;
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:after {
-    content: "/FHD" !important;
-  }
-}
-@media (min-width: 2048px) {
-  .include-media-test:after {
-    content: "/2K" !important;
-  }
-}
-@media (min-width: 2560px) {
-  .include-media-test:after {
-    content: "/QHD" !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .include-media-test:before {
-    content: "<=sm";
-  }
-}
-@media (min-width: 421px) {
-  .include-media-test:before {
-    content: ">sm";
-  }
-}
-@media (max-width: 979px) {
-  .include-media-test:before {
-    content: ">=815px, <md";
-  }
-}
-@media (min-width: 767px) {
-  .include-media-test:before {
-    content: ">=ms";
-  }
-}
-@media (min-width: 980px) {
-  .include-media-test:before {
-    content: ">=md";
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:before {
-    content: ">=ls";
-  }
-}
-@media (min-width: 1366px) {
-  .include-media-test:before {
-    content: ">=lg";
-  }
-}
-@media (min-width: 1440px) {
-  .include-media-test:before {
-    content: ">=ll";
-  }
-}
-@media (min-width: 1580px) {
-  .include-media-test:before {
-    content: ">=xl";
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:before {
-    content: ">=xxl";
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .include-media-test:after {
-    content: "Retina" !important;
-  }
-}
-@media (min-width: 640px) {
-  .include-media-test:after {
-    content: "/nHD" !important;
-  }
-}
-@media (min-width: 1280px) {
-  .include-media-test:after {
-    content: "/HD" !important;
-  }
-}
-@media (min-width: 1920px) {
-  .include-media-test:after {
-    content: "/FHD" !important;
-  }
-}
-@media (min-width: 2048px) {
-  .include-media-test:after {
-    content: "/2K" !important;
-  }
-}
-@media (min-width: 2560px) {
-  .include-media-test:after {
-    content: "/QHD" !important;
-  }
-}
-
+/*** Parent ***/
+/*** Children ***/
+/*** Parent ***/
+/*** Children ***/
+/*** Parent ***/
+/*** Children ***/
 .column,
 .clmn {
   width: 100%;
