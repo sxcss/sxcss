@@ -5,12 +5,12 @@ $media: (
     'sm': 420px, // Large Smartsms like ism XS Max/XR/6 Plus/7 Plus/8 Plus or Galaxy Note 9
     'ms': 767px, // All Devices smaller than Tablet,
     'md': 980px, // Tablets,
-    'ml': 1080px, // iPad Pro & super small laptops
+    'ml': 1080px, // iPad Pro & super small laptop screens
     'ls': 1280px, // Small laptops like MacBook 12"
     'lg': 1366px, // Most common laptop resolution
-    'll': 1440px, // 
-    'xl': 1580px,
-    'xxl': 1920px, 
+    'll': 1440px, // MacBook Pro 13"
+    'xl': 1580px, // MacBook Pro 15"
+    'xxl': 1920px
   ),
   resolutions: (
     'nHD': (
