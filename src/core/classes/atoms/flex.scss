@@ -1,18 +1,20 @@
-@import '../mixins/flex.scss';
+@import '../../mixins/quants/quants.scss';
+@import '../../mixins/atoms/atoms.scss';
+@import '../../variables/flex.scss';
 
 .flex,
 .flx {
-  @include flex;
+  @include display(flex);
 
   &-wrap, &-wrp {
 
     &--wrap, &--wrp {
-      @include flex;
+      @include display(flex);
       @include flex-wrap(wrap);
     }
 
     &--wrap, &--nowrp {
-      @include flex;
+      @include display(flex);
       @include flex-wrap(nowrap);
     }
   }
@@ -23,7 +25,7 @@
     @for $i from 1 through 12 {
       &--#{$i}-col,
       &--#{$i} {
-        @include flex-basis($i);
+        @include flex-basis(map-get($flex-basis, $i));
       }
     }
   }
