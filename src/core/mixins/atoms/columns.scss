@@ -1,0 +1,3 @@
+@mixin columns($column-width, $column-count) {
+  columns: $column-width $column-count;
+}
