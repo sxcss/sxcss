@@ -1,3 +1,27 @@
-@mixin columns($column-width, $column-count) {
-  columns: $column-width $column-count;
+@mixin column-count($column-count) {
+  column-count: $column-count;
+}
+
+@mixin column-fill($column-fill) {
+  column-fill: $column-fill;
+}
+
+@mixin column-gap($column-gap) {
+  column-gap: $column-gap;
+}
+
+@mixin column-rule($column-rule) {
+  column-rule: $column-rule;
+}
+
+@mixin column-span($column-span) {
+  column-span: $column-span;
+}
+
+@mixin column-width($column-width) {
+  column-width: $column-width;
+}
+
+@mixin columns($width, $count) {
+  columns: $width $count;
 }

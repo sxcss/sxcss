@@ -1,0 +1,35 @@
+@mixin font-weight($font-weight) {
+  font-weight: $font-weight;
+}
+
+@mixin font-variant($font-variant) {
+  font-variant: $font-variant;
+}
+
+@mixin font-stretch($font-stretch) {
+  font-stretch: $font-stretch;
+}
+
+@mixin font-size($font-size) {
+  font-size: $font-size;
+}
+
+@mixin line-height($line-height) {
+  line-height: $line-height;
+}
+
+@mixin font-family($font-family) {
+  font-family: $font-family;
+}
+
+@mixin font(
+  $weight: normal,
+  $variant: unset,
+  $stretch: normal,
+  $style: normal,
+  $size: normal,
+  $l-height: 1,
+  $family: inherit
+) {
+  font: $style $variant $weight $size/$l-height $family;
+}

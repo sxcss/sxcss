@@ -1,92 +1,5 @@
-$media: (
-  breakpoints: (
-    'xxs': 240px, // Nokia 8810 and other super small screens like Smart Watches
-    'xs': 375px, // Most of the smartsms including Galaxy S and ism 6/7/8/X,
-    'sm': 420px, // Large Smartsms like ism XS Max/XR/6 Plus/7 Plus/8 Plus or Galaxy Note 9
-    'ms': 767px, // All Devices smaller than Tablet,
-    'md': 980px, // Tablets,
-    'ml': 1080px, // iPad Pro & super small laptop screens
-    'ls': 1280px, // Small laptops like MacBook 12"
-    'lg': 1366px, // Most common laptop resolution
-    'll': 1440px, // MacBook Pro 13"
-    'xl': 1580px, // MacBook Pro 15"
-    'xxl': 1920px
-  ),
-  resolutions: (
-    'nHD': (
-      '(min-width: 640px)'
-    ),
-    'qHD': (
-      '(min-width: 960px)'
-    ),
-    'HD': (
-      '(min-width: 1280px)'
-    ),
-    'FHD': (
-      '(min-width: 1920px)'
-    ),
-    '2K': (
-      '(min-width: 2048px)'
-    ),
-    'QHD': (
-      '(min-width: 2560px)'
-    ),
-    'UHD': (
-      '(min-width: 3840px)'
-    ),
-    '4K': (
-      '(min-width: 4096px)'
-    ),
-    '5K': (
-      '(min-width: 5120px)'
-    ),
-    'UHD-2': (
-      '(min-width: 7680px)'
-    ),
-    '8K': (
-      '(min-width: 8192px)'
-    ),
-    'retina2x': (
-        '(-webkit-min-device-pixel-ratio: 2)', 
-        '(min-resolution: 192dpi)'
-    ), 
-    'retina3x': (
-        '(-webkit-min-device-pixel-ratio: 3)', 
-        '(min-resolution: 350dpi)'
-    )
-  ),
-  types: (
-    'screen': 'screen', 
-    'print': 'print', 
-    'handheld': 'handheld'
-  )
-) !default;
-
-$unit-intervals: (
-	'px': 1, 
-	'em': 0.01, 
-	'rem': 0.1
-) !default;
-
-@function map-deep-get($map, $submapKey, $keys...) {
-  $iterable: map-get($map, $submapKey);
-
-  @each $key in $keys {
-      $map: map-get($iterable, $key);
-  }
-
-  @return $map;
-}
-
-@function map-deep-has-key($map, $map-key, $keys...) {
-  @each $key in $keys {
-      $tmp: map-deep-get($map, $map-key, $key);
-      @if $tmp != null {
-        @return true;
-      }
-  }
-  @return false;
-}
+// This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
+// It was refactored to fit the Fantastic CSS sizing convention
 
 @mixin media($conditions...) {
   @for $i from 1 through length($conditions) {
@@ -113,7 +26,6 @@ $unit-intervals: (
   $result: '';
   $has-groups: false;
 
-  // Getting initial snapshot and looking for groups
   @each $expression in $resolutions {
     @if (str-length($result) != 0) {
       $result: $result + ' and ';
@@ -129,7 +41,6 @@ $unit-intervals: (
     }
   }
 
-  // If we have groups, we have to create all possible combinations
   @if $has-groups {
     @each $expression in $resolutions {
       @if (type-of($expression) == 'list') {
@@ -160,7 +71,6 @@ $unit-intervals: (
     @warn 'Expression with type `#{type-of($expression)}` detected, string expected.';
   }
 
-  // Separating the operator from the rest of the expression
   @if (str-slice($expression, 2, 2) == '=') {
     $operator: str-slice($expression, 1, 2);
     $value: str-slice($expression, 3);
@@ -169,11 +79,7 @@ $unit-intervals: (
     $value: str-slice($expression, 2);
   }
 
-  // Checking what type of expression we're dealing with
-
-  // @debug $value;
   @if map-deep-has-key($media, breakpoints, $value) {
-    // @debug map-deep-get($media, breakpoints, $value);
     $result: map-deep-get($media, breakpoints, $value);
   } @else if map-deep-has-key($media, resolutions, $expression) {
     $result: map-deep-get($media, resolutions, $expression);
@@ -253,66 +159,4 @@ $unit-intervals: (
   }
 
   @return if($minus, -$result, $result);;
-}
-
-@function to-number($string) {
-  // Matrices
-  $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
-  $numbers:  0   1   2   3   4   5   6   7   8   9;
-  
-  // Result
-  $result: 0;
-  $divider: 0;
-  $minus: false;
-
-  // Looping through all characters
-  @for $i from 1 through str-length($string) {
-    $character: str-slice($string, $i, $i);
-    $index: index($strings, $character);
-    
-  
-    @if $character == '-' {
-      $minus: true;
-    }
-    
-    @else if $character == '.' {
-      $divider: 1;
-    }
-    
-    @else {
-      @if type-of($index) != 'number' {
-        $result: if($minus, $result * -1, $result);
-        @return _length($result, str-slice($string, $i));
-      }
-
-      $number: nth($numbers, $index);
-      
-      @if $divider == 0 {
-        $result: $result * 10;
-      }
-      
-      @else {
-        // Move the decimal dot to the left
-        $divider: $divider * 10;
-        $number: $number / $divider;
-      }
-      
-      $result: $result + $number;
-    }
-  }
-  
-  @return if($minus, $result * -1, $result);
-}
-
-@function _length($number, $unit) {
-  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
-  $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
-  $index: index($strings, $unit);
-  
-  @if type-of($index) != 'number' {
-    @warn 'Unknown unit `#{$unit}`.';
-    @return false;
-  }
-  
-  @return $number * nth($units, $index);
 }

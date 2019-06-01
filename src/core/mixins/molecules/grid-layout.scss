@@ -1,0 +1,33 @@
+@mixin grid-layout(
+  $grid-cols: 1,
+  $grid-cols-fr: 1fr,
+  $grid-cols-gap: unset,
+  $grid-rows: auto,
+  $grid-rows-fr: auto,
+  $grid-rows-gap: unset,
+  $grid-gap: map-get($gap, xxs)
+) {
+  
+  /* Flexbox Fallback for older browsers */
+  
+  @include display(flex);
+
+  > div {
+    @include flex-basis($grid-cols);
+  }
+
+  /* CSS Grid-based layout system */
+  
+  @include display(grid);
+  @include grid-template-rows(repeat($grid-rows, $grid-rows-fr));
+  @include grid-row-gap($grid-rows-gap);
+
+  @include grid-template-columns(repeat($grid-cols, $grid-cols-fr));
+  @include grid-column-gap($grid-cols-gap);
+
+  @include grid-gap($grid-gap);
+  
+  @if $grid-cols == 1 {
+    @include flex-direction(column);
+  }
+}
