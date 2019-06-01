@@ -1,5 +1,3 @@
-@import 'opacity.scss';
-
 @mixin hover($hover-opacity: unset, $hover-transform: unset, $hover-scale: unset, $hover-animation: unset) {
   &:hover {
     opacity: $hover-opacity;
