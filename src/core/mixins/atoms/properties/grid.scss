@@ -1,0 +1,56 @@
+/*** Parent ***/
+
+@mixin grid-template-columns($grid-template-columns) {
+  grid-template-columns: $grid-template-columns;
+}
+
+@mixin grid-template-rows($grid-template-rows) {
+  grid-template-rows: $grid-template-rows;
+}
+
+@mixin grid-template-areas($grid-template-areas) {
+  grid-template-areas: $grid-template-areas;
+}
+
+// @mixin grid-template($grid-template-areas, $grid-template-columns, $grid-template-rows) {
+  
+// }
+
+
+/*** Children ***/
+
+@mixin grid-column-start($grid-column-start) {
+  grid-column-start: $grid-column-start;
+}
+
+@mixin grid-column-end($grid-column-end) {
+  grid-column-end: $grid-column-end;
+}
+
+@mixin grid-column($grid-column) {
+  grid-column: $grid-column;
+}
+
+@mixin grid-row-start($grid-row-start) {
+  grid-row-start: $grid-row-start;
+}
+
+@mixin grid-row-end($grid-row-end) {
+  grid-row-end: $grid-row-end;
+}
+
+@mixin grid-area($grid-area) {
+  grid-area: $grid-area;  
+}
+
+@mixin grid-column-gap($grid-column-gap) {
+  grid-column-gap: $grid-column-gap;
+}
+
+@mixin grid-row-gap($grid-row-gap) {
+  grid-row-gap: $grid-row-gap;
+}
+
+@mixin grid-gap($grid-gap) {
+  grid-gap: $grid-gap;
+}

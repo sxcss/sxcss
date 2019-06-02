@@ -1,0 +1,9 @@
+@function map-deep-get($map, $submapKey, $keys...) {
+  $iterable: map-get($map, $submapKey);
+
+  @each $key in $keys {
+      $map: map-get($iterable, $key);
+  }
+
+  @return $map;
+}

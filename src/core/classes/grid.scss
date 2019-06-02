@@ -1,8 +1,8 @@
-@import '../mixins/grid.scss';
+@import '../mixins/atoms/properties/grid.scss';
 
 .grid,
 .grd {
-  @include grid;
+  @include display(grid);
 
   &-template,
   &-tmp {

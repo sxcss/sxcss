@@ -1,6 +1,8 @@
-@import 'background.scss';
-@import 'border.scss';
-@import 'columns.scss';
-@import 'filter.scss';
-@import 'flex.scss';
-// @import '.scss';
+@import 'properties/properties.scss';
+@import 'rules/rules.scss';
+@import 'selectors/selectors.scss';
+@import 'pseudo-classes/pseudo-classes.scss';
+@import 'pseudo-elements/pseudo-elements.scss';
+@import 'pseudo-selectors/pseudo-selectors.scss';
+@import 'rules/rules.scss';
+@import 'selectors/selectors.scss';

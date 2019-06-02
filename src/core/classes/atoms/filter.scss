@@ -1,5 +1,5 @@
 @import '../../variables/filter.scss';
-@import '../../mixins/atoms/filter.scss';
+@import '../../mixins/atoms/properties/filter.scss';
 
 @each $filter-function in $filter-functions {
   // $i: #{$i}#{'%'};

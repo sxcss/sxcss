@@ -1,0 +1,69 @@
+$media: (
+  breakpoints: (
+    'xxs': 240px, // Nokia 8810 and other super small screens like Smart Watches
+    'xs': 375px, // Most of the smartsms including Galaxy S and ism 6/7/8/X,
+    'sm': 420px, // Large Smartsms like ism XS Max/XR/6 Plus/7 Plus/8 Plus or Galaxy Note 9
+    'ms': 767px, // All Devices smaller than Tablet,
+    'md': 980px, // Tablets,
+    'ml': 1080px, // iPad Pro & super small laptop screens
+    'ls': 1280px, // Small laptops like MacBook 12"
+    'lg': 1366px, // Most common laptop resolution
+    'll': 1440px, // MacBook Pro 13"
+    'xl': 1580px, // MacBook Pro 15"
+    'xxl': 1920px
+  ),
+  resolutions: (
+    'nHD': (
+      '(min-width: 640px)'
+    ),
+    'qHD': (
+      '(min-width: 960px)'
+    ),
+    'HD': (
+      '(min-width: 1280px)'
+    ),
+    'FHD': (
+      '(min-width: 1920px)'
+    ),
+    '2K': (
+      '(min-width: 2048px)'
+    ),
+    'QHD': (
+      '(min-width: 2560px)'
+    ),
+    'UHD': (
+      '(min-width: 3840px)'
+    ),
+    '4K': (
+      '(min-width: 4096px)'
+    ),
+    '5K': (
+      '(min-width: 5120px)'
+    ),
+    'UHD-2': (
+      '(min-width: 7680px)'
+    ),
+    '8K': (
+      '(min-width: 8192px)'
+    ),
+    'retina2x': (
+        '(-webkit-min-device-pixel-ratio: 2)', 
+        '(min-resolution: 192dpi)'
+    ), 
+    'retina3x': (
+        '(-webkit-min-device-pixel-ratio: 3)', 
+        '(min-resolution: 350dpi)'
+    )
+  ),
+  types: (
+    'screen': 'screen', 
+    'print': 'print', 
+    'handheld': 'handheld'
+  )
+) !default;
+
+$unit-intervals: (
+	'px': 1, 
+	'em': 0.01, 
+	'rem': 0.1
+) !default;
