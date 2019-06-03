@@ -1,3 +1,3 @@
 # /bin/bash
 
-sass --watch  main.scss:main.css;
+sass --watch  index.scss:dist/main.css;

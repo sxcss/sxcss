@@ -1,0 +1,30 @@
+@import '../../atoms';
+
+@mixin boxed($boxed-width: calc(100% - #{map-get($gap, sm)}), $boxed-max-width: map-get($width, boxed)) {
+  width: $boxed-width;
+  max-width: $boxed-max-width;
+  @include margin(auto);
+  @media all and (max-width: 767px) {
+    width: calc(100% - #{map-get($gap, sm)});
+  }
+}
+
+@mixin fullwidth {
+  @include width(100%);
+  @include max-width(100vw);
+}
+
+@mixin container {
+  box-sizing: border-box;
+  @include width(100%);
+
+  &__inner {
+    @include height(100%);
+    @include width(100%);
+    @include margin(auto);
+    
+    &--boxed {
+      @include boxed;
+    }
+  }
+}

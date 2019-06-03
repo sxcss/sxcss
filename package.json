@@ -2,7 +2,7 @@
   "name": "sxcss",
   "version": "1.0.32",
   "description": "🎮 Scalable, Extendable & Componentized Style Sheets 🛠",
-  "main": "main.scss",
+  "main": "index.scss",
   "scripts": {
     "dev": "bash scripts/dev.sh",
     "test": "bash scripts/test.sh",
