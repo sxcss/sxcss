@@ -1,7 +1,7 @@
 {
-  "name": "fantastic-css",
+  "name": "sxcss",
   "version": "1.0.32",
-  "description": "🎮 Universal, scalable and 100% customizable SCSS library for rapid and organized UI development 🛠",
+  "description": "🎮 Scalable, Extendable & Componentized Style Sheets 🛠",
   "main": "main.scss",
   "scripts": {
     "dev": "bash scripts/dev.sh",
@@ -15,12 +15,11 @@
     "sass-loader": "^7.1.0"
   },
   "devDependencies": {
-    "uglifycss": "^0.0.29",
     "vuepress": "^0.14.11"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/new-fantastic/fantastic-css.git"
+    "url": "git+https://github.com/sxcss/sxcss.git"
   },
   "keywords": [
     "sass",
@@ -48,7 +47,7 @@
   "author": "Aleksander Grygier <alek@newfantastic.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/new-fantastic/fantastic-css/issues"
+    "url": "https://github.com/sxcss/sxcss/issues"
   },
-  "homepage": "https://github.com/new-fantastic/fantastic-css#readme"
+  "homepage": "https://github.com/sxcss/sxcss#readme"
 }
