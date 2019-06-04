@@ -2,83 +2,22 @@
 
 .background,
 .bg {
-
-  &-color,
-  &-cl {
-
-    &--black, &--blk {
-      @include background-color(map-get($color, black));
-    }
-
-    &--white, &--wht {
-      @include background-color(map-get($color, white));
-    }
-
-    &--primary, &--pry {
-      @include background-color(map-get($color, primary));
-    }
-
-    &--secondary, &--scd {
-      @include background-color(map-get($color, secondary));
-    }
-
-    &--light-gray, &--lt-gr {
-      @include background-color(map-get($color, light-gray));
-    }
-
-    &--extra-light-gray, &xtr--lt-gr {
-      @include background-color(map-get($color, extra-light-gray));
-    }
-
-    &--dark-gray, &--drk-gr {
-      @include background-color(map-get($color, dark-gray));
-    }
-  }
-
-  &-size, &-sz {
-
-    &--cover, &--cvr {
-      @include background-size(cover);
-    }
-
-    &--contain, &--ctn {
-      @include background-size(contain);
-    }
-
-    &--100 {
-      @include background-size(100);
-    }
-  }
-
-  &-position {
-
-    &-x {
-      
-      &--left, &-lft {
-        @include background-position-x(left);
+  @each $property, $values in $background {
+    @if $property != color {
+      &-#{$property} {
+        @each $value in $values {
+          &--#{$value} {
+            background-#{$property}: #{$value};
+          }
+        }
       }
-
-      &--center, &--ctr {
-        @include background-position-x(center);
-      }
-
-      &--right, &--rgt {
-        @include background-position-x(right);
-      }
-    }
-
-    &-y {
-      
-      &--top {
-        @include background-position-y(top);
-      }
-
-      &--center, &--ctr {
-        @include background-position-y(center);
-      }
-
-      &--right, &--btm {
-        @include background-position-y(bottom);
+    } @else {
+      &-#{$property} {
+        @each $key, $value in $values {
+          &--#{$key} {
+            background-#{$property}: #{$value};
+          }
+        }
       }
     }
   }

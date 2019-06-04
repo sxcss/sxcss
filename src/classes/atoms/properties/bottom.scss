@@ -1,0 +1,12 @@
+@import '../../../variables/size';
+@import '../../../mixins/atoms/properties/bottom';
+
+.bottom,
+.btm {
+
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include bottom(map-get($size, $key));
+    }
+  }
+}
