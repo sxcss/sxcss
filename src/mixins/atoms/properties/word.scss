@@ -1,0 +1,15 @@
+@mixin word-spacing($word-spacing) {
+  word-spacing: $word-spacing;
+}
+
+@mixin word-break($word-break) {
+  word-break: $word-break;
+}
+
+@mixin word (
+  $break,
+  $spacing
+) {
+  word-break: $break;
+  word-spacing: $spacing;
+}

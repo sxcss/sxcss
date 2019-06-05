@@ -1,0 +1,24 @@
+@mixin transition-property($transition-property) {
+  transition-property: $transition-property;
+}
+
+@mixin transition-duration($transition-duration) {
+  transition-duration: $transition-duration;
+}
+
+@mixin transition-timing-function($transition-timing-function) {
+  transition-timing-function: $transition-timing-function;
+}
+
+@mixin transition-delay($transition-delay) {
+  transition-delay: $transition-delay;
+}
+
+@mixin transition(
+  $property: unset,
+  $duration: unset,
+  $timing-function: unset,
+  $delay: unset
+){
+  transition: $property $duration $timing-function $delay;
+}
