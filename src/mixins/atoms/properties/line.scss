@@ -1,3 +1,7 @@
+@mixin line-clamp($line-clamp) {
+  line-clamp: $line-clamp;
+}
+
 @mixin line-height($line-height) {
   line-height: $line-height;
 }
