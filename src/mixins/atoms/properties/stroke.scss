@@ -1,0 +1,14 @@
+@mixin stroke(
+  $color,
+  $width,
+  $dasharray,
+  $dashoffset,
+  $linecap
+) {
+  stroke: $color;
+  stroke-width: $width;
+  stroke-dasharray: $dasharray;
+  stroke-dashoffset: $dashoffset;
+  stroke-linecap: $linecap;
+  stroke-linejoin: $linejoin;
+}

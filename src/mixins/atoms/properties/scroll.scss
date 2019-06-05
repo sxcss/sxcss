@@ -1,0 +1,99 @@
+@mixin scroll-behavior($scroll-behavior) {
+  scroll-behavior: $scroll-behavior;
+}
+
+@mixin scroll-margin-top($scroll-margin-top) {
+  scroll-margin-top: $scroll-margin-top;
+}
+
+@mixin scroll-margin-right($scroll-margin-right) {
+  scroll-margin-right: $scroll-margin-right;
+}
+
+@mixin scroll-margin-bottom($scroll-margin-bottom) {
+  scroll-margin-bottom: $scroll-margin-bottom;
+}
+
+@mixin scroll-margin-left($scroll-margin-left) {
+  scroll-margin-left: $scroll-margin-left;
+}
+
+@mixin scroll-margin(
+  $margin-top: unset,
+  $margin-right: unset,
+  $margin-bottom: unset,
+  $margin-left: unset
+) {
+  scroll-margin:
+    $scroll-margin-top
+    $scroll-margin-right
+    $scroll-margin-bottom
+    $scroll-margin-left;
+}
+
+@mixin scroll-padding-top($scroll-padding-top) {
+  scroll-padding-top: $scroll-padding-top;
+}
+
+@mixin scroll-padding-right($scroll-padding-right) {
+  scroll-padding-right: $scroll-padding-right;
+}
+
+@mixin scroll-padding-bottom($scroll-padding-bottom) {
+  scroll-padding-bottom: $scroll-padding-bottom;
+}
+
+@mixin scroll-padding-left($scroll-padding-left) {
+  scroll-padding-left: $scroll-padding-left;
+}
+
+@mixin scroll-padding(
+  $padding-top: unset,
+  $padding-right: unset,
+  $padding-bottom: unset,
+  $padding-left: unset
+) {
+  scroll-padding:
+    $scroll-padding-top
+    $scroll-padding-right
+    $scroll-padding-bottom
+    $scroll-padding-top;
+}
+
+@mixin scroll-snap-align($scroll-snap-align) {
+  scroll-snap-align: $scroll-snap-align;
+}
+
+@mixin scroll-snap-stop($scroll-snap-stop) {
+  scroll-snap-stop: $scroll-snap-stop;
+}
+
+@mixin scroll-snap-type($scroll-snap-type) {
+  scroll-snap-type: $scroll-snap-type;
+}
+
+@mixin scroll-snap(
+  $align: unset,
+  $stop: unset,
+  $type: unset
+) {
+  scroll-snap-align: $lign;
+  scroll-snap-stop: $stop;
+  scroll-snap-type: $type;
+}
+
+@mixin scroll(
+  $margin-top: unset,
+  $margin-right: unset,
+  $margin-bottom: unset,
+  $margin-left: unset,
+  $padding-top: unset,
+  $padding-right: unset,
+  $padding-bottom: unset,
+  $padding-left: unset,
+  $align: unset,
+  $stop: unset,
+  $type: unset
+) {
+
+}

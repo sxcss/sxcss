@@ -2,10 +2,36 @@
   text-align: $text-align;
 }
 
+@mixin text-align-last($text-align-last) {
+  text-align-last: $text-align-last;
+}
+
+@mixin text-decoration($line: unset, $type, $color: inherit, $style: unset) {
+  text-decoration: $line, $type, $color;
+  text-decoration-style: $style;
+}
+
+@mixin text-indent($text-indent) {
+  text-indent: $text-indent;
+}
+
+@mixin text-overflow($text-overflow) {
+  text-overflow: $text-overflow;
+}
+
+@mixin text-rendering($text-rendering) {
+  text-rendering: $text-rendering;
+}
+
+@mixin text-shadow($offset-x: 0, $offset-y: 0, $blur: unset, $color: unset) {
+  text-shadow: $offset-x $offset-y $blur $color;
+}
+
+@mixin text-stroke($stroke-width, $stroke-color) {
+  text-stroke: $stroke-width $stroke-color;
+}
+
 @mixin text-transform($text-transform) {
   text-transform: $text-transform;
 }
 
-@mixin line-height($line-height) {
-  line-height: $line-height;
-}
