@@ -1,0 +1,9 @@
+@import '../../../mixins/atoms/properties/clear.scss';
+
+.clear {
+  @each  $value in $clear {
+    &--#{$value} {
+      @include clear($value);
+    }
+  }
+}

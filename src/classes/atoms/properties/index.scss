@@ -1,14 +1,14 @@
 @import 'align';
 @import 'appearance';
-// @import 'backface-visibility';
+// @import 'backface-visibility'; - in consideration
 @import 'background';
-// @import 'bleed';
-// @import 'block-overflow';
+// @import 'bleed'; - in consideration
+// @import 'block-overflow'; - in consideration
 @import 'border';
 @import 'bottom';
 @import 'color';
-// @import 'caret-color';
-// @import 'clear';
+// @import 'caret-color';  - TBD
+@import 'clear';
 // @import 'clip-path';
 // @import 'columns';
 // @import 'content';
@@ -39,7 +39,7 @@
 @import 'object';
 // @import 'offset';
 @import 'opacity';
-// @import 'order';
+@import 'order';
 // @import 'orphans';
 // @import 'outline';
 // @import 'overflow';

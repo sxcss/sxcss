@@ -1,41 +1,16 @@
-@import '../../../variables';
+@import '../../../variables/scale';
+@import '../../../mixins/atoms/properties/opacity';
 
 .opacity,
 .opc {
 
-  &--xxs {
-    opacity: map-get($opacity, xxs);
-  }
-
-  &--xs {
-    opacity: map-get($opacity, xs);
-  }
-
-  &--sm {
-    opacity: map-get($opacity, sm);
-  }
-
-  &--ms {
-    opacity: map-get($opacity, ms);
-  }
-
-  &--md {
-    opacity: map-get($opacity, md);
-  }
-
-  &--ml {
-    opacity: map-get($opacity, ml);
-  }
-
-  &--lg {
-    opacity: map-get($opacity, lg);
-  }
-
-  &--xl {
-    opacity: map-get($opacity, xl);
-  }
-
-  &--xxl {
-    opacity: map-get($opacity, xxl);
+  @each $property, $values  in $scale {
+    @if $property == 'decimal' {
+      @each $key, $value in $values {
+        &--#{$key} {
+          @include opacity($value);
+        }
+      }
+    }
   }
 }

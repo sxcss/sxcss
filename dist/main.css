@@ -1337,6 +1337,16 @@ input[type=number]::-webkit-outer-spin-button {
   color: #111;
 }
 
+.clear--left {
+  clear: left;
+}
+.clear--right {
+  clear: right;
+}
+.clear--both {
+  clear: both;
+}
+
 .filter--blur--10 {
   filter: blur(10%);
 }
@@ -3715,78 +3725,143 @@ input[type=number]::-webkit-outer-spin-button {
   object-fit: contain;
 }
 
-.opacity--xxs,
-.opc--xxs {
+.opacity--01,
+.opc--01 {
   opacity: 0.1;
 }
-.opacity--xs,
-.opc--xs {
+.opacity--02,
+.opc--02 {
   opacity: 0.2;
 }
-.opacity--sm,
-.opc--sm {
+.opacity--03,
+.opc--03 {
   opacity: 0.3;
 }
-.opacity--ms,
-.opc--ms {
+.opacity--04,
+.opc--04 {
   opacity: 0.4;
 }
-.opacity--md,
-.opc--md {
+.opacity--05,
+.opc--05 {
   opacity: 0.5;
 }
-.opacity--ml,
-.opc--ml {
+.opacity--06,
+.opc--06 {
   opacity: 0.6;
 }
-.opacity--lg,
-.opc--lg {
+.opacity--07,
+.opc--07 {
   opacity: 0.7;
 }
-.opacity--xl,
-.opc--xl {
+.opacity--08,
+.opc--08 {
   opacity: 0.8;
 }
-.opacity--xxl,
-.opc--xxl {
+.opacity--09,
+.opc--09 {
   opacity: 0.9;
+}
+.opacity--1,
+.opc--1 {
+  opacity: 1;
+}
+
+.order--1 {
+  order: 1;
+}
+.order--2 {
+  order: 2;
+}
+.order--3 {
+  order: 3;
+}
+.order--4 {
+  order: 4;
+}
+.order--5 {
+  order: 5;
+}
+.order--6 {
+  order: 6;
+}
+.order--7 {
+  order: 7;
+}
+.order--8 {
+  order: 8;
+}
+.order--9 {
+  order: 9;
+}
+.order--10 {
+  order: 10;
+}
+.order--11 {
+  order: 11;
+}
+.order--12 {
+  order: 12;
+}
+.order--13 {
+  order: 13;
+}
+.order--14 {
+  order: 14;
+}
+.order--15 {
+  order: 15;
+}
+.order--16 {
+  order: 16;
+}
+.order--17 {
+  order: 17;
+}
+.order--18 {
+  order: 18;
+}
+.order--19 {
+  order: 19;
+}
+.order--20 {
+  order: 20;
 }
 
 .padding--0,
 .p--0 {
-  padding: 0 !important;
+  padding: 0 !important, unset, unset, unset;
 }
 .padding--xxs,
 .p--xxs {
-  padding: 10px !important;
+  padding: 10px !important, unset, unset, unset;
 }
 .padding--xs,
 .p--xs {
-  padding: 1rem !important;
+  padding: 1rem !important, unset, unset, unset;
 }
 .padding--sm,
 .p--sm {
-  padding: 1.5rem !important;
+  padding: 1.5rem !important, unset, unset, unset;
 }
 .padding--ms,
 .p--ms {
-  padding: 2rem !important;
+  padding: 2rem !important, unset, unset, unset;
 }
 .padding--md,
 .p--md {
-  padding: 3rem !important;
+  padding: 3rem !important, unset, unset, unset;
 }
 .padding--ml,
 .p--ml {
-  padding: 4.5rem !important;
+  padding: 4.5rem !important, unset, unset, unset;
 }
 .padding--lg,
 .p--lg {
-  padding: 6rem !important;
+  padding: 6rem !important, unset, unset, unset;
 }
 .padding--xl,
 .p--xl {
-  padding: 6rem !important;
+  padding: 6rem !important, unset, unset, unset;
 }
 .padding-x--0,
 .p-x--0 {
@@ -4149,6 +4224,7 @@ input[type=number]::-webkit-outer-spin-button {
   right: unset;
   bottom: unset;
   left: unset;
+  transform: unset;
 }
 .position-fixed, .position-fix,
 .pos-fixed,
@@ -4158,19 +4234,17 @@ input[type=number]::-webkit-outer-spin-button {
   right: unset;
   bottom: unset;
   left: unset;
+  transform: unset;
 }
 .position-fixed--top, .position-fix--top,
 .pos-fixed--top,
 .pos-fix--top {
   position: fixed;
-  top: unset;
-  right: unset;
-  bottom: unset;
-  left: unset;
-  left: unset;
-  right: unset;
   top: 0;
+  right: unset;
   bottom: unset;
+  left: unset;
+  transform: unset;
 }
 .position-fixed--right, .position-fixed--btm, .position-fix--right, .position-fix--btm,
 .pos-fixed--right,
@@ -4180,12 +4254,9 @@ input[type=number]::-webkit-outer-spin-button {
   position: fixed;
   top: unset;
   right: unset;
-  bottom: unset;
-  left: unset;
-  left: unset;
-  right: unset;
-  top: unset;
   bottom: 0;
+  left: unset;
+  transform: unset;
 }
 .position-absolute, .position-abs,
 .pos-absolute,
@@ -4195,6 +4266,7 @@ input[type=number]::-webkit-outer-spin-button {
   right: unset;
   bottom: unset;
   left: unset;
+  transform: unset;
 }
 .position-absolute--center, .position-absolute--ctr, .position-abs--center, .position-abs--ctr,
 .pos-absolute--center,
@@ -4202,12 +4274,10 @@ input[type=number]::-webkit-outer-spin-button {
 .pos-abs--center,
 .pos-abs--ctr {
   position: absolute;
-  top: unset;
+  top: 50%;
   right: unset;
   bottom: unset;
-  left: unset;
   left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
 }
 .position-absolute--center-top, .position-absolute--ctr-top, .position-abs--center-top, .position-abs--ctr-top,
@@ -4216,12 +4286,10 @@ input[type=number]::-webkit-outer-spin-button {
 .pos-abs--center-top,
 .pos-abs--ctr-top {
   position: absolute;
-  top: unset;
+  top: 0;
   right: unset;
   bottom: unset;
-  left: unset;
   left: 50%;
-  top: 0;
   transform: translate(-50%, -100%);
 }
 .position-absolute--center-bottom, .position-absolute--ctr-btm, .position-abs--center-bottom, .position-abs--ctr-btm,
@@ -4230,12 +4298,10 @@ input[type=number]::-webkit-outer-spin-button {
 .pos-abs--center-bottom,
 .pos-abs--ctr-btm {
   position: absolute;
-  top: unset;
+  top: 100%;
   right: unset;
   bottom: unset;
-  left: unset;
   left: 50%;
-  top: 100%;
   transform: translate(-50%, 0);
 }
 .position-absolute--left-top, .position-absolute--lft-top, .position-abs--left-top, .position-abs--lft-top,
@@ -4244,12 +4310,10 @@ input[type=number]::-webkit-outer-spin-button {
 .pos-abs--left-top,
 .pos-abs--lft-top {
   position: absolute;
-  top: unset;
+  top: 0;
   right: unset;
   bottom: unset;
-  left: unset;
   left: 0;
-  top: 0;
   transform: translate(-100%, -100%);
 }
 .position-absolute--left-bottom, .position-absolute--lft-btm, .position-abs--left-bottom, .position-abs--lft-btm,
@@ -4258,12 +4322,10 @@ input[type=number]::-webkit-outer-spin-button {
 .pos-abs--left-bottom,
 .pos-abs--lft-btm {
   position: absolute;
-  top: unset;
+  top: 100%;
   right: unset;
   bottom: unset;
-  left: unset;
   left: 0;
-  top: 100%;
   transform: translate(-100%, 0);
 }
 .position-absolute--left-center, .position-absolute--lft-ctr, .position-abs--left-center, .position-abs--lft-ctr,
@@ -4272,12 +4334,10 @@ input[type=number]::-webkit-outer-spin-button {
 .pos-abs--left-center,
 .pos-abs--lft-ctr {
   position: absolute;
-  top: unset;
+  top: 50%;
   right: unset;
   bottom: unset;
-  left: unset;
   left: 0;
-  top: 50%;
   transform: translate(-100%, -50%);
 }
 .position-absolute--right-top, .position-absolute--rgt-top, .position-abs--right-top, .position-abs--rgt-top,
@@ -4286,12 +4346,10 @@ input[type=number]::-webkit-outer-spin-button {
 .pos-abs--right-top,
 .pos-abs--rgt-top {
   position: absolute;
-  top: unset;
+  top: 0;
   right: unset;
   bottom: unset;
-  left: unset;
   left: 100%;
-  top: 0;
   transform: translate(-100%, -100%);
 }
 .position-absolute--right-bottom, .position-absolute--rgt-btm, .position-abs--right-bottom, .position-abs--rgt-btm,
@@ -4300,12 +4358,10 @@ input[type=number]::-webkit-outer-spin-button {
 .pos-abs--right-bottom,
 .pos-abs--rgt-btm {
   position: absolute;
-  top: unset;
+  top: 100%;
   right: unset;
   bottom: unset;
-  left: unset;
   left: 100%;
-  top: 100%;
   transform: translate(-100%, 0);
 }
 .position-absolute--right-center, .position-absolute--rgt-ctr, .position-abs--right-center, .position-abs--rgt-ctr,
@@ -4314,12 +4370,10 @@ input[type=number]::-webkit-outer-spin-button {
 .pos-abs--right-center,
 .pos-abs--rgt-ctr {
   position: absolute;
-  top: unset;
+  top: 50%;
   right: unset;
   bottom: unset;
-  left: unset;
   left: 100%;
-  top: 50%;
   transform: translate(-100%, -50%);
 }
 

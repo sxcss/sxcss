@@ -1,0 +1,7 @@
+@mixin perspective($perspective, $perspective-origin-x, $perspective-origin-y, $perspective-transform: unset) {
+  perspective: $perspective;
+  perspective-origin: $perspective-origin-x $perspective-origin-y;
+  > div {
+    transform: $perspective-transform;
+  }
+}
