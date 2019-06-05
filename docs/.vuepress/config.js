@@ -8,8 +8,8 @@ module.exports = {
       { text: 'Guide', link: '/guide/' },
       { text: 'API', link: '/api/' },
       { text: 'Contribution Guide', link: '/contribution-guide/' },
-      { text: 'GitHub', link: 'https://github.com/new-fantastic/fantastic-css' },
-      { text: 'Support us', link: 'https://github.com/new-fantastic/fantastic-css' }
+      { text: 'GitHub', link: 'https://github.com/sxcss/sxcss' },
+      { text: 'Support us', link: 'https://github.com/sxcss/sxcss' }
     ],
     sidebar: {
       '/guide/': [

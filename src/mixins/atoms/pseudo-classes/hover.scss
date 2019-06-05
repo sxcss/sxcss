@@ -1,0 +1,8 @@
+@mixin hover($hover-opacity: unset, $hover-transform: unset, $hover-scale: unset, $hover-animation: unset) {
+  &:hover {
+    opacity: $hover-opacity;
+    transform: $hover-transform;
+    scale: $hover-scale;
+    animation: $hover-animation;
+  }
+}

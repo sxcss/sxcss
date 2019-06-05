@@ -1,0 +1,16 @@
+@import 'gap.scss';
+
+$flex-basis: (
+  1: unset,
+  2: calc(51% - #{map-get($gap, sm)} / 2),
+  3: calc(33.3333% - 1.5 * #{map-get($gap, sm)} / 3),
+  4: calc(25% - 2 * #{map-get($gap, sm)} / 4),
+  5: calc(25% - 2.5 * #{map-get($gap, sm)} / 5),
+  6: calc(25% - 3 * #{map-get($gap, sm)} / 6),
+  7: calc(14.2857% - 3.5 * #{map-get($gap, sm)} / 7),
+  8: calc(12.5% - 4 * #{map-get($gap, sm)} / 8),
+  9: calc(11.11% - 4.5 * #{map-get($gap, sm)} / 9),
+  10: calc(10% - 5 * #{map-get($gap, sm)} / 10),
+  11: calc(9.0909% - 5.5 * #{map-get($gap, sm)} / 11),
+  12: calc(8.3333% - 6 * #{map-get($gap, sm)} / 12),
+)

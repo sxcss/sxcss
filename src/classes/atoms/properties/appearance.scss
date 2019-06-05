@@ -1,0 +1,13 @@
+@import '../../../variables/appearance';
+
+.appearance {
+  @each $engine, $values in $appearance {
+    &--#{$engine} {
+      @each $value in $values {
+        &-#{$value} {
+          -#{$engine}-appearance: #{$value};
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import '../../../variables/size.scss';
+@import '../../../mixins/atoms/properties/text.scss';
+
+.line-height,
+.ln-h {
+
+  &--1 {
+    @include line-height(1 !important);
+  }
+
+  &--1-1 {
+    @include line-height(1.1 !important);
+  }
+
+  &--1-2 {
+    @include line-height(1.2 !important);
+  }
+
+  &--1-3 {
+    @include line-height(1.33 !important);
+  }
+
+  &--1-5 {
+    @include line-height(1.5 !important);
+  }
+
+  &--1-8 {
+    @include line-height(1.8 !important);
+  }
+
+  &--2 {
+    @include line-height(2 !important);
+  }
+
+  &--2-4 {
+    @include line-height(2.4 !important);
+  }
+
+  &--2-7 {
+    @include line-height(2.7 !important);
+  }
+
+  &--3 {
+    @include line-height(3 !important);
+  }
+
+  &--4 {
+    @include line-height(4 !important);
+  }
+
+  &--xxs {
+    @include line-height(map-get($size, xxs) !important);
+  }
+
+  &--xs {
+    @include line-height(map-get($size, xs) !important);
+  }
+
+  &--sm {
+    @include line-height(map-get($size, sm) !important);
+  }
+
+  &--ms {
+    @include line-height(map-get($size, ms) !important);
+  }
+
+  &--md {
+    @include line-height(map-get($size, md) !important);
+  }
+
+  &--ml {
+    @include line-height(map-get($size, ml) !important);
+  }
+
+  &--lg {
+    @include line-height(map-get($size, lg) !important);
+  }
+
+  &--xl {
+    @include line-height(map-get($size, xl) !important);
+  }
+
+  &--xxl {
+    @include line-height(map-get($size, xxs) !important);
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../../variables/size';
+@import '../../../mixins/atoms/properties/right';
+
+.right {
+
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include right(map-get($size, $key));
+    }
+  }
+}

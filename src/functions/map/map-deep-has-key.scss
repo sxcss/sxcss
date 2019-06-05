@@ -1,0 +1,9 @@
+@function map-deep-has-key($map, $map-key, $keys...) {
+  @each $key in $keys {
+      $tmp: map-deep-get($map, $map-key, $key);
+      @if $tmp != null {
+        @return true;
+      }
+  }
+  @return false;
+}

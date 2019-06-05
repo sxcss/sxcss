@@ -1,0 +1,24 @@
+@import '../../../mixins/atoms/properties/background.scss';
+
+.background,
+.bg {
+  @each $property, $values in $background {
+    @if $property != color {
+      &-#{$property} {
+        @each $value in $values {
+          &--#{$value} {
+            background-#{$property}: #{$value};
+          }
+        }
+      }
+    } @else {
+      &-#{$property} {
+        @each $key, $value in $values {
+          &--#{$key} {
+            background-#{$property}: #{$value};
+          }
+        }
+      }
+    }
+  }
+}

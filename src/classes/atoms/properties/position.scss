@@ -1,0 +1,64 @@
+@import '../../../mixins/atoms/properties/position.scss';
+
+.position,
+.pos {
+
+  &-relative,
+  &-rel {
+    @include position(relative);
+  }
+
+  &-fixed,
+  &-fix {
+    @include position(fixed);
+
+    &--top {
+      @include position($position: fixed, $top:  0);
+    }
+
+    &--right, &--btm {
+      @include position($position: fixed, $bottom:  0);
+    }
+  }
+
+  &-absolute,
+  &-abs {
+    @include position(absolute);
+
+    &--center, &--ctr {
+      @include position($position: absolute, $left: 50%, $top:  50%, $transform: translate(-50%, -50%));
+    }
+
+    &--center-top, &--ctr-top {
+      @include position($position: absolute, $left: 50%, $top:  0, $transform: translate(-50%, -100%));
+    }
+
+    &--center-bottom, &--ctr-btm {
+      @include position($position: absolute, $left: 50%, $top:  100%, $transform: translate(-50%, 0));
+    }
+
+    &--left-top, &--lft-top {
+      @include position($position: absolute, $left: 0, $top:  0, $transform: translate(-100%, -100%));
+    }
+
+    &--left-bottom, &--lft-btm {
+      @include position($position: absolute, $left: 0, $top:  100%, $transform: translate(-100%, 0));
+    }
+    
+    &--left-center, &--lft-ctr {
+      @include position($position: absolute, $left: 0, $top:  50%, $transform: translate(-100%, -50%));
+    }
+
+    &--right-top, &--rgt-top {
+      @include position($position: absolute, $left: 100%, $top:  0, $transform: translate(-100%, -100%));
+    }
+
+    &--right-bottom, &--rgt-btm {
+      @include position($position: absolute, $left: 100%, $top:  100%, $transform: translate(-100%, 0));
+    }
+    
+    &--right-center, &--rgt-ctr {
+      @include position($position: absolute, $left: 100%, $top:  50%, $transform: translate(-100%, -50%));
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../../variables';
+
+@mixin background-image($background-image) {
+  background-image: $background-image;
+}
+
+@mixin background-position-x($background-position-x) {
+  background-position-x: $background-position-x;
+}
+
+@mixin background-position-y($background-position-y) {
+  background-position-y: $background-position-y;
+}
+
+@mixin background-position($background-position, $background-position-x: $background-position, $background-position-y: $background-position) {
+  @if $background-position {
+    background-position: $background-position;
+  } @else {
+    background-position: $background-position-x $background-position-y;
+  }
+}
+
+@mixin background-size($background-size) {
+  background-size: $background-size;
+}
+
+@mixin background-repeat($background-repeat) {
+  background-repeat: $background-repeat;
+}
+
+@mixin background-origin($background-origin) {
+  background-origin: $background-origin;
+}
+
+@mixin background-clip($background-clip) {
+  background-clip: $background-clip;
+}
+
+@mixin background-color($background-color) {
+  background-color: $background-color;
+}
+
+@mixin background(
+  $background-image: unset,
+  $background-position-x: unset,
+  $background-position-y: unset,
+  $background-size: unset,
+  $background-repeat: unset,
+  $background-attatchment: unset,
+  $background-origin: unset,
+  $background-clip: unset,
+  $background-color: unset
+){
+  background:
+    $background-image
+    $background-position-x
+    $background-position-y
+    $background-size
+    $background-repeat
+    $background-attatchment
+    $background-origin
+    $background-clip
+    $background-color
+}

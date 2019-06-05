@@ -1,0 +1,13 @@
+@import '../../../variables/proportions.scss';
+
+@mixin height($height) {
+  height: $height;
+}
+
+@mixin min-height($height) {
+  height: $height;
+}
+
+@mixin max-height($height) {
+  height: $height;
+}

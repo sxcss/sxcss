@@ -1,0 +1,11 @@
+@import '../../../variables/size';
+@import '../../../mixins/atoms/properties/top';
+
+.top {
+
+  @each $key, $value  in $size {
+    &--#{$key} {
+      @include top(map-get($size, $key));
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@mixin outline-width($outline-width) {
+  outline-width: $outline-width;
+}
+
+
+@mixin outline-style($outline-style) {
+  outline-style: $outline-style;
+}
+
+
+@mixin outline-color($outline-color) {
+  outline-color: $outline-color;
+}
+
+@mixin outline-offset($outline-offset) {
+  outline-offset: $outline-offset;
+}
+
+
+@mixin outline($outline-width: unset, $outline-style: unset, $outline-color: unset, $outline-offset: unset) {
+  outline: $outline-width, $outline-style, $outline-color;
+  outline-offset: $outline-offset;
+}

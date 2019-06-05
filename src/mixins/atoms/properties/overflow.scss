@@ -1,0 +1,15 @@
+@mixin overflow-x($overflow-x) {
+  overflow-x: $overflow-x;
+  overscroll-behavior: contain;
+}
+
+@mixin overflow-y($overflow-y) {
+  overflow-y: $overflow-y;
+  overscroll-behavior: contain;
+}
+
+@mixin overflow($overflow-x: unset, $overflow-y: unset) {
+  overflow-x: $overflow-x;
+  overflow-y: $overflow-y;
+  overscroll-behavior: contain;
+}

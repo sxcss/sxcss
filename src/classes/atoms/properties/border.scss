@@ -1,0 +1,33 @@
+@import '../../../variables/border';
+@import '../../../variables/size.scss';
+@import '../../../mixins/atoms/properties/border.scss';
+
+.border,
+.bdr {
+
+  /// Native values
+
+  @each $property, $values in $border {
+    &-#{$property} {
+      @each $value in $values {
+        &-#{$value} {
+          border-#{$property}: #{$value};
+        }
+      }
+    }
+  }
+
+  /// Scaled values
+
+  @each $key, $value  in $size {
+    &-radius--#{$key},
+    &-rds--#{$key} {
+      @include border-radius(map-get($size, $key));
+    }
+    
+    &-width--#{$key},
+    &-w--#{$key} {
+      @include border-width(map-get($size, $key));
+    }
+  }
+}

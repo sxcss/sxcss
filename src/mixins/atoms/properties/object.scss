@@ -1,0 +1,12 @@
+@mixin object-fit($object-fit) {
+  object-fit: $object-fit;
+}
+
+@mixin object-position($object-position-x, $object-position-y) {
+  object-position: $object-position-x, $object-position-y;
+}
+
+@mixin object($object-fit, $object-position-x, $object-position-y) {
+  object-fit: $object-fit;
+  object-position: $object-position-x, $object-position-y;
+}

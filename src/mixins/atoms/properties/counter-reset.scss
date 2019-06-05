@@ -1,0 +1,3 @@
+@mixin counter-reset($user-ident, $integer) {
+  counter-reset: $user-ident, $integer;
+}

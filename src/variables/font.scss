@@ -1,0 +1,48 @@
+$font: (
+
+  size: (
+    xxs: xx-small,
+    xs: x-small,
+    sm: small,
+    md: medium,
+    lg: large,
+    xl: x-large,
+    xxl: xx-large
+  ),
+
+  weight: (
+    thin: 100,
+    extralight: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900
+  ),
+
+  style: (
+    normal
+    italic
+    oblique
+    inherit
+  ),
+
+  stretch: (
+    normal,
+    ultra-condensed,
+    extra-condensed,
+    condensed,
+    semi-condensed,
+    semi-expanded,
+    expanded,
+    extra-expanded,
+    ultra-expanded
+  ),
+
+  variant: (
+    normal,
+    small-caps
+  )
+);

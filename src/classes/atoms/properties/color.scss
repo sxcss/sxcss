@@ -1,0 +1,30 @@
+@import '../../../mixins/atoms/properties/color.scss';
+
+.color,
+.clr {
+
+  &--black, &--blk {
+    @include color(map-get($color, black));
+  }
+
+  &--white, &--wht {
+  @include color(map-get($color, white));    
+  }
+
+  &--primary,
+  &--pry {
+    @include color(map-get($color, primary));
+  }
+
+  &--secondary, &--scd {
+    @include color(map-get($color, secondary));
+  }
+
+  &--light-gray, &--lt-gr {
+    @include color(map-get($color, light-gray));
+  }
+
+  &--dark-gray, &--drk-gr {
+    @include color(map-get($color, dark-gray));
+  }
+}

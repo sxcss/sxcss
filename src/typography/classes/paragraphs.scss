@@ -1,6 +1,0 @@
-@import '../../core/variables/variables.scss';
-
-p {
-  font-size: map-get($font-size, sm);
-  line-height: map-get($line-height, md);
-}
