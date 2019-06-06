@@ -11,27 +11,27 @@
   border-radius: $border-radius;
 }
 
-@mixin border($width: thin, $style: solid, $color: inherit, $radius: unset) {
+@mixin border($width: thin, $style: solid, $color: inherit, $radius: null) {
   border: $width $style $color;
   border-radius: $radius;
 }
 
-@mixin border-top($width: thin, $style: solid, $color: inherit, $radius: unset) {
+@mixin border-top($width: thin, $style: solid, $color: inherit, $radius: null) {
   border-top: $width $style $color;
   border-radius: $radius;
 }
 
-@mixin border-right($width: thin, $style: solid, $color: inherit, $radius: unset) {
+@mixin border-right($width: thin, $style: solid, $color: inherit, $radius: null) {
   border-right: $width $style $color;
   border-radius: $radius;
 }
 
-@mixin border-bottom($width: thin, $style: solid, $color: inherit, $radius: unset) {
+@mixin border-bottom($width: thin, $style: solid, $color: inherit, $radius: null) {
   border-bottom: $width $style $color;
   border-radius: $radius;
 }
 
-@mixin border-left($width: thin, $style: solid, $color: inherit, $radius: unset) {
+@mixin border-left($width: thin, $style: solid, $color: inherit, $radius: null) {
   border-left: $width $style $color;
   border-radius: $radius;
 }

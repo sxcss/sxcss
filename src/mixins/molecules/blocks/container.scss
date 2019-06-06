@@ -1,4 +1,4 @@
-@import '../../atoms';
+@import '../../atoms/index.scss';
 
 @mixin boxed($boxed-width: calc(100% - #{map-get($gap, sm)}), $boxed-max-width: map-get($width, boxed)) {
   width: $boxed-width;

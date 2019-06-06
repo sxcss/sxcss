@@ -25,10 +25,10 @@
 }
 
 @mixin padding(
-  $padding-top: unset,
-  $padding-right: unset,
-  $padding-bottom: unset,
-  $padding-left: unset) {
+  $padding-top: null,
+  $padding-right: null,
+  $padding-bottom: null,
+  $padding-left: null) {
     padding:
       $padding-top,
       $padding-right,

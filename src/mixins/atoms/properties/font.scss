@@ -24,7 +24,7 @@
 
 @mixin font(
   $weight: normal,
-  $variant: unset,
+  $variant: null,
   $stretch: normal,
   $style: normal,
   $size: normal,

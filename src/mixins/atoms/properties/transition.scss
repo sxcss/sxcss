@@ -15,10 +15,10 @@
 }
 
 @mixin transition(
-  $property: unset,
-  $duration: unset,
-  $timing-function: unset,
-  $delay: unset
+  $property: null,
+  $duration: null,
+  $timing-function: null,
+  $delay: null
 ){
   transition: $property $duration $timing-function $delay;
 }

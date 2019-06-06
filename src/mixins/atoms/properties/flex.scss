@@ -18,7 +18,7 @@
   flex-wrap: $flex-wrap;
 }
 
-@mixin flex($grow, $shrink, $basis: unset, $direction: unset, $wrap: unset) {
+@mixin flex($grow: null, $shrink: null, $basis: null, $direction: null, $wrap: null) {
   @include display(flex);
   flex: $grow $shrink $basis;
   flex-direction: $direction;

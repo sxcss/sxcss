@@ -17,7 +17,7 @@
 }
 
 
-@mixin outline($outline-width: unset, $outline-style: unset, $outline-color: unset, $outline-offset: unset) {
+@mixin outline($outline-width: null, $outline-style: null, $outline-color: null, $outline-offset: null) {
   outline: $outline-width, $outline-style, $outline-color;
   outline-offset: $outline-offset;
 }

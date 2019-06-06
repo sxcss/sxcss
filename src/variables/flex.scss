@@ -1,7 +1,7 @@
 @import 'gap.scss';
 
 $flex-basis: (
-  1: unset,
+  1: null,
   2: calc(51% - #{map-get($gap, sm)} / 2),
   3: calc(33.3333% - 1.5 * #{map-get($gap, sm)} / 3),
   4: calc(25% - 2 * #{map-get($gap, sm)} / 4),

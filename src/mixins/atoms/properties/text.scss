@@ -6,7 +6,7 @@
   text-align-last: $text-align-last;
 }
 
-@mixin text-decoration($line: unset, $type, $color: inherit, $style: unset) {
+@mixin text-decoration($line: null, $type: null, $color: inherit, $style: null) {
   text-decoration: $line, $type, $color;
   text-decoration-style: $style;
 }
@@ -23,7 +23,7 @@
   text-rendering: $text-rendering;
 }
 
-@mixin text-shadow($offset-x: 0, $offset-y: 0, $blur: unset, $color: unset) {
+@mixin text-shadow($offset-x: 0, $offset-y: 0, $blur: null, $color: null) {
   text-shadow: $offset-x $offset-y $blur $color;
 }
 

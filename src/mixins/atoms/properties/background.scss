@@ -1,4 +1,4 @@
-@import '../../../variables';
+@import '../../../variables/index.scss';
 
 @mixin background-image($background-image) {
   background-image: $background-image;
@@ -41,24 +41,24 @@
 }
 
 @mixin background(
-  $background-image: unset,
-  $background-position-x: unset,
-  $background-position-y: unset,
-  $background-size: unset,
-  $background-repeat: unset,
-  $background-attatchment: unset,
-  $background-origin: unset,
-  $background-clip: unset,
-  $background-color: unset
+  $image: null,
+  $position-x: null,
+  $position-y: null,
+  $size: null,
+  $repeat: null,
+  $attatchment: null,
+  $origin: null,
+  $clip: null,
+  $color: null
 ){
   background:
-    $background-image
-    $background-position-x
-    $background-position-y
-    $background-size
-    $background-repeat
-    $background-attatchment
-    $background-origin
-    $background-clip
-    $background-color
+    $image
+    $position-x
+    $position-y
+    $size
+    $repeat
+    $attatchment
+    $origin
+    $clip
+    $color
 }
