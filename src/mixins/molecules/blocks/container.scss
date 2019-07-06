@@ -5,7 +5,7 @@
   max-width: $max-width;
   margin: auto !important;
   @media all and (max-width: 767px) {
-    width: calc(100% - #{map-get($gap, sm)});
+    width: calc(100% - #{map-deep-get($scale, proportion, sm)});
   }
 }
 
