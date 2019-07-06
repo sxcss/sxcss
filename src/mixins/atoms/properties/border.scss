@@ -11,11 +11,6 @@
   border-radius: $border-radius;
 }
 
-@mixin border($width: thin, $style: solid, $color: inherit, $radius: null) {
-  border: $width $style $color;
-  border-radius: $radius;
-}
-
 @mixin border-top($width: thin, $style: solid, $color: inherit, $radius: null) {
   border-top: $width $style $color;
   border-radius: $radius;
@@ -33,5 +28,46 @@
 
 @mixin border-left($width: thin, $style: solid, $color: inherit, $radius: null) {
   border-left: $width $style $color;
+  border-radius: $radius;
+}
+
+@mixin border(
+  $top: false,
+  $right: false,
+  $bottom: false,
+  $left: false,
+  $x: false,
+  $y: false,
+  $width: null,
+  $style: solid,
+  $color: null,
+  $radius: null,
+) {
+  @if $top == true {
+    border-top: $width $style $color;
+  }
+  
+  @else if $right == true {
+    border-right: $width $style $color;
+  }
+
+  @else if $bottom == true {
+    border-bottom: $width $style $color;
+  }
+  @else if $left == true {
+    border-left: $width $style $color;
+  }
+  
+  @else if $x == true {
+    border-left: $width $style $color;
+    border-right: $width $style $color;
+  }
+
+  @else if $y == true {
+    border-top: $width $style $color;
+    border-bottom: $width $style $color;
+  } @else {
+    border: $width $style $color;
+  }
   border-radius: $radius;
 }

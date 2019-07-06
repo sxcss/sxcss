@@ -1,5 +1,5 @@
-@import '../../../variables/size.scss';
-@import '../../../mixins/atoms/properties/line.scss';
+@import '../../../variables/scale';
+@import '../../../mixins/atoms/properties/line';
 
 .line-height,
 .ln-h {
@@ -49,38 +49,38 @@
   }
 
   &--xxs {
-    @include line-height(map-get($size, xxs) !important);
+    @include line-height(map-deep-get($scale, proportion, xxs) !important);
   }
 
   &--xs {
-    @include line-height(map-get($size, xs) !important);
+    @include line-height(map-deep-get($scale, proportion, xs) !important);
   }
 
   &--sm {
-    @include line-height(map-get($size, sm) !important);
+    @include line-height(map-deep-get($scale, proportion, sm) !important);
   }
 
   &--ms {
-    @include line-height(map-get($size, ms) !important);
+    @include line-height(map-deep-get($scale, proportion, ms) !important);
   }
 
   &--md {
-    @include line-height(map-get($size, md) !important);
+    @include line-height(map-deep-get($scale, proportion, md) !important);
   }
 
   &--ml {
-    @include line-height(map-get($size, ml) !important);
+    @include line-height(map-deep-get($scale, proportion, ml) !important);
   }
 
   &--lg {
-    @include line-height(map-get($size, lg) !important);
+    @include line-height(map-deep-get($scale, proportion, lg) !important);
   }
 
   &--xl {
-    @include line-height(map-get($size, xl) !important);
+    @include line-height(map-deep-get($scale, proportion, xl) !important);
   }
 
   &--xxl {
-    @include line-height(map-get($size, xxs) !important);
+    @include line-height(map-deep-get($scale, proportion, xxs) !important);
   }
 }

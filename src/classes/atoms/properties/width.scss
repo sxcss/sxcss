@@ -1,16 +1,22 @@
-@import '../../../variables/size.scss';
-@import '../../../mixins/width.scss';
+@import '../../../variables/scale';
+@import '../../../mixins/atoms/properties/width';
 
-.width, .h {
+.width, .w {
 
-  @each $key, $value  in $size {
+  @each $key, $value  in map-get($scale, proportion) {
     &--#{$key} {
-      @include width(map-get($size, $key));
+      @include width(map-deep-get($scale, proportion, $key));
+    }
+  }
+
+  @each $key, $value  in map-get($scale, percent) {
+    &--#{$key} {
+      @include width(map-deep-get($scale, percent, $key));
     }
   }
 
   @for $i from 2 through 10 {
-    @each $key, $value  in $size {
+    @each $key, $value  in map-get($scale, proportion) {
       @if $key != 10 
       and $key != 20
       and $key != 25
@@ -29,23 +35,29 @@
       and $key != 50vw
       and $key != 100vw { 
         &--#{$i}#{$key} {
-          @include width(calc(#{$i} * #{map-get($size, $key)}));
+          @include width(calc(#{$i} * #{map-deep-get($scale, proportion, $key)}));
         }
       }
     }
   }
 }
 
-.min-width, .min-h {
+.min-width, .min-w {
 
-  @each $key, $value  in $size {
+  @each $key, $value  in map-get($scale, proportion) {
     &--#{$key} {
-      @include min-width(map-get($size, $key));
+      @include min-width(map-deep-get($scale, proportion, $key));
+    }
+  }
+
+  @each $key, $value  in map-get($scale, percent) {
+    &--#{$key} {
+      @include min-width(map-deep-get($scale, percent, $key));
     }
   }
 
   @for $i from 2 through 10 {
-    @each $key, $value  in $size {
+    @each $key, $value  in map-get($scale, proportion) {
       @if $key != 10 
       and $key != 20
       and $key != 25
@@ -64,23 +76,29 @@
       and $key != 50vw
       and $key != 100vw { 
         &--#{$i}#{$key} {
-          @include min-width(calc(#{$i} * #{map-get($size, $key)}));
+          @include min-width(calc(#{$i} * #{map-deep-get($scale, proportion, $key)}));
         }
       }
     }
   }
 }
 
-.max-width, .max-h {
+.max-width, .max-w {
 
-  @each $key, $value  in $size {
+  @each $key, $value  in map-get($scale, proportion) {
     &--#{$key} {
-      @include max-width(map-get($size, $key));
+      @include max-width(map-deep-get($scale, proportion, $key));
+    }
+  }
+
+  @each $key, $value  in map-get($scale, percent) {
+    &--#{$key} {
+      @include max-width(map-deep-get($scale, percent, $key));
     }
   }
 
   @for $i from 2 through 10 {
-    @each $key, $value  in $size {
+    @each $key, $value  in map-get($scale, proportion) {
       @if $key != 10 
       and $key != 20
       and $key != 25
@@ -99,7 +117,7 @@
       and $key != 50vw
       and $key != 100vw { 
         &--#{$i}#{$key} {
-          @include max-width(calc(#{$i} * #{map-get($size, $key)}));
+          @include max-width(calc(#{$i} * #{map-deep-get($scale, proportion, $key)}));
         }
       }
     }

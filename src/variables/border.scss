@@ -1,3 +1,5 @@
+@import 'color';
+
 $border: (
   width: (
     thin,
@@ -16,4 +18,5 @@ $border: (
     groove,
     ridge
   )
+  // color: $color
 );

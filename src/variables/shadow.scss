@@ -1,47 +1,49 @@
+@import '../functions/map/map-deep-get.scss';
+
 $shadow-offset-x: (
-  xxs: map-get($gap, xxs),
-  xs: map-get($gap, xs),
-  sm: map-get($gap, sm),
-  ms: map-get($gap, ms),
-  md: map-get($gap, md),
-  ml: map-get($gap, ml),
-  lg: map-get($gap, lg),
-  xl: map-get($gap, xl),
-  xxl: map-get($gap, xxl) 
+  xxs: map-deep-get($scale, proportion, xxs),
+  xs: map-deep-get($scale, proportion, xs),
+  sm: map-deep-get($scale, proportion, sm),
+  ms: map-deep-get($scale, proportion, ms),
+  md: map-deep-get($scale, proportion, md),
+  ml: map-deep-get($scale, proportion, ml),
+  lg: map-deep-get($scale, proportion, lg),
+  xl: map-deep-get($scale, proportion, xl),
+  xxl: map-deep-get($scale, proportion, xxl) 
 );
 
 $shadow-offset-y: (
-  xxs: map-get($gap, xxs),
-  xs: map-get($gap, xs),
-  sm: map-get($gap, sm),
-  ms: map-get($gap, ms),
-  md: map-get($gap, md),
-  ml: map-get($gap, ml),
-  lg: map-get($gap, lg),
-  xl: map-get($gap, xl),
-  xxl: map-get($gap, xxl) 
+  xxs: map-deep-get($scale, proportion, xxs),
+  xs: map-deep-get($scale, proportion, xs),
+  sm: map-deep-get($scale, proportion, sm),
+  ms: map-deep-get($scale, proportion, ms),
+  md: map-deep-get($scale, proportion, md),
+  ml: map-deep-get($scale, proportion, ml),
+  lg: map-deep-get($scale, proportion, lg),
+  xl: map-deep-get($scale, proportion, xl),
+  xxl: map-deep-get($scale, proportion, xxl) 
 );
 
 $shadow-blur-radius: (
-  xxs: map-get($gap, xxs),
-  xs: map-get($gap, xs),
-  sm: map-get($gap, sm),
-  ms: map-get($gap, ms),
-  md: map-get($gap, md),
-  ml: map-get($gap, ml),
-  lg: map-get($gap, lg),
-  xl: map-get($gap, xl),
-  xxl: map-get($gap, xxl) 
+  xxs: map-deep-get($scale, proportion, xxs),
+  xs: map-deep-get($scale, proportion, xs),
+  sm: map-deep-get($scale, proportion, sm),
+  ms: map-deep-get($scale, proportion, ms),
+  md: map-deep-get($scale, proportion, md),
+  ml: map-deep-get($scale, proportion, ml),
+  lg: map-deep-get($scale, proportion, lg),
+  xl: map-deep-get($scale, proportion, xl),
+  xxl: map-deep-get($scale, proportion, xxl) 
 );
 
 $shadow-spread-radius: (
-  xxs: map-get($gap, xxs),
-  xs: map-get($gap, xs),
-  sm: map-get($gap, sm),
-  ms: map-get($gap, ms),
-  md: map-get($gap, md),
-  ml: map-get($gap, ml),
-  lg: map-get($gap, lg),
-  xl: map-get($gap, xl),
-  xxl: map-get($gap, xxl) 
+  xxs: map-deep-get($scale, proportion, xxs),
+  xs: map-deep-get($scale, proportion, xs),
+  sm: map-deep-get($scale, proportion, sm),
+  ms: map-deep-get($scale, proportion, ms),
+  md: map-deep-get($scale, proportion, md),
+  ml: map-deep-get($scale, proportion, ml),
+  lg: map-deep-get($scale, proportion, lg),
+  xl: map-deep-get($scale, proportion, xl),
+  xxl: map-deep-get($scale, proportion, xxl) 
 );

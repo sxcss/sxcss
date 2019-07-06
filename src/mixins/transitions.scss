@@ -1,5 +1,3 @@
-@import '../variables/transitions.scss';
-
 @mixin transition($transition) {
   transition: $transition;
 }

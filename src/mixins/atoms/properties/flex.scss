@@ -18,9 +18,19 @@
   flex-wrap: $flex-wrap;
 }
 
-@mixin flex($grow: null, $shrink: null, $basis: null, $direction: null, $wrap: null) {
+@mixin flex(
+  $grow: null,
+  $shrink: null,
+  $basis: null,
+  $direction: null,
+  $wrap: null,
+  $justify-content: null,
+  $align-items: null
+) {
   @include display(flex);
   flex: $grow $shrink $basis;
   flex-direction: $direction;
   flex-wrap: $wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
 }

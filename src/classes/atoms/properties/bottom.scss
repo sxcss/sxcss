@@ -1,12 +1,18 @@
-@import '../../../variables/size';
+@import '../../../variables/scale';
 @import '../../../mixins/atoms/properties/bottom';
 
 .bottom,
 .btm {
 
-  @each $key, $value  in $size {
+  @each $key, $value  in map-get($scale, proportion) {
     &--#{$key} {
-      @include bottom(map-get($size, $key));
+      @include bottom(map-deep-get($scale, proportion, $key));
+    }
+  }
+
+  @each $key, $value  in map-get($scale, percent) {
+    &--#{$key} {
+      @include bottom(map-deep-get($scale, percent, $key));
     }
   }
 }

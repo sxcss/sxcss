@@ -7,7 +7,7 @@
   $grid-rows: auto,
   $grid-rows-fr: auto,
   $grid-rows-gap: null,
-  $grid-gap: map-get($gap, xxs)
+  $grid-gap: null
 ) {
   
   /* Flexbox Fallback for older browsers */

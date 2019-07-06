@@ -6,117 +6,117 @@
   &--ease-out, &--e-o {
 
     &--xxs {
-      @include transition(all map-get($transition-time, xxs) ease-out);
+      @include transition(all map-deep-get($transition, duration, xxs) ease-out);
     }
 
     &--xs {
-      @include transition(all map-get($transition-time, xs) ease-out);
+      @include transition(all map-deep-get($transition, duration, xs) ease-out);
     }
 
     &--sm {
-      @include transition(all map-get($transition-time, sm) ease-out);
+      @include transition(all map-deep-get($transition, duration, sm) ease-out);
     }
 
     &--ms {
-      @include transition(all map-get($transition-time, ms) ease-out);
+      @include transition(all map-deep-get($transition, duration, ms) ease-out);
     }
 
     &--md {
-      @include transition(all map-get($transition-time, md) ease-out);
+      @include transition(all map-deep-get($transition, duration, md) ease-out);
     }
 
     &--ml {
-      @include transition(all map-get($transition-time, ml) ease-out);
+      @include transition(all map-deep-get($transition, duration, ml) ease-out);
     }
 
     &--lg {
-      @include transition(all map-get($transition-time, lg) ease-out);
+      @include transition(all map-deep-get($transition, duration, lg) ease-out);
     }
 
     &--xl {
-      @include transition(all map-get($transition-time, xl) ease-out);
+      @include transition(all map-deep-get($transition, duration, xl) ease-out);
     }
 
     &--xxl {
-      @include transition(all map-get($transition-time, xxl) ease-out);
+      @include transition(all map-deep-get($transition, duration, xxl) ease-out);
     }
   }
 
   &--ease-in, &--e-i {
 
     &--xxs {
-      @include transition(all map-get($transition-time, xxs) ease-in);
+      @include transition(all map-deep-get($transition, duration, xxs) ease-in);
     }
 
     &--xs {
-      @include transition(all map-get($transition-time, xs) ease-in);
+      @include transition(all map-deep-get($transition, duration, xs) ease-in);
     }
 
     &--sm {
-      @include transition(all map-get($transition-time, sm) ease-in);
+      @include transition(all map-deep-get($transition, duration, sm) ease-in);
     }
 
     &--ms {
-      @include transition(all map-get($transition-time, ms) ease-in);
+      @include transition(all map-deep-get($transition, duration, ms) ease-in);
     }
 
     &--md {
-      @include transition(all map-get($transition-time, md) ease-in);
+      @include transition(all map-deep-get($transition, duration, md) ease-in);
     }
 
     &--ml {
-      @include transition(all map-get($transition-time, ml) ease-in);
+      @include transition(all map-deep-get($transition, duration, ml) ease-in);
     }
 
     &--lg {
-      @include transition(all map-get($transition-time, lg) ease-in);
+      @include transition(all map-deep-get($transition, duration, lg) ease-in);
     }
 
     &--xl {
-      @include transition(all map-get($transition-time, xl) ease-in);
+      @include transition(all map-deep-get($transition, duration, xl) ease-in);
     }
 
     &--xxl {
-      @include transition(all map-get($transition-time, xxl) ease-in);
+      @include transition(all map-deep-get($transition, duration, xxl) ease-in);
     }
   }
 
   &--ease-in-out, &--e-i-o {
 
     &--xxs {
-      @include transition(all map-get($transition-time, xxs) ease-in-out);
+      @include transition(all map-deep-get($transition, duration, xxs) ease-in-out);
     }
 
     &--xs {
-      @include transition(all map-get($transition-time, xs) ease-in-out);
+      @include transition(all map-deep-get($transition, duration, xs) ease-in-out);
     }
 
     &--sm {
-      @include transition(all map-get($transition-time, sm) ease-in-out);
+      @include transition(all map-deep-get($transition, duration, sm) ease-in-out);
     }
 
     &--ms {
-      @include transition(all map-get($transition-time, ms) ease-in-out);
+      @include transition(all map-deep-get($transition, duration, ms) ease-in-out);
     }
 
     &--md {
-      @include transition(all map-get($transition-time, md) ease-in-out);
+      @include transition(all map-deep-get($transition, duration, md) ease-in-out);
     }
 
     &--ml {
-      @include transition(all map-get($transition-time, ml) ease-in-out);
+      @include transition(all map-deep-get($transition, duration, ml) ease-in-out);
     }
 
     &--lg {
-      @include transition(all map-get($transition-time, lg) ease-in-out);
+      @include transition(all map-deep-get($transition, duration, lg) ease-in-out);
     }
 
     &--xl {
-      @include transition(all map-get($transition-time, xl) ease-in-out);
+      @include transition(all map-deep-get($transition, duration, xl) ease-in-out);
     }
 
     &--xxl {
-      @include transition(all map-get($transition-time, xxl) ease-in-out);
+      @include transition(all map-deep-get($transition, duration, xxl) ease-in-out);
     }
   }
 }

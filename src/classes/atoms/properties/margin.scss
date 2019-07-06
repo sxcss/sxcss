@@ -1,4 +1,5 @@
 @import '../../../mixins/atoms/properties/margin.scss';
+@import '../../../functions/map/map-deep-get';
 
 .margin,
 .m {
@@ -14,35 +15,35 @@
     }
 
     &--xxs {
-      @include margin(map-get($gap, xxs) !important);
+      @include margin(map-deep-get($scale, proportion, xxs) !important);
     }
 
     &--xs {
-      @include margin(map-get($gap, xs)!important);
+      @include margin(map-deep-get($scale, proportion, xs)!important);
     }
 
     &--sm {
-      @include margin(map-get($gap, sm)!important);
+      @include margin(map-deep-get($scale, proportion, sm)!important);
     }
 
     &--ms {
-      @include margin(map-get($gap, ms)!important);
+      @include margin(map-deep-get($scale, proportion, ms)!important);
     }
 
     &--md {
-      @include margin(map-get($gap, md)!important);
+      @include margin(map-deep-get($scale, proportion, md)!important);
     }
 
     &--ml {
-      @include margin(map-get($gap, ml)!important);
+      @include margin(map-deep-get($scale, proportion, ml)!important);
     }
 
     &--lg {
-      @include margin(map-get($gap, lg)!important);
+      @include margin(map-deep-get($scale, proportion, lg)!important);
     }
 
     &--xl {
-      @include margin(map-get($gap, lg)!important);
+      @include margin(map-deep-get($scale, proportion, lg)!important);
     }
   }
 
@@ -57,35 +58,35 @@
     }
 
     &--xxs {
-      @include margin-x(map-get($gap, xxs) !important);
+      @include margin-x(map-deep-get($scale, proportion, xxs) !important);
     }
 
     &--xs {
-      @include margin-x(map-get($gap, xs)!important);
+      @include margin-x(map-deep-get($scale, proportion, xs)!important);
     }
 
     &--sm {
-      @include margin-x(map-get($gap, sm)!important);
+      @include margin-x(map-deep-get($scale, proportion, sm)!important);
     }
 
     &--ms {
-      @include margin-x(map-get($gap, ms)!important);
+      @include margin-x(map-deep-get($scale, proportion, ms)!important);
     }
 
     &--md {
-      @include margin-x(map-get($gap, md)!important);
+      @include margin-x(map-deep-get($scale, proportion, md)!important);
     }
 
     &--ml {
-      @include margin-x(map-get($gap, ml)!important);
+      @include margin-x(map-deep-get($scale, proportion, ml)!important);
     }
 
     &--lg {
-      @include margin-x(map-get($gap, lg)!important);
+      @include margin-x(map-deep-get($scale, proportion, lg)!important);
     }
 
     &--xl {
-      @include margin-x(map-get($gap, xl)!important);
+      @include margin-x(map-deep-get($scale, proportion, xl)!important);
     }
   }
 
@@ -100,35 +101,35 @@
     }
 
     &--xxs {
-      @include margin-y(map-get($gap, xxs) !important);
+      @include margin-y(map-deep-get($scale, proportion, xxs) !important);
     }
 
     &--xs {
-      @include margin-y(map-get($gap, xs)!important);
+      @include margin-y(map-deep-get($scale, proportion, xs)!important);
     }
 
     &--sm {
-      @include margin-y(map-get($gap, sm)!important);
+      @include margin-y(map-deep-get($scale, proportion, sm)!important);
     }
 
     &--ms {
-      @include margin-y(map-get($gap, ms)!important);
+      @include margin-y(map-deep-get($scale, proportion, ms)!important);
     }
 
     &--md {
-      @include margin-y(map-get($gap, md)!important);
+      @include margin-y(map-deep-get($scale, proportion, md)!important);
     }
 
     &--ml {
-      @include margin-y(map-get($gap, ml)!important);
+      @include margin-y(map-deep-get($scale, proportion, ml)!important);
     }
 
     &--lg {
-      @include margin-y(map-get($gap, lg)!important);
+      @include margin-y(map-deep-get($scale, proportion, lg)!important);
     }
 
     &--xl {
-      @include margin-y(map-get($gap, xl)!important);
+      @include margin-y(map-deep-get($scale, proportion, xl)!important);
     }
   }
 
@@ -144,35 +145,35 @@
     }
 
     &--xxs {
-      @include margin-left(map-get($gap, xxs) !important);
+      @include margin-left(map-deep-get($scale, proportion, xxs) !important);
     }
 
     &--xs {
-      @include margin-left(map-get($gap, xs)!important);
+      @include margin-left(map-deep-get($scale, proportion, xs)!important);
     }
 
     &--sm {
-      @include margin-left(map-get($gap, sm)!important);
+      @include margin-left(map-deep-get($scale, proportion, sm)!important);
     }
 
     &--ms {
-      @include margin-left(map-get($gap, ms)!important);
+      @include margin-left(map-deep-get($scale, proportion, ms)!important);
     }
 
     &--md {
-      @include margin-left(map-get($gap, md)!important);
+      @include margin-left(map-deep-get($scale, proportion, md)!important);
     }
 
     &--ml {
-      @include margin-left(map-get($gap, ml)!important);
+      @include margin-left(map-deep-get($scale, proportion, ml)!important);
     }
 
     &--lg {
-      @include margin-left(map-get($gap, lg)!important);
+      @include margin-left(map-deep-get($scale, proportion, lg)!important);
     }
 
     &--xl {
-      @include margin-left(map-get($gap, xl)!important);
+      @include margin-left(map-deep-get($scale, proportion, xl)!important);
     }
   }
 
@@ -188,35 +189,35 @@
     }
 
     &--xxs {
-      @include margin-right(map-get($gap, xxs) !important);
+      @include margin-right(map-deep-get($scale, proportion, xxs) !important);
     }
 
     &--xs {
-      @include margin-right(map-get($gap, xs)!important);
+      @include margin-right(map-deep-get($scale, proportion, xs)!important);
     }
 
     &--sm {
-      @include margin-right(map-get($gap, sm)!important);
+      @include margin-right(map-deep-get($scale, proportion, sm)!important);
     }
 
     &--ms {
-      @include margin-right(map-get($gap, ms)!important);
+      @include margin-right(map-deep-get($scale, proportion, ms)!important);
     }
 
     &--md {
-      @include margin-right(map-get($gap, md)!important);
+      @include margin-right(map-deep-get($scale, proportion, md)!important);
     }
 
     &--ml {
-      @include margin-right(map-get($gap, ml)!important);
+      @include margin-right(map-deep-get($scale, proportion, ml)!important);
     }
 
     &--lg {
-      @include margin-right(map-get($gap, lg)!important);
+      @include margin-right(map-deep-get($scale, proportion, lg)!important);
     }
 
     &--xl {
-      @include margin-right(map-get($gap, xl)!important);
+      @include margin-right(map-deep-get($scale, proportion, xl)!important);
     }
   }
 
@@ -228,35 +229,35 @@
     }
 
     &--xxs {
-      @include margin-top(map-get($gap, xxs) !important);
+      @include margin-top(map-deep-get($scale, proportion, xxs) !important);
     }
 
     &--xs {
-      @include margin-top(map-get($gap, xs)!important);
+      @include margin-top(map-deep-get($scale, proportion, xs)!important);
     }
 
     &--sm {
-      @include margin-top(map-get($gap, sm)!important);
+      @include margin-top(map-deep-get($scale, proportion, sm)!important);
     }
 
     &--ms {
-      @include margin-top(map-get($gap, ms)!important);
+      @include margin-top(map-deep-get($scale, proportion, ms)!important);
     }
 
     &--md {
-      @include margin-top(map-get($gap, md)!important);
+      @include margin-top(map-deep-get($scale, proportion, md)!important);
     }
 
     &--ml {
-      @include margin-top(map-get($gap, ml)!important);
+      @include margin-top(map-deep-get($scale, proportion, ml)!important);
     }
 
     &--lg {
-      @include margin-top(map-get($gap, lg)!important);
+      @include margin-top(map-deep-get($scale, proportion, lg)!important);
     }
 
     &--xl {
-      @include margin-top(map-get($gap, xl)!important);
+      @include margin-top(map-deep-get($scale, proportion, xl)!important);
     }
   }
 
@@ -268,35 +269,35 @@
     }
 
     &--xxs {
-      @include margin-bottom(map-get($gap, xxs) !important);
+      @include margin-bottom(map-deep-get($scale, proportion, xxs) !important);
     }
 
     &--xs {
-      @include margin-bottom(map-get($gap, xs)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, xs)!important);
     }
 
     &--sm {
-      @include margin-bottom(map-get($gap, sm)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, sm)!important);
     }
 
     &--ms {
-      @include margin-bottom(map-get($gap, ms)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, ms)!important);
     }
 
     &--md {
-      @include margin-bottom(map-get($gap, md)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, md)!important);
     }
 
     &--ml {
-      @include margin-bottom(map-get($gap, ml)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, ml)!important);
     }
 
     &--lg {
-      @include margin-bottom(map-get($gap, lg)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, lg)!important);
     }
 
     &--xl {
-      @include margin-bottom(map-get($gap, xl)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, xl)!important);
     }
   }
 }

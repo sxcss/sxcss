@@ -1,6 +1,6 @@
 @import '../../../variables/border';
-@import '../../../variables/size.scss';
-@import '../../../mixins/atoms/properties/border.scss';
+@import '../../../variables/scale';
+@import '../../../mixins/atoms/properties/border';
 
 .border,
 .bdr {
@@ -19,15 +19,27 @@
 
   /// Scaled values
 
-  @each $key, $value  in $size {
+  @each $key, $value  in map-get($scale, proportion) {
     &-radius--#{$key},
     &-rds--#{$key} {
-      @include border-radius(map-get($size, $key));
+      @include border-radius(map-deep-get($scale, proportion, $key));
     }
     
     &-width--#{$key},
     &-w--#{$key} {
-      @include border-width(map-get($size, $key));
+      @include border-width(map-deep-get($scale, proportion, $key));
+    }
+  }
+
+  @each $key, $value  in map-get($scale, percent) {
+    &-radius--#{$key},
+    &-rds--#{$key} {
+      @include border-radius(map-deep-get($scale, percent, $key));
+    }
+    
+    &-width--#{$key},
+    &-w--#{$key} {
+      @include border-width(map-deep-get($scale, percent, $key));
     }
   }
 }

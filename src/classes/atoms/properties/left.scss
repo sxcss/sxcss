@@ -1,11 +1,17 @@
-@import '../../../variables/size';
+@import '../../../variables/scale';
 @import '../../../mixins/atoms/properties/left';
 
 .left {
 
-  @each $key, $value  in $size {
+  @each $key, $value  in map-get($scale, proportion) {
     &--#{$key} {
-      @include left(map-get($size, $key));
+      @include left(map-deep-get($scale, proportion, $key));
+    }
+  }
+
+  @each $key, $value  in map-get($scale, percent) {
+    &--#{$key} {
+      @include left(map-deep-get($scale, percent, $key));
     }
   }
 }
