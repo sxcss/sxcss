@@ -3,9 +3,9 @@
 }
 
 @mixin min-height($height) {
-  height: $height;
+  min-height: $height;
 }
 
 @mixin max-height($height) {
-  height: $height;
+  max-height: $height;
 }
