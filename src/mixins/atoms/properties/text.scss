@@ -7,7 +7,7 @@
 }
 
 @mixin text-decoration($line: null, $type: null, $color: inherit, $style: null) {
-  text-decoration: $line, $type, $color;
+  text-decoration: $line $type $color;
   text-decoration-style: $style;
 }
 
@@ -35,3 +35,29 @@
   text-transform: $text-transform;
 }
 
+@mixin text(
+  $align: null,
+  $align-last: null,
+  $decoration: null,
+  $decoration-line: null,
+  $decoration-type: null,
+  $decoration-color: null,
+  $decoration-style: null,
+  $indent: null,
+  $overflow: null,
+  $rendering: null,
+  $shadow-offset-x: null,
+  $shadow-offset-y: null,
+  $shadow-blur: null,
+  $shadow-color: null,
+  $stroke: null,
+  $transform: null
+) {
+  @include text-align($align);
+  @include text-align-last($align-last);
+  @include text-decoration($decoration-line $decoration-type $decoration-color);
+  @include text-indent($indent);
+  @include text-overflow($overflow);
+  @include text-rendering($rendering);
+  @include text-shadow($shadow-offset-x $shadow-offset-y $shadow-blur $shadow-color);
+}
