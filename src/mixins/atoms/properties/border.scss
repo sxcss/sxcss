@@ -32,40 +32,40 @@
 }
 
 @mixin border(
-  $top: false,
-  $right: false,
-  $bottom: false,
-  $left: false,
-  $x: false,
-  $y: false,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null,
+  $x: null,
+  $y: null,
   $width: null,
   $style: solid,
   $color: null,
   $radius: null,
 ) {
   @if $top == true {
-    border-top: $width $style $color;
+    border-top: $top $style $color;
   }
   
   @else if $right == true {
-    border-right: $width $style $color;
+    border-right: $right $style $color;
   }
 
   @else if $bottom == true {
-    border-bottom: $width $style $color;
+    border-bottom: $bottom $style $color;
   }
   @else if $left == true {
-    border-left: $width $style $color;
+    border-left: $left $style $color;
   }
   
   @else if $x == true {
-    border-left: $width $style $color;
-    border-right: $width $style $color;
+    border-left: $x $style $color;
+    border-right: $x $style $color;
   }
 
   @else if $y == true {
-    border-top: $width $style $color;
-    border-bottom: $width $style $color;
+    border-top: $y $style $color;
+    border-bottom: $y $style $color;
   } @else {
     border: $width $style $color;
   }
