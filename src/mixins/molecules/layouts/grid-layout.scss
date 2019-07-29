@@ -24,7 +24,7 @@
   
   @include display(grid);
   @include grid-template-rows(repeat($grid-rows, $grid-rows-fr));
-  @include grid-template-rows($grid-template-columns);
+  @include grid-template-rows($grid-template-rows);
   @include grid-row-gap($grid-rows-gap);
 
   @include grid-template-columns(repeat($grid-cols, $grid-cols-fr));
