@@ -23,13 +23,13 @@
 }
 
 @mixin font(
-  $weight: normal,
+  $style: null,
+  $weight: null,
   $variant: null,
-  $stretch: normal,
-  $style: normal,
-  $size: normal,
+  $stretch: null,
+  $size: inherit,
   $line-height: 1,
-  $family: inherit
+  $family: sans-serif
 ) {
   font: $style $variant $weight $size/$line-height $family;
 }
