@@ -6,7 +6,7 @@
   text-align-last: $text-align-last;
 }
 
-@mixin text-decoration($line: null, $type: null, $color: inherit, $style: null) {
+@mixin text-decoration($line: null, $type: null, $color: null, $style: null) {
   text-decoration: $line $type $color;
   text-decoration-style: $style;
 }
