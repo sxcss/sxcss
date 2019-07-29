@@ -30,8 +30,8 @@
   $padding-bottom: null,
   $padding-left: null) {
     padding:
-      $padding-top,
-      $padding-right,
-      $padding-bottom,
+      $padding-top
+      $padding-right
+      $padding-bottom
       $padding-left;
 }
