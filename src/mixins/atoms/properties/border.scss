@@ -43,27 +43,27 @@
   $color: null,
   $radius: null,
 ) {
-  @if $top == true {
+  @if $top {
     border-top: $top $style $color;
   }
   
-  @else if $right == true {
+  @else if $right {
     border-right: $right $style $color;
   }
 
-  @else if $bottom == true {
+  @else if $bottom {
     border-bottom: $bottom $style $color;
   }
-  @else if $left == true {
+  @else if $left {
     border-left: $left $style $color;
   }
   
-  @else if $x == true {
+  @else if $x {
     border-left: $x $style $color;
     border-right: $x $style $color;
   }
 
-  @else if $y == true {
+  @else if $y {
     border-top: $y $style $color;
     border-bottom: $y $style $color;
   } @else {
