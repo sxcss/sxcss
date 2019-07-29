@@ -25,13 +25,14 @@
 }
 
 @mixin padding(
-  $padding-top: null,
-  $padding-right: null,
-  $padding-bottom: null,
-  $padding-left: null) {
-    padding:
-      $padding-top
-      $padding-right
-      $padding-bottom
-      $padding-left;
+  $top: 0,
+  $right: 0,
+  $bottom: 0,
+  $left: 0,
+  $x: null,
+  $y: null
+) {
+    @include padding($padding-top $padding-right $padding-bottom $padding-left);
+  @include padding-x($x);
+  @include padding-y($y);
 }

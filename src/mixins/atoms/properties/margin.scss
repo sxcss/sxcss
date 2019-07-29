@@ -25,13 +25,14 @@
 }
 
 @mixin margin(
-  $margin-top: null,
-  $margin-right: null,
-  $margin-bottom: null,
-  $margin-left: null) {
-    margin:
-      $margin-top
-      $margin-right
-      $margin-bottom
-      $margin-left;
+  $top: 0,
+  $right: 0,
+  $bottom: 0,
+  $left: 0,
+  $x: null,
+  $y: null
+) {
+    @include margin($margin-top $margin-right $margin-bottom $margin-left);
+  @include margin-x($x);
+  @include margin-y($y);
 }
