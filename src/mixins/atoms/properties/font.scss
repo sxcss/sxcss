@@ -28,8 +28,8 @@
   $stretch: normal,
   $style: normal,
   $size: normal,
-  $l-height: 1,
+  $line-height: 1,
   $family: inherit
 ) {
-  font: $style $variant $weight $size/$l-height $family;
+  font: $style $variant $weight $size/$line-height $family;
 }
