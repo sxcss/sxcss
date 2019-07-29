@@ -32,7 +32,7 @@
   $x: null,
   $y: null
 ) {
-    @include margin($margin-top $margin-right $margin-bottom $margin-left);
+  margin: $top $right $bottom $left;
   @include margin-x($x);
   @include margin-y($y);
 }

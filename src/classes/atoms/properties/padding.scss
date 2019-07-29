@@ -1,123 +1,123 @@
-@import '../../../mixins/atoms/properties/padding';
+@import '../../../mixins/atoms/properties/margin.scss';
 @import '../../../functions/map/map-deep-get';
 
-.padding,
-.p {
+.margin,
+.m {
 
   & {
 
     &--0 {
-      @include padding(0 !important);
+      @include margin(0);
     }
 
     &--xxs {
-      @include padding(map-deep-get($scale, proportion, xxs) !important);
+      @include margin(map-deep-get($scale, proportion, xxs));
     }
 
     &--xs {
-      @include padding(map-deep-get($scale, proportion, xs)!important);
+      @include margin(map-deep-get($scale, proportion, xs));
     }
 
     &--sm {
-      @include padding(map-deep-get($scale, proportion, sm)!important);
+      @include margin(map-deep-get($scale, proportion, sm));
     }
 
     &--ms {
-      @include padding(map-deep-get($scale, proportion, ms)!important);
+      @include margin(map-deep-get($scale, proportion, ms));
     }
 
     &--md {
-      @include padding(map-deep-get($scale, proportion, md)!important);
+      @include margin(map-deep-get($scale, proportion, md));
     }
 
     &--ml {
-      @include padding(map-deep-get($scale, proportion, ml)!important);
+      @include margin(map-deep-get($scale, proportion, ml));
     }
 
     &--lg {
-      @include padding(map-deep-get($scale, proportion, lg)!important);
+      @include margin(map-deep-get($scale, proportion, lg));
     }
 
     &--xl {
-      @include padding(map-deep-get($scale, proportion, lg)!important);
+      @include margin(map-deep-get($scale, proportion, lg));
     }
   }
 
   &-x {
 
     &--0 {
-      @include padding-x(0 !important);
+      @include margin-x(0);
     }
 
     &--xxs {
-      @include padding-x(map-deep-get($scale, proportion, xxs) !important);
+      @include margin-x(map-deep-get($scale, proportion, xxs));
     }
 
     &--xs {
-      @include padding-x(map-deep-get($scale, proportion, xs)!important);
+      @include margin-x(map-deep-get($scale, proportion, xs));
     }
 
     &--sm {
-      @include padding-x(map-deep-get($scale, proportion, sm)!important);
+      @include margin-x(map-deep-get($scale, proportion, sm));
     }
 
     &--ms {
-      @include padding-x(map-deep-get($scale, proportion, ms)!important);
+      @include margin-x(map-deep-get($scale, proportion, ms));
     }
 
     &--md {
-      @include padding-x(map-deep-get($scale, proportion, md)!important);
+      @include margin-x(map-deep-get($scale, proportion, md));
     }
 
     &--ml {
-      @include padding-x(map-deep-get($scale, proportion, ml)!important);
+      @include margin-x(map-deep-get($scale, proportion, ml));
     }
 
     &--lg {
-      @include padding-x(map-deep-get($scale, proportion, lg)!important);
+      @include margin-x(map-deep-get($scale, proportion, lg));
     }
 
     &--xl {
-      @include padding-x(map-deep-get($scale, proportion, xl)!important);
+      @include margin-x(map-deep-get($scale, proportion, xl));
     }
   }
 
   &-y {
 
     &--0 {
-      @include padding-y(0 !important);
+      @include margin-y(0);
     }
 
     &--xxs {
-      @include padding-y(map-deep-get($scale, proportion, xxs) !important);
+      @include margin-y(map-deep-get($scale, proportion, xxs));
     }
 
     &--xs {
-      @include padding-y(map-deep-get($scale, proportion, xs)!important);
+      @include margin-y(map-deep-get($scale, proportion, xs));
     }
 
     &--sm {
-      @include padding-y(map-deep-get($scale, proportion, sm)!important);
+      @include margin-y(map-deep-get($scale, proportion, sm));
     }
 
     &--ms {
-      @include padding-y(map-deep-get($scale, proportion, ms)!important);
+      @include margin-y(map-deep-get($scale, proportion, ms));
     }
 
     &--md {
-      @include padding-y(map-deep-get($scale, proportion, md)!important);
+      @include margin-y(map-deep-get($scale, proportion, md));
     }
 
     &--ml {
-      @include padding-y(map-deep-get($scale, proportion, ml)!important);
+      @include margin-y(map-deep-get($scale, proportion, ml));
     }
 
     &--lg {
-      @include padding-y(map-deep-get($scale, proportion, lg)!important);
+      @include margin-y(map-deep-get($scale, proportion, lg));
     }
 
     &--xl {
-      @include padding-y(map-deep-get($scale, proportion, xl)!important);
+      @include margin-y(map-deep-get($scale, proportion, xl));
     }
   }
 
@@ -125,39 +125,39 @@
   &-l {
 
     &--0 {
-      @include padding-left(0 !important);
+      @include margin-left(0);
     }
 
     &--xxs {
-      @include padding-left(map-deep-get($scale, proportion, xxs) !important);
+      @include margin-left(map-deep-get($scale, proportion, xxs));
     }
 
     &--xs {
-      @include padding-left(map-deep-get($scale, proportion, xs)!important);
+      @include margin-left(map-deep-get($scale, proportion, xs));
     }
 
     &--sm {
-      @include padding-left(map-deep-get($scale, proportion, sm)!important);
+      @include margin-left(map-deep-get($scale, proportion, sm));
     }
 
     &--ms {
-      @include padding-left(map-deep-get($scale, proportion, ms)!important);
+      @include margin-left(map-deep-get($scale, proportion, ms));
     }
 
     &--md {
-      @include padding-left(map-deep-get($scale, proportion, md)!important);
+      @include margin-left(map-deep-get($scale, proportion, md));
     }
 
     &--ml {
-      @include padding-left(map-deep-get($scale, proportion, ml)!important);
+      @include margin-left(map-deep-get($scale, proportion, ml));
     }
 
     &--lg {
-      @include padding-left(map-deep-get($scale, proportion, lg)!important);
+      @include margin-left(map-deep-get($scale, proportion, lg));
     }
 
     &--xl {
-      @include padding-left(map-deep-get($scale, proportion, xl)!important);
+      @include margin-left(map-deep-get($scale, proportion, xl));
     }
   }
 
@@ -165,39 +165,39 @@
   &-r {
 
     &--0 {
-      @include padding-right(0 !important);
+      @include margin-right(0);
     }
 
     &--xxs {
-      @include padding-right(map-deep-get($scale, proportion, xxs) !important);
+      @include margin-right(map-deep-get($scale, proportion, xxs));
     }
 
     &--xs {
-      @include padding-right(map-deep-get($scale, proportion, xs)!important);
+      @include margin-right(map-deep-get($scale, proportion, xs));
     }
 
     &--sm {
-      @include padding-right(map-deep-get($scale, proportion, sm)!important);
+      @include margin-right(map-deep-get($scale, proportion, sm));
     }
 
     &--ms {
-      @include padding-right(map-deep-get($scale, proportion, ms)!important);
+      @include margin-right(map-deep-get($scale, proportion, ms));
     }
 
     &--md {
-      @include padding-right(map-deep-get($scale, proportion, md)!important);
+      @include margin-right(map-deep-get($scale, proportion, md));
     }
 
     &--ml {
-      @include padding-right(map-deep-get($scale, proportion, ml)!important);
+      @include margin-right(map-deep-get($scale, proportion, ml));
     }
 
     &--lg {
-      @include padding-right(map-deep-get($scale, proportion, lg)!important);
+      @include margin-right(map-deep-get($scale, proportion, lg));
     }
 
     &--xl {
-      @include padding-right(map-deep-get($scale, proportion, xl)!important);
+      @include margin-right(map-deep-get($scale, proportion, xl));
     }
   }
 
@@ -205,39 +205,39 @@
   &-t {
 
     &--0 {
-      @include padding-top(0 !important);
+      @include margin-top(0);
     }
 
     &--xxs {
-      @include padding-top(map-deep-get($scale, proportion, xxs) !important);
+      @include margin-top(map-deep-get($scale, proportion, xxs));
     }
 
     &--xs {
-      @include padding-top(map-deep-get($scale, proportion, xs)!important);
+      @include margin-top(map-deep-get($scale, proportion, xs));
     }
 
     &--sm {
-      @include padding-top(map-deep-get($scale, proportion, sm)!important);
+      @include margin-top(map-deep-get($scale, proportion, sm));
     }
 
     &--ms {
-      @include padding-top(map-deep-get($scale, proportion, ms)!important);
+      @include margin-top(map-deep-get($scale, proportion, ms));
     }
 
     &--md {
-      @include padding-top(map-deep-get($scale, proportion, md)!important);
+      @include margin-top(map-deep-get($scale, proportion, md));
     }
 
     &--ml {
-      @include padding-top(map-deep-get($scale, proportion, ml)!important);
+      @include margin-top(map-deep-get($scale, proportion, ml));
     }
 
     &--lg {
-      @include padding-top(map-deep-get($scale, proportion, lg)!important);
+      @include margin-top(map-deep-get($scale, proportion, lg));
     }
 
     &--xl {
-      @include padding-top(map-deep-get($scale, proportion, xl)!important);
+      @include margin-top(map-deep-get($scale, proportion, xl));
     }
   }
 
@@ -245,39 +245,39 @@
   &-b {
     
     &--0 {
-      @include padding-bottom(0 !important);
+      @include margin-bottom(0);
     }
 
     &--xxs {
-      @include padding-bottom(map-deep-get($scale, proportion, xxs) !important);
+      @include margin-bottom(map-deep-get($scale, proportion, xxs));
     }
 
     &--xs {
-      @include padding-bottom(map-deep-get($scale, proportion, xs)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, xs));
     }
 
     &--sm {
-      @include padding-bottom(map-deep-get($scale, proportion, sm)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, sm));
     }
 
     &--ms {
-      @include padding-bottom(map-deep-get($scale, proportion, ms)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, ms));
     }
 
     &--md {
-      @include padding-bottom(map-deep-get($scale, proportion, md)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, md));
     }
 
     &--ml {
-      @include padding-bottom(map-deep-get($scale, proportion, ml)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, ml));
     }
 
     &--lg {
-      @include padding-bottom(map-deep-get($scale, proportion, lg)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, lg));
     }
 
     &--xl {
-      @include padding-bottom(map-deep-get($scale, proportion, xl)!important);
+      @include margin-bottom(map-deep-get($scale, proportion, xl));
     }
   }
 }
