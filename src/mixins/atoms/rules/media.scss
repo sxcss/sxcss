@@ -89,7 +89,7 @@
   }
 
   @if ($is-width) {
-    @debug $result;
+    // @debug $result;
     $unit: unit($result);
     $interval: 0;
     
