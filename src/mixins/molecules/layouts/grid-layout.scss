@@ -9,7 +9,11 @@
   $grid-rows: auto,
   $grid-rows-fr: auto,
   $grid-rows-gap: null,
-  $grid-gap: null
+  $grid-gap: null,
+  $justify-items: null,
+  $justify-content: null,
+  $align-items: null,
+  $align-content: null
 ) {
   
   /* Flexbox Fallback for older browsers */
@@ -32,6 +36,12 @@
   @include grid-column-gap($grid-cols-gap);
 
   @include grid-gap($grid-gap);
+
+  @include justify-content($justify-content);
+  @include justify-items($justify-items);
+  
+  @include align-content($align-content);
+  @include align-items($align-items);
   
   @if $grid-cols == 1 {
     @include flex-direction(column);
