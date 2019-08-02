@@ -31,6 +31,10 @@
   grid-column: $grid-column;
 }
 
+@mixin grid-row($grid-row) {
+  grid-row: $grid-row;
+}
+
 @mixin grid-row-start($grid-row-start) {
   grid-row-start: $grid-row-start;
 }
