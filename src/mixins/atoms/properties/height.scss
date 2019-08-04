@@ -1,5 +1,11 @@
-@mixin height($height) {
+@mixin height(
+$height: null,
+$min: null,
+$max: null
+) {
   height: $height;
+  min-height: $min;
+  max-height: $max;
 }
 
 @mixin min-height($height) {

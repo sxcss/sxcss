@@ -1,5 +1,11 @@
-@mixin width($width) {
+@mixin width(
+  $width: null,
+  $min: null,
+  $max: null
+) {
   width: $width;
+  min-width: $min;
+  max-width: $max;
 }
 
 @mixin min-width($width) {
