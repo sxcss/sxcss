@@ -6,7 +6,7 @@
   object-position: $object-position-x, $object-position-y;
 }
 
-@mixin object($object-fit, $object-position-x, $object-position-y) {
-  object-fit: $object-fit;
-  object-position: $object-position-x, $object-position-y;
+@mixin object($fit, $position-x, $position-y) {
+  object-fit: $fit;
+  object-position: $position-x, $position-y;
 }
