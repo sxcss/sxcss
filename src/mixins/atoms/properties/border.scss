@@ -52,28 +52,28 @@
   $radius: null,
 ) {
   @if $top {
-    border-top: $top $style $color;
+    border-top: $top;
   }
   
   @if $right {
-    border-right: $right $style $color;
+    border-right: $right;
   }
 
   @if $bottom {
-    border-bottom: $bottom $style $color;
+    border-bottom: $bottom;
   }
   @if $left {
-    border-left: $left $style $color;
+    border-left: $left;
   }
   
   @if $x {
-    border-left: $x $style $color;
-    border-right: $x $style $color;
+    border-left: $x;
+    border-right: $x;
   }
 
   @if $y {
-    border-top: $y $style $color;
-    border-bottom: $y $style $color;
+    border-top: $y;
+    border-bottom: $y;
   } 
 
   @if $width {
