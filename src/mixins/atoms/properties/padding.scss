@@ -34,12 +34,13 @@
   $y: null
 ) {
 
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+  
   @if $padding {
     padding: $padding;
-  }
-
-  @if $top & $right & $bottom & $left {
-    padding: $top $right $bottom $left;
   }
 
   @if $x {
@@ -50,21 +51,5 @@
   @if $y {
     padding-top: $y;
     padding-bottom: $y;
-  }
-
-  @if $top {
-    padding-top: $top;
-  }
-
-  @if $right {
-    padding-right: $right;
-  }
-
-  @if $bottom {
-    padding-bottom: $bottom;
-  }
-
-  @if $left {
-    padding-left: $left;
   }
 }
