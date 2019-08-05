@@ -41,13 +41,13 @@
   }
 
   @if $x {
-    margin-left: $margin-x;
-    margin-right: $margin-x;
+    margin-left: $x;
+    margin-right: $x;
   }
 
   @if $y {
-    margin-top: $margin-y;
-    margin-bottom: $margin-y;
+    margin-top: $y;
+    margin-bottom: $y;
   }
 
   @if $top {

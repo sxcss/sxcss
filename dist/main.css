@@ -3349,6 +3349,46 @@ input[type=number]::-webkit-outer-spin-button {
   list-style-type: lower-roman;
 }
 
+.margin--0,
+.m--0 {
+  margin: 0;
+}
+.margin--auto,
+.m--auto {
+  margin: auto;
+}
+.margin--xxs,
+.m--xxs {
+  margin: 0.5rem;
+}
+.margin--xs,
+.m--xs {
+  margin: 1rem;
+}
+.margin--sm,
+.m--sm {
+  margin: 1.5rem;
+}
+.margin--ms,
+.m--ms {
+  margin: 2rem;
+}
+.margin--md,
+.m--md {
+  margin: 3rem;
+}
+.margin--ml,
+.m--ml {
+  margin: 5rem;
+}
+.margin--lg,
+.m--lg {
+  margin: 6rem;
+}
+.margin--xl,
+.m--xl {
+  margin: 6rem;
+}
 .margin-x--0,
 .m-x--0 {
   margin-left: 0;
@@ -3757,6 +3797,42 @@ input[type=number]::-webkit-outer-spin-button {
   order: 20;
 }
 
+.margin--0,
+.m--0 {
+  margin: 0;
+}
+.margin--xxs,
+.m--xxs {
+  margin: 0.5rem;
+}
+.margin--xs,
+.m--xs {
+  margin: 1rem;
+}
+.margin--sm,
+.m--sm {
+  margin: 1.5rem;
+}
+.margin--ms,
+.m--ms {
+  margin: 2rem;
+}
+.margin--md,
+.m--md {
+  margin: 3rem;
+}
+.margin--ml,
+.m--ml {
+  margin: 5rem;
+}
+.margin--lg,
+.m--lg {
+  margin: 6rem;
+}
+.margin--xl,
+.m--xl {
+  margin: 6rem;
+}
 .margin-x--0,
 .m-x--0 {
   margin-left: 0;
