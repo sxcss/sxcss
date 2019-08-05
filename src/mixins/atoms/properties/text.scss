@@ -53,11 +53,11 @@
   $stroke: null,
   $transform: null
 ) {
-  text-align: align;
-  text-align-last: align-last;
+  text-align: $align;
+  text-align-last: $align-last;
   text-decoration: $decoration-line $decoration-type $decoration-color;
-  text-indent: indent;
-  text-overflow: overflow;
+  text-indent: $indent;
+  text-overflow: $overflow;
   text-rendering: $rendering;
   text-shadow: $shadow-offset-x $shadow-offset-y $shadow-blur $shadow-color;
   text-transform: $transform;
