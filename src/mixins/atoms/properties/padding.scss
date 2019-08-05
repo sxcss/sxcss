@@ -25,7 +25,7 @@
 }
 
 @mixin padding(
-  $padding,
+  $padding...,
   $top: null,
   $right: null,
   $bottom: null,
@@ -34,7 +34,9 @@
   $y: null
 ) {
 
-  padding: $padding;
+  @if $padding {
+    padding: $padding;
+  }
 
   @if $top & $right & $bottom & $left {
     padding: $top $right $bottom $left;
