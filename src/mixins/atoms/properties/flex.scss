@@ -25,7 +25,8 @@
   $direction: null,
   $wrap: null,
   $justify-content: null,
-  $align-items: null
+  $align-items: null,
+  $position: null
 ) {
   @include display(flex);
   @if $grow & $shrink & $basis {
