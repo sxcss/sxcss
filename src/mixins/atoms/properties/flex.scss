@@ -28,9 +28,32 @@
   $align-items: null
 ) {
   @include display(flex);
+  @if $grow & $shrink & $basis {
   flex: $grow $shrink $basis;
-  flex-direction: $direction;
-  flex-wrap: $wrap;
-  justify-content: $justify-content;
-  align-items: $align-items;
+  }
+  @if $grow {
+    flex-grow: $grow;
+  }
+  @if $shrink {
+    flex-shrink: $shrink;
+  }
+  @if $basis {
+    flex-basis: $basis;
+  }
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+  @if $justify-content {
+    justify-content: $justify-content;
+  }
+  @if $align-items {
+    align-items: $align-items;
+  }
+  @if $position {
+    justify-content: $position;
+    align-items: $position;
+  }
 }

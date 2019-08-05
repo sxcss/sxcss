@@ -10,7 +10,7 @@
   list-style-type: $list-style-type;
 }
 
-@include list($style: null, $style-position: null, $style-type: null, $style-image: null) {
+@mixin list($style: null, $style-position: null, $style-type: null, $style-image: null) {
   list-style: $style;
   list-style-position: $style-position;
   list-style-type: $style-type;
