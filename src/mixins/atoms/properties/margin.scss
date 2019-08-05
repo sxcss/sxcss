@@ -25,14 +25,44 @@
 }
 
 @mixin margin(
-  $top: 0,
-  $right: 0,
-  $bottom: 0,
-  $left: 0,
+  $margin,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null,
   $x: null,
   $y: null
 ) {
-  margin: $top $right $bottom $left;
-  @include margin-x($x);
-  @include margin-y($y);
+
+  margin: $margin;
+
+  @if $top & $right & $bottom & $left {
+    margin: $top $right $bottom $left;
+  }
+
+  @if $x {
+    margin-left: $margin-x;
+    margin-right: $margin-x;
+  }
+
+  @if $y {
+    margin-top: $margin-y;
+    margin-bottom: $margin-y;
+  }
+
+  @if $top {
+    margin-top: $top;
+  }
+
+  @if $right {
+    margin-right: $right;
+  }
+
+  @if $bottom {
+    margin-bottom: $bottom;
+  }
+
+  @if $left {
+    margin-left: $left;
+  }
 }

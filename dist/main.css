@@ -3349,46 +3349,6 @@ input[type=number]::-webkit-outer-spin-button {
   list-style-type: lower-roman;
 }
 
-.margin--0,
-.m--0 {
-  margin: 0 0 0 0;
-}
-.margin--auto,
-.m--auto {
-  margin: auto 0 0 0;
-}
-.margin--xxs,
-.m--xxs {
-  margin: 0.5rem 0 0 0;
-}
-.margin--xs,
-.m--xs {
-  margin: 1rem 0 0 0;
-}
-.margin--sm,
-.m--sm {
-  margin: 1.5rem 0 0 0;
-}
-.margin--ms,
-.m--ms {
-  margin: 2rem 0 0 0;
-}
-.margin--md,
-.m--md {
-  margin: 3rem 0 0 0;
-}
-.margin--ml,
-.m--ml {
-  margin: 5rem 0 0 0;
-}
-.margin--lg,
-.m--lg {
-  margin: 6rem 0 0 0;
-}
-.margin--xl,
-.m--xl {
-  margin: 6rem 0 0 0;
-}
 .margin-x--0,
 .m-x--0 {
   margin-left: 0;
@@ -3797,42 +3757,6 @@ input[type=number]::-webkit-outer-spin-button {
   order: 20;
 }
 
-.margin--0,
-.m--0 {
-  margin: 0 0 0 0;
-}
-.margin--xxs,
-.m--xxs {
-  margin: 0.5rem 0 0 0;
-}
-.margin--xs,
-.m--xs {
-  margin: 1rem 0 0 0;
-}
-.margin--sm,
-.m--sm {
-  margin: 1.5rem 0 0 0;
-}
-.margin--ms,
-.m--ms {
-  margin: 2rem 0 0 0;
-}
-.margin--md,
-.m--md {
-  margin: 3rem 0 0 0;
-}
-.margin--ml,
-.m--ml {
-  margin: 5rem 0 0 0;
-}
-.margin--lg,
-.m--lg {
-  margin: 6rem 0 0 0;
-}
-.margin--xl,
-.m--xl {
-  margin: 6rem 0 0 0;
-}
 .margin-x--0,
 .m-x--0 {
   margin-left: 0;

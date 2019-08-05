@@ -25,14 +25,42 @@
 }
 
 @mixin padding(
-  $top: 0,
-  $right: 0,
-  $bottom: 0,
-  $left: 0,
+  $padding: null,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null,
   $x: null,
   $y: null
 ) {
-  padding: $top $right $bottom $left;
-  @include padding-x($x);
-  @include padding-y($y);
+
+  @if $top & $right & $bottom & $left {
+    padding: $top $right $bottom $left;
+  }
+
+  @if $x {
+    padding-left: $padding-x;
+    padding-right: $padding-x;
+  }
+
+  @if $y {
+    padding-top: $padding-y;
+    padding-bottom: $padding-y;
+  }
+
+  @if $top {
+    padding-top: $top;
+  }
+
+  @if $right {
+    padding-right: $right;
+  }
+
+  @if $bottom {
+    padding-bottom: $bottom;
+  }
+
+  @if $left {
+    padding-left: $left;
+  }
 }
