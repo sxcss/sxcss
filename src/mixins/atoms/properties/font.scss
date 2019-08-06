@@ -30,7 +30,8 @@
   $size: null,
   $line-height: null,
   $family: null,
-  $letter-spacing: null
+  $letter-spacing: null,
+  $color: null
 ) {
 
   @if $size & $line-height & $weight & $family {
@@ -51,5 +52,9 @@
 
   @if $letter-spacing {
     letter-spacing: $letter-spacing;
+  }
+
+  @if $color {
+    color: $color;
   }
 }
