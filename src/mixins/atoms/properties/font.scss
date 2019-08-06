@@ -31,7 +31,10 @@
   $line-height: 1,
   $family: sans-serif
 ) {
-  font: $style $variant $weight #{$size}/#{$line-height} $family;
+
+  @if $size & $line-height & $weight {
+    font: $style $variant $weight #{$size}/#{$line-height} $family;
+  }
 
   @if $size == true & $weight == false & $line-height == false {
     font-size: $size;
