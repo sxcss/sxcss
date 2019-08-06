@@ -7,39 +7,39 @@
   &-opc {
 
     &--xxs {
-      @include hover($hover-opacity: map-get($opacity, xxs));
+      @include hover($opacity: map-get($opacity, xxs));
     }
 
     &--xs {
-      @include hover($hover-opacity: map-get($opacity, xs));
+      @include hover($opacity: map-get($opacity, xs));
     }
 
     &--sm {
-      @include hover($hover-opacity: map-get($opacity, sm));
+      @include hover($opacity: map-get($opacity, sm));
     }
 
     &--ms {
-      @include hover($hover-opacity: map-get($opacity, ms));
+      @include hover($opacity: map-get($opacity, ms));
     }
 
     &--md {
-      @include hover($hover-opacity: map-get($opacity, md));
+      @include hover($opacity: map-get($opacity, md));
     }
 
     &--ml {
-      @include hover($hover-opacity: map-get($opacity, ml));
+      @include hover($opacity: map-get($opacity, ml));
     }
 
     &--lg {
-      @include hover($hover-opacity: map-get($opacity, lg));
+      @include hover($opacity: map-get($opacity, lg));
     }
 
     &--xl {
-      @include hover($hover-opacity: map-get($opacity, xl));
+      @include hover($opacity: map-get($opacity, xl));
     }
 
     &--xxl {
-      @include hover($hover-opacity: map-get($opacity, xxl));
+      @include hover($opacity: map-get($opacity, xxl));
     }
   }
 
@@ -47,39 +47,39 @@
   &-tfm {
 
     &--xxs {
-      @include hover($hover-transform: map-deep-get($scale, proportion, xxs));
+      @include hover($transform: map-deep-get($scale, proportion, xxs));
     }
 
     &--xs {
-      @include hover($hover-transform: map-deep-get($scale, proportion, xs));
+      @include hover($transform: map-deep-get($scale, proportion, xs));
     }
 
     &--sm {
-      @include hover($hover-transform: map-deep-get($scale, proportion, sm));
+      @include hover($transform: map-deep-get($scale, proportion, sm));
     }
 
     &--ms {
-      @include hover($hover-transform: map-deep-get($scale, proportion, ms));
+      @include hover($transform: map-deep-get($scale, proportion, ms));
     }
 
     &--md {
-      @include hover($hover-transform: map-deep-get($scale, proportion, md));
+      @include hover($transform: map-deep-get($scale, proportion, md));
     }
 
     &--ml {
-      @include hover($hover-transform: map-deep-get($scale, proportion, ml));
+      @include hover($transform: map-deep-get($scale, proportion, ml));
     }
 
     &--lg {
-      @include hover($hover-transform: map-deep-get($scale, proportion, lg));
+      @include hover($transform: map-deep-get($scale, proportion, lg));
     }
 
     &--xl {
-      @include hover($hover-transform: map-deep-get($scale, proportion, xl));
+      @include hover($transform: map-deep-get($scale, proportion, xl));
     }
 
     &--xxl {
-      @include hover($hover-transform: map-deep-get($scale, proportion, xxl));
+      @include hover($transform: map-deep-get($scale, proportion, xxl));
     }
   }
 
@@ -87,39 +87,39 @@
   &-scl {
 
     &--xxs {
-      @include hover($hover-scale: map-deep-get($scale, proportion, xxs));
+      @include hover($scale: map-deep-get($scale, proportion, xxs));
     }
 
     &--xs {
-      @include hover($hover-scale: map-deep-get($scale, proportion, xs));
+      @include hover($scale: map-deep-get($scale, proportion, xs));
     }
 
     &--sm {
-      @include hover($hover-scale: map-deep-get($scale, proportion, sm));
+      @include hover($scale: map-deep-get($scale, proportion, sm));
     }
 
     &--ms {
-      @include hover($hover-scale: map-deep-get($scale, proportion, ms));
+      @include hover($scale: map-deep-get($scale, proportion, ms));
     }
 
     &--md {
-      @include hover($hover-scale: map-deep-get($scale, proportion, md));
+      @include hover($scale: map-deep-get($scale, proportion, md));
     }
 
     &--ml {
-      @include hover($hover-scale: map-deep-get($scale, proportion, ml));
+      @include hover($scale: map-deep-get($scale, proportion, ml));
     }
 
     &--lg {
-      @include hover($hover-scale: map-deep-get($scale, proportion, lg));
+      @include hover($scale: map-deep-get($scale, proportion, lg));
     }
 
     &--xl {
-      @include hover($hover-scale: map-deep-get($scale, proportion, xl));
+      @include hover($scale: map-deep-get($scale, proportion, xl));
     }
 
     &--xxl {
-      @include hover($hover-scale: map-deep-get($scale, proportion, xxl));
+      @include hover($scale: map-deep-get($scale, proportion, xxl));
     }
   }
 }

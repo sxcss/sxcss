@@ -1,8 +1,8 @@
-@mixin hover($hover-opacity: null, $hover-transform: null, $hover-scale: null, $hover-animation: null) {
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
   &:hover {
-    opacity: $hover-opacity;
-    transform: $hover-transform;
-    scale: $hover-scale;
-    animation: $hover-animation;
+    opacity: $opacity;
+    transform: $transform;
+    scale: $scale;
+    animation: $animation;
   }
 }
