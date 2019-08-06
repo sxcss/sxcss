@@ -27,12 +27,13 @@
   $weight: null,
   $variant: null,
   $stretch: null,
-  $size: inherit,
-  $line-height: 1,
-  $family: sans-serif
+  $size: null,
+  $line-height: null,
+  $family: null,
+  $letter-spacing: null
 ) {
 
-  @if $size & $line-height & $weight {
+  @if $size & $line-height & $weight & $family {
     font: $style $variant $weight #{$size}/#{$line-height} $family;
   }
 
@@ -46,5 +47,9 @@
 
   @if $line-height == true & $size == false & $weight == false {
     line-height: $line-height;
+  }
+
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing;
   }
 }
