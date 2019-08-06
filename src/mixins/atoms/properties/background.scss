@@ -42,6 +42,7 @@
 
 @mixin background(
   $image: null,
+  $position: null,
   $position-x: null,
   $position-y: null,
   $size: null,
@@ -51,14 +52,14 @@
   $clip: null,
   $color: null
 ){
-  background:
-    $image
-    $position-x
-    $position-y
-    $size
-    $repeat
-    $attatchment
-    $origin
-    $clip
-    $color
+  background-image: $image;
+  background-position: $position;
+  background-position-x: $position-x;
+  background-position-y: $position-y;
+  background-size: $size;
+  background-repeat: $repeat;
+  background-attatchment: $attatchment;
+  background-origin: $origin;
+  background-clip: $clip;
+  background-color: $color;
 }
