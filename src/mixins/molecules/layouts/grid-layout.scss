@@ -18,7 +18,7 @@
   
   /* Flexbox Fallback for older browsers */
   
-  @include display(flex);
+  @include flex;
 
   > div {
     @include flex-basis(map-get($flex-basis, $grid-cols));
