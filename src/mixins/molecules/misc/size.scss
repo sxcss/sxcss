@@ -10,8 +10,8 @@
   $max-x: null
 ) {
   @if $size {
-    x: $size;
-    y: $size;
+    width: $size;
+    height: $size;
   }
   @if $min {
     min-width: $min;
@@ -22,7 +22,7 @@
     max-height: $max;
   }
   @if $y {
-    y: $y;
+    height: $y;
   }
   @if $min-y {
     min-height: $min-y;
@@ -31,7 +31,7 @@
     max-height: $max-y;
   }
   @if $x {
-    x: $x;
+    width: $x;
   }
   @if $min-x {
     min-width: $min-x;
