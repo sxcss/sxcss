@@ -1,42 +1,42 @@
 @mixin size(
   $size: null,
-  $min-size: null,
-  $max-size: null,
-  $height: null,
-  $min-height: null,
-  $max-height: null,
-  $width: null,
-  $min-width: null,
-  $max-width: null
+  $min: null,
+  $max: null,
+  $y: null,
+  $min-y: null,
+  $max-y: null,
+  $x: null,
+  $min-x: null,
+  $max-x: null
 ) {
   @if $size {
-    width: $size;
-    height: $size;
+    x: $size;
+    y: $size;
   }
   @if $min-size {
-    max-width: $min-size;
-    max-height: $min-size;
+    min-width: $min-size;
+    min-height: $min-size;
   }
   @if $max-size {
     max-width: $max-size;
     max-height: $max-size;
   }
-  @if $height {
-    height: $height;
+  @if $y {
+    y: $y;
   }
-  @if $min-height {
-    min-height: $min-height;
+  @if $min-y {
+    min-height: $min-y;
   }
-  @if $max-height {
-    max-height: $max-height;
+  @if $max-y {
+    max-height: $max-y;
   }
-  @if $width {
-    width: $width;
+  @if $x {
+    x: $x;
   }
-  @if $min-width {
-    min-width: $min-width;
+  @if $min-x {
+    min-width: $min-x;
   }
-  @if $max-width {
-    max-width: $max-width;
+  @if $max-x {
+    max-width: $max-x;
   }
 }
