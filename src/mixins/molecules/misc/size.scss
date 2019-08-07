@@ -13,13 +13,13 @@
     x: $size;
     y: $size;
   }
-  @if $min-size {
-    min-width: $min-size;
-    min-height: $min-size;
+  @if $min {
+    min-width: $min;
+    min-height: $min;
   }
-  @if $max-size {
-    max-width: $max-size;
-    max-height: $max-size;
+  @if $max {
+    max-width: $max;
+    max-height: $max;
   }
   @if $y {
     y: $y;
