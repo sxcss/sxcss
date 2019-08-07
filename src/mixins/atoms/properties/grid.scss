@@ -58,3 +58,45 @@
 @mixin grid-gap($grid-gap) {
   grid-gap: $grid-gap;
 }
+
+@mixin  grid(
+  $template-columns: null,
+  $template-rows: null,
+  $template-areas: null,
+  $template: null,
+  $column-start: null,
+  $column-end: null,
+  $column: null,
+  $row-start: null,
+  $row-end: null,
+  $row: null,
+  $area: null,
+  $column-gap: null,
+  $row-gap: null,
+  $gap: null,
+  $justify-items: null,
+  $justify-content: null,
+  $align-items: null,
+  $align-content: null,
+  $place-items: null,
+  $place-content: null
+){
+  grid-template-columns: $template-columns;
+  grid-template-rows: $template-rows;
+  grid-template-areas: $template-areas;
+  grid-template: $template;
+  grid-column-start: $column-start;
+  grid-column-end: $column-end;
+  grid-column: $column;
+  grid-row-start: $row-start;
+  grid-row-end: $row-end;
+  grid-row: $row;
+  grid-column-gap: $column-gap;
+  grid-row-gap: $row-gap;
+  justify-content: $justify-content;
+  justify-items: $justify-items;
+  align-content: $align-content;
+  align-items: $align-items;
+  place-content: $place-content;
+  place-items: $place-items;
+}
