@@ -81,6 +81,7 @@
   $place-items: null,
   $place-content: null
 ){
+  display: grid;
   grid-template-columns: $template-columns;
   grid-template-rows: $template-rows;
   grid-template-areas: $template-areas;
