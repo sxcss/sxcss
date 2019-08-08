@@ -8,8 +8,9 @@
   overscroll-behavior: contain;
 }
 
-@mixin overflow($overflow-x: null, $overflow-y: null) {
-  overflow-x: $overflow-x;
-  overflow-y: $overflow-y;
+@mixin overflow($x: null, $y: null) {
+  overflow-x: $x;
+  overflow-y: $y;
   overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
