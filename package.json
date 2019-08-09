@@ -1,6 +1,6 @@
 {
   "name": "sxcss",
-  "version": "1.0.91",
+  "version": "1.0.92",
   "description": "🎮 Scalable, Extendable & Componentized Style Sheets 🛠",
   "main": "index.scss",
   "scripts": {
