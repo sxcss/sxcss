@@ -5,12 +5,12 @@
   transform-origin: $origin-x $origin-y;
 }
 
-@mixin transform-scaleX($scale-x, $origin-x, $origin-y) {
+@mixin transform-scaleX($scale-x, $origin-x: null, $origin-y: null) {
   @include transform-origin($origin-x, $origin-y);
   transform: scaleX($scale-x);
 }
 
-@mixin transform-scaleY($scale-y, $origin-x, $origin-y) {
+@mixin transform-scaleY($scale-y, $origin-x: null, $origin-y: null) {
   @include transform-origin($origin-x, $origin-y);
   transform: scaleY($scale-y);
 }
@@ -36,12 +36,12 @@
   transform: scale3d($value-x, $value-y, $value-z);
 }
 
-@mixin transform-skewX($skew-x, $origin-x, $origin-y) {
+@mixin transform-skewX($skew-x, $origin-x: null, $origin-y: null) {
   @include transform-origin($origin-x, $origin-y);
   transform: skewX();
 }
 
-@mixin transform-skewY($skew-y, $origin-x, $origin-y) {
+@mixin transform-skewY($skew-y: null, $origin-x: null, $origin-y: null) {
   @include transform-origin($origin-x, $origin-y);
   transform: skewY($skew-y);
 }
@@ -57,12 +57,12 @@
   transform: skewY($value-y);
 }
 
-@mixin transform-translateX($translate-x, $origin-x, $origin-y) {
+@mixin transform-translateX($translate-x, $origin-x: null, $origin-y: null) {
   @include transform-origin($origin-x, $origin-y);
   transform: translateX($translate-x);
 }
 
-@mixin transform-translateY($translate-y, $origin-x, $origin-y) {
+@mixin transform-translateY($translate-y, $origin-x: null, $origin-y: null) {
   @include transform-origin($origin-x, $origin-y);
   transform: translateY($translate-y);
 }
@@ -89,7 +89,7 @@
   transform: translate3d($value-x, $value-y, $value-z);
 }
 
-@mixin transform-rotate($translate-rotate, $origin-x, $origin-y) {
+@mixin transform-rotate($translate-rotate: null, $origin-x: null, $origin-y: null) {
   @include transform-origin($origin-x, $origin-y);
   transform: rotate($translate-rotate);
 }
@@ -104,7 +104,7 @@
   transform: rotate3d();
 }
 
-@mixin transform-perspective($transform-perspective, $origin-x, $origin-y) {
+@mixin transform-perspective($transform-perspective: null, $origin-x: null, $origin-y: null) {
   @include transform-origin($origin-x, $origin-y);
   transform: perspective($transform-perspective);
 }
