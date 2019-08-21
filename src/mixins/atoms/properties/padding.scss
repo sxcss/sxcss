@@ -31,78 +31,151 @@
   $bottom: null,
   $left: null,
   $x: null,
-  $y: null
+  $y: null,
+  $important: null
 ) {
 
-  @if $padding {
-    padding: $padding;
+  @if $top and $right and $bottom and $left and $x == null and $y == null {
+    @if $important {
+      padding: $top $right $bottom $left !important;
+    } @else {
+      padding: $top $right $bottom $left;
+    }
   }
 
   @if $top and $right == null and $bottom == null and $left == null and $x == null and $y == null {
-    padding-top: $top;
+    @if $important {
+      padding-top: $top !important;
+    } @else {
+      padding-top: $top;
+    }
   }
 
   @if $right and $bottom == null and $left == null and $top == null and $x == null and $y == null {
-    padding-right: $right;
+    @if $important {
+      padding-right: $right !important;
+    } @else {
+      padding-right: $right;
+    }
   }
 
   @if $bottom and $left == null and $top == null and $right == null and $x == null and $y == null {
-    padding-bottom: $bottom;
+    @if $important {
+      padding-bottom: $bottom !important;
+    } @else {
+      padding-bottom: $bottom;
+    }
   }
 
   @if $left and $top == null and $right == null and $bottom == null and $x == null and $y == null {
-    padding-left: $left;
+    @if $important {
+      padding-left: $left !important;
+    } @else {
+      padding-left: $left;
+    }
   }
 
-  @if $top and $bottom {
-    padding: $top 0 $bottom 0;
+  @if $top and $bottom and $right == null and $left == null {
+    @if $important {
+      padding: $top 0 $bottom 0 !important;
+    } @else {
+      padding: $top 0 $bottom 0;
+    }
   }
 
-  @if $left and $right {
-    padding: 0 $right 0 $left;
+  @if $left and $right and $top == null and $bottom == null {
+    @if $important {
+      padding: 0 $right 0 $left !important;
+    } @else {
+      padding: 0 $right 0 $left;
+    }
   }
 
   @if $top and $bottom and $right and $left == null {
-    padding: 0 $right $bottom $left;
+    @if $important {
+      padding: 0 $right $bottom $left !important;
+    } @else {
+      padding: 0 $right $bottom $left;
+    }
   }
 
   @if $top and $bottom and $right and $top == null {
-    padding: $top $right $bottom 0;
+    @if $important {
+      padding: $top $right $bottom 0 !important;
+    } @else {
+      padding: $top $right $bottom 0;
+    }
   }
 
   @if $top and $left and $right and $bottom == null {
-    padding: $top $right 0 $left;
+    @if $important {
+      padding: $top $right 0 $left !important;
+    } @else {
+      padding: $top $right 0 $left;
+    }
   }
 
   @if $top and $bottom and $left and $right == null {
-    padding: $top 0 $bottom $left;
+    @if $important {
+      padding: $top 0 $bottom $left !important;
+    } @else {
+      padding: $top 0 $bottom $left;
+    }
   }
 
   @if $x and $y == null and $top == null and $bottom == null {
-    padding: 0 $x 0 $x;
+    @if $important {
+      padding: 0 $x 0 $x !important;
+    } @else {
+      padding: 0 $x 0 $x;
+    }
   }
 
   @if $y and $x == null and $right == null and $left == null {
-    padding: $y 0 $y 0;
+    @if $important {
+      padding: $y 0 $y 0 !important;
+    } @else {
+      padding: $y 0 $y 0;
+    }
   }
 
   @if $x and $y {
-    padding: $y $x $y $x;
+    @if $important {
+      padding: $y $x $y x !important;
+    } @else {
+      padding: $y $x $y $x;
+    }
   }
 
   @if $x and $top and $bottom == null {
-    padding: $top $x 0 $x;
+    @if $important {
+      padding: $top $x 0 $x !important;
+    } @else {
+      padding: $top $x 0 $x;
+    }
   }
 
   @if $x and $bottom and $top == null {
-    padding: 0 $x $bottom $x;
+    @if $important {
+      padding: 0 $x $bottom $x !important;
+    } @else {
+      padding: 0 $x $bottom $x;
+    }
   }
 
   @if $y and $right and $left == null {
-    padding: $y $right $y 0;
+    @if $important {
+      padding: $y $right $y 0 !important;
+    } @else {
+      padding: $y $right $y 0;
+    }
   }
 
   @if $y and $left and $right == null {
-    padding: $y 0 $y $left;
+    @if $important {
+      padding: $y 0 $y $left !important;
+    } @else {
+      padding: $y 0 $y $left;
+    }
   }
 }
