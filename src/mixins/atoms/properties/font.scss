@@ -34,20 +34,34 @@
   $color: null
 ) {
 
-  @if $size & $line-height & $weight & $family {
+  @if $size and $line-height and $weight and $family {
     font: $style $variant $weight #{$size}/#{$line-height} $family;
   }
 
-  @if $size == true & $weight == false & $line-height == false {
+  @if $size and $weight == null and $line-height == null {
     font-size: $size;
   }
 
-  @if $weight == true & $size == false & $line-height == false {
+  @if $weight and $size == null and $line-height == null {
     font-weight: $weight;
   }
 
-  @if $line-height == true & $size == false & $weight == false {
+  @if $size and $weight and $line-height == null {
+    font-size: $size;
+    font-weight: $weight;
+  }
+
+  @if $line-height and $size == null and $weight == null {
     line-height: $line-height;
+  }
+
+
+  @if $size and $weight and $line-height {
+    font: $weight #{$size}/#{$line-height} sans-serif;
+  }
+
+  @if $size and $weight and $line-height and $family {
+    font: $weight #{$size}/#{$line-height} $family;
   }
 
   @if $letter-spacing {

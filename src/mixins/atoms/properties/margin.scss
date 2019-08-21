@@ -33,23 +33,75 @@
   $x: null,
   $y: null
 ) {
-
-  margin-top: $top;
-  margin-right: $right;
-  margin-bottom: $bottom;
-  margin-left: $left;
-  
-  @if $margin {
-    margin: $margin;
+  @if $top and $right == null and $bottom == null and $left == null {
+    margin-top: $top;
   }
 
-  @if $x {
-    margin-left: $x;
-    margin-right: $x;
+  @if $top and $right == null and $bottom == null and $left == null and $x == null and $y == null {
+    margin-top: $top;
   }
 
-  @if $y {
-    margin-top: $y;
-    margin-bottom: $y;
+  @if $right and $bottom == null and $left == null and $top == null and $x == null and $y == null {
+    margin-right: $right;
+  }
+
+  @if $bottom and $left == null and $top == null and $right == null and $x == null and $y == null {
+    margin-bottom: $bottom;
+  }
+
+  @if $left and $top == null and $right == null and $bottom == null and $x == null and $y == null {
+    margin-left: $left;
+  }
+
+  @if $top and $bottom {
+    margin: $top 0 $bottom 0;
+  }
+
+  @if $left and $right {
+    margin: 0 $right 0 $left;
+  }
+
+  @if $top and $bottom and $right and $left == null {
+    margin: 0 $right $bottom $left;
+  }
+
+  @if $top and $bottom and $right and $top == null {
+    margin: $top $right $bottom 0;
+  }
+
+  @if $top and $left and $right and $bottom == null {
+    margin: $top $right 0 $left;
+  }
+
+  @if $top and $bottom and $left and $right == null {
+    margin: $top 0 $bottom $left;
+  }
+
+  @if $x and $y == null and $top == null and $bottom == null {
+    margin: 0 $x 0 $x;
+  }
+
+  @if $y and $x == null and $right == null and $left == null {
+    margin: $y 0 $y 0;
+  }
+
+  @if $x and $y {
+    margin: $y $x $y $x;
+  }
+
+  @if $x and $top and $bottom == null {
+    margin: $top $x 0 $x;
+  }
+
+  @if $x and $bottom and $top == null {
+    margin: 0 $x $bottom $x;
+  }
+
+  @if $y and $right and $left == null {
+    margin: $y $right $y 0;
+  }
+
+  @if $y and $left and $right == null {
+    margin: $y 0 $y $left;
   }
 }

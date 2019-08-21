@@ -34,22 +34,75 @@
   $y: null
 ) {
 
-  padding-top: $top;
-  padding-right: $right;
-  padding-bottom: $bottom;
-  padding-left: $left;
-  
   @if $padding {
     padding: $padding;
   }
 
-  @if $x {
-    padding-left: $x;
-    padding-right: $x;
+  @if $top and $right == null and $bottom == null and $left == null and $x == null and $y == null {
+    padding-top: $top;
   }
 
-  @if $y {
-    padding-top: $y;
-    padding-bottom: $y;
+  @if $right and $bottom == null and $left == null and $top == null and $x == null and $y == null {
+    padding-right: $right;
+  }
+
+  @if $bottom and $left == null and $top == null and $right == null and $x == null and $y == null {
+    padding-bottom: $bottom;
+  }
+
+  @if $left and $top == null and $right == null and $bottom == null and $x == null and $y == null {
+    padding-left: $left;
+  }
+
+  @if $top and $bottom {
+    padding: $top 0 $bottom 0;
+  }
+
+  @if $left and $right {
+    padding: 0 $right 0 $left;
+  }
+
+  @if $top and $bottom and $right and $left == null {
+    padding: 0 $right $bottom $left;
+  }
+
+  @if $top and $bottom and $right and $top == null {
+    padding: $top $right $bottom 0;
+  }
+
+  @if $top and $left and $right and $bottom == null {
+    padding: $top $right 0 $left;
+  }
+
+  @if $top and $bottom and $left and $right == null {
+    padding: $top 0 $bottom $left;
+  }
+
+  @if $x and $y == null and $top == null and $bottom == null {
+    padding: 0 $x 0 $x;
+  }
+
+  @if $y and $x == null and $right == null and $left == null {
+    padding: $y 0 $y 0;
+  }
+
+  @if $x and $y {
+    padding: $y $x $y $x;
+  }
+
+  @if $x and $top and $bottom == null {
+    padding: $top $x 0 $x;
+  }
+
+  @if $x and $bottom and $top == null {
+    padding: 0 $x $bottom $x;
+  }
+
+  @if $y and $right and $left == null {
+    padding: $y $right $y 0;
+  }
+
+  @if $y and $left and $right == null {
+    padding: $y 0 $y $left;
   }
 }
