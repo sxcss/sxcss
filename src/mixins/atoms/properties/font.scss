@@ -55,6 +55,9 @@
     line-height: $line-height;
   }
 
+  @if $size and $line-height and $weight == null {
+    font: 400 #{$size}/#{$line-height} sans-serif;
+  }
 
   @if $size and $weight and $line-height {
     font: $weight #{$size}/#{$line-height} sans-serif;
