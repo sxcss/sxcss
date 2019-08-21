@@ -83,9 +83,19 @@
     }
   }
 
-  @if $size and $weight and $line-height {
+  @if $size and $weight and $family and $line-height == null {
+    @if $important {
+      font: $weight #{$size}/1 $family !important;
+    } @else {
+      font: $weight #{$size}/1 $family;
+    }
+  }
+
+  @if $size and $weight and $line-height and $family == null {
     @if $important {
       font: $weight #{$size}/#{$line-height} sans-serif !important;
+    } @else {
+      font: $weight #{$size}/#{$line-height};
     }
   }
 
