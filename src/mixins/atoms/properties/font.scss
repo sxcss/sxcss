@@ -31,47 +31,93 @@
   $line-height: null,
   $family: null,
   $letter-spacing: null,
-  $color: null
+  $color: null,
+  $important: null
 ) {
 
   @if $size and $line-height and $weight and $family {
-    font: $style $variant $weight #{$size}/#{$line-height} $family;
+    @if $important {
+      font: $style $variant $weight #{$size}/#{$line-height} $family !important;
+    } @else {
+      font: $style $variant $weight #{$size}/#{$line-height} $family;
+    }
   }
 
   @if $size and $weight == null and $line-height == null {
-    font-size: $size;
+    @if $important {
+      font-size: $size !important;
+    } @else {
+      font-size: $size;
+    }
   }
 
   @if $weight and $size == null and $line-height == null {
-    font-weight: $weight;
+    @if $important {
+      font-weight: $weight !important;
+    } @else {
+      font-weight: $weight;
+    }
   }
 
   @if $size and $weight and $line-height == null {
-    font-size: $size;
-    font-weight: $weight;
+    @if $important {
+      font: 400 #{$size}/1 sans-serif !important;
+    } @else {
+      font: 400 #{$size}/1 sans-serif;
+    }
   }
 
   @if $line-height and $size == null and $weight == null {
-    line-height: $line-height;
+    @if $important {
+      line-height: $line-height !important;
+    } @else {
+      line-height: $line-height;
+    }
   }
 
   @if $size and $line-height and $weight == null {
-    font: 400 #{$size}/#{$line-height} sans-serif;
+    @if $important {
+      font: 400 #{$size}/#{$line-height} sans-serif !important;
+    } @else {
+      font: 400 #{$size}/#{$line-height} sans-serif;
+    }
   }
 
   @if $size and $weight and $line-height {
-    font: $weight #{$size}/#{$line-height} sans-serif;
+    @if $important {
+      font: $weight #{$size}/#{$line-height} sans-serif !important;
+    }
   }
 
   @if $size and $weight and $line-height and $family {
-    font: $weight #{$size}/#{$line-height} $family;
+    @if $important {
+      font: $weight #{$size}/#{$line-height} $family !important;
+    } @else {
+      font: $weight #{$size}/#{$line-height} $family;
+    }
+  }
+
+  @if $size and $weight and $line-height {
+    @if $important {
+      font: $weight #{$size}/#{$line-height} sans-serif !important;
+    } @else {
+      font: $weight #{$size}/#{$line-height} sans-serif;
+    }
   }
 
   @if $letter-spacing {
-    letter-spacing: $letter-spacing;
+    @if $important {
+      letter-spacing: $letter-spacing !important;
+    } @else {
+      letter-spacing: $letter-spacing;
+    }
   }
 
   @if $color {
-    color: $color;
+    @if $important {
+      color: $color !important;
+    } @else {
+      color: $color;
+    }
   }
 }
