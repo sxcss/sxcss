@@ -35,13 +35,7 @@
   $important: null
 ) {
 
-  @if $top and $right and $bottom and $left and $x == null and $y == null {
-    @if $important {
-      padding: $top $right $bottom $left !important;
-    } @else {
-      padding: $top $right $bottom $left;
-    }
-  }
+  // Single Property
 
   @if $top and $right == null and $bottom == null and $left == null and $x == null and $y == null {
     @if $important {
@@ -75,11 +69,29 @@
     }
   }
 
+  // Two Properties
+
+  @if $top and $right and $bottom == null and $left == null {
+    @if $important {
+      padding: $top $right 0 0!important;
+    } @else {
+      padding: $top $right 0 0;
+    }
+  }
+
   @if $top and $bottom and $right == null and $left == null {
     @if $important {
       padding: $top 0 $bottom 0 !important;
     } @else {
       padding: $top 0 $bottom 0;
+    }
+  }
+
+  @if $top and $left and $right == null and $left == null {
+    @if $important {
+      padding: $top 0 0 $left !important;
+    } @else {
+      padding: $top 0 0 $left;
     }
   }
 
@@ -91,6 +103,24 @@
     }
   }
 
+  @if $left and $bottom and $top == null and $right == null {
+    @if $important {
+      padding: 0 0 $bottom $left !important;
+    } @else {
+      padding: 0 0 $bottom $left;
+    }
+  }
+
+  @if $right and $bottom and $top == null and $right == null {
+    @if $important {
+      padding: 0 $right $bottom 0 !important;
+    } @else {
+      padding: 0 $right $bottom 0;
+    }
+  }
+
+  // Three Properties
+
   @if $top and $bottom and $right and $left == null {
     @if $important {
       padding: 0 $right $bottom $left !important;
@@ -99,11 +129,11 @@
     }
   }
 
-  @if $top and $bottom and $right and $top == null {
+  @if $top and $bottom and $left and $right == null {
     @if $important {
-      padding: $top $right $bottom 0 !important;
+      padding: $top 0 $bottom $left !important;
     } @else {
-      padding: $top $right $bottom 0;
+      padding: $top 0 $bottom $left;
     }
   }
 
@@ -115,13 +145,25 @@
     }
   }
 
-  @if $top and $bottom and $left and $right == null {
+  @if $bottom and $left and $right and $top == null {
     @if $important {
-      padding: $top 0 $bottom $left !important;
+      padding: 0 $right $bottom $left !important;
     } @else {
-      padding: $top 0 $bottom $left;
+      padding: 0 $right $bottom $left;
     }
   }
+
+  // Four Properties
+
+  @if $top and $right and $bottom and $left and $x == null and $y == null {
+    @if $important {
+      padding: $top $right $bottom $left !important;
+    } @else {
+      padding: $top $right $bottom $left;
+    }
+  }
+
+  // Axis Properties
 
   @if $x and $y == null and $top == null and $bottom == null {
     @if $important {
