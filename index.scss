@@ -250,6 +250,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+@function _size($number, $unit) {
+  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
+  $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
+  $index: index($strings, $unit);
+  @if type-of($index) != 'number' {
+	@warn 'Unknown unit `#{$unit}`.';
+	@return false;
+  }
+  @return $number * nth($units, $index);
+}
 
 @function to-number($string) {
   // Matrices
@@ -287,16 +297,6 @@ input[type=number]::-webkit-outer-spin-button {
 	}
   }
   @return if($minus, $result * -1, $result);
-}
-@function _size($number, $unit) {
-  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
-  $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
-  $index: index($strings, $unit);
-  @if type-of($index) != 'number' {
-	@warn 'Unknown unit `#{$unit}`.';
-	@return false;
-  }
-  @return $number * nth($units, $index);
 }
 $scale: (
   percent: (
@@ -536,20 +536,6 @@ $z-index: (
 // TBD
 // TBD
 // TBD
-
-
-
-
-
-
-
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 // TBD
 @mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
   &:hover {
@@ -579,6 +565,20 @@ $z-index: (
 // TBD
 // TBD
 // TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+
+
+
+
+
+
+
 // TBD
 // TBD
 // TBD
@@ -2648,49 +2648,6 @@ $max: null
   }
 }
 
-// TBD
-
-@mixin grid-layout(
-  $grid-template-columns: null,
-  $grid-cols: 1,
-  $grid-cols-fr: 1fr,
-  $grid-cols-gap: null,
-  $grid-template-rows: null,
-  $grid-rows: auto,
-  $grid-rows-fr: auto,
-  $grid-rows-gap: null,
-  $grid-gap: null,
-  $justify-items: null,
-  $justify-content: null,
-  $align-items: null,
-  $align-content: null
-) {
-  /* Flexbox Fallback for older browsers */
-  @include flex;
-  > div {
-	@include flex-basis(map-get($flex-basis, $grid-cols));
-  }
-  /* CSS Grid-based layout system */
-  width: $fghjklkj;
-  @include display(grid);
-  @include grid-template-rows(repeat($grid-rows, $grid-rows-fr));
-  @include grid-template-rows($grid-template-rows);
-  @include grid-row-gap($grid-rows-gap);
-  @include grid-template-columns(repeat($grid-cols, $grid-cols-fr));
-  @include grid-template-columns($grid-template-columns);
-  @include grid-column-gap($grid-cols-gap);
-  @include grid-gap($grid-gap);
-  @include justify-content($justify-content);
-  @include justify-items($justify-items);
-  @include align-content($align-content);
-  @include align-items($align-items);
-  @if $grid-cols == 1 {
-	@include flex-direction(column);
-  }
-}
-
-
-
 @mixin hide {
   display: none !important;
   opacity: 0 !important;
@@ -2740,3 +2697,45 @@ $max: null
 	max-width: $max-x;
   }
 }
+// TBD
+
+@mixin grid-layout(
+  $grid-template-columns: null,
+  $grid-cols: 1,
+  $grid-cols-fr: 1fr,
+  $grid-cols-gap: null,
+  $grid-template-rows: null,
+  $grid-rows: auto,
+  $grid-rows-fr: auto,
+  $grid-rows-gap: null,
+  $grid-gap: null,
+  $justify-items: null,
+  $justify-content: null,
+  $align-items: null,
+  $align-content: null
+) {
+  /* Flexbox Fallback for older browsers */
+  @include flex;
+  > div {
+	@include flex-basis(map-get($flex-basis, $grid-cols));
+  }
+  /* CSS Grid-based layout system */
+  @include display(grid);
+  @include grid-template-rows(repeat($grid-rows, $grid-rows-fr));
+  @include grid-template-rows($grid-template-rows);
+  @include grid-row-gap($grid-rows-gap);
+  @include grid-template-columns(repeat($grid-cols, $grid-cols-fr));
+  @include grid-template-columns($grid-template-columns);
+  @include grid-column-gap($grid-cols-gap);
+  @include grid-gap($grid-gap);
+  @include justify-content($justify-content);
+  @include justify-items($justify-items);
+  @include align-content($align-content);
+  @include align-items($align-items);
+  @if $grid-cols == 1 {
+	@include flex-direction(column);
+  }
+}
+
+
+
