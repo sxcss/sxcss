@@ -13,6 +13,10 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
+    "gulp-remove-empty-lines": "^0.1.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-whitespace": "^0.1.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0"
   },

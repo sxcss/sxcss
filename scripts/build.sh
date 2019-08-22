@@ -1,4 +1,8 @@
 # /bin/bash
-
-sass  --update --stop-on-error index.scss:dist/main.css;
-sass --update --stop-on-error --style=compressed  index.scss:dist/main.min.css;
+sass --stop-on-error   dist/test.scss:dist/test.css;
+gulp reset;
+gulp functions;
+gulp variables;
+gulp mixins;
+gulp index;
+perl -i -pe"s/\@import .*;//g" index.scss

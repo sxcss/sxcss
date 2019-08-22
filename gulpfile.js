@@ -1,26 +1,51 @@
 gulp = require("gulp");
 concat = require("gulp-concat");
+// strip = require('gulp-strip-comments')
+stripCssComments = require("gulp-strip-css-comments");
+whitespace = require("gulp-whitespace");
+removeEmptyLines = require('gulp-remove-empty-lines');
 
-// the default task
-gulp.task("a", function() {
+gulp.task("reset", function() {
+  return gulp
+    .src("./src/reset.scss")
+    .pipe(concat("a_reset.scss"))
+    .pipe(gulp.dest("./build/"))
+});
+
+gulp.task("functions", function() {
+  return gulp
+    .src("./src/functions/**/*.scss")
+    .pipe(concat("b_functions.scss"))
+    .pipe(gulp.dest("./build/"))
+});
+
+gulp.task("variables", function() {
   return gulp
     .src("./src/variables/**/*.scss")
-    .pipe(concat("vars.scss"))
-    .pipe(gulp.dest("./dist/"))
+    .pipe(concat("c_variables.scss"))
+    .pipe(gulp.dest("./build/"))
 });
 
-gulp.task("b", function() {
+gulp.task("mixins", function() {
   return gulp
-    .src("./src/**/*.scss")
-    .pipe(concat("novars.scss"))
-    .pipe(gulp.dest("./dist/"))
+    .src("./src/mixins/**/*.scss")
+    .pipe(concat("d_mixins.scss"))
+    .pipe(gulp.dest("./build/"))
 });
 
 
-gulp.task("c", function() {
+gulp.task("index", function() {
   return gulp
-    .src("./dist/*vars.scss")
-    .pipe(concat("all.scss"))
-    .pipe(gulp.dest("./dist/"));
+    .src("./build/*.scss")
+    .pipe(concat("index.scss"))
+    .pipe(stripCssComments())
+    .pipe(removeEmptyLines({
+      removeComments: true
+    }))
+    .pipe(whitespace({
+      spacesToTabs: 4,
+      removeTrailing: true
+    }))
+    .pipe(gulp.dest("./"));
 });
 
