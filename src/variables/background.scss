@@ -1,65 +1,65 @@
-@import 'color';
+@import "color";
 
 $background: (
   attatchment: (
-    'scroll',
-    'fixed',
-    'local'
+    "scroll",
+    "fixed",
+    "local"
   ),
   clip: (
-    'border-box',
-    'padding-box',
-    'content',
-    'inherit'
+    "border-box",
+    "padding-box",
+    "content",
+    "inherit"
   ),
   blend-mode: (
-    'initial',
-    'inherit',
-    'unset',
-    'normal',
-    'multiply',
-    'screen',
-    'overlay',
-    'darken',
-    'lighten',
-    'color-dodge',
-    'color-burn',
-    'hard-light',
-    'soft-light',
-    'difference',
-    'exclusion',
-    'hue',
-    'saturation',
-    'color',
-    'luminosity'
+    "initial",
+    "inherit",
+    "unset",
+    "normal",
+    "multiply",
+    "screen",
+    "overlay",
+    "darken",
+    "lighten",
+    "color-dodge",
+    "color-burn",
+    "hard-light",
+    "soft-light",
+    "difference",
+    "exclusion",
+    "hue",
+    "saturation",
+    "color",
+    "luminosity"
   ),
   origin: (
-    'border-box',
-    'padding-box',
-    'content',
-    'inherit'
+    "border-box",
+    "padding-box",
+    "content",
+    "inherit"
   ),
   repeat: (
-    'repeat',
-    'repat-x',
-    'repeat-y',
-    'no-repeat',
-    'space',
-    'round'
+    "repeat",
+    "repat-x",
+    "repeat-y",
+    "no-repeat",
+    "space",
+    "round"
   ),
   size: (
-    'contain',
-    'cover'
+    "contain",
+    "cover"
   ),
   position-x: (
-    'left',
-    'center',
-    'right'
+    "left",
+    "center",
+    "right"
   ),
   position-y: (
-    'top',
-    'center',
-    'bottom'
+    "top",
+    "center",
+    "bottom"
   ),
   color: $color
 );

@@ -1,5 +1,3 @@
-@import 'color';
-
 $border: (
   width: (
     thin,
@@ -10,13 +8,11 @@ $border: (
     none,
     solid,
     inset,
-    outset
-    hidden,
+    outset hidden,
     dashed,
     dotted,
     double,
     groove,
     ridge
-  )
-  // color: $color
+  ) // color: $color
 );

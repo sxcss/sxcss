@@ -1,5 +1,3 @@
-@import '../../../variables/index.scss';
-
 @mixin background-image($background-image) {
   background-image: $background-image;
 }
@@ -12,7 +10,11 @@
   background-position-y: $background-position-y;
 }
 
-@mixin background-position($background-position, $background-position-x: $background-position, $background-position-y: $background-position) {
+@mixin background-position(
+  $background-position,
+  $background-position-x: $background-position,
+  $background-position-y: $background-position
+) {
   @if $background-position {
     background-position: $background-position;
   } @else {
@@ -51,7 +53,7 @@
   $origin: null,
   $clip: null,
   $color: null
-){
+) {
   background-image: $image;
   background-position: $position;
   background-position-x: $position-x;
