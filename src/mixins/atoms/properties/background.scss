@@ -43,23 +43,520 @@
 @mixin background(
   $image: null,
   $position: null,
-  $position-x: null,
   $position-y: null,
+  $position-x: null,
   $size: null,
+  $size-y: null,
+  $size-x: null,
   $repeat: null,
-  $attatchment: null,
+  $attachment: null,
   $origin: null,
   $clip: null,
   $color: null
 ){
-  background-image: $image;
-  background-position: $position;
-  background-position-x: $position-x;
-  background-position-y: $position-y;
-  background-size: $size;
-  background-repeat: $repeat;
-  background-attatchment: $attatchment;
-  background-origin: $origin;
-  background-clip: $clip;
-  background-color: $color;
+
+  // Image
+
+  @if $image
+  and $color == null
+  and $position == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $repeat == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background: $image;
+  }
+
+  // Color
+
+  @if $color
+  and $image == null
+  and $position == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $repeat == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background: $color;
+  }
+
+  // Repeat
+
+  @if $repeat
+  and $image == null
+  and $color == null
+  and $position == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background-repeat: $repeat;
+  }
+
+  // Attachment
+
+  @if $attachment
+  and $image == null
+  and $color == null
+  and $position == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $repeat == null
+  and $clip == null
+  and $origin == null {
+    background-attachment: $attachment;
+  }
+
+  // Origin
+
+  @if $origin
+  and $image == null
+  and $color == null
+  and $position == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $repeat == null
+  and $clip == null
+  and $attachment == null {
+    background-origin: $origin;
+  }
+
+  // Clip
+
+  @if $clip
+  and $image == null
+  and $color == null
+  and $position == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $repeat == null
+  and $origin == null 
+  and $attachment == null {
+    background-clip: $clip;
+  }
+
+  // Positions
+
+  @if $position
+  and $image == null
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $repeat == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background-position: $position;
+  }
+
+  @if $position-y
+  and $image == null
+  and $color == null
+  and $position-x == null
+  and $position == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $repeat == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background-position-y: $position;
+  }
+
+  @if $position-x
+  and $image == null
+  and $color == null
+  and $position == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $repeat == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background-position-x: $position;
+  }
+
+  @if $position-y and $position-x
+  and $image == null
+  and $color == null
+  and $position == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $repeat == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background-position: $position-y $position-x;
+  }
+
+  // Sizes
+
+  @if $size
+  and $image == null
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size-y == null
+  and $size-x == null
+  and $repeat == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background-size: $size;
+  }
+
+  @if $size-y and $size-x
+  and $image == null
+  and $color == null
+  and $position == null
+  and $size == null
+  and $repeat == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background-size: $size-y $size-x;
+  }
+
+  // Image and Repeat
+
+  @if $image and $repeat
+  and $color == null
+  and $position == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background: $image $repeat;
+  }
+
+  // Image, Repeat and Positions
+
+  @if $image and $repeat and $position
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background: $image $position $repeat;
+  }
+
+  @if $image and $repeat and $position-y and $position-x
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $size-y == null
+  and $size-x == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background: $image $position-y $position-x $repeat;
+  }
+
+  // Image, Repeat, Positions and Sizes
+
+  @if $image and $repeat and $position and $size
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size-y == null
+  and $size-x == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background: $image #{$position} / #{$size} $repeat;
+  }
+
+  @if $image and $repeat and $position and $size-y and $size-x
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background: $image #{$position} / #{$size-y $size-x} $repeat;
+  }
+
+  @if $image and $repeat and $position-y and $position-x and $size
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size-y == null
+  and $size-x == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background: $image #{$position-y $position-x} / #{$size} $repeat;
+  }
+
+  @if $image and $repeat and $position-y and $position-x and $size-y and $size-x
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $clip == null
+  and $attachment == null
+  and $origin == null {
+    background: $image #{$position-y $position-x} / #{$size-y $size-x} $repeat;
+  }
+
+  // Image, Repeat, Positions, Sizes and Attachment
+
+  @if $image and $repeat and $position and $size and $attachment
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size-y == null
+  and $size-x == null
+  and $clip == null
+  and $origin == null {
+    background: $image #{$position} / #{$size} $repeat $attachment;
+  }
+
+  @if $image and $repeat and $position and $size-y and $size-x and $attachment
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $clip == null
+  and $origin == null {
+    background: $image #{$position} / #{$size-y $size-x} $repeat $attachment;
+  }
+
+  @if $image and $repeat and $position-y and $position-x and $size and $attachment
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size-y == null
+  and $size-x == null
+  and $clip == null
+  and $origin == null {
+    background: $image #{$position-y $position-x} / #{$size} $repeat $attachment;
+  }
+
+  @if $image and $repeat and $position-y and $position-x and $size-y and $size-x and $attachment
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $clip == null
+  and $origin == null {
+    background: $image #{$position-y $position-x} / #{$size-y $size-x} $repeat $attachment;
+  }
+
+  // Image, Repeat, Positions, Sizes, Attachment and Origin
+
+  @if $image and $repeat and $position and $size and $attachment and $origin
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size-y == null
+  and $size-x == null
+  and $clip == null {
+    background: $image #{$position} / #{$size} $repeat $attachment $origin;
+  }
+
+  @if $image and $repeat and $position and $size-y and $size-x and $attachment and $origin
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $clip == null {
+    background: $image #{$position} / #{$size-y $size-x} $repeat $attachment $origin;
+  }
+
+  @if $image and $repeat and $position-y and $position-x and $size and $attachment and $origin
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size-y == null
+  and $size-x == null
+  and $clip == null {
+    background: $image #{$position-y $position-x} / #{$size} $repeat $attachment $origin;
+  }
+
+  @if $image and $repeat and $position-y and $position-x and $size-y and $size-x and $attachment and $origin
+  and $color == null
+  and $position-x == null
+  and $position-y == null
+  and $size == null
+  and $clip == null {
+    background: $image #{$position-y $position-x} / #{$size-y $size-x} $repeat $attachment $origin;
+  }
+
+    // Image, Repeat, Positions, Sizes, Attachment and Clip
+
+    @if $image and $repeat and $position and $size and $attachment and $clip
+    and $color == null
+    and $position-x == null
+    and $position-y == null
+    and $size-y == null
+    and $size-x == null
+    and $origin == null {
+      background: $image #{$position} / #{$size} $repeat $attachment $clip;
+    }
+  
+    @if $image and $repeat and $position and $size-y and $size-x and $attachment and $clip
+    and $color == null
+    and $position-x == null
+    and $position-y == null
+    and $size == null
+    and $origin == null {
+      background: $image #{$position} / #{$size-y $size-x} $repeat $attachment $clip;
+    }
+  
+    @if $image and $repeat and $position-y and $position-x and $size and $attachment and $clip
+    and $color == null
+    and $position-x == null
+    and $position-y == null
+    and $size-y == null
+    and $size-x == null
+    and $origin == null {
+      background: $image #{$position-y $position-x} / #{$size} $repeat $attachment $clip;
+    }
+  
+    @if $image and $repeat and $position-y and $position-x and $size-y and $size-x and $attachment and $clip
+    and $color == null
+    and $position-x == null
+    and $position-y == null
+    and $size == null
+    and $origin == null {
+      background: $image #{$position-y $position-x} / #{$size-y $size-x} $repeat $attachment $clip;
+    }
+
+    // Image, Repeat, Positions, Sizes, Attachment, Origin and Clip
+
+    @if $image and $repeat and $position and $size and $attachment and $origin and $clip
+    and $color == null
+    and $position-x == null
+    and $position-y == null
+    and $size-y == null
+    and $size-x == null {
+      background: $image #{$position} / #{$size} $repeat $attachment $origin $clip;
+    }
+  
+    @if $image and $repeat and $position and $size-y and $size-x and $attachment and $origin and $clip
+    and $color == null
+    and $position-x == null
+    and $position-y == null
+    and $size == null {
+      background: $image #{$position} / #{$size-y $size-x} $repeat $attachment $origin $clip;
+    }
+  
+    @if $image and $repeat and $position-y and $position-x and $size and $attachment and $origin and $clip
+    and $color == null
+    and $position-x == null
+    and $position-y == null
+    and $size-y == null
+    and $size-x == null {
+      background: $image #{$position-y $position-x} / #{$size} $repeat $attachment $origin $clip;
+    }
+  
+    @if $image and $repeat and $position-y and $position-x and $size-y and $size-x and $attachment and $origin and $clip
+    and $color == null
+    and $position-x == null
+    and $position-y == null
+    and $size == null {
+      background: $image #{$position-y $position-x} / #{$size-y $size-x} $repeat $attachment $origin $clip;
+    }
+  
+    // Complete Property
+
+    @if $image 
+    and $color
+    and $position
+    and $position-x == null
+    and $position-y == null
+    and $size
+    and $size-y == null
+    and $size-x == null
+    and $repeat
+    and $clip
+    and $attachment
+    and $origin {
+      background: $image #{$position} / #{$size} $repeat $attachment $origin $clip $color;
+    }
+
+    @if $image 
+    and $color
+    and $position == null
+    and $position-x
+    and $position-y
+    and $size
+    and $size-y == null
+    and $size-x == null
+    and $repeat
+    and $clip
+    and $attachment
+    and $origin {
+      background: $image #{$position-y $position-x} / #{$size} $repeat $attachment $origin $clip $color;
+    }
+
+    @if $image 
+    and $color
+    and $position
+    and $position-x == null
+    and $position-y == null
+    and $size == null
+    and $size-y
+    and $size-x
+    and $repeat
+    and $clip
+    and $attachment
+    and $origin {
+      background: $image #{$position} / #{$size-y $size-x} $repeat $attachment $origin $clip $color;
+    }
+
+    @if $image 
+    and $color
+    and $position == null
+    and $position-x
+    and $position-y
+    and $size == null
+    and $size-y
+    and $size-x
+    and $repeat
+    and $clip
+    and $attachment
+    and $origin {
+      background: $image #{$position-y $position-x} / #{$size-y $size-x} $repeat $attachment $origin $clip $color;
+    }
 }
