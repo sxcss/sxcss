@@ -1,9 +1,0 @@
-@import '../../../mixins/atoms/properties/order.scss';
-
-.order {
-  @for $i from 1 through 20 {
-    &--#{$i} {
-      @include order($i);
-    }
-  }
-}

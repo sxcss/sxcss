@@ -1,4 +1,4 @@
-@import 'scale.scss';
+@import 'a_scale.scss';
 @import '../functions/map/map-deep-get';
 
 $flex-basis: (
@@ -14,4 +14,4 @@ $flex-basis: (
   10: calc(10% - 5 * #{map-deep-get($scale, proportion, sm)} / 10),
   11: calc(9.0909% - 5.5 * #{map-deep-get($scale, proportion, sm)} / 11),
   12: calc(8.3333% - 6 * #{map-deep-get($scale, proportion, sm)} / 12),
-)
+);

@@ -25,7 +25,7 @@
   }
 
   /* CSS Grid-based layout system */
-  
+  width: $fghjklkj;
   @include display(grid);
   @include grid-template-rows(repeat($grid-rows, $grid-rows-fr));
   @include grid-template-rows($grid-template-rows);
