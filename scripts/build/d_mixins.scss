@@ -60,22 +60,6 @@
 
 // TBD
 
-@import 'default';
-@import 'empty';
-@import 'focus-within';
-@import 'range';
-@import 'target';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
 
 // TBD
 
@@ -122,190 +106,17 @@
 
 // TBD
 
-@import 'keyframes.scss';
-@import 'media.scss';
-
-
-// This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
-// It was refactored to fit the Fantastic CSS sizing convention
-
-@mixin media($conditions...) {
-  @for $i from 1 through length($conditions) {
-    $conditions: set-nth($conditions, $i, parse-expression(nth($conditions, $i)));
-  }
-
-  $branches: get-query-branches($conditions);
-  $query: '';
-
-  @each $branch in $branches {
-    @if (str-length($query) != 0) {
-      $query: $query + ', ';
-    }
-
-    $query: $query + $branch;
-  }
-
-  @media #{$query} {
-    @content;
-  }
-}
-
-@function get-query-branches($resolutions) {
-  $result: '';
-  $has-groups: false;
-
-  @each $expression in $resolutions {
-    @if (str-length($result) != 0) {
-      $result: $result + ' and ';
-    }
-
-    @if (type-of($expression) == 'string') {
-      $result: $result + $expression;
-    } @else if (type-of($expression) == 'list') {
-      $result: $result + nth($expression, 1);
-      $has-groups: true;
-    } @else {
-      @warn '#{$expression} is not a valid expression.';
-    }
-  }
-
-  @if $has-groups {
-    @each $expression in $resolutions {
-      @if (type-of($expression) == 'list') {
-        $first: nth($expression, 1);
-
-        @each $member in $expression {
-          @if ($member != $first) {
-            @each $partial in $result {
-              $result: join($result, str-replace-first($first, $member, $partial));
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @return $result;
-}
-
-@function parse-expression($expression) {
-  $operator: '';
-  $value: '';
-  $element: '';
-  $result: '';
-  $is-width: true;
-
-  @if (type-of($expression) != 'string') {
-    @warn 'Expression with type `#{type-of($expression)}` detected, string expected.';
-  }
-
-  @if (str-slice($expression, 2, 2) == '=') {
-    $operator: str-slice($expression, 1, 2);
-    $value: str-slice($expression, 3);
-  } @else {
-    $operator: str-slice($expression, 1, 1);
-    $value: str-slice($expression, 2);
-  }
-
-  @if map-deep-has-key($media, breakpoints, $value) {
-    $result: map-deep-get($media, breakpoints, $value);
-  } @else if map-deep-has-key($media, resolutions, $expression) {
-    $result: map-deep-get($media, resolutions, $expression);
-    $is-width: false;
-  } @else {
-    $is-width: false;
-  }
-
-  @if ($is-width) {
-    // @debug $result;
-    $unit: unit($result);
-    $interval: 0;
-    
-    @if (map-has-key($unit-intervals, $unit)) {
-      $interval: map-get($unit-intervals, $unit);
-    } @else {
-      @warn 'Unknown unit: #{$unit}';
-    } 
-       
-    @if ($operator == '>') {
-      $element: '(min-width: #{$result + $interval})';
-    } @else if ($operator == '<') {
-      $element: '(max-width: #{$result - $interval})';
-    } @else if ($operator == '>=') {
-      $element: '(min-width: #{$result})';
-    } @else if ($operator == '<=') {
-      $element: '(max-width: #{$result})';
-    } @else {
-      @warn '#{$expression} is missing an operator.';
-    }
-  } @else {
-    $element: $result;
-  }
-
-  @return $element;
-}
-
-@function str-replace-first($search, $replace, $subject) {
-  $search-start: str-index($subject, $search);
-
-  @if $search-start == null {
-    @return $subject;
-  }
-
-  $result: str-slice($subject, 0, $search-start - 1);
-  $result: $result + $replace;
-  $result: $result + str-slice($subject, $search-start + str-length($search));
-
-  @return $result;
-}
-
-@function to-number($value) {
-  @if type-of($value) == 'number' {
-    @return $value;
-  } @else if type-of($value) != 'string' {
-    @error 'Value for `to-number` should be a number or a string.';
-  }
-
-  $result: 0;
-  $digits: 0;
-  $minus: str-slice($value, 1, 1) == '-';
-  $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
-
-  @for $i from if($minus, 2, 1) through str-length($value) {
-    $character: str-slice($value, $i, $i);
-
-    @if (index(map-keys($numbers), $character) or $character == '.') {
-      @if $character == '.' {
-        $digits: 1; 
-      } @else if $digits == 0 {
-        $result: $result * 10 + map-get($numbers, $character);  
-      } @else {
-        $digits: $digits * 10;
-        $result: $result + map-get($numbers, $character) / $digits;
-      }
-    }
-  }
-
-  @return if($minus, -$result, $result);;
-}
-
-// TBD
-
-// TBD
-
-@import 'active';
-@import 'any-link';
-@import 'invalid';
-@import 'not';
-@import 'nth';
-@import 'root';
-@import 'valid';
-
 // TBD
 
 // TBD
 
 // TBD
+
+@import 'default';
+@import 'empty';
+@import 'focus-within';
+@import 'range';
+@import 'target';
 
 // TBD
 
@@ -2533,6 +2344,195 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
+
+@import 'keyframes.scss';
+@import 'media.scss';
+
+
+// This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
+// It was refactored to fit the Fantastic CSS sizing convention
+
+@mixin media($conditions...) {
+  @for $i from 1 through length($conditions) {
+    $conditions: set-nth($conditions, $i, parse-expression(nth($conditions, $i)));
+  }
+
+  $branches: get-query-branches($conditions);
+  $query: '';
+
+  @each $branch in $branches {
+    @if (str-length($query) != 0) {
+      $query: $query + ', ';
+    }
+
+    $query: $query + $branch;
+  }
+
+  @media #{$query} {
+    @content;
+  }
+}
+
+@function get-query-branches($resolutions) {
+  $result: '';
+  $has-groups: false;
+
+  @each $expression in $resolutions {
+    @if (str-length($result) != 0) {
+      $result: $result + ' and ';
+    }
+
+    @if (type-of($expression) == 'string') {
+      $result: $result + $expression;
+    } @else if (type-of($expression) == 'list') {
+      $result: $result + nth($expression, 1);
+      $has-groups: true;
+    } @else {
+      @warn '#{$expression} is not a valid expression.';
+    }
+  }
+
+  @if $has-groups {
+    @each $expression in $resolutions {
+      @if (type-of($expression) == 'list') {
+        $first: nth($expression, 1);
+
+        @each $member in $expression {
+          @if ($member != $first) {
+            @each $partial in $result {
+              $result: join($result, str-replace-first($first, $member, $partial));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @return $result;
+}
+
+@function parse-expression($expression) {
+  $operator: '';
+  $value: '';
+  $element: '';
+  $result: '';
+  $is-width: true;
+
+  @if (type-of($expression) != 'string') {
+    @warn 'Expression with type `#{type-of($expression)}` detected, string expected.';
+  }
+
+  @if (str-slice($expression, 2, 2) == '=') {
+    $operator: str-slice($expression, 1, 2);
+    $value: str-slice($expression, 3);
+  } @else {
+    $operator: str-slice($expression, 1, 1);
+    $value: str-slice($expression, 2);
+  }
+
+  @if map-deep-has-key($media, breakpoints, $value) {
+    $result: map-deep-get($media, breakpoints, $value);
+  } @else if map-deep-has-key($media, resolutions, $expression) {
+    $result: map-deep-get($media, resolutions, $expression);
+    $is-width: false;
+  } @else {
+    $is-width: false;
+  }
+
+  @if ($is-width) {
+    // @debug $result;
+    $unit: unit($result);
+    $interval: 0;
+    
+    @if (map-has-key($unit-intervals, $unit)) {
+      $interval: map-get($unit-intervals, $unit);
+    } @else {
+      @warn 'Unknown unit: #{$unit}';
+    } 
+       
+    @if ($operator == '>') {
+      $element: '(min-width: #{$result + $interval})';
+    } @else if ($operator == '<') {
+      $element: '(max-width: #{$result - $interval})';
+    } @else if ($operator == '>=') {
+      $element: '(min-width: #{$result})';
+    } @else if ($operator == '<=') {
+      $element: '(max-width: #{$result})';
+    } @else {
+      @warn '#{$expression} is missing an operator.';
+    }
+  } @else {
+    $element: $result;
+  }
+
+  @return $element;
+}
+
+@function str-replace-first($search, $replace, $subject) {
+  $search-start: str-index($subject, $search);
+
+  @if $search-start == null {
+    @return $subject;
+  }
+
+  $result: str-slice($subject, 0, $search-start - 1);
+  $result: $result + $replace;
+  $result: $result + str-slice($subject, $search-start + str-length($search));
+
+  @return $result;
+}
+
+@function to-number($value) {
+  @if type-of($value) == 'number' {
+    @return $value;
+  } @else if type-of($value) != 'string' {
+    @error 'Value for `to-number` should be a number or a string.';
+  }
+
+  $result: 0;
+  $digits: 0;
+  $minus: str-slice($value, 1, 1) == '-';
+  $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
+
+  @for $i from if($minus, 2, 1) through str-length($value) {
+    $character: str-slice($value, $i, $i);
+
+    @if (index(map-keys($numbers), $character) or $character == '.') {
+      @if $character == '.' {
+        $digits: 1; 
+      } @else if $digits == 0 {
+        $result: $result * 10 + map-get($numbers, $character);  
+      } @else {
+        $digits: $digits * 10;
+        $result: $result + map-get($numbers, $character) / $digits;
+      }
+    }
+  }
+
+  @return if($minus, -$result, $result);;
+}
+
+// TBD
+
+// TBD
+
+@import 'active';
+@import 'any-link';
+@import 'invalid';
+@import 'not';
+@import 'nth';
+@import 'root';
+@import 'valid';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
 
 @import '../../atoms/index.scss';
 
