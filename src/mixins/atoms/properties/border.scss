@@ -58,11 +58,11 @@
     border-width: $width;
   }
 
-  // @if $style and $width == null and $color == null and $top == null and $right == null and $bottom == null and $left == null adn $x == null and $y == null {
-  //   border-style: $style;
-  // }
+  @if $style and $width == null and $color == null {
+    border-style: $style;
+  }
 
-  @if $color and $width == null and $style == null and $top == null and $right == null and $bottom == null and $left == null adn $x == null and $y == null {
+  @if $color and $width == null and $style == null {
     border-color: $color;
   }
 
