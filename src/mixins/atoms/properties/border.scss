@@ -51,44 +51,101 @@
   $color: null,
   $radius: null,
 ) {
-  @if $top {
-    border-top: $top;
-  }
-  
-  @if $right {
-    border-right: $right;
-  }
 
-  @if $bottom {
-    border-bottom: $bottom;
-  }
-  @if $left {
-    border-left: $left;
-  }
-  
-  @if $x {
-    border-left: $x;
-    border-right: $x;
-  }
+  // Single Property
 
-  @if $y {
-    border-top: $y;
-    border-bottom: $y;
-  } 
-
-  @if $width {
+  @if $width and $style == null and $color == null {
     border-width: $width;
   }
 
-  @if $style {
-    border-style: $style;
-  }
+  // @if $style and $width == null and $color == null and $top == null and $right == null and $bottom == null and $left == null adn $x == null and $y == null {
+  //   border-style: $style;
+  // }
 
-  @if $color {
+  @if $color and $width == null and $style == null and $top == null and $right == null and $bottom == null and $left == null adn $x == null and $y == null {
     border-color: $color;
   }
 
   @if $radius {
     border-radius: $radius;
+  }
+
+  @if $top and $style == null and $color == null {
+    border-top: $top;
+  }
+  
+  @if $right and $style == null and $color == null {
+    border-right: $right;
+  }
+
+  @if $bottom and $style == null and $color == null {
+    border-bottom: $bottom;
+  }
+  @if $left and $style == null and $color == null {
+    border-left: $left;
+  }
+  
+  @if $x and $style == null and $color == null {
+    border-left: $x;
+    border-right: $x;
+  }
+
+  @if $y and $style == null and $color == null {
+    border-top: $y;
+    border-bottom: $y;
+  } 
+
+  // Two properties
+
+  @if $width and $style and $color == null {
+    border: $width $style;
+  }
+
+  @if $top and $style and $color == null {
+    border-top: $top $style;
+  }
+
+  @if $right and $style and $color == null {
+    border-right: $right $style;
+  }
+
+  @if $bottom and $style and $color == null {
+    border-bottom: $bottom $style;
+  }
+
+  @if $left and $style and $color == null {
+    border-left: $left $style;
+  }
+
+  @if $x and $style and $color == null {
+    border-left: $x $style;
+    border-right: $x $style;
+  }
+
+  @if $y and $style and $color == null {
+    border-top: $y $style;
+    border-bottom: $y $style;
+  }
+
+  // Three Properties
+
+  @if $width and $style and $color {
+    border: $width $style $color;
+  }
+
+  @if $top and $style and $color {
+    border-top: $top $style $color;
+  }
+
+  @if $right and $style and $color {
+    border-right: $right $style $color;
+  }
+
+  @if $bottom and $style and $color {
+    border-bottom: $bottom $style $color;
+  }
+
+  @if $left and $style and $color {
+    border-left: $left $style $color;
   }
 }
