@@ -1,6 +1,5 @@
 gulp = require("gulp");
 concat = require("gulp-concat");
-// strip = require('gulp-strip-comments')
 stripCssComments = require("gulp-strip-css-comments");
 whitespace = require("gulp-whitespace");
 removeEmptyLines = require('gulp-remove-empty-lines');
@@ -48,4 +47,3 @@ gulp.task("index", function() {
     }))
     .pipe(gulp.dest("./"));
 });
-

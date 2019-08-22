@@ -27,10 +27,10 @@
 @import 'rules/index.scss';
 @import 'selectors/index.scss';
 
+
 @import 'blocks/index.scss';
 @import 'layouts/index.scss';
 @import 'misc/index.scss';
-
 
 // TBD
 
@@ -288,28 +288,6 @@
 
   @return if($minus, -$result, $result);;
 }
-
-// TBD
-
-// TBD
-
-@import 'active';
-@import 'any-link';
-@import 'invalid';
-@import 'not';
-@import 'nth';
-@import 'root';
-@import 'valid';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
 
 @mixin align-content($align-content) {
   align-content: $align-content;
@@ -2534,6 +2512,28 @@ $max: null
   z-index: $z-index;
 }
 
+// TBD
+
+// TBD
+
+@import 'active';
+@import 'any-link';
+@import 'invalid';
+@import 'not';
+@import 'nth';
+@import 'root';
+@import 'valid';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
 @import '../../atoms/index.scss';
 
 @mixin boxed($width: null, $max-width: null) {
@@ -2566,58 +2566,6 @@ $max: null
 }
 
 @import 'container';
-
-@mixin hide {
-  display: none !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
-@import 'hide';
-@import 'size';
-
-@mixin size(
-  $size: null,
-  $min: null,
-  $max: null,
-  $y: null,
-  $min-y: null,
-  $max-y: null,
-  $x: null,
-  $min-x: null,
-  $max-x: null
-) {
-  @if $size {
-    width: $size;
-    height: $size;
-  }
-  @if $min {
-    min-width: $min;
-    min-height: $min;
-  }
-  @if $max {
-    max-width: $max;
-    max-height: $max;
-  }
-  @if $y {
-    height: $y;
-  }
-  @if $min-y {
-    min-height: $min-y;
-  }
-  @if $max-y {
-    max-height: $max-y;
-  }
-  @if $x {
-    width: $x;
-  }
-  @if $min-x {
-    min-width: $min-x;
-  }
-  @if $max-x {
-    max-width: $max-x;
-  }
-}
 
 // TBD
 
@@ -2675,3 +2623,55 @@ $max: null
 @import 'grid-layout';
 @import 'table-layout';
 
+
+@mixin hide {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+@import 'hide';
+@import 'size';
+
+@mixin size(
+  $size: null,
+  $min: null,
+  $max: null,
+  $y: null,
+  $min-y: null,
+  $max-y: null,
+  $x: null,
+  $min-x: null,
+  $max-x: null
+) {
+  @if $size {
+    width: $size;
+    height: $size;
+  }
+  @if $min {
+    min-width: $min;
+    min-height: $min;
+  }
+  @if $max {
+    max-width: $max;
+    max-height: $max;
+  }
+  @if $y {
+    height: $y;
+  }
+  @if $min-y {
+    min-height: $min-y;
+  }
+  @if $max-y {
+    max-height: $max-y;
+  }
+  @if $x {
+    width: $x;
+  }
+  @if $min-x {
+    min-width: $min-x;
+  }
+  @if $max-x {
+    max-width: $max-x;
+  }
+}
