@@ -9,34 +9,34 @@ gulp.task("reset", function() {
   return gulp
     .src("./src/reset.scss")
     .pipe(concat("a_reset.scss"))
-    .pipe(gulp.dest("./build/"))
+    .pipe(gulp.dest("./scripts/build/"))
 });
 
 gulp.task("functions", function() {
   return gulp
     .src("./src/functions/**/*.scss")
     .pipe(concat("b_functions.scss"))
-    .pipe(gulp.dest("./build/"))
+    .pipe(gulp.dest("./scripts/build/"))
 });
 
 gulp.task("variables", function() {
   return gulp
     .src("./src/variables/**/*.scss")
     .pipe(concat("c_variables.scss"))
-    .pipe(gulp.dest("./build/"))
+    .pipe(gulp.dest("./scripts/build/"))
 });
 
 gulp.task("mixins", function() {
   return gulp
     .src("./src/mixins/**/*.scss")
     .pipe(concat("d_mixins.scss"))
-    .pipe(gulp.dest("./build/"))
+    .pipe(gulp.dest("./scripts/build/"))
 });
 
 
 gulp.task("index", function() {
   return gulp
-    .src("./build/*.scss")
+    .src("./scripts/build/*.scss")
     .pipe(concat("index.scss"))
     .pipe(stripCssComments())
     .pipe(removeEmptyLines({

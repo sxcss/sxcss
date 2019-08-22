@@ -4,9 +4,8 @@
   "description": "🎮 Scalable, Extendable & Componentized Style Sheets 🛠",
   "main": "index.scss",
   "scripts": {
-    "dev": "bash scripts/dev.sh",
-    "test": "bash scripts/test.sh",
-    "build": "bash scripts/build.sh",
+    "dev": "bash scripts/dev/dev.sh",
+    "build": "bash scripts/build/build.sh",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
