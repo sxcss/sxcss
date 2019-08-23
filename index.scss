@@ -260,27 +260,6 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-
-@function map-deep-get($map, $submapKey, $keys...) {
-  $iterable: map-get($map, $submapKey);
-  @each $key in $keys {
-	  $map: map-get($iterable, $key);
-  }
-  @return $map;
-}
-@function map-deep-has-key($map, $map-key, $keys...) {
-  @each $key in $keys {
-	  $tmp: map-deep-get($map, $map-key, $key);
-	  @if $tmp != null {
-		@return true;
-	  }
-  }
-  @return false;
-}
-
-
-
 @function to-number($string) {
   // Matrices
   $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
@@ -317,6 +296,22 @@ input[type=number]::-webkit-outer-spin-button {
 	}
   }
   @return if($minus, $result * -1, $result);
+}
+@function map-deep-get($map, $submapKey, $keys...) {
+  $iterable: map-get($map, $submapKey);
+  @each $key in $keys {
+	  $map: map-get($iterable, $key);
+  }
+  @return $map;
+}
+@function map-deep-has-key($map, $map-key, $keys...) {
+  @each $key in $keys {
+	  $tmp: map-deep-get($map, $map-key, $key);
+	  @if $tmp != null {
+		@return true;
+	  }
+  }
+  @return false;
 }
 @function _size($number, $unit) {
   $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
@@ -368,8 +363,6 @@ $scale: (
 	'xxl': 10rem
   )
 );
-
-
 $flex-basis: (
   1: null,
   2: calc(51% - #{map-deep-get($scale, proportion, sm)} / 2),
@@ -427,12 +420,6 @@ $font: (
 	small-caps
   )
 );
-
-
-
-
-
-
 $media: (
   breakpoints: (
 	'xxs': 240px, // Nokia 8810 and other super small screens like Smart Watches
@@ -536,9 +523,6 @@ $z-index: (
   layer-11: 999999999999,
   layer-12: 9999999999999
 );
-
-
-
 @mixin transition($transition) {
   transition: $transition;
 }
@@ -551,45 +535,6 @@ $z-index: (
 @mixin max-width($width) {
   max-width: $width;
 }
-
-
-
-
-
-
-
-
-
-
-
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-	opacity: $opacity;
-	transform: $transform;
-	scale: $scale;
-	animation: $animation;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // TBD
 // TBD
 // TBD
@@ -602,28 +547,6 @@ $z-index: (
 // TBD
 // TBD
 // TBD
-
-
-
-
-
-
-
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-
-
-
-
-
-// TBD
-// TBD
-
-
 // This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
 // It was refactored to fit the Fantastic CSS sizing convention
 @mixin media($conditions...) {
@@ -758,6 +681,58 @@ $z-index: (
   }
   @return if($minus, -$result, $result);;
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+	opacity: $opacity;
+	transform: $transform;
+	scale: $scale;
+	animation: $animation;
+  }
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+@mixin boxed($width: null, $max-width: null) {
+  width: $width;
+  max-width: $max-width;
+  margin: auto !important;
+  @media all and (max-width: 767px) {
+	width: calc(100% - #{map-deep-get($scale, proportion, sm)});
+  }
+}
+@mixin fullwidth {
+  width: 100%;
+  max-width: 100vw;
+}
+@mixin container {
+  box-sizing: border-box;
+  @include width(100%);
+  &__inner {
+	@include height(100%);
+	@include width(100%);
+	@include margin(auto);
+	&--boxed {
+	  @include boxed;
+	}
+  }
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -776,7 +751,6 @@ $z-index: (
 @mixin backface-visibility($backface-visibility) {
   backface-visibility: $backface-visibility;
 }
-
 @mixin background-image($background-image) {
   background-image: $background-image;
 }
@@ -1738,71 +1712,7 @@ $max: null
 @mixin image-rendering($image-rendering) {
   image-rendering: $image-rendering;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //   - not supported in Firefox and Safari
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // @import 'zoom' — not supported in Firefox
 @mixin initial-letter($initial-letter) {
   initial-letter: $initial-letter;
@@ -2639,47 +2549,6 @@ $max: null
   z-index: $z-index;
 }
 // TBD
-// TBD
-
-
-
-
-
-
-
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-
-@mixin boxed($width: null, $max-width: null) {
-  width: $width;
-  max-width: $max-width;
-  margin: auto !important;
-  @media all and (max-width: 767px) {
-	width: calc(100% - #{map-deep-get($scale, proportion, sm)});
-  }
-}
-@mixin fullwidth {
-  width: 100%;
-  max-width: 100vw;
-}
-@mixin container {
-  box-sizing: border-box;
-  @include width(100%);
-  &__inner {
-	@include height(100%);
-	@include width(100%);
-	@include margin(auto);
-	&--boxed {
-	  @include boxed;
-	}
-  }
-}
-
-// TBD
-
 @mixin grid-layout(
   $grid-template-columns: null,
   $grid-cols: 1,
@@ -2717,16 +2586,11 @@ $max: null
 	@include flex-direction(column);
   }
 }
-
-
-
 @mixin hide {
   display: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
 }
-
-
 @mixin size(
   $size: null,
   $min: null,
