@@ -54,57 +54,56 @@
   @if $align-items {
     align-items: $align-items;
   }
+
   // TO BE REMOVED
   @if $position {
     justify-content: $position;
     align-items: $position;
   }
   ////////////////
-  @if $place {
-  
-    @if $place == center {
-      justify-content: center;
-      align-items: center;
-    }
 
-    @if $place == start center or $place == flex-start center {
-      justify-content: flex-start;
-      align-items: center;
-    }
-    
-    @if $place == center start or $place == center flex-start {
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    @if $place == start or $place == flex-start or $place == start start or $place == flex-start flex-start {
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-
-    @if $place == start end or $place == flex-start flex-end or $place == start flex-end or $place == flex-start end {
-      justify-content: flex-start;
-      align-items: flex-end;
-    }
-    
-    @if $place == end start or $place == flex-end flex-start or $place == flex-end start or $place == end flex-start {
-      justify-content: flex-end;
-      align-items: flex-start;
-    }
-
-    @if $place == end center or $place == flex-end center {
-      justify-content: flex-end;
-      align-items: center;
-    }
-    
-    @if $place == center end or $place == center flex-end {
-      justify-content: center;
-      align-items: flex-end;
-    }
-
-    @if $place == end or $place == flex-end or $place == end end or $place == flex-end flex-end {
-      justify-content: flex-end;
-      align-items: flex-end;
-    }
+  @if $place == 'center' {
+	  justify-content: center;
+	  align-items: center;
   }
+  
+	@if $place == 'start center' or $place == 'flex-start center' {
+	  justify-content: flex-start;
+	  align-items: center;
+  }
+
+	@if $place == 'center start' or $place == 'center flex-start' {
+	  justify-content: center;
+	  align-items: flex-start;
+  }
+
+	@if $place == 'start' or $place == 'flex-start' or $place == 'start star't or $place == 'flex-start flex-start' {
+	  justify-content: flex-start;
+	  align-items: flex-start;
+  }
+
+	@if $place == 'start end' or $place == 'flex-start flex-end' or $place == 'start flex-end' or $place == 'flex-start end' {
+	  justify-content: flex-start;
+	  align-items: flex-end;
+  }
+
+	@if $place == 'end start' or $place == 'flex-end flex-start' or $place == 'flex-end start' or $place == 'end flex-start' {
+	  justify-content: flex-end;
+	  align-items: flex-start;
+  }
+
+	@if $place == 'end cente'r or $place == 'flex-end center' {
+	  justify-content: flex-end;
+	  align-items: center;
+  }
+
+	@if $place == 'center end' or $place == 'center flex-end' {
+	  justify-content: center;
+	  align-items: flex-end;
+  }
+
+	@if $place == 'end' or $place == 'flex-end' or $place == 'end end' or $place == 'flex-end flex-end' {
+	  justify-content: flex-end;
+	  align-items: flex-end;
+	}
 }
