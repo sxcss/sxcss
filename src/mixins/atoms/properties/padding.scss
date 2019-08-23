@@ -183,7 +183,7 @@
 
   @if $x and $y {
     @if $important {
-      padding: $y $x $y x !important;
+      padding: $y $x $y $x !important;
     } @else {
       padding: $y $x $y $x;
     }

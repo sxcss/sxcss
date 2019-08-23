@@ -183,7 +183,7 @@
 
   @if $x and $y {
     @if $important {
-      margin: $y $x $y x !important;
+      margin: $y $x $y $x !important;
     } @else {
       margin: $y $x $y $x;
     }
