@@ -77,7 +77,7 @@
 	  align-items: flex-start;
   }
 
-	@if $place == 'start' or $place == 'flex-start' or $place == 'start star't or $place == 'flex-start flex-start' {
+	@if $place == 'start' or $place == 'flex-start' or $place == 'start start' or $place == 'flex-start flex-start' {
 	  justify-content: flex-start;
 	  align-items: flex-start;
   }
@@ -92,7 +92,7 @@
 	  align-items: flex-start;
   }
 
-	@if $place == 'end cente'r or $place == 'flex-end center' {
+	@if $place == 'end center' or $place == 'flex-end center' {
 	  justify-content: flex-end;
 	  align-items: center;
   }
