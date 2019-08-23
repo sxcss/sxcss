@@ -1,5 +1,5 @@
 // This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
-// It was refactored to fit the Fantastic CSS sizing convention
+// It was refactored to fit the SXCSS sizing convention
 
 @mixin media($conditions...) {
   @for $i from 1 through length($conditions) {

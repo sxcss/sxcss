@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Fantastic CSS',
+  title: 'SXCSS',
   description: ' 🎮 Minimalist, universal and scalable SASS/CSS framework for rapid UI development 🛠 ',
   ga: 'UA-140885563-1',
   themeConfig: {

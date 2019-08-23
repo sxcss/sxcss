@@ -1,0 +1,51 @@
+@mixin box(
+  $min-width: null,
+  $width: null,
+  $max-width: null,
+  $height: null,
+  $max-height: null,
+  $size: null,
+  $size-max: null,
+  $padding: null,
+  $padding-x: null,
+  $padding-y: null,
+  $padding-top: null,
+  $padding-right: null,
+  $padding-bottom: null,
+  $padding-left: null,
+  $margin: null,
+  $margin-x: null,
+  $margin-y: null,
+  $margin-top: null,
+  $margin-right: null,
+  $margin-bottom: null,
+  $margin-left: null
+){
+  @include size(
+    $size: $size,
+    $min-x: $min-width,
+    $x: $width,
+    $max-x:$max-width,
+    $min-y: $min-height,
+    $y: $height,
+    $max-y: $max-height
+  );
+  @include padding(
+    $padding: $padding,
+    $y: $padding-y,
+    $x: $padding-x,
+    $top: $padding-top,
+    $right: $padding-right,
+    $bottom: $padding-bottom,
+    $left: $padding-left
+  );
+  @include margin(
+    $margin: $margin,
+    $y: $margin-y,
+    $x: $margin-x,
+    $top: $margin-top,
+    $right: $margin-right,
+    $bottom: $margin-bottom,
+    $left: $margin-left
+  );
+}
