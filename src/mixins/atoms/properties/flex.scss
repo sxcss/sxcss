@@ -26,7 +26,7 @@
   $wrap: null,
   $justify-content: null,
   $align-items: null,
-  $position: null
+  $place: null
 ) {
   @include display(flex);
   @if $grow & $shrink & $basis {
@@ -53,8 +53,57 @@
   @if $align-items {
     align-items: $align-items;
   }
+  // TO BE REMOVED
   @if $position {
     justify-content: $position;
     align-items: $position;
+  }
+  ////////////////
+  @if $place {
+  
+    @if $place == center {
+      justify-content: center;
+      align-items: center;
+    }
+
+    @if $place == start center {
+      justify-content: flex-start;
+      align-items: center;
+    }
+    
+    @if $place == center start {
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    @if $place == start or $place == start start {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    @if $place == start end {
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+    
+    @if $place == end start {
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+
+    @if $place == end center {
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    @if $place == center end {
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    @if $place == end or $place == end end {
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
   }
 }
