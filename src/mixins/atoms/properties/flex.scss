@@ -26,7 +26,8 @@
   $wrap: null,
   $justify-content: null,
   $align-items: null,
-  $place: null
+  $place: null,
+  $position: null // TO BE REMOVED
 ) {
   @include display(flex);
   @if $grow & $shrink & $basis {
