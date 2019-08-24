@@ -260,22 +260,6 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-@function map-deep-get($map, $submapKey, $keys...) {
-  $iterable: map-get($map, $submapKey);
-  @each $key in $keys {
-	  $map: map-get($iterable, $key);
-  }
-  @return $map;
-}
-@function map-deep-has-key($map, $map-key, $keys...) {
-  @each $key in $keys {
-	  $tmp: map-deep-get($map, $map-key, $key);
-	  @if $tmp != null {
-		@return true;
-	  }
-  }
-  @return false;
-}
 @function to-number($string) {
   // Matrices
   $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
@@ -312,6 +296,22 @@ input[type=number]::-webkit-outer-spin-button {
 	}
   }
   @return if($minus, $result * -1, $result);
+}
+@function map-deep-get($map, $submapKey, $keys...) {
+  $iterable: map-get($map, $submapKey);
+  @each $key in $keys {
+	  $map: map-get($iterable, $key);
+  }
+  @return $map;
+}
+@function map-deep-has-key($map, $map-key, $keys...) {
+  @each $key in $keys {
+	  $tmp: map-deep-get($map, $map-key, $key);
+	  @if $tmp != null {
+		@return true;
+	  }
+  }
+  @return false;
 }
 @function _size($number, $unit) {
   $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
@@ -540,6 +540,13 @@ $z-index: (
 // TBD
 // TBD
 // TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
   &:hover {
 	opacity: $opacity;
@@ -548,13 +555,6 @@ $z-index: (
 	animation: $animation;
   }
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 // TBD
 // TBD
 // TBD
@@ -702,6 +702,13 @@ $z-index: (
   }
   @return if($minus, -$result, $result);;
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -1824,42 +1831,42 @@ $max: null
 	}
   }
   // Two Properties
-  @if $top and $right and $bottom == null and $left == null {
+  @if $top and $right {
 	@if $important {
 	  margin: $top $right 0 0!important;
 	} @else {
 	  margin: $top $right 0 0;
 	}
   }
-  @if $top and $bottom and $right == null and $left == null {
+  @if $top and $bottom {
 	@if $important {
 	  margin: $top 0 $bottom 0 !important;
 	} @else {
 	  margin: $top 0 $bottom 0;
 	}
   }
-  @if $top and $left and $right == null and $left == null {
+  @if $top and $left {
 	@if $important {
 	  margin: $top 0 0 $left !important;
 	} @else {
 	  margin: $top 0 0 $left;
 	}
   }
-  @if $left and $right and $top == null and $bottom == null {
+  @if $left and $right {
 	@if $important {
 	  margin: 0 $right 0 $left !important;
 	} @else {
 	  margin: 0 $right 0 $left;
 	}
   }
-  @if $left and $bottom and $top == null and $right == null {
+  @if $left and $bottom {
 	@if $important {
 	  margin: 0 0 $bottom $left !important;
 	} @else {
 	  margin: 0 0 $bottom $left;
 	}
   }
-  @if $right and $bottom and $top == null and $right == null {
+  @if $right and $bottom {
 	@if $important {
 	  margin: 0 $right $bottom 0 !important;
 	} @else {
@@ -2070,42 +2077,42 @@ $max: null
 	}
   }
   // Two Properties
-  @if $top and $right and $bottom == null and $left == null {
+  @if $top and $right {
 	@if $important {
 	  padding: $top $right 0 0!important;
 	} @else {
 	  padding: $top $right 0 0;
 	}
   }
-  @if $top and $bottom and $right == null and $left == null {
+  @if $top and $bottom {
 	@if $important {
 	  padding: $top 0 $bottom 0 !important;
 	} @else {
 	  padding: $top 0 $bottom 0;
 	}
   }
-  @if $top and $left and $right == null and $left == null {
+  @if $top and $left {
 	@if $important {
 	  padding: $top 0 0 $left !important;
 	} @else {
 	  padding: $top 0 0 $left;
 	}
   }
-  @if $left and $right and $top == null and $bottom == null {
+  @if $left and $right {
 	@if $important {
 	  padding: 0 $right 0 $left !important;
 	} @else {
 	  padding: 0 $right 0 $left;
 	}
   }
-  @if $left and $bottom and $top == null and $right == null {
+  @if $left and $bottom {
 	@if $important {
 	  padding: 0 0 $bottom $left !important;
 	} @else {
 	  padding: 0 0 $bottom $left;
 	}
   }
-  @if $right and $bottom and $top == null and $right == null {
+  @if $right and $bottom {
 	@if $important {
 	  padding: 0 $right $bottom 0 !important;
 	} @else {
@@ -2556,13 +2563,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin box(
   $min-width: null,
   $width: null,
