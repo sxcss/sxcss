@@ -71,7 +71,7 @@
 
   // Two Properties
 
-  @if $top and $right {
+  @if $top and $right and $left == null and $bottom == null {
     @if $important {
       padding: $top $right 0 0!important;
     } @else {
@@ -79,7 +79,7 @@
     }
   }
 
-  @if $top and $bottom {
+  @if $top and $bottom and $left == null and $right == null {
     @if $important {
       padding: $top 0 $bottom 0 !important;
     } @else {
@@ -87,7 +87,7 @@
     }
   }
 
-  @if $top and $left {
+  @if $top and $left  and $bottom == null and $right == null {
     @if $important {
       padding: $top 0 0 $left !important;
     } @else {
@@ -95,7 +95,7 @@
     }
   }
 
-  @if $left and $right {
+  @if $left and $right and $top == null and $bottom == null {
     @if $important {
       padding: 0 $right 0 $left !important;
     } @else {
@@ -103,7 +103,7 @@
     }
   }
 
-  @if $left and $bottom {
+  @if $left and $bottom  and $top == null and $right == null {
     @if $important {
       padding: 0 0 $bottom $left !important;
     } @else {
@@ -111,7 +111,7 @@
     }
   }
 
-  @if $right and $bottom {
+  @if $right and $bottom and $left == null and $top == null{
     @if $important {
       padding: 0 $right $bottom 0 !important;
     } @else {
