@@ -14,6 +14,16 @@
   }
   @return false;
 }
+@function _size($number, $unit) {
+  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
+  $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
+  $index: index($strings, $unit);
+  @if type-of($index) != 'number' {
+	@warn 'Unknown unit `#{$unit}`.';
+	@return false;
+  }
+  @return $number * nth($units, $index);
+}
 @function to-number($string) {
   // Matrices
   $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
@@ -50,16 +60,6 @@
 	}
   }
   @return if($minus, $result * -1, $result);
-}
-@function _size($number, $unit) {
-  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
-  $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
-  $index: index($strings, $unit);
-  @if type-of($index) != 'number' {
-	@warn 'Unknown unit `#{$unit}`.';
-	@return false;
-  }
-  @return $number * nth($units, $index);
 }
 $scale: (
   percent: (
@@ -301,6 +301,11 @@ $z-index: (
 // TBD
 // TBD
 // TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
 // It was refactored to fit the SXCSS sizing convention
 @mixin media($conditions...) {
@@ -435,6 +440,8 @@ $z-index: (
   }
   @return if($minus, -$result, $result);;
 }
+// TBD
+// TBD
 // TBD
 // TBD
 // TBD
@@ -2296,13 +2303,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin box(
   $min-width: null,
   $width: null,
@@ -2417,10 +2417,89 @@ $max: null
 	@include flex-direction(column);
   }
 }
-@mixin hide {
+@mixin hide(
+  $media: null
+) {
   display: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
+  @if $media == 'xxs' {
+	@include media('xxs') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
+  @if $media == 'xs' {
+	@include media('xs') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
+  @if $media == 'sm' {
+	@include media('sm') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
+  @if $media == 'ms' {
+	@include media('ms') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
+  @if $media == 'md' {
+	@include media('md') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
+  @if $media == 'ml' {
+	@include media('ml') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
+  @if $media == 'ls' {
+	@include media('ls') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
+  @if $media == 'lg' {
+	@include media('lg') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
+  @if $media == 'll' {
+	@include media('ll') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
+  @if $media == 'xl' {
+	@include media('xl') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
+  @if $media == 'xxl' {
+	@include media('xxl') {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  }
 }
 @mixin size(
   $size: null,

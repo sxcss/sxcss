@@ -106,6 +106,22 @@
 
 // TBD
 
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'default';
+@import 'empty';
+@import 'focus-within';
+@import 'range';
+@import 'target';
+
+// TBD
+
+// TBD
+
 @import 'keyframes.scss';
 @import 'media.scss';
 
@@ -277,13 +293,19 @@
 
 // TBD
 
+@import 'active';
+@import 'any-link';
+@import 'invalid';
+@import 'not';
+@import 'nth';
+@import 'root';
+@import 'valid';
+
 // TBD
 
-@import 'default';
-@import 'empty';
-@import 'focus-within';
-@import 'range';
-@import 'target';
+// TBD
+
+// TBD
 
 // TBD
 
@@ -2564,28 +2586,6 @@ $max: null
   z-index: $z-index;
 }
 
-// TBD
-
-// TBD
-
-@import 'active';
-@import 'any-link';
-@import 'invalid';
-@import 'not';
-@import 'nth';
-@import 'root';
-@import 'valid';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
 @mixin box(
   $min-width: null,
   $width: null,
@@ -2730,10 +2730,100 @@ $max: null
 @import 'table-layout';
 
 
-@mixin hide {
+@mixin hide(
+  $media: null
+) {
   display: none !important;
   opacity: 0 !important;
   pointer-events: none !important;
+
+  @if $media == 'xxs' {
+    @include media('xxs') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @if $media == 'xs' {
+    @include media('xs') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @if $media == 'sm' {
+    @include media('sm') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @if $media == 'ms' {
+    @include media('ms') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @if $media == 'md' {
+    @include media('md') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @if $media == 'ml' {
+    @include media('ml') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @if $media == 'ls' {
+    @include media('ls') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @if $media == 'lg' {
+    @include media('lg') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @if $media == 'll' {
+    @include media('ll') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @if $media == 'xl' {
+    @include media('xl') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
+
+  @if $media == 'xxl' {
+    @include media('xxl') {
+      display: none !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  }
 }
 
 @import 'hide';
