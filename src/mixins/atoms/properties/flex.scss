@@ -136,4 +136,54 @@
     justify-content: flex-end;
     align-items: space-around;
   }
+
+  @if $place == 'space-between start' or $place == 'space-between flex-start' {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @if $place == 'space-between center' {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @if $place == 'space-between end' or $place == 'space-between flex-end' {
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  @if $place == 'space-between space-around' {
+    justify-content: space-between;
+    align-items: space-around;
+  }
+
+  @if $place == 'space-between space-between' {
+    justify-content: space-between;
+    align-items: space-between;
+  }
+
+  @if $place == 'space-around start' or $place == 'space-around flex-start' {
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  @if $place == 'space-around center' {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  @if $place == 'space-around end' or $place == 'space-around flex-end' {
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+
+  @if $place == 'space-around space-around' {
+    justify-content: space-around;
+    align-items: space-around;
+  }
+
+  @if $place == 'space-around space-between' {
+    justify-content: space-around;
+    align-items: space-between;
+  }
 }
