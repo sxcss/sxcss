@@ -4,34 +4,26 @@ stripCssComments = require("gulp-strip-css-comments");
 whitespace = require("gulp-whitespace");
 removeEmptyLines = require('gulp-remove-empty-lines');
 
-gulp.task("reset", function() {
-  return gulp
-    .src("./src/reset.scss")
-    .pipe(concat("a_reset.scss"))
-    .pipe(gulp.dest("./scripts/build/"))
-});
-
 gulp.task("functions", function() {
   return gulp
     .src("./src/functions/**/*.scss")
-    .pipe(concat("b_functions.scss"))
+    .pipe(concat("a_functions.scss"))
     .pipe(gulp.dest("./scripts/build/"))
 });
 
 gulp.task("variables", function() {
   return gulp
     .src("./src/variables/**/*.scss")
-    .pipe(concat("c_variables.scss"))
+    .pipe(concat("b_variables.scss"))
     .pipe(gulp.dest("./scripts/build/"))
 });
 
 gulp.task("mixins", function() {
   return gulp
     .src("./src/mixins/**/*.scss")
-    .pipe(concat("d_mixins.scss"))
+    .pipe(concat("c_mixins.scss"))
     .pipe(gulp.dest("./scripts/build/"))
 });
-
 
 gulp.task("index", function() {
   return gulp

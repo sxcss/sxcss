@@ -1,265 +1,3 @@
-html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-}
-body {
-  margin: 0;
-}
-main {
-  display: block;
-}
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-a {
-  background-color: transparent;
-}
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-b,
-strong {
-  font-weight: bolder;
-}
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
-html {
-  box-sizing: border-box;
-  height: 100%;
-}
-* {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  &, &::after, &::before {
-	box-sizing: border-box;
-  }
-}
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
-abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
-strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
-figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  vertical-align: baseline;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-ol, ul {
-	list-style: none;
-}
-img {
-  border-style: none;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-}
-button,
-input {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-progress {
-  vertical-align: baseline;
-}
-textarea {
-  overflow: auto;
-}
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-details {
-  display: block;
-}
-summary {
-  display: list-item;
-}
-template {
-  display: none;
-}
-[hidden] {
-  display: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-a {
-  color: inherit;
-}
-button,
-input,
-select {
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  height: 100%;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote {
-  &:before,
-  &:after {
-	content: '';
-	content: none;
-  }
-}
-q {
-  &:before,
-  &:after {
-	content: '';
-	content: none;
-  }
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-button, input, textarea, select, option {
-  appearance: none;
-  &:focus,
-  &:active {
-	outline: none;
-  }
-}
-a {
-  cursor: pointer;
-}
-img {
-  max-width: 100%;
-}
-input, textarea {
-color: currentColor;
-}
-a, button {
-cursor: pointer;
-}
-input[type='search']::-webkit-search-cancel-button {
-display: none;
-}
-input[type='search']::-ms-clear {
-display: none;
-}
-*,
-*:focus,
-*:active {
-  -webkit-tap-highlight-color: transparent;
-}
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
 @function map-deep-get($map, $submapKey, $keys...) {
   $iterable: map-get($map, $submapKey);
   @each $key in $keys {
@@ -540,13 +278,6 @@ $z-index: (
 // TBD
 // TBD
 // TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
   &:hover {
 	opacity: $opacity;
@@ -563,145 +294,6 @@ $z-index: (
 // TBD
 // TBD
 // TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
-// It was refactored to fit the SXCSS sizing convention
-@mixin media($conditions...) {
-  @for $i from 1 through length($conditions) {
-	$conditions: set-nth($conditions, $i, parse-expression(nth($conditions, $i)));
-  }
-  $branches: get-query-branches($conditions);
-  $query: '';
-  @each $branch in $branches {
-	@if (str-length($query) != 0) {
-	  $query: $query + ', ';
-	}
-	$query: $query + $branch;
-  }
-  @media #{$query} {
-	@content;
-  }
-}
-@function get-query-branches($resolutions) {
-  $result: '';
-  $has-groups: false;
-  @each $expression in $resolutions {
-	@if (str-length($result) != 0) {
-	  $result: $result + ' and ';
-	}
-	@if (type-of($expression) == 'string') {
-	  $result: $result + $expression;
-	} @else if (type-of($expression) == 'list') {
-	  $result: $result + nth($expression, 1);
-	  $has-groups: true;
-	} @else {
-	  @warn '#{$expression} is not a valid expression.';
-	}
-  }
-  @if $has-groups {
-	@each $expression in $resolutions {
-	  @if (type-of($expression) == 'list') {
-		$first: nth($expression, 1);
-		@each $member in $expression {
-		  @if ($member != $first) {
-			@each $partial in $result {
-			  $result: join($result, str-replace-first($first, $member, $partial));
-			}
-		  }
-		}
-	  }
-	}
-  }
-  @return $result;
-}
-@function parse-expression($expression) {
-  $operator: '';
-  $value: '';
-  $element: '';
-  $result: '';
-  $is-width: true;
-  @if (type-of($expression) != 'string') {
-	@warn 'Expression with type `#{type-of($expression)}` detected, string expected.';
-  }
-  @if (str-slice($expression, 2, 2) == '=') {
-	$operator: str-slice($expression, 1, 2);
-	$value: str-slice($expression, 3);
-  } @else {
-	$operator: str-slice($expression, 1, 1);
-	$value: str-slice($expression, 2);
-  }
-  @if map-deep-has-key($media, breakpoints, $value) {
-	$result: map-deep-get($media, breakpoints, $value);
-  } @else if map-deep-has-key($media, resolutions, $expression) {
-	$result: map-deep-get($media, resolutions, $expression);
-	$is-width: false;
-  } @else {
-	$is-width: false;
-  }
-  @if ($is-width) {
-	// @debug $result;
-	$unit: unit($result);
-	$interval: 0;
-	@if (map-has-key($unit-intervals, $unit)) {
-	  $interval: map-get($unit-intervals, $unit);
-	} @else {
-	  @warn 'Unknown unit: #{$unit}';
-	}
-	@if ($operator == '>') {
-	  $element: '(min-width: #{$result + $interval})';
-	} @else if ($operator == '<') {
-	  $element: '(max-width: #{$result - $interval})';
-	} @else if ($operator == '>=') {
-	  $element: '(min-width: #{$result})';
-	} @else if ($operator == '<=') {
-	  $element: '(max-width: #{$result})';
-	} @else {
-	  @warn '#{$expression} is missing an operator.';
-	}
-  } @else {
-	$element: $result;
-  }
-  @return $element;
-}
-@function str-replace-first($search, $replace, $subject) {
-  $search-start: str-index($subject, $search);
-  @if $search-start == null {
-	@return $subject;
-  }
-  $result: str-slice($subject, 0, $search-start - 1);
-  $result: $result + $replace;
-  $result: $result + str-slice($subject, $search-start + str-length($search));
-  @return $result;
-}
-@function to-number($value) {
-  @if type-of($value) == 'number' {
-	@return $value;
-  } @else if type-of($value) != 'string' {
-	@error 'Value for `to-number` should be a number or a string.';
-  }
-  $result: 0;
-  $digits: 0;
-  $minus: str-slice($value, 1, 1) == '-';
-  $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
-  @for $i from if($minus, 2, 1) through str-length($value) {
-	$character: str-slice($value, $i, $i);
-	@if (index(map-keys($numbers), $character) or $character == '.') {
-	  @if $character == '.' {
-		$digits: 1;
-	  } @else if $digits == 0 {
-		$result: $result * 10 + map-get($numbers, $character);
-	  } @else {
-		$digits: $digits * 10;
-		$result: $result + map-get($numbers, $character) / $digits;
-	  }
-	}
-  }
-  @return if($minus, -$result, $result);;
-}
 // TBD
 // TBD
 // TBD
@@ -2565,6 +2157,152 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
+// It was refactored to fit the SXCSS sizing convention
+@mixin media($conditions...) {
+  @for $i from 1 through length($conditions) {
+	$conditions: set-nth($conditions, $i, parse-expression(nth($conditions, $i)));
+  }
+  $branches: get-query-branches($conditions);
+  $query: '';
+  @each $branch in $branches {
+	@if (str-length($query) != 0) {
+	  $query: $query + ', ';
+	}
+	$query: $query + $branch;
+  }
+  @media #{$query} {
+	@content;
+  }
+}
+@function get-query-branches($resolutions) {
+  $result: '';
+  $has-groups: false;
+  @each $expression in $resolutions {
+	@if (str-length($result) != 0) {
+	  $result: $result + ' and ';
+	}
+	@if (type-of($expression) == 'string') {
+	  $result: $result + $expression;
+	} @else if (type-of($expression) == 'list') {
+	  $result: $result + nth($expression, 1);
+	  $has-groups: true;
+	} @else {
+	  @warn '#{$expression} is not a valid expression.';
+	}
+  }
+  @if $has-groups {
+	@each $expression in $resolutions {
+	  @if (type-of($expression) == 'list') {
+		$first: nth($expression, 1);
+		@each $member in $expression {
+		  @if ($member != $first) {
+			@each $partial in $result {
+			  $result: join($result, str-replace-first($first, $member, $partial));
+			}
+		  }
+		}
+	  }
+	}
+  }
+  @return $result;
+}
+@function parse-expression($expression) {
+  $operator: '';
+  $value: '';
+  $element: '';
+  $result: '';
+  $is-width: true;
+  @if (type-of($expression) != 'string') {
+	@warn 'Expression with type `#{type-of($expression)}` detected, string expected.';
+  }
+  @if (str-slice($expression, 2, 2) == '=') {
+	$operator: str-slice($expression, 1, 2);
+	$value: str-slice($expression, 3);
+  } @else {
+	$operator: str-slice($expression, 1, 1);
+	$value: str-slice($expression, 2);
+  }
+  @if map-deep-has-key($media, breakpoints, $value) {
+	$result: map-deep-get($media, breakpoints, $value);
+  } @else if map-deep-has-key($media, resolutions, $expression) {
+	$result: map-deep-get($media, resolutions, $expression);
+	$is-width: false;
+  } @else {
+	$is-width: false;
+  }
+  @if ($is-width) {
+	// @debug $result;
+	$unit: unit($result);
+	$interval: 0;
+	@if (map-has-key($unit-intervals, $unit)) {
+	  $interval: map-get($unit-intervals, $unit);
+	} @else {
+	  @warn 'Unknown unit: #{$unit}';
+	}
+	@if ($operator == '>') {
+	  $element: '(min-width: #{$result + $interval})';
+	} @else if ($operator == '<') {
+	  $element: '(max-width: #{$result - $interval})';
+	} @else if ($operator == '>=') {
+	  $element: '(min-width: #{$result})';
+	} @else if ($operator == '<=') {
+	  $element: '(max-width: #{$result})';
+	} @else {
+	  @warn '#{$expression} is missing an operator.';
+	}
+  } @else {
+	$element: $result;
+  }
+  @return $element;
+}
+@function str-replace-first($search, $replace, $subject) {
+  $search-start: str-index($subject, $search);
+  @if $search-start == null {
+	@return $subject;
+  }
+  $result: str-slice($subject, 0, $search-start - 1);
+  $result: $result + $replace;
+  $result: $result + str-slice($subject, $search-start + str-length($search));
+  @return $result;
+}
+@function to-number($value) {
+  @if type-of($value) == 'number' {
+	@return $value;
+  } @else if type-of($value) != 'string' {
+	@error 'Value for `to-number` should be a number or a string.';
+  }
+  $result: 0;
+  $digits: 0;
+  $minus: str-slice($value, 1, 1) == '-';
+  $numbers: ('0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9);
+  @for $i from if($minus, 2, 1) through str-length($value) {
+	$character: str-slice($value, $i, $i);
+	@if (index(map-keys($numbers), $character) or $character == '.') {
+	  @if $character == '.' {
+		$digits: 1;
+	  } @else if $digits == 0 {
+		$result: $result * 10 + map-get($numbers, $character);
+	  } @else {
+		$digits: $digits * 10;
+		$result: $result + map-get($numbers, $character) / $digits;
+	  }
+	}
+  }
+  @return if($minus, -$result, $result);;
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin box(
   $min-width: null,
   $width: null,
