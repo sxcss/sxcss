@@ -61,20 +61,30 @@
     align-items: $position;
   }
   ////////////////
-
-  @if $place == 'center' {
-	  justify-content: center;
-	  align-items: center;
-  }
   
-	@if $place == 'start center' or $place == 'flex-start center' {
-	  justify-content: flex-start;
+  @if $place == 'center start' or $place == 'center flex-start' {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  @if $place == 'center' or $place == 'center center' {
+	  justify-content: center;
 	  align-items: center;
   }
 
-	@if $place == 'center start' or $place == 'center flex-start' {
+  @if $place == 'center end' or $place == 'center flex-end' {
 	  justify-content: center;
-	  align-items: flex-start;
+	  align-items: flex-end;
+  }
+
+  @if $place == 'center space-between' {
+    justify-content: center;
+    align-items: space-between;
+  }
+
+  @if $place == 'center space-around' {
+    justify-content: center;
+    align-items: space-around;
   }
 
 	@if $place == 'start' or $place == 'flex-start' or $place == 'start start' or $place == 'flex-start flex-start' {
@@ -82,9 +92,24 @@
 	  align-items: flex-start;
   }
 
+	@if $place == 'start center' or $place == 'flex-start center' {
+	  justify-content: flex-start;
+	  align-items: center;
+  }
+
 	@if $place == 'start end' or $place == 'flex-start flex-end' or $place == 'start flex-end' or $place == 'flex-start end' {
 	  justify-content: flex-start;
 	  align-items: flex-end;
+  }
+
+  @if $place == 'start space-between' or $place == 'flex-start space-between' {
+    justify-content: flex-start;
+    align-items: space-between;
+  }
+
+  @if $place == 'start space-around' or $place == 'flex-start space-around' {
+    justify-content: flex-start;
+    align-items: space-around;
   }
 
 	@if $place == 'end start' or $place == 'flex-end flex-start' or $place == 'flex-end start' or $place == 'end flex-start' {
@@ -97,13 +122,18 @@
 	  align-items: center;
   }
 
-	@if $place == 'center end' or $place == 'center flex-end' {
-	  justify-content: center;
-	  align-items: flex-end;
-  }
-
 	@if $place == 'end' or $place == 'flex-end' or $place == 'end end' or $place == 'flex-end flex-end' {
 	  justify-content: flex-end;
 	  align-items: flex-end;
-	}
+  }
+
+  @if $place == 'end space-between' or $place == 'flex-end space-between' {
+    justify-content: flex-end;
+    align-items: space-between;
+  }
+
+  @if $place == 'end space-around' or $place == 'flex-end space-around' {
+    justify-content: flex-end;
+    align-items: space-around;
+  }
 }
