@@ -40,6 +40,7 @@
 }
 
 @mixin border(
+  $border: null,
   $top: null,
   $right: null,
   $bottom: null,
@@ -53,6 +54,8 @@
 ) {
 
   // Single Property
+
+  border: $border;
 
   @if $width and $style == null and $color == null {
     border-width: $width;
