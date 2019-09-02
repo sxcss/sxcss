@@ -32,10 +32,16 @@
   $left: null,
   $x: null,
   $y: null,
-  $important: null
+  $important: null,
+  $first: null,
+  $last: null
 ) {
 
   // Single Property
+
+  @if $margin {
+    margin: $margin;
+  }
 
   @if $top and $right == null and $bottom == null and $left == null and $x == null and $y == null {
     @if $important {
@@ -219,6 +225,109 @@
       margin: $y 0 $y $left !important;
     } @else {
       margin: $y 0 $y $left;
+    }
+  }
+
+  @if $first {
+    &:first-child,
+    &:first-of-type {
+      margin: $first;
+    }
+  }
+
+  @if $first-top {
+    &:first-child,
+    &:first-of-type {
+      margin-top: $first-top;
+    }
+  }
+
+  @if $first-right {
+    &:first-child,
+    &:first-of-type {
+      margin-right: $first-right;
+    }
+  }
+
+  @if $first-bottom {
+    &:first-child,
+    &:first-of-type {
+      margin-bottom: $first-bottom;
+    }
+  }
+
+  @if $first-left {
+    &:first-child,
+    &:first-of-type {
+      margin-left: $first-left;
+    }
+  }
+
+  @if $first-y {
+    &:first-child,
+    &:first-of-type {
+      margin: $first-y 0;
+    }
+  }
+
+  @if $first-x {
+    &:first-child,
+    &:first-of-type {
+      margin: 0 $first-x;
+    }
+  }
+
+
+
+
+
+
+  @if $last {
+    &:last-child,
+    &:last-of-type {
+      margin: $last;
+    }
+  }
+
+  @if $last-top {
+    &:last-child,
+    &:last-of-type {
+      margin-top: $last-top;
+    }
+  }
+
+  @if $last-right {
+    &:last-child,
+    &:last-of-type {
+      margin-right: $last-right;
+    }
+  }
+
+  @if $last-bottom {
+    &:last-child,
+    &:last-of-type {
+      margin-bottom: $last-bottom;
+    }
+  }
+
+  @if $last-left {
+    &:last-child,
+    &:last-of-type {
+      margin-left: $last-left;
+    }
+  }
+
+  @if $last-y {
+    &:last-child,
+    &:last-of-type {
+      margin: $last-y 0;
+    }
+  }
+
+  @if $last-x {
+    &:last-child,
+    &:last-of-type {
+      margin: 0 $last-x;
     }
   }
 }

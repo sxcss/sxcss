@@ -32,10 +32,16 @@
   $left: null,
   $x: null,
   $y: null,
-  $important: null
+  $important: null,
+  $first: null,
+  $last: null
 ) {
 
   // Single Property
+
+  @if $padding {
+    padding: $padding;
+  }
 
   @if $top and $right == null and $bottom == null and $left == null and $x == null and $y == null {
     @if $important {
@@ -71,6 +77,7 @@
 
   // Two Properties
 
+  
   @if $top and $right and $left == null and $bottom == null {
     @if $important {
       padding: $top $right 0 0!important;
@@ -218,6 +225,109 @@
       padding: $y 0 $y $left !important;
     } @else {
       padding: $y 0 $y $left;
+    }
+  }
+
+  @if $first {
+    &:first-child,
+    &:first-of-type {
+      padding: $first;
+    }
+  }
+
+  @if $first-top {
+    &:first-child,
+    &:first-of-type {
+      padding-top: $first-top;
+    }
+  }
+
+  @if $first-right {
+    &:first-child,
+    &:first-of-type {
+      padding-right: $first-right;
+    }
+  }
+
+  @if $first-bottom {
+    &:first-child,
+    &:first-of-type {
+      padding-bottom: $first-bottom;
+    }
+  }
+
+  @if $first-left {
+    &:first-child,
+    &:first-of-type {
+      padding-left: $first-left;
+    }
+  }
+
+  @if $first-y {
+    &:first-child,
+    &:first-of-type {
+      padding: $first-y 0;
+    }
+  }
+
+  @if $first-x {
+    &:first-child,
+    &:first-of-type {
+      padding: 0 $first-x;
+    }
+  }
+
+
+
+
+
+
+  @if $last {
+    &:last-child,
+    &:last-of-type {
+      padding: $last;
+    }
+  }
+
+  @if $last-top {
+    &:last-child,
+    &:last-of-type {
+      padding-top: $last-top;
+    }
+  }
+
+  @if $last-right {
+    &:last-child,
+    &:last-of-type {
+      padding-right: $last-right;
+    }
+  }
+
+  @if $last-bottom {
+    &:last-child,
+    &:last-of-type {
+      padding-bottom: $last-bottom;
+    }
+  }
+
+  @if $last-left {
+    &:last-child,
+    &:last-of-type {
+      padding-left: $last-left;
+    }
+  }
+
+  @if $last-y {
+    &:last-child,
+    &:last-of-type {
+      padding: $last-y 0;
+    }
+  }
+
+  @if $last-x {
+    &:last-child,
+    &:last-of-type {
+      padding: 0 $last-x;
     }
   }
 }
