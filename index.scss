@@ -294,13 +294,6 @@ $z-index: (
 // TBD
 // TBD
 // TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -1459,7 +1452,19 @@ $max: null
   $y: null,
   $important: null,
   $first: null,
-  $last: null
+  $first-top: null,
+  $first-right: null,
+  $first-bottom: null,
+  $first-left: null,
+  $first-y: null,
+  $first-x: null,
+  $last: null,
+  $last-top: null,
+  $last-right: null,
+  $last-bottom: null,
+  $last-left: null,
+  $last-y: null,
+  $last-x: null
 ) {
   // Single Property
   @if $margin {
@@ -2413,6 +2418,18 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
 // It was refactored to fit the SXCSS sizing convention
 @mixin media($conditions...) {
@@ -2547,11 +2564,6 @@ $max: null
   }
   @return if($minus, -$result, $result);;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 // TBD
 // TBD
 // TBD
