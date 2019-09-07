@@ -32,6 +32,7 @@
   $family: null,
   $letter-spacing: null,
   $color: null,
+  $align: null,
   $important: null
 ) {
 
@@ -59,7 +60,7 @@
     }
   }
 
-  @if $size and $weight and $line-height == null $family == null {
+  @if $size and $weight == null and $line-height == null $family == null {
     @if $important {
       font: 400 #{$size}/1 sans-serif !important;
     } @else {
@@ -128,6 +129,14 @@
       color: $color !important;
     } @else {
       color: $color;
+    }
+  }
+
+  @if $align {
+    @if $important {
+      text-align: $align !important;
+    } @else {
+      text-align: $align;
     }
   }
 }
