@@ -278,13 +278,6 @@ $z-index: (
 // TBD
 // TBD
 // TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
   &:hover {
 	opacity: $opacity;
@@ -293,6 +286,13 @@ $z-index: (
 	animation: $animation;
   }
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // TBD
 // TBD
 // TBD
@@ -440,6 +440,13 @@ $z-index: (
   }
   @return if($minus, -$result, $result);;
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -1730,6 +1737,20 @@ $max: null
 	  margin: 0 $right $bottom $left;
 	}
   }
+  @if $y  and $right and $left and $x == null {
+	@if $important {
+	  margin: $y $right $y $left !important;
+	} @else {
+	  margin: $y $right $y $left;
+	}
+  }
+  @if $x  and $top and $bottom and $y == null {
+	@if $important {
+	  margin: $top $x $bottom $x !important;
+	} @else {
+	  margin: $top $x $bottom $x;
+	}
+  }
   // Four Properties
   @if $top and $right and $bottom and $left and $x == null and $y == null {
 	@if $important {
@@ -2075,6 +2096,20 @@ $max: null
 	  padding: 0 $right $bottom $left !important;
 	} @else {
 	  padding: 0 $right $bottom $left;
+	}
+  }
+  @if $y  and $right and $left and $x == null {
+	@if $important {
+	  padding: $y $right $y $left !important;
+	} @else {
+	  padding: $y $right $y $left;
+	}
+  }
+  @if $x  and $top and $bottom and $y == null {
+	@if $important {
+	  padding: $top $x $bottom $x !important;
+	} @else {
+	  padding: $top $x $bottom $x;
 	}
   }
   // Four Properties
@@ -2578,13 +2613,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin box(
   $min-width: null,
   $width: null,

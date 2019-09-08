@@ -27,32 +27,10 @@
 @import 'rules/index.scss';
 @import 'selectors/index.scss';
 
+
 @import 'blocks/index.scss';
 @import 'layouts/index.scss';
 @import 'misc/index.scss';
-
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'after';
-@import 'before';
-@import 'first-letter';
-@import 'first-line';
-@import 'marker';
-@import 'placeholder';
-@import 'selection';
-
-// TBD
-
-// TBD
-
-// TBD
 
 // TBD
 
@@ -99,6 +77,28 @@
 // TBD
 
 // TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'after';
+@import 'before';
+@import 'first-letter';
+@import 'first-line';
+@import 'marker';
+@import 'placeholder';
+@import 'selection';
 
 // TBD
 
@@ -288,6 +288,28 @@
 
   @return if($minus, -$result, $result);;
 }
+
+// TBD
+
+// TBD
+
+@import 'active';
+@import 'any-link';
+@import 'invalid';
+@import 'not';
+@import 'nth';
+@import 'root';
+@import 'valid';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
 
 @mixin align-content($align-content) {
   align-content: $align-content;
@@ -1889,6 +1911,22 @@ $max: null
     }
   }
 
+  @if $y  and $right and $left and $x == null {
+    @if $important {
+      margin: $y $right $y $left !important;
+    } @else {
+      margin: $y $right $y $left;
+    }
+  }
+
+  @if $x  and $top and $bottom and $y == null {
+    @if $important {
+      margin: $top $x $bottom $x !important;
+    } @else {
+      margin: $top $x $bottom $x;
+    }
+  }
+
   // Four Properties
 
   @if $top and $right and $bottom and $left and $x == null and $y == null {
@@ -2301,6 +2339,22 @@ $max: null
       padding: 0 $right $bottom $left !important;
     } @else {
       padding: 0 $right $bottom $left;
+    }
+  }
+
+  @if $y  and $right and $left and $x == null {
+    @if $important {
+      padding: $y $right $y $left !important;
+    } @else {
+      padding: $y $right $y $left;
+    }
+  }
+
+  @if $x  and $top and $bottom and $y == null {
+    @if $important {
+      padding: $top $x $bottom $x !important;
+    } @else {
+      padding: $top $x $bottom $x;
     }
   }
 
@@ -2894,28 +2948,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-
-// TBD
-
-// TBD
-
-@import 'active';
-@import 'any-link';
-@import 'invalid';
-@import 'not';
-@import 'nth';
-@import 'root';
-@import 'valid';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
 
 @mixin box(
   $min-width: null,
