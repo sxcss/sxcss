@@ -186,17 +186,17 @@
 
   @if $x and $y == null and $top == null and $bottom == null {
     @if $important {
-      padding: 0 $x 0 $x !important;
+      padding: 0 $x !important;
     } @else {
-      padding: 0 $x 0 $x;
+      padding: 0 $x;
     }
   }
 
   @if $y and $x == null and $right == null and $left == null {
     @if $important {
-      padding: $y 0 $y 0 !important;
+      padding: $y 0!important;
     } @else {
-      padding: $y 0 $y 0;
+      padding: $y 0
     }
   }
 
