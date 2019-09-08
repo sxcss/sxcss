@@ -36,7 +36,7 @@
   $important: null
 ) {
 
-  @if $size and $line-height and $weight and $family and $variant {
+  @if $style and $variant and $weight and $size and $line-heigh and $family {
     @if $important {
       font: $style $variant $weight #{$size}/#{$line-height} $family !important;
     } @else {
@@ -60,11 +60,13 @@
     }
   }
 
-  @if $size and $weight == null and $line-height == null $family == null {
+  @if $size and $weight and $line-height == null {
     @if $important {
-      font: 400 #{$size}/1 sans-serif !important;
+      font-size: $size !important;
+      font-weight: $weight !important;
     } @else {
-      font: 400 #{$size}/1 sans-serif;
+      font-size: $size;
+      font-weight: $weight;
     }
   }
 
@@ -79,8 +81,10 @@
   @if $size and $line-height and $weight == null and $family == null {
     @if $important {
       font: 400 #{$size}/#{$line-height} sans-serif !important;
+      font-family: inherit !important;
     } @else {
       font: 400 #{$size}/#{$line-height} sans-serif;
+      font-family: inherit; 
     }
   }
 
@@ -108,11 +112,13 @@
     }
   }
 
-  @if $size and $weight and $line-height and $family == null{
+  @if $size and $weight and $line-height and $family == null {
     @if $important {
       font: $weight #{$size}/#{$line-height} sans-serif !important;
+      font-family: inherit !important;
     } @else {
       font: $weight #{$size}/#{$line-height} sans-serif;
+      font-family: inherit;
     }
   }
 
