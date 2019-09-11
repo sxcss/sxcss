@@ -13,13 +13,25 @@
     width: $size;
     height: $size;
   }
+  @if $size == '100v' or $size == 100v {
+    width: 100vw;
+    height: 100vh;
+  }
   @if $min {
     min-width: $min;
     min-height: $min;
   }
+  @if $min == '100v' or $min == 100v {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
   @if $max {
     max-width: $max;
     max-height: $max;
+  }
+  @if $max == '100v' or $max == 100v {
+    max-width: 100vw;
+    max-height: 100vh;
   }
   @if $y {
     height: $y;
