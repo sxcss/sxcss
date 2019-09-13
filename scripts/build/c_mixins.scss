@@ -38,28 +38,6 @@
 
 // TBD
 
-// TBD
-
-@import 'after';
-@import 'before';
-@import 'first-letter';
-@import 'first-line';
-@import 'marker';
-@import 'placeholder';
-@import 'selection';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
 
 // TBD
 
@@ -99,6 +77,28 @@
 // TBD
 
 // TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'after';
+@import 'before';
+@import 'first-letter';
+@import 'first-line';
+@import 'marker';
+@import 'placeholder';
+@import 'selection';
 
 // TBD
 
@@ -3038,56 +3038,129 @@ $max: null
 
 // TBD
 
-@import '../../atoms/properties/grid.scss';
-
 @mixin grid-layout(
-  $grid-template-columns: null,
-  $grid-cols: 1,
-  $grid-cols-fr: 1fr,
-  $grid-cols-gap: null,
-  $grid-template-rows: null,
-  $grid-rows: auto,
-  $grid-rows-fr: auto,
-  $grid-rows-gap: null,
-  $grid-gap: null,
+  $gap: null,
+  $cols: null,
+  $cols-fr: null,
+  $cols-gap: null,
+  $rows: null,
+  $rows-fr: null,
+  $rows-gap: null,
   $justify-items: null,
   $justify-content: null,
   $align-items: null,
   $align-content: null
 ) {
-  
-  /* Flexbox Fallback for older browsers */
-  
-  @include flex;
+
+  // Flexbox Fallback for older browsers
+
+  @include flex($wrap: wrap, $justify-content: space-between);
 
   > div {
-    @include flex-basis(map-get($flex-basis, $grid-cols));
+
+    @if $gap {
+
+      @if $cols == 1 {
+        flex-basis: 100%;
+      }
+
+      @if $cols == 2 {
+        flex-basis: calc(51% - #{$gap} / 2);
+      }
+
+      @if $cols == 3 {
+        flex-basis: calc(33.3333% - 2 * #{$gap} / 3);
+      }
+
+      @if $cols == 4 {
+        flex-basis: calc(25% - 3 * #{$gap} / 4);
+      }
+
+      @if $cols == 5 {
+        flex-basis: calc(25% - 4 * #{$gap} / 5);
+      }
+
+      @if $cols == 6 {
+        flex-basis: calc(25% - 5 * #{$gap} / 6);
+      }
+
+      @if $cols == 7 {
+        flex-basis: calc(14.2857% - 6 * #{$gap} / 7);
+      }
+
+      @if $cols == 8 {
+        flex-basis: calc(12.5% - 7 * #{$gap} / 8);
+      }
+
+      @if $cols == 9 {
+        flex-basis: calc(11.11% - 8 * #{$gap} / 9);
+      }
+
+      @if $cols == 10 {
+        flex-basis: calc(10% - 9 * #{$gap} / 10);
+      }
+
+      @if $cols == 11 {
+        flex-basis: calc(9.0909%- 10 * #{$gap} / 11);
+      }
+
+      @if $cols == 12 {
+        flex-basis: calc(8.3333% - 11 * #{$gap} / 12);
+      }
+    }
   }
 
-  /* CSS Grid-based layout system */
+  // CSS Grid-based layout system
 
-  @include display(grid);
-  @include grid-template-rows(repeat($grid-rows, $grid-rows-fr));
-  @include grid-template-rows($grid-template-rows);
-  @include grid-row-gap($grid-rows-gap);
+  @if $cols {
 
-  @include grid-template-columns(repeat($grid-cols, $grid-cols-fr));
-  @include grid-template-columns($grid-template-columns);
-  @include grid-column-gap($grid-cols-gap);
+    @if $rows == null {
+      @if $cols-fr == null and $rows-fr == null {
+        @include grid(
+          $template-columns: repeat($cols, auto),
+          $template-rows: auto,
+          $gap: $gap
+        );
+      }
 
-  @include grid-gap($grid-gap);
-
-  @include justify-content($justify-content);
-  @include justify-items($justify-items);
-  
-  @include align-content($align-content);
-  @include align-items($align-items);
-  
-  @if $grid-cols == 1 {
-    @include flex-direction(column);
+      @if $cols-fr {
+        @if $rows-fr == null {
+          @include grid(
+          $template-columns: repeat($cols, $cols-fr),
+          $template-rows: auto,
+          $gap: $gap
+          );
+        }
+      }
+    }
   }
+
+  @if $rows {
+
+    @include grid(
+      $template-columns: repeat($cols, auto),
+      $template-rows: repeat($rows, auto),
+      $gap: $gap
+    );
+
+    @if $rows-fr {
+      @if $cols-fr == null {
+        @include grid(
+        $template-columns: repeat($cols, auto),
+        $template-rows: (auto, $rows-fr),
+        $gap: $gap
+        );
+      }
+    }
+  }
+
+  // @include grid-column-gap($cols-gap);
+  // // @include grid-gap($gap);
+  // @include justify-content($justify-content);
+  // @include justify-items($justify-items);
+  // @include align-content($align-content);
+  // @include align-items($align-items);
 }
-
 @import 'flex-layout';
 @import 'grid-layout';
 @import 'table-layout';
