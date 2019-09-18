@@ -1,4 +1,4 @@
-@mixin grid-layout(
+@mixin grid-layout-core(
   $gap: null,
   $cols: null,
   $cols-fr: null,
@@ -6,14 +6,18 @@
   $rows: null,
   $rows-fr: null,
   $rows-gap: null,
+  $place-items: null,
+  $place-content: null,
   $justify-items: null,
   $justify-content: null,
   $align-items: null,
-  $align-content: null
+  $align-content: null,
+  $template: null,
+  $template-areas: null,
+  $template-columns: null,
+  $template-rows: null,
+  $media: null
 ) {
-
-  // Flexbox Fallback for older browsers
-
   @include flex($wrap: wrap, $justify-content: space-between);
 
   > div {
@@ -111,6 +115,120 @@
         $gap: $gap
         );
       }
+    }
+  }
+
+  @if $cols-gap {
+    column-gap: $cols-gap;
+  }
+
+  @if $rows-gap {
+    row-gap: $rows-gap;
+  }
+
+  @if $justify-content {
+    justify-content: $justify-content;
+  }
+
+  @if $justify-items {
+    justify-items: $justify-items;
+  }
+
+  @if $align-content {
+    align-content: $align-content;
+  }
+
+  @if $align-items {
+    align-items: $align-items;
+  }
+
+  @if $place-content {
+    place-content: $place-content;
+  }
+
+  @if $place-items {
+    place-items: $place-items;
+  }
+
+  @if $template {
+    grid-template: $template;
+  }
+
+  @if $template-areas {
+    grid-template-areas: $template-areas;
+  }
+
+  @if $template-columns {
+    grid-template-columns: $template-columns;
+  }
+
+  @if $template-rows {
+    grid-template-rows: $template-rows;
+  }
+}
+
+@mixin grid-layout(
+  $gap: null,
+  $cols: null,
+  $cols-fr: null,
+  $cols-gap: null,
+  $rows: null,
+  $rows-fr: null,
+  $rows-gap: null,
+  $justify-items: null,
+  $justify-content: null,
+  $align-items: null,
+  $align-content: null,
+  $place-items: null,
+  $place-content: null,
+  $template: null,
+  $template-columns: null,
+  $template-rows: null,
+  $template-areas: null,
+  $media: null
+) {
+
+  @include grid-layout-core(
+    $gap: $gap,
+    $cols: $cols,
+    $cols-fr: $cols-fr,
+    $cols-gap: $cols-gap,
+    $rows: $rows,
+    $rows-fr: $rows-fr,
+    $rows-gap: $rows-gap,
+    $justify-items: $justify-items,
+    $justify-content: $justify-content,
+    $align-items: $align-items,
+    $align-content: $align-content,
+    $place-items: $place-items,
+    $place-content: $place-content,
+    $template: $template,
+    $template-areas: $template-areas,
+    $template-columns: $template-columns,
+    $template-rows: $template-rows,
+  );
+
+  @if $media {
+    @include media($media) {
+      @include grid-layout-core(
+        $gap: $gap,
+        $cols: $cols,
+        $cols-fr: $cols-fr,
+        $cols-gap: $cols-gap,
+        $rows: $rows,
+        $rows-fr: $rows-fr,
+        $rows-gap: $rows-gap,
+        $justify-items: $justify-items,
+        $justify-content: $justify-content,
+        $align-items: $align-items,
+        $align-content: $align-content,
+        $place-items: $place-items,
+        $place-content: $place-content,
+        $template: $template,
+        $template-areas: $template-areas,
+        $template-columns: $template-columns,
+        $template-rows: $template-rows
+      );
     }
   }
 }

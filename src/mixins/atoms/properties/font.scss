@@ -52,7 +52,7 @@
     }
   }
 
-  @if $weight and $size == null and $line-height == null {
+  @if $weight and $size == null and $line-height == null and $family == null {
     @if $important {
       font-weight: $weight !important;
     } @else {
@@ -60,7 +60,7 @@
     }
   }
 
-  @if $size and $weight and $line-height == null {
+  @if $size and $weight and $line-height == null and $family == null {
     @if $important {
       font-size: $size !important;
       font-weight: $weight !important;
@@ -70,7 +70,7 @@
     }
   }
 
-  @if $line-height and $size == null and $weight == null {
+  @if $line-height and $size == null and $weight == null and $family == null {
     @if $important {
       line-height: $line-height !important;
     } @else {
@@ -80,35 +80,21 @@
 
   @if $size and $line-height and $weight == null and $family == null {
     @if $important {
-      font: 400 #{$size}/#{$line-height} sans-serif !important;
-      font-family: inherit !important;
+      font-size: $size !important;
+      line-height: $line-height !important;
     } @else {
-      font: 400 #{$size}/#{$line-height} sans-serif;
-      font-family: inherit; 
+      font-size: $size;
+      line-height: $line-height;
     }
   }
 
   @if $size and $weight and $family and $line-height == null {
     @if $important {
       font: $weight #{$size}/1 $family !important;
+      line-height: inherit !important;
     } @else {
       font: $weight #{$size}/1 $family;
-    }
-  }
-
-  @if $size and $weight and $line-height and $family == null {
-    @if $important {
-      font: $weight #{$size}/#{$line-height} sans-serif !important;
-    } @else {
-      font: $weight #{$size}/#{$line-height};
-    }
-  }
-
-  @if $size and $weight and $line-height and $family {
-    @if $important {
-      font: $weight #{$size}/#{$line-height} $family !important;
-    } @else {
-      font: $weight #{$size}/#{$line-height} $family;
+      line-height: inherit !important;
     }
   }
 
@@ -118,7 +104,15 @@
       font-family: inherit !important;
     } @else {
       font: $weight #{$size}/#{$line-height} sans-serif;
-      font-family: inherit;
+      font-family: inherit !important;
+    }
+  }
+
+  @if $size and $weight and $line-height and $family {
+    @if $important {
+      font: $weight #{$size}/#{$line-height} $family !important;
+    } @else {
+      font: $weight #{$size}/#{$line-height} $family;
     }
   }
 
