@@ -1,4 +1,6 @@
+.gitignore
 docs
-scripts
-dist
+gulpfile.js
 node_modules
+scripts
+src
