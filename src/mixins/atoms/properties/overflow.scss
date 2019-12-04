@@ -1,18 +1,18 @@
-@mixin overflow-x($overflow-x, $overscroll-contain) {
+@mixin overflow-x($overflow-x, $overscroll-behavior) {
   overflow-x: $overflow-x;
-  overscroll-behavior: $overscroll-contain;
+  overscroll-behavior: $overscroll-behavior;
   -webkit-overflow-scrolling: touch;
 }
 
-@mixin overflow-y($overflow-y, $overscroll-contain) {
+@mixin overflow-y($overflow-y, $overscroll-behavior) {
   overflow-y: $overflow-y;
-  overscroll-behavior: $overscroll-contain;
+  overscroll-behavior: $overscroll-behavior;
   -webkit-overflow-scrolling: touch;
 }
 
-@mixin overflow($x: null, $y: null, $overscroll-contain) {
+@mixin overflow($x: null, $y: null, $overscroll-behavior) {
   overflow-x: $x;
   overflow-y: $y;
-  overscroll-behavior: $overscroll-contain;
+  overscroll-behavior: $overscroll-behavior;
   -webkit-overflow-scrolling: touch;
 }
