@@ -1,4 +1,4 @@
 bash scripts/build/build.sh;
 git add --all;
-git commit -m"Patch";
-npm version patch;
+git commit -m"Major";
+npm version major;

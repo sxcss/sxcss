@@ -8,7 +8,9 @@
     "build": "bash scripts/build/build.sh",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "publish:patch": "bash scripts/publish/patch.sh"
+    "version:patch": "bash scripts/publish/patch.sh",
+    "version:minor": "bash scripts/publish/minor.sh",
+    "version:major": "bash scripts/publish/major.sh"
   },
   "dependencies": {
     "gulp": "^4.0.2",
