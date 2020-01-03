@@ -39,10 +39,3 @@ gulp.task("index", function() {
     }))
     .pipe(gulp.dest("./"));
 });
-
-var npmVersion = require('gulp-npm-version');
- 
-gulp.task('npm-version', function() {
-  return gulp.src('./package.json')
-    .pipe(npmVersion());
-});
