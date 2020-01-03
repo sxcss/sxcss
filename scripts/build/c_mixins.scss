@@ -38,6 +38,22 @@
 
 // TBD
 
+@import 'default';
+@import 'empty';
+@import 'focus-within';
+@import 'range';
+@import 'target';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
 // TBD
 
 @import 'after';
@@ -101,22 +117,6 @@
 // TBD
 
 // TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'default';
-@import 'empty';
-@import 'focus-within';
-@import 'range';
-@import 'target';
 
 // TBD
 
@@ -288,115 +288,6 @@
 
   @return if($minus, -$result, $result);;
 }
-
-@mixin box(
-  $min-width: null,
-  $width: null,
-  $max-width: null,
-  $min-height: null,
-  $height: null,
-  $max-height: null,
-  $size: null,
-  $size-max: null,
-  $padding: null,
-  $padding-x: null,
-  $padding-y: null,
-  $padding-top: null,
-  $padding-right: null,
-  $padding-bottom: null,
-  $padding-left: null,
-  $margin: null,
-  $margin-x: auto,
-  $margin-y: null,
-  $margin-top: null,
-  $margin-right: null,
-  $margin-bottom: null,
-  $margin-left: null
-){
-  @include size(
-    $size: $size,
-    $min-x: $min-width,
-    $x: $width,
-    $max-x:$max-width,
-    $min-y: $min-height,
-    $y: $height,
-    $max-y: $max-height
-  );
-  @include padding(
-    $padding: $padding,
-    $y: $padding-y,
-    $x: $padding-x,
-    $top: $padding-top,
-    $right: $padding-right,
-    $bottom: $padding-bottom,
-    $left: $padding-left
-  );
-  @include margin(
-    $margin: $margin,
-    $y: $margin-y,
-    $x: $margin-x,
-    $top: $margin-top,
-    $right: $margin-right,
-    $bottom: $margin-bottom,
-    $left: $margin-left
-  );
-}
-
-@import '../../atoms/index.scss';
-
-@mixin boxed($width: null, $max-width: null) {
-  width: $width;
-  max-width: $max-width;
-  margin: auto !important;
-  @media all and (max-width: 767px) {
-    width: calc(100% - #{map-deep-get($scale, proportion, sm)});
-  }
-}
-
-@mixin fullwidth {
-  width: 100%;
-  max-width: 100vw;
-}
-
-@mixin container {
-  box-sizing: border-box;
-  @include width(100%);
-
-  &__inner {
-    @include height(100%);
-    @include width(100%);
-    @include margin(auto);
-    
-    &--boxed {
-      @include boxed;
-    }
-  }
-}
-
-@import 'box';
-@import 'container';
-
-// TBD
-
-// TBD
-
-@import 'active';
-@import 'any-link';
-@import 'invalid';
-@import 'not';
-@import 'nth';
-@import 'root';
-@import 'valid';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
 
 // TBD
 
@@ -639,6 +530,115 @@
 @import 'grid-layout';
 @import 'table-layout';
 
+
+@mixin box(
+  $min-width: null,
+  $width: null,
+  $max-width: null,
+  $min-height: null,
+  $height: null,
+  $max-height: null,
+  $size: null,
+  $size-max: null,
+  $padding: null,
+  $padding-x: null,
+  $padding-y: null,
+  $padding-top: null,
+  $padding-right: null,
+  $padding-bottom: null,
+  $padding-left: null,
+  $margin: null,
+  $margin-x: auto,
+  $margin-y: null,
+  $margin-top: null,
+  $margin-right: null,
+  $margin-bottom: null,
+  $margin-left: null
+){
+  @include size(
+    $size: $size,
+    $min-x: $min-width,
+    $x: $width,
+    $max-x:$max-width,
+    $min-y: $min-height,
+    $y: $height,
+    $max-y: $max-height
+  );
+  @include padding(
+    $padding: $padding,
+    $y: $padding-y,
+    $x: $padding-x,
+    $top: $padding-top,
+    $right: $padding-right,
+    $bottom: $padding-bottom,
+    $left: $padding-left
+  );
+  @include margin(
+    $margin: $margin,
+    $y: $margin-y,
+    $x: $margin-x,
+    $top: $margin-top,
+    $right: $margin-right,
+    $bottom: $margin-bottom,
+    $left: $margin-left
+  );
+}
+
+@import '../../atoms/index.scss';
+
+@mixin boxed($width: null, $max-width: null) {
+  width: $width;
+  max-width: $max-width;
+  margin: auto !important;
+  @media all and (max-width: 767px) {
+    width: calc(100% - #{map-deep-get($scale, proportion, sm)});
+  }
+}
+
+@mixin fullwidth {
+  width: 100%;
+  max-width: 100vw;
+}
+
+@mixin container {
+  box-sizing: border-box;
+  @include width(100%);
+
+  &__inner {
+    @include height(100%);
+    @include width(100%);
+    @include margin(auto);
+    
+    &--boxed {
+      @include boxed;
+    }
+  }
+}
+
+@import 'box';
+@import 'container';
+
+// TBD
+
+// TBD
+
+@import 'active';
+@import 'any-link';
+@import 'invalid';
+@import 'not';
+@import 'nth';
+@import 'root';
+@import 'valid';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
 
 @mixin align-content($align-content) {
   align-content: $align-content;
