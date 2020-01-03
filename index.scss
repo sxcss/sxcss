@@ -14,16 +14,6 @@
   }
   @return false;
 }
-@function _size($number, $unit) {
-  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
-  $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
-  $index: index($strings, $unit);
-  @if type-of($index) != 'number' {
-	@warn 'Unknown unit `#{$unit}`.';
-	@return false;
-  }
-  @return $number * nth($units, $index);
-}
 @function to-number($string) {
   // Matrices
   $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
@@ -60,6 +50,16 @@
 	}
   }
   @return if($minus, $result * -1, $result);
+}
+@function _size($number, $unit) {
+  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
+  $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
+  $index: index($strings, $unit);
+  @if type-of($index) != 'number' {
+	@warn 'Unknown unit `#{$unit}`.';
+	@return false;
+  }
+  @return $number * nth($units, $index);
 }
 $scale: (
   percent: (
@@ -273,6 +273,27 @@ $z-index: (
 @mixin max-width($width) {
   max-width: $width;
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+	opacity: $opacity;
+	transform: $transform;
+	scale: $scale;
+	animation: $animation;
+  }
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -2441,20 +2462,6 @@ $max: null
 // TBD
 // TBD
 // TBD
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-	opacity: $opacity;
-	transform: $transform;
-	scale: $scale;
-	animation: $animation;
-  }
-}
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 // TBD
 // TBD
 // TBD
@@ -2603,13 +2610,6 @@ $max: null
   }
   @return if($minus, -$result, $result);;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin box(
   $min-width: null,
   $width: null,
@@ -2684,75 +2684,6 @@ $max: null
 	&--boxed {
 	  @include boxed;
 	}
-  }
-}
-@mixin hide(
-  $media: null
-) {
-  @if $media {
-	@include media($media) {
-	  display: none !important;
-	  opacity: 0 !important;
-	  pointer-events: none !important;
-	}
-  } @else {
-	display: none !important;
-	opacity: 0 !important;
-	pointer-events: none !important;
-  }
-}
-@mixin size(
-  $size: null,
-  $min: null,
-  $max: null,
-  $y: null,
-  $min-y: null,
-  $max-y: null,
-  $x: null,
-  $min-x: null,
-  $max-x: null
-) {
-  @if $size {
-	width: $size;
-	height: $size;
-  }
-  @if $size == '100v' or $size == 100v {
-	width: 100vw;
-	height: 100vh;
-  }
-  @if $min {
-	min-width: $min;
-	min-height: $min;
-  }
-  @if $min == '100v' or $min == 100v {
-	min-width: 100vw;
-	min-height: 100vh;
-  }
-  @if $max {
-	max-width: $max;
-	max-height: $max;
-  }
-  @if $max == '100v' or $max == 100v {
-	max-width: 100vw;
-	max-height: 100vh;
-  }
-  @if $y {
-	height: $y;
-  }
-  @if $min-y {
-	min-height: $min-y;
-  }
-  @if $max-y {
-	max-height: $max-y;
-  }
-  @if $x {
-	width: $x;
-  }
-  @if $min-x {
-	min-width: $min-x;
-  }
-  @if $max-x {
-	max-width: $max-x;
   }
 }
 // TBD
@@ -2952,5 +2883,74 @@ $max: null
 		$template-rows: $template-rows
 	  );
 	}
+  }
+}
+@mixin hide(
+  $media: null
+) {
+  @if $media {
+	@include media($media) {
+	  display: none !important;
+	  opacity: 0 !important;
+	  pointer-events: none !important;
+	}
+  } @else {
+	display: none !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+  }
+}
+@mixin size(
+  $size: null,
+  $min: null,
+  $max: null,
+  $y: null,
+  $min-y: null,
+  $max-y: null,
+  $x: null,
+  $min-x: null,
+  $max-x: null
+) {
+  @if $size {
+	width: $size;
+	height: $size;
+  }
+  @if $size == '100v' or $size == 100v {
+	width: 100vw;
+	height: 100vh;
+  }
+  @if $min {
+	min-width: $min;
+	min-height: $min;
+  }
+  @if $min == '100v' or $min == 100v {
+	min-width: 100vw;
+	min-height: 100vh;
+  }
+  @if $max {
+	max-width: $max;
+	max-height: $max;
+  }
+  @if $max == '100v' or $max == 100v {
+	max-width: 100vw;
+	max-height: 100vh;
+  }
+  @if $y {
+	height: $y;
+  }
+  @if $min-y {
+	min-height: $min-y;
+  }
+  @if $max-y {
+	max-height: $max-y;
+  }
+  @if $x {
+	width: $x;
+  }
+  @if $min-x {
+	min-width: $min-x;
+  }
+  @if $max-x {
+	max-width: $max-x;
   }
 }
