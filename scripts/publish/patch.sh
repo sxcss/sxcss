@@ -1,5 +1,6 @@
 bash scripts/build/build.sh;
-gulp npm-version;
+npm version patch;
 git add --all;
-git commit -m"publish";
+git commit -m"Patch";
 git push;
+npm publish;
