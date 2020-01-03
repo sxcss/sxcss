@@ -20,7 +20,7 @@
     "sass-loader": "^7.1.0"
   },
   "devDependencies": {
-    "grunt-bump": "^0.8.0",
+    "gulp-npm-version": "^0.0.2",
     "vuepress": "^0.14.11"
   },
   "repository": {

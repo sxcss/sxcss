@@ -1,5 +1,5 @@
 bash scripts/build/build.sh;
-grunt bump:patch;
+gulp npm-version;
 git add --all;
 git commit -m"publish";
 git push;
