@@ -10,7 +10,7 @@
   -webkit-overflow-scrolling: touch;
 }
 
-@mixin overflow($x: null, $y: null, $overscroll-behavior) {
+@mixin overflow($overscroll-behavior, $x: null, $y: null) {
   overflow-x: $x;
   overflow-y: $y;
   overscroll-behavior: $overscroll-behavior;
