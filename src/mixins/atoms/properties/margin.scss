@@ -46,7 +46,9 @@
   $last-bottom: null,
   $last-left: null,
   $last-y: null,
-  $last-x: null
+  $last-x: null,
+  $nth-child-order: null,
+  $nth-child-value: null
 ) {
 
   // Single Property
@@ -351,6 +353,12 @@
     &:last-child,
     &:last-of-type {
       margin: 0 $last-x;
+    }
+  }
+
+  @if $nth-child-value {
+    &:nth-child(#{$nth-child-order}) {
+      margin: $nth-child-value;
     }
   }
 }
