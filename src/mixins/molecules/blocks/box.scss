@@ -20,7 +20,9 @@
   $margin-top: null,
   $margin-right: null,
   $margin-bottom: null,
-  $margin-left: null
+  $margin-left: null,
+  $display: null,
+  $place: null
 ){
   @include size(
     $size: $size,
@@ -49,4 +51,11 @@
     $bottom: $margin-bottom,
     $left: $margin-left
   );
+  @if $display == flex or $display == 'flex' {
+    @if $place {
+      @include flex($place: $place)
+    } @else {
+      @include flex;
+    }
+  }
 }
