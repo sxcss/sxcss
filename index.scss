@@ -278,18 +278,6 @@ $z-index: (
 // TBD
 // TBD
 // TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
   &:hover {
 	opacity: $opacity;
@@ -298,6 +286,18 @@ $z-index: (
 	animation: $animation;
   }
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // TBD
 // TBD
 // TBD
@@ -440,13 +440,6 @@ $z-index: (
   }
   @return if($minus, -$result, $result);;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -2703,6 +2696,13 @@ $max: null
   }
 }
 // TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin grid-layout-core(
   $gap: null,
   $cols: null,
@@ -2902,18 +2902,21 @@ $max: null
   }
 }
 @mixin hide(
-  $media: null
+  $media: null,
+  $display: none !important,
+  $opacity: 0 !important,
+  $pointer-events: none !important
 ) {
   @if $media {
 	@include media($media) {
-	  display: none !important;
-	  opacity: 0 !important;
-	  pointer-events: none !important;
+	  display: $display;
+	  opacity: $opacity;
+	  pointer-events: $pointer-events;
 	}
   } @else {
-	display: none !important;
-	opacity: 0 !important;
-	pointer-events: none !important;
+	display: $display;
+	opacity: $opacity;
+	pointer-events: $pointer-events;
   }
 }
 @mixin size(

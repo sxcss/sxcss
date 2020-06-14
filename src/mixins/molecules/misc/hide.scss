@@ -1,15 +1,18 @@
 @mixin hide(
-  $media: null
+  $media: null,
+  $display: none !important,
+  $opacity: 0 !important,
+  $pointer-events: none !important
 ) {
   @if $media {
     @include media($media) {
-      display: none !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
+      display: $display;
+      opacity: $opacity;
+      pointer-events: $pointer-events;
     }
   } @else {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
+    display: $display;
+    opacity: $opacity;
+    pointer-events: $pointer-events;
   }
 }
