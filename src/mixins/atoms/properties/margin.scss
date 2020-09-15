@@ -314,6 +314,18 @@
     }
   }
 
+  @if $last-child {
+    &:last-child {
+      margin: $last;
+    }
+  }
+
+  @if $last-of-type {
+    &:last-of-type {
+      margin: $last;
+    }
+  }
+
   @if $last-top {
     &:last-child,
     &:last-of-type {
