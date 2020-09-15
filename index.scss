@@ -273,27 +273,6 @@ $z-index: (
 @mixin max-width($width) {
   max-width: $width;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-	opacity: $opacity;
-	transform: $transform;
-	scale: $scale;
-	animation: $animation;
-  }
-}
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -1468,7 +1447,7 @@ $max: null
   $first-y: null,
   $first-x: null,
   $last: null,
-  $las-child: null,
+  $last-child: null,
   $last-of-type: null,
   $last-top: null,
   $last-right: null,
@@ -2481,6 +2460,27 @@ $max: null
 // TBD
 // TBD
 // TBD
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+	opacity: $opacity;
+	transform: $transform;
+	scale: $scale;
+	animation: $animation;
+  }
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // TBD
 // TBD
 // TBD
@@ -2622,13 +2622,6 @@ $max: null
   }
   @return if($minus, -$result, $result);;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin box(
   $min-width: null,
   $width: null,
@@ -2985,3 +2978,10 @@ $max: null
 	max-width: $max-x;
   }
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
