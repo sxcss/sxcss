@@ -292,8 +292,16 @@ img {
   max-width: 100%;
 }
 
-input, textarea {
-color: currentColor;
+textarea,
+input,
+input:not([type="radio"]):not([type="checkbox"]),
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  color: currentColor;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
 }
 
 a, button {
