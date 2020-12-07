@@ -1,0 +1,56 @@
+@mixin flexbox-carousel__parent(
+  $parent-width: 100%,
+  $parent-height: auto,
+  $parent-padding-left: 0,
+  $parent-direction: row
+) {
+	position: relative;
+  width: $parent-width;
+  height: $parent-height;
+  padding-left: $parent-padding-left;
+  @include flex($direction: $parent-direction);
+  @include overflow($x: auto);
+}
+
+@mixin flexbox-carousel__child(
+  $child-width: null,
+  $child-height: null,
+  $child-size: null,
+  $child-gap: null,
+  $child-direction: 'ltr'
+) {
+  width: $child-width;
+  height: $child-height;
+  @include size($child-size);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+  @if $child-direction == 'ltr' {
+    float: left;
+    margin: 0 $child-gap 0 0;
+  }
+  @if $child-direction == 'rtl' {
+    float: right;
+    margin: 0 0 0 $child-gap;
+  }
+}
+
+@mixin flexbox-carousel(
+  $slide-size: null,
+  $slide-width: null,
+  $slide-height: null,
+  $gap: null
+) {
+  @include flexbox-carousel__parent(
+      $parent-padding-left: $gap
+  );
+
+  > * {
+    @include flexbox-carousel__child(
+      $child-size: $slide-size,
+      $child-width: $slide-width,
+      $child-height: $slide-height,
+      $child-gap: $gap
+    );
+  }
+}
