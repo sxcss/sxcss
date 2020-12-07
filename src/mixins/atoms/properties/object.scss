@@ -3,7 +3,7 @@
 }
 
 @mixin object-position($object-position-x, $object-position-y) {
-  object-position: $object-position-x, $object-position-y;
+  object-position: $object-position-x $object-position-y;
 }
 
 @mixin object(
