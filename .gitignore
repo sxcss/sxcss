@@ -3,3 +3,5 @@ docs/.vuepress/dist
 *.sketch
 
 \.DS_Store
+
+dev/node_modules
