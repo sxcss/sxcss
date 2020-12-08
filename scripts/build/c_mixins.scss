@@ -84,28 +84,6 @@
 
 // TBD
 
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'after';
-@import 'before';
-@import 'first-letter';
-@import 'first-line';
-@import 'marker';
-@import 'placeholder';
-@import 'selection';
-
-// TBD
-
-// TBD
-
-// TBD
-
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -2762,6 +2740,44 @@ $max: null
   z-index: $z-index;
 }
 
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'default';
+@import 'empty';
+@import 'focus-within';
+@import 'range';
+@import 'target';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'after';
+@import 'before';
+@import 'first-letter';
+@import 'first-line';
+@import 'marker';
+@import 'placeholder';
+@import 'selection';
+
+// TBD
+
+// TBD
+
+// TBD
+
 @import 'keyframes.scss';
 @import 'media.scss';
 
@@ -2928,22 +2944,6 @@ $max: null
 
   @return if($minus, -$result, $result);;
 }
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'default';
-@import 'empty';
-@import 'focus-within';
-@import 'range';
-@import 'target';
-
-// TBD
-
-// TBD
 
 // TBD
 
@@ -3326,6 +3326,7 @@ $max: null
 
 @import 'hide';
 @import 'size';
+@import 'truncate';
 
 @mixin size(
   $size: null,
@@ -3380,4 +3381,14 @@ $max: null
   @if $max-x {
     max-width: $max-x;
   }
+}
+
+@mixin truncate($lines){
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
 }
