@@ -16,7 +16,7 @@
           :key="index"
           class="carousel__pagination-item">
           <a
-            :href="`#carousel__slide--${index}`"
+            :href="`#${carouselKey}--${index}`"
             class="carousel__pagination-button"
           >Go to slide {{ index }}</a>
         </li>
@@ -39,8 +39,12 @@ export default {
     },
     paginationEnabled: {
       type: Boolean,
-      required: true,
       default: true
+    },
+    carouselKey: {
+      type: String,
+      required: true,
+      default: 'slide'
     }
   },
   methods: {

@@ -1,16 +1,16 @@
 <template>
   <li
     class="carousel__slide"
-    :tabindex="tabindex"
-    :id="'carousel__slide--' + tabindex"
+    :tabindex="slideIndex"
+    :id="`${carouselKey}--${slideIndex}`"
   >
     <div class="carousel__snapper">
       <a
-        :href="`#carousel__slide--${prevSlide(tabindex)}`"
+        :href="`#${carouselKey}--${prevSlide(slideIndex)}`"
         class="carousel__prev"
       />
       <a
-        :href="`#carousel__slide--${nextSlide(tabindex)}`"
+        :href="`#${carouselKey}--${nextSlide(slideIndex)}`"
         class="carousel__next"
       />
     </div>
@@ -26,9 +26,14 @@ export default {
     carouselNavigation
   ],
   props: {
-    tabindex: {
+    slideIndex: {
       type: String | Number,
       required: true
+    },
+    carouselKey: {
+      type: String,
+      required: true,
+      default: 'slide'
     }
   }
 }

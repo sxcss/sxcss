@@ -6,7 +6,20 @@
       <CarouselItem
         v-for="(item, index) in carouselItems"
         :key="index"
-        :tabindex="index"
+        :slideIndex="index"
+      >
+        {{ index + 1 }}
+      </CarouselItem>
+    </Carousel>
+    <Carousel
+      :paginationItems="carouselItems"
+      carouselKey="slajd"
+    >
+      <CarouselItem
+        v-for="(item, index) in carouselItems"
+        :key="index"
+        :slideIndex="index"
+        carouselKey="slajd"
       >
         {{ index + 1 }}
       </CarouselItem>
