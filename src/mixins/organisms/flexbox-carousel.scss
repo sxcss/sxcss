@@ -56,6 +56,7 @@
   position: relative;
   width: $slide-width;
   height: $slide-height;
+  overflow: hidden;
   @include size($slide-size);
   flex: $slide-flex;
   flex-shrink: 0;
