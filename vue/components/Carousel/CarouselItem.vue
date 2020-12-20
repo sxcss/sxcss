@@ -6,11 +6,11 @@
   >
     <div class="carousel__snapper">
       <a
-        :href="'#carousel__slide--' + prevSlide(tabindex)"
+        :href="`#carousel__slide--${prevSlide(tabindex)}`"
         class="carousel__prev"
       />
       <a
-        :href="'#carousel__slide--' + nextSlide(tabindex)"
+        :href="`#carousel__slide--${nextSlide(tabindex)}`"
         class="carousel__next"
       />
     </div>

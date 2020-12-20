@@ -1,16 +1,22 @@
 <template>
-  <div class="carousel">
+  <div
+    class="carousel"
+    :paginationEnabled="paginationEnabled"
+  >
     <div class="carousel__viewport">
       <slot />
     </div>
-    <aside class="carousel__pagination">
+    <aside
+      v-if="paginationEnabled"
+      class="carousel__pagination"
+    >
       <ol class="carousel__pagination-list">
         <li
           v-for="(item, index) in paginationItems"
           :key="index"
           class="carousel__pagination-item">
           <a
-            :href="'#carousel__slide--' + index"
+            :href="`#carousel__slide--${index}`"
             class="carousel__pagination-button"
           >Go to slide {{ index }}</a>
         </li>
@@ -26,10 +32,15 @@ export default {
   mixins: [
     carouselNavigation
   ],
-  props: {
+  props: { 
     paginationItems: {
       type: Array,
       required: true
+    },
+    paginationEnabled: {
+      type: Boolean,
+      required: true,
+      default: true
     }
   },
   methods: {
