@@ -278,6 +278,13 @@ $z-index: (
 // TBD
 // TBD
 // TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
   &:hover {
 	opacity: $opacity;
@@ -286,6 +293,11 @@ $z-index: (
 	animation: $animation;
   }
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // TBD
 // TBD
 // TBD
@@ -2476,18 +2488,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 // This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
 // It was refactored to fit the SXCSS sizing convention
 @mixin media($conditions...) {
@@ -2629,6 +2629,91 @@ $max: null
 // TBD
 // TBD
 // TBD
+@mixin box(
+  $min-width: null,
+  $width: null,
+  $max-width: null,
+  $min-height: null,
+  $height: null,
+  $max-height: null,
+  $size: null,
+  $size-max: null,
+  $padding: null,
+  $padding-x: null,
+  $padding-y: null,
+  $padding-top: null,
+  $padding-right: null,
+  $padding-bottom: null,
+  $padding-left: null,
+  $margin: null,
+  $margin-x: auto,
+  $margin-y: null,
+  $margin-top: null,
+  $margin-right: null,
+  $margin-bottom: null,
+  $margin-left: null,
+  $display: null,
+  $place: null
+){
+  @include size(
+	$size: $size,
+	$min-x: $min-width,
+	$x: $width,
+	$max-x:$max-width,
+	$min-y: $min-height,
+	$y: $height,
+	$max-y: $max-height
+  );
+  @include padding(
+	$padding: $padding,
+	$y: $padding-y,
+	$x: $padding-x,
+	$top: $padding-top,
+	$right: $padding-right,
+	$bottom: $padding-bottom,
+	$left: $padding-left
+  );
+  @include margin(
+	$margin: $margin,
+	$y: $margin-y,
+	$x: $margin-x,
+	$top: $margin-top,
+	$right: $margin-right,
+	$bottom: $margin-bottom,
+	$left: $margin-left
+  );
+  @if $display == flex or $display == 'flex' {
+	@if $place {
+	  @include flex($place: $place)
+	} @else {
+	  @include flex;
+	}
+  }
+}
+@mixin boxed($width: null, $max-width: null) {
+  width: $width;
+  max-width: $max-width;
+  margin: auto !important;
+  @media all and (max-width: 767px) {
+	width: calc(100% - #{map-deep-get($scale, proportion, sm)});
+  }
+}
+@mixin fullwidth {
+  width: 100%;
+  max-width: 100vw;
+}
+@mixin container {
+  box-sizing: border-box;
+  @include width(100%);
+  &__inner {
+	@include height(100%);
+	@include width(100%);
+	@include margin(auto);
+	&--boxed {
+	  @include boxed;
+	}
+  }
+}
 // TBD
 @mixin grid-layout-core(
   $gap: null,
@@ -2825,91 +2910,6 @@ $max: null
 		$template-columns: $template-columns,
 		$template-rows: $template-rows
 	  );
-	}
-  }
-}
-@mixin box(
-  $min-width: null,
-  $width: null,
-  $max-width: null,
-  $min-height: null,
-  $height: null,
-  $max-height: null,
-  $size: null,
-  $size-max: null,
-  $padding: null,
-  $padding-x: null,
-  $padding-y: null,
-  $padding-top: null,
-  $padding-right: null,
-  $padding-bottom: null,
-  $padding-left: null,
-  $margin: null,
-  $margin-x: auto,
-  $margin-y: null,
-  $margin-top: null,
-  $margin-right: null,
-  $margin-bottom: null,
-  $margin-left: null,
-  $display: null,
-  $place: null
-){
-  @include size(
-	$size: $size,
-	$min-x: $min-width,
-	$x: $width,
-	$max-x:$max-width,
-	$min-y: $min-height,
-	$y: $height,
-	$max-y: $max-height
-  );
-  @include padding(
-	$padding: $padding,
-	$y: $padding-y,
-	$x: $padding-x,
-	$top: $padding-top,
-	$right: $padding-right,
-	$bottom: $padding-bottom,
-	$left: $padding-left
-  );
-  @include margin(
-	$margin: $margin,
-	$y: $margin-y,
-	$x: $margin-x,
-	$top: $margin-top,
-	$right: $margin-right,
-	$bottom: $margin-bottom,
-	$left: $margin-left
-  );
-  @if $display == flex or $display == 'flex' {
-	@if $place {
-	  @include flex($place: $place)
-	} @else {
-	  @include flex;
-	}
-  }
-}
-@mixin boxed($width: null, $max-width: null) {
-  width: $width;
-  max-width: $max-width;
-  margin: auto !important;
-  @media all and (max-width: 767px) {
-	width: calc(100% - #{map-deep-get($scale, proportion, sm)});
-  }
-}
-@mixin fullwidth {
-  width: 100%;
-  max-width: 100vw;
-}
-@mixin container {
-  box-sizing: border-box;
-  @include width(100%);
-  &__inner {
-	@include height(100%);
-	@include width(100%);
-	@include margin(auto);
-	&--boxed {
-	  @include boxed;
 	}
   }
 }
