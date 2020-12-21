@@ -1,0 +1,211 @@
+@keyframes flexbox-carousel__animation--snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+@mixin flexbox-carousel(
+  $wrapper-height,
+  $wrapper-width,
+  
+  $viewport-classname,
+  $viewport-position: absolute,
+  $viewport-top: 0,
+  $viewport-right: 0,
+  $viewport-bottom: 0,
+  $viewport-left: 0,
+  $viewport-width: 100%,
+  $viewport-height: auto,
+  $viewport-direction: row,
+  $viewport-counter: null,
+  
+  $slide-classname,
+  $slide-size: null,
+  $slide-width: null,
+  $slide-height: null,
+  $slide-direction: 'ltr',
+  $slide-flex: null,
+  $slide-counter: false,
+
+  $snapper-classname,
+
+  $pagination-classname,
+
+  $gap: null,
+  $navigation-enabled: false,
+  $pagination-enabled: false
+) {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+  position: relative;
+  height: $wrapper-height;
+  width: $wrapper-width;
+
+  &, > #{$slide-classname} {
+    list-style: none !important;
+  }
+
+  #{$viewport-classname} {
+    @if $viewport-position {
+      position: $viewport-position;
+      top: $viewport-top;
+      right: $viewport-right;
+      bottom: $viewport-bottom;
+      left: $viewport-left;
+    }
+    @if $viewport-counter {
+      counter-reset: item;
+    }
+    width: $viewport-width;
+    height: $viewport-height;
+    @include flex($direction: $viewport-direction);
+    @include overflow($x: scroll);
+    scroll-snap-type: x mandatory;
+  }
+
+  #{$slide-classname} {
+    position: relative;
+    width: $slide-width;
+    height: $slide-height;
+    overflow: hidden;
+    @include size($slide-size);
+    flex: $slide-flex;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    @if $slide-direction == 'ltr' {
+      float: left;
+      margin: 0 $gap 0 0;
+    }
+    @if $slide-counter {
+      counter-increment: item;
+    }
+    @if $slide-direction == 'rtl' {
+      float: right;
+      margin: 0 0 0 $gap;
+    }
+
+    @media (hover: hover) {
+      @keyframes flexbox-carousel__animation--tostart {
+        75% {
+          left: 0;
+        }
+        95% {
+          left: -300%;
+        }
+        98% {
+          left: -300%;
+        }
+        99% {
+          left: 0;
+        }
+      }
+
+      &:last-child &__snapper {
+        animation-name: flexbox-carousel__animation--tostart, flexbox-carousel__animation--snap;
+      }
+    }
+  }
+
+  #{$snapper-classname} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+    scroll-snap-align: center;
+  
+    @media (hover: hover) {
+  
+      @keyframes flexbox-carousel__animation--tonext {
+        75% {
+          left: 0;
+        }
+        95% {
+          left: 100%;
+        }
+        98% {
+          left: 100%;
+        }
+        99% {
+          left: 0;
+        }
+      }
+  
+      animation-name: flexbox-carousel__animation--tonext, flexbox-carousel__animation--snap;
+      animation-timing-function: ease;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  @if $navigation-enabled {
+    
+    &::before,
+    &::after,
+    &__prev,
+    &__next {
+      position: absolute;
+      top: 0;
+      top: 50%;
+      width: 4rem;
+      height: 4rem;
+      transform: translateY(-50%);
+      outline: 0;
+    }
+
+    &::before,
+    &__prev {
+      left: 0;
+    }
+
+    &::after,
+    &__next {
+      right: 0;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      z-index: 1;
+      background: #000;
+      pointer-events: none;
+    }
+  }
+
+  @if $pagination-enabled {
+
+    #{$pagination-classname} {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+  
+      &-list,
+      &-item {
+        display: inline-block;
+      }
+  
+      &-button {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #333;
+        background-clip: content-box;
+        border: 0.25rem solid transparent;
+        border-radius: 50%;
+        font-size: 0;
+        transition: transform 0.1s;
+      }
+    }
+  }
+}

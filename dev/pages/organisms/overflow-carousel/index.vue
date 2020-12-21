@@ -1,5 +1,5 @@
 <template>
-  <article id="flexbox-carousel-page">
+  <article id="overflow-carousel-page">
     <Carousel
       :paginationEnabled="false"
       :paginationItems="carouselItems"
@@ -61,22 +61,6 @@ export default {
     $overflow-overlay-color: #fff,
     $overflow-overlay-width: 120px
   );
-  //  &__viewport {
-  //    @include overflow-carousel__viewport($width: 100%, $children-margin: 20px, $padding-left: 20px);
-  //  }
-
-  // &__slide {
-  //   @include overflow-carousel__item($width: 420px, $height: 420px);
-  //   @include flex($place: center);
-  //   font-size: 48px;
-  //   font-weight: 700;
-  //   background-color: grey;
-  //   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  //   color: white;
-  // }
-
-  &__viewport {
-  }
 
   &__slide {
     @include flex($place: center);

@@ -62,25 +62,48 @@ export default {
 @import '../../../../src/mixins/index.scss';
 
 .carousel {
-  @include flexbox-carousel__wrapper(
-    $carousel-height: 450px,
-    $carousel-width: 37.5rem,
-    $navigation-enabled: true
+  @include flexbox-carousel(
+    $navigation-enabled: true,
+
+    $wrapper-height: 450px,
+    $wrapper-width: 37.5rem,
+    
+    $viewport-classname: '.carousel__viewport',
+    $viewport-counter: true,
+    
+    $slide-classname: '.carousel__slide',
+    $slide-flex: 0 0 100%,
+    $slide-width: 100%,
+    $slide-counter: true,
+
+    $snapper-classname: '.carousel__snapper',
+
+    $pagination-classname: '.carousel__pagination',
+    $pagination-enabled: true,
+
+    $gap: 16px
   );
 
-  &__viewport {
-    @include flexbox-carousel__viewport(
-      $viewport-counter: true
-    );
-  }
+
+  // @include flexbox-carousel__wrapper(
+  //   $carousel-height: 450px,
+  //   $carousel-width: 37.5rem,
+  //   $navigation-enabled: true
+  // );
+
+  // &__viewport {
+  //   @include flexbox-carousel__viewport(
+  //     $viewport-counter: true
+  //   );
+  // }
 
   &__slide {
-    @include flexbox-carousel__slide(
-      $slide-flex: 0 0 100%,
-      $slide-width: 100%,
-      $slide-counter: true,
-      $slide-gap: 16px
-    );
+    // @include flexbox-carousel__slide(
+    //   $slide-flex: 0 0 100%,
+    //   $slide-width: 100%,
+    //   $slide-counter: true,
+    //   $slide-gap: 16px
+    // );
     @include flex($place: center);
     font-size: 48px;
     font-weight: 700;
@@ -89,12 +112,12 @@ export default {
     color: white;
   }
 
-  &__snapper {
-    @include flexbox-carousel__snapper;
-  }
+  // &__snapper {
+  //   @include flexbox-carousel__snapper;
+  // }
 
-  &__pagination {
-    @include flexbox-carousel__pagination;
-  }
+  // &__pagination {
+  //   @include flexbox-carousel__pagination;
+  // }
 }
 </style>

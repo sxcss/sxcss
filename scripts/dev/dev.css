@@ -339,5 +339,19 @@ input[type=number]::-webkit-outer-spin-button {
     scroll-snap-align: center;
   }
 }
+@keyframes flexbox-carousel__animation--snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
 
 /*# sourceMappingURL=dev.css.map */

@@ -84,7 +84,7 @@
     scroll-snap-align: start;
     position: relative;
     float: left;
-    margin-right: $gap;
+    margin-right: $gap !important;
     width: $slide-width !important;
     height: $slide-height !important;
 
