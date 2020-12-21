@@ -462,7 +462,7 @@ $z-index: (
 	}
   }
 }
-@mixin overflow-carousel__container(
+@mixin overflow-carousel__viewport (
   $width: 100%,
   $children-margin: 0,
   $padding-left: 0
@@ -477,6 +477,16 @@ $z-index: (
   -webkit-overflow-scrolling: touch;
   > * {
 	margin-right: $children-margin;
+	&:last-of-type {
+	  &::after {
+		content: "";
+		position: absolute;
+		left: 100%;
+		top: 0;
+		height: 100%;
+		width: $children-margin;
+	  }
+	}
   }
 }
 @mixin overflow-carousel__item(
@@ -491,6 +501,75 @@ $z-index: (
   position: relative;
   float: left;
 }
+@mixin overflow-carousel (
+  $viewport-width: 100%,
+  $viewport-padding-left: 0,
+  $slide-width: auto,
+  $slide-height: auto,
+  $gap: 0,
+) {
+  position: relative;
+  width: $viewport-width;
+  padding-left: $gap;
+  display: flex;
+  flex-direction: row !important;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  > * {
+	display: flex;
+	flex-shrink: 0;
+	scroll-snap-align: start;
+	position: relative;
+	float: left;
+	margin-right: $gap;
+	width: $slide-width !important;
+	height: $slide-height !important;
+	&:last-of-type {
+	  &::after {
+		content: "";
+		position: absolute;
+		left: 100%;
+		top: 0;
+		height: 100%;
+		width: $gap;
+	  }
+	}
+  }
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+	opacity: $opacity;
+	transform: $transform;
+	scale: $scale;
+	animation: $animation;
+  }
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -2664,39 +2743,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-	opacity: $opacity;
-	transform: $transform;
-	scale: $scale;
-	animation: $animation;
-  }
-}
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 // This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
 // It was refactored to fit the SXCSS sizing convention
 @mixin media($conditions...) {

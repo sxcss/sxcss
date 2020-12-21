@@ -1,4 +1,4 @@
-@mixin overflow-carousel__container(
+@mixin overflow-carousel__viewport (
   $width: 100%,
   $children-margin: 0,
   $padding-left: 0
@@ -14,6 +14,17 @@
 
   > * {
     margin-right: $children-margin;
+
+    &:last-of-type {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 0;
+        height: 100%;
+        width: $children-margin;
+      }
+    }
   }
 }
 
@@ -28,4 +39,43 @@
   scroll-snap-align: start;
   position: relative;
   float: left;
+}
+
+@mixin overflow-carousel (
+  $viewport-width: 100%,
+  $viewport-padding-left: 0,
+  $slide-width: auto,
+  $slide-height: auto,
+  $gap: 0,
+) {
+  position: relative;
+  width: $viewport-width;
+  padding-left: $gap;
+  display: flex;
+  flex-direction: row !important;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  > * {
+    display: flex;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    position: relative;
+    float: left;
+    margin-right: $gap;
+    width: $slide-width !important;
+    height: $slide-height !important;
+
+    &:last-of-type {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 0;
+        height: 100%;
+        width: $gap;
+      }
+    }
+  }
 }

@@ -241,7 +241,7 @@
 @import './flexbox-carousel';
 @import './overflow-carousel';
 
-@mixin overflow-carousel__container(
+@mixin overflow-carousel__viewport (
   $width: 100%,
   $children-margin: 0,
   $padding-left: 0
@@ -257,6 +257,17 @@
 
   > * {
     margin-right: $children-margin;
+
+    &:last-of-type {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 0;
+        height: 100%;
+        width: $children-margin;
+      }
+    }
   }
 }
 
@@ -272,6 +283,134 @@
   position: relative;
   float: left;
 }
+
+@mixin overflow-carousel (
+  $viewport-width: 100%,
+  $viewport-padding-left: 0,
+  $slide-width: auto,
+  $slide-height: auto,
+  $gap: 0,
+) {
+  position: relative;
+  width: $viewport-width;
+  padding-left: $gap;
+  display: flex;
+  flex-direction: row !important;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  > * {
+    display: flex;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    position: relative;
+    float: left;
+    margin-right: $gap;
+    width: $slide-width !important;
+    height: $slide-height !important;
+
+    &:last-of-type {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 100%;
+        top: 0;
+        height: 100%;
+        width: $gap;
+      }
+    }
+  }
+}
+// TBD
+
+// TBD
+
+// TBD
+
+
+// TBD
+
+// TBD
+
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+    opacity: $opacity;
+    transform: $transform;
+    scale: $scale;
+    animation: $animation;
+  }
+}
+
+@import 'blank';
+@import 'checked';
+@import 'dir';
+@import 'disabled';
+@import 'enabled';
+@import 'focus';
+@import 'hover.scss';
+@import 'lang';
+@import 'link';
+@import 'only';
+@import 'optional';
+@import 'placeholder-shown';
+@import 'required';
+@import 'user-invalid';
+@import 'visited';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'after';
+@import 'before';
+@import 'first-letter';
+@import 'first-line';
+@import 'marker';
+@import 'placeholder';
+@import 'selection';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'default';
+@import 'empty';
+@import 'focus-within';
+@import 'range';
+@import 'target';
+
+// TBD
+
+// TBD
 
 @mixin align-content($align-content) {
   align-content: $align-content;
@@ -2917,96 +3056,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-
-// TBD
-
-// TBD
-
-// TBD
-
-
-// TBD
-
-// TBD
-
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-    opacity: $opacity;
-    transform: $transform;
-    scale: $scale;
-    animation: $animation;
-  }
-}
-
-@import 'blank';
-@import 'checked';
-@import 'dir';
-@import 'disabled';
-@import 'enabled';
-@import 'focus';
-@import 'hover.scss';
-@import 'lang';
-@import 'link';
-@import 'only';
-@import 'optional';
-@import 'placeholder-shown';
-@import 'required';
-@import 'user-invalid';
-@import 'visited';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'after';
-@import 'before';
-@import 'first-letter';
-@import 'first-line';
-@import 'marker';
-@import 'placeholder';
-@import 'selection';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'default';
-@import 'empty';
-@import 'focus-within';
-@import 'range';
-@import 'target';
-
-// TBD
-
-// TBD
 
 @import 'keyframes.scss';
 @import 'media.scss';

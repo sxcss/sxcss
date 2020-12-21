@@ -853,10 +853,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@naked-ui/vue@^0.0.12":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@naked-ui/vue/-/vue-0.0.12.tgz#211728cc167470aa10b60fa90beed06069da5751"
-  integrity sha512-u/zL4UNaCe6sggfoj8/QwadQjjhp1P9N5cyDbIuoCCzETESZoYA88hpVWzSRYHN4k3X/MlU6BQFVy52GmkOpvw==
+"@naked-ui/vue@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@naked-ui/vue/-/vue-0.0.13.tgz#47c3d1e840a6f8cc85aa84de6ed0c9486e8579cd"
+  integrity sha512-Xr83A+z64/RuDz/82m1NPEBiGrwJadEapLO8/X7wh3CmudfP9RQEtgKcD8bD03RZQVTLR7/O5PZMMD3e4D+5XQ==
   dependencies:
     babel-loader "^8.2.2"
     core-js "^3.8.1"

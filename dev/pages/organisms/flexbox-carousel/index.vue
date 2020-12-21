@@ -13,6 +13,8 @@
         {{ index + 1 }}
       </CarouselItem>
     </Carousel>
+    <br />
+    <br />
     <Carousel
       :paginationItems="carouselItems"
       carouselKey="slajder_b"
@@ -80,7 +82,11 @@ export default {
       $slide-gap: 16px
     );
     @include flex($place: center);
-    font-size: 32px;
+    font-size: 48px;
+    font-weight: 700;
+    background-color: grey;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
   }
 
   &__snapper {
