@@ -28,5 +28,4 @@
   scroll-snap-align: start;
   position: relative;
   float: left;
-  @include margin($y: 0, $right: $size-4, $important: true);
 }
