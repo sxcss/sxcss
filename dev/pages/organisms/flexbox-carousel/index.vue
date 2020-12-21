@@ -30,10 +30,10 @@
 </template>
 
 <script>
-import Carousel  from '@naked-ui/vue/src/components/Carousel/Carousel.vue'
-import CarouselItem  from '@naked-ui/vue/src/components/Carousel/CarouselItem.vue'
+// import Carousel  from '@naked-ui/vue/src/components/Carousel/Carousel.vue'
+// import CarouselItem  from '@naked-ui/vue/src/components/Carousel/CarouselItem.vue'
 
-// import { Carousel, CarouselItem } from '@naked-ui/vue'
+import { Carousel, CarouselItem } from '@naked-ui/vue'
 
 export default {
   data () {
