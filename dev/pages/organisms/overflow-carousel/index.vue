@@ -55,7 +55,6 @@ export default {
 @import '../../../../src/mixins/index.scss';
 
 .carousel {
-
   @include overflow-carousel(
     $viewport-classname: '.carousel__viewport',
     $viewport-width: 100%,
@@ -69,10 +68,12 @@ export default {
 
   &__slide {
     @include flex($place: center);
-    font-size: 48px;
-    font-weight: 700;
     background-color: grey;
-    color: white;
+
+    &-content {
+      font: 700 48px/48px -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: white;
+    }
   }
 }
 </style>

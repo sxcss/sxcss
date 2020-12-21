@@ -273,20 +273,6 @@ $z-index: (
 @mixin max-width($width) {
   max-width: $width;
 }
-@keyframes flexbox-carousel__animation--snap {
-  96% {
-	scroll-snap-align: center;
-  }
-  97% {
-	scroll-snap-align: none;
-  }
-  99% {
-	scroll-snap-align: none;
-  }
-  100% {
-	scroll-snap-align: center;
-  }
-}
 @mixin flexbox-carousel(
   $wrapper-height,
   $wrapper-width,
@@ -314,7 +300,7 @@ $z-index: (
   $pagination-enabled: false
 ) {
   box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-color: transparent transparent;
   scrollbar-width: 0px;
   position: relative;
   height: $wrapper-height;
@@ -359,25 +345,6 @@ $z-index: (
 	  float: right;
 	  margin: 0 0 0 $gap;
 	}
-	@media (hover: hover) {
-	  @keyframes flexbox-carousel__animation--tostart {
-		75% {
-		  left: 0;
-		}
-		95% {
-		  left: -300%;
-		}
-		98% {
-		  left: -300%;
-		}
-		99% {
-		  left: 0;
-		}
-	  }
-	  &:last-child &__snapper {
-		animation-name: flexbox-carousel__animation--tostart, flexbox-carousel__animation--snap;
-	  }
-	}
   }
   #{$snapper-classname} {
 	position: absolute;
@@ -385,26 +352,6 @@ $z-index: (
 	left: 0;
 	@include size(100%);
 	scroll-snap-align: center;
-	@media (hover: hover) {
-	  @keyframes flexbox-carousel__animation--tonext {
-		75% {
-		  left: 0;
-		}
-		95% {
-		  left: 100%;
-		}
-		98% {
-		  left: 100%;
-		}
-		99% {
-		  left: 0;
-		}
-	  }
-	  animation-name: flexbox-carousel__animation--tonext, flexbox-carousel__animation--snap;
-	  animation-timing-function: ease;
-	  animation-duration: 2s;
-	  animation-iteration-count: infinite;
-	}
   }
   @if $navigation-enabled {
 	&::before,
@@ -459,45 +406,6 @@ $z-index: (
 	  }
 	}
   }
-}
-@mixin overflow-carousel__viewport (
-  $width: 100%,
-  $gap: 0,
-  $padding-left: 0
-) {
-  position: relative;
-  width: $width;
-  padding-left: $padding-left;
-  display: flex;
-  flex-direction: row !important;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  > * {
-	margin-right: $gap;
-	&:last-of-type {
-	  &::after {
-		content: "";
-		position: absolute;
-		left: 100%;
-		top: 0;
-		height: 100%;
-		width: $gap;
-	  }
-	}
-  }
-}
-@mixin overflow-carousel__item(
-  $width: auto,
-  $height: auto
-) {
-  display: flex;
-  width: $width !important;
-  height: $height !important;
-  flex-shrink: 0;
-  scroll-snap-align: start;
-  position: relative;
-  float: left;
 }
 @mixin overflow-carousel (
   $viewport-classname: null,
@@ -554,6 +462,27 @@ $z-index: (
 	}
   }
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+	opacity: $opacity;
+	transform: $transform;
+	scale: $scale;
+	animation: $animation;
+  }
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -2732,27 +2661,6 @@ $max: null
 // TBD
 // TBD
 // TBD
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-	opacity: $opacity;
-	transform: $transform;
-	scale: $scale;
-	animation: $animation;
-  }
-}
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 // TBD
 // TBD
 // TBD
@@ -2894,13 +2802,6 @@ $max: null
   }
   @return if($minus, -$result, $result);;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin box(
   $min-width: null,
   $width: null,
@@ -3185,6 +3086,13 @@ $max: null
 	}
   }
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin hide(
   $media: null,
   $display: none !important,

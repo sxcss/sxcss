@@ -6,7 +6,7 @@
 
 <style lang="scss">
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
   background: #ddd;
   padding: 16px !important;
 }
