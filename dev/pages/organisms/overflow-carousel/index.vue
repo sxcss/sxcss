@@ -50,6 +50,17 @@ export default {
 @import '../../../../src/mixins/index.scss';
 
 .carousel {
+
+  @include overflow-carousel(
+    $viewport-classname: '.carousel__viewport',
+    $viewport-width: 100%,
+    $gap: 20px,
+    $slide-classname: '.carousel__slide',
+    $slide-width: 300px,
+    $slide-height: 300px,
+    $overflow-overlay-color: #fff,
+    $overflow-overlay-width: 120px
+  );
   //  &__viewport {
   //    @include overflow-carousel__viewport($width: 100%, $children-margin: 20px, $padding-left: 20px);
   //  }
@@ -65,7 +76,6 @@ export default {
   // }
 
   &__viewport {
-     @include overflow-carousel($viewport-width: 100%, $gap: 20px, $slide-width: 300px, $slide-height: 300px);
   }
 
   &__slide {

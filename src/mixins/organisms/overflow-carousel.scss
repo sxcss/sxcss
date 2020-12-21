@@ -42,22 +42,42 @@
 }
 
 @mixin overflow-carousel (
+  $viewport-classname: null,
   $viewport-width: 100%,
   $viewport-padding-left: 0,
+  $slide-classname: null,
   $slide-width: auto,
   $slide-height: auto,
   $gap: 0,
+  $overflow-overlay-width: null,
+  $overflow-overlay-color: null
 ) {
-  position: relative;
-  width: $viewport-width;
-  padding-left: $gap;
-  display: flex;
-  flex-direction: row !important;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  
+  #{$viewport-classname} {
+    width: $viewport-width;
+    padding-left: $gap;
+    display: flex;
+    flex-direction: row !important;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
 
-  > * {
+  @if $overflow-overlay-width or $overflow-overlay-color {
+    position: relative;
+    #{$viewport-classname}::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: $overflow-overlay-width;
+      background-image: linear-gradient(to left, #{$overflow-overlay-color}, transparent);
+      pointer-events: none;
+    }
+  }
+
+  #{$slide-classname} {
     display: flex;
     flex-shrink: 0;
     scroll-snap-align: start;
