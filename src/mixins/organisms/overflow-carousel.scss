@@ -1,6 +1,6 @@
 @mixin overflow-carousel__viewport (
   $width: 100%,
-  $children-margin: 0,
+  $gap: 0,
   $padding-left: 0
 ) {
   position: relative;
@@ -13,7 +13,7 @@
   -webkit-overflow-scrolling: touch;
 
   > * {
-    margin-right: $children-margin;
+    margin-right: $gap;
 
     &:last-of-type {
       &::after {
@@ -22,7 +22,7 @@
         left: 100%;
         top: 0;
         height: 100%;
-        width: $children-margin;
+        width: $gap;
       }
     }
   }

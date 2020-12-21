@@ -243,7 +243,7 @@
 
 @mixin overflow-carousel__viewport (
   $width: 100%,
-  $children-margin: 0,
+  $gap: 0,
   $padding-left: 0
 ) {
   position: relative;
@@ -256,7 +256,7 @@
   -webkit-overflow-scrolling: touch;
 
   > * {
-    margin-right: $children-margin;
+    margin-right: $gap;
 
     &:last-of-type {
       &::after {
@@ -265,7 +265,7 @@
         left: 100%;
         top: 0;
         height: 100%;
-        width: $children-margin;
+        width: $gap;
       }
     }
   }
@@ -369,44 +369,6 @@
 // TBD
 
 // TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'after';
-@import 'before';
-@import 'first-letter';
-@import 'first-line';
-@import 'marker';
-@import 'placeholder';
-@import 'selection';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'default';
-@import 'empty';
-@import 'focus-within';
-@import 'range';
-@import 'target';
 
 // TBD
 
@@ -3056,6 +3018,44 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'after';
+@import 'before';
+@import 'first-letter';
+@import 'first-line';
+@import 'marker';
+@import 'placeholder';
+@import 'selection';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'default';
+@import 'empty';
+@import 'focus-within';
+@import 'range';
+@import 'target';
+
+// TBD
+
+// TBD
 
 @import 'keyframes.scss';
 @import 'media.scss';

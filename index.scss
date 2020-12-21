@@ -464,7 +464,7 @@ $z-index: (
 }
 @mixin overflow-carousel__viewport (
   $width: 100%,
-  $children-margin: 0,
+  $gap: 0,
   $padding-left: 0
 ) {
   position: relative;
@@ -476,7 +476,7 @@ $z-index: (
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   > * {
-	margin-right: $children-margin;
+	margin-right: $gap;
 	&:last-of-type {
 	  &::after {
 		content: "";
@@ -484,7 +484,7 @@ $z-index: (
 		left: 100%;
 		top: 0;
 		height: 100%;
-		width: $children-margin;
+		width: $gap;
 	  }
 	}
   }
@@ -550,18 +550,6 @@ $z-index: (
 	animation: $animation;
   }
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 // TBD
 // TBD
 // TBD
@@ -2743,6 +2731,18 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
 // It was refactored to fit the SXCSS sizing convention
 @mixin media($conditions...) {
