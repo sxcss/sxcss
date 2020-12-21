@@ -1,5 +1,12 @@
 <template>
-  <article id="overflow-carousel-page">
+  <article
+    id="overflow-carousel-page"
+    class="page"
+  >
+    <h1 class="page__title">Overflow Carousel</h1>
+    <section
+      class="page__inner"
+    >
     <Carousel
       :paginationEnabled="false"
       :paginationItems="carouselItems"
@@ -16,13 +23,11 @@
         </div>
       </CarouselItem>
     </Carousel>
+    </section>
   </article>
 </template>
 
 <script>
-// import Carousel  from '@naked-ui/vue/src/components/Carousel/Carousel.vue'
-// import CarouselItem  from '@naked-ui/vue/src/components/Carousel/CarouselItem.vue'
-
 import { Carousel, CarouselItem } from '@naked-ui/vue'
 
 export default {
@@ -58,8 +63,8 @@ export default {
     $slide-classname: '.carousel__slide',
     $slide-width: 300px,
     $slide-height: 300px,
-    $overflow-overlay-color: #fff,
-    $overflow-overlay-width: 120px
+    $overflow-overlay-background: linear-gradient(to left, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25), transparent),
+    $overflow-overlay-width: 20px
   );
 
   &__slide {
@@ -67,7 +72,6 @@ export default {
     font-size: 48px;
     font-weight: 700;
     background-color: grey;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
   }
 }

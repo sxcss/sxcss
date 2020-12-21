@@ -50,7 +50,7 @@
   $slide-height: auto,
   $gap: 0,
   $overflow-overlay-width: null,
-  $overflow-overlay-color: null
+  $overflow-overlay-background: null
 ) {
   
   #{$viewport-classname} {
@@ -73,7 +73,7 @@
       right: 0;
       height: 100%;
       width: $overflow-overlay-width;
-      background-image: linear-gradient(to left, #{$overflow-overlay-color}, transparent);
+      background: $overflow-overlay-background;
       pointer-events: none;
     }
   }
