@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "yarn install && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -11,6 +11,7 @@
     "lint": "yarn lint:style"
   },
   "dependencies": {
+    "@naked-ui/vue": "^0.0.12",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6"
   },

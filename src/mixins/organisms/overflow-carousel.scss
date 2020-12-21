@@ -1,0 +1,31 @@
+@mixin overflow-carousel__container(
+  $width: 100%,
+  $children-margin: 0,
+  $padding-left: 0
+) {
+  position: relative;
+  width: $width;
+  padding-left: $padding-left;
+  display: flex;
+  flex-direction: row !important;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  > * {
+    margin-right: $children-margin;
+  }
+}
+
+@mixin overflow-carousel__item(
+  $width: auto,
+  $height: auto
+) {
+  display: flex;
+  width: $width !important;
+  height: $height !important;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+  float: left;
+}
