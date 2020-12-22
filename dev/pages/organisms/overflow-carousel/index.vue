@@ -18,9 +18,7 @@
         :slideIndex="index"
         carouselKey="slajder_a"
       >
-        <div class="carousel__slide-content">
-          {{ index + 1 }}
-        </div>
+        {{ index + 1 }}
       </CarouselItem>
     </Carousel>
     </section>

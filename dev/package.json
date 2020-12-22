@@ -11,7 +11,7 @@
     "lint": "yarn lint:style"
   },
   "dependencies": {
-    "@naked-ui/vue": "^0.0.13",
+    "@naked-ui/vue": "^0.0.16",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6"
   },

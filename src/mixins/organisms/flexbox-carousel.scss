@@ -1,7 +1,7 @@
 @mixin flexbox-carousel(
   $viewport-classname,
   $slide-classname,
-  $snapper-classname,
+  $navigation-classname,
   $pagination-classname,
   
   $wrapper-height,
@@ -80,7 +80,7 @@
     }
   }
 
-  #{$snapper-classname} {
+  #{$navigation-classname} {
     position: absolute;
     top: 0;
     left: 0;

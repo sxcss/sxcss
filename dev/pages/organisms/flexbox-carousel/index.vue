@@ -40,9 +40,6 @@
 </template>
 
 <script>
-// import Carousel  from '@naked-ui/vue/src/components/Carousel/Carousel.vue'
-// import CarouselItem  from '@naked-ui/vue/src/components/Carousel/CarouselItem.vue'
-
 import { Carousel, CarouselItem } from '@naked-ui/vue'
 
 export default {
@@ -72,7 +69,7 @@ export default {
 .carousel {
   @include flexbox-carousel(
     $navigation-enabled: true,
-    
+
     $wrapper-height: 450px,
     $wrapper-width: 37.5rem,
     $viewport-classname: '.carousel__viewport',
@@ -83,7 +80,7 @@ export default {
     $slide-width: 100%,
     $slide-counter: true,
     
-    $snapper-classname: '.carousel__snapper',
+    $navigation-classname: '.carousel__navigation',
     $pagination-classname: '.carousel__pagination',
     $pagination-enabled: true,
     
@@ -92,11 +89,12 @@ export default {
 
   &__slide {
     @include flex($place: center);
-    font-size: 48px;
-    font-weight: 700;
     background-color: grey;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
+
+    &-content {
+      font: 700 48px/48px -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      color: white;
+    }
   }
 }
 </style>
