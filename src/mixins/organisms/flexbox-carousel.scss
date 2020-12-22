@@ -1,8 +1,14 @@
 @mixin flexbox-carousel(
+  $viewport-classname,
+  $slide-classname,
+  $snapper-classname,
+  $pagination-classname,
+  
   $wrapper-height,
   $wrapper-width,
-  
-  $viewport-classname,
+
+  $gap: null,
+
   $viewport-position: absolute,
   $viewport-top: 0,
   $viewport-right: 0,
@@ -13,7 +19,6 @@
   $viewport-direction: row,
   $viewport-counter: null,
   
-  $slide-classname,
   $slide-size: null,
   $slide-width: null,
   $slide-height: null,
@@ -21,11 +26,6 @@
   $slide-flex: null,
   $slide-counter: false,
 
-  $snapper-classname,
-
-  $pagination-classname,
-
-  $gap: null,
   $navigation-enabled: false,
   $pagination-enabled: false
 ) {

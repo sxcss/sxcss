@@ -27,11 +27,21 @@
 @import 'rules/index.scss';
 @import 'selectors/index.scss';
 
+@import 'blocks/index.scss';
+@import 'layouts/index.scss';
+@import 'misc/index.scss';
+
 @mixin flexbox-carousel(
+  $viewport-classname,
+  $slide-classname,
+  $snapper-classname,
+  $pagination-classname,
+  
   $wrapper-height,
   $wrapper-width,
-  
-  $viewport-classname,
+
+  $gap: null,
+
   $viewport-position: absolute,
   $viewport-top: 0,
   $viewport-right: 0,
@@ -42,7 +52,6 @@
   $viewport-direction: row,
   $viewport-counter: null,
   
-  $slide-classname,
   $slide-size: null,
   $slide-width: null,
   $slide-height: null,
@@ -50,11 +59,6 @@
   $slide-flex: null,
   $slide-counter: false,
 
-  $snapper-classname,
-
-  $pagination-classname,
-
-  $gap: null,
   $navigation-enabled: false,
   $pagination-enabled: false
 ) {
@@ -206,8 +210,9 @@
     flex-wrap: nowrap;
   }
 
-  @if $overflow-overlay-width or $overflow-overlay-color {
+  @if $overflow-overlay-width or $overflow-overlay-background {
     position: relative;
+  
     #{$viewport-classname}::after {
       content: '';
       position: absolute;
@@ -242,62 +247,6 @@
     }
   }
 }
-@import 'blocks/index.scss';
-@import 'layouts/index.scss';
-@import 'misc/index.scss';
-
-// TBD
-
-// TBD
-
-// TBD
-
-
-// TBD
-
-// TBD
-
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-    opacity: $opacity;
-    transform: $transform;
-    scale: $scale;
-    animation: $animation;
-  }
-}
-
-@import 'blank';
-@import 'checked';
-@import 'dir';
-@import 'disabled';
-@import 'enabled';
-@import 'focus';
-@import 'hover.scss';
-@import 'lang';
-@import 'link';
-@import 'only';
-@import 'optional';
-@import 'placeholder-shown';
-@import 'required';
-@import 'user-invalid';
-@import 'visited';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -2949,6 +2898,58 @@ $max: null
 
 // TBD
 
+
+// TBD
+
+// TBD
+
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+    opacity: $opacity;
+    transform: $transform;
+    scale: $scale;
+    animation: $animation;
+  }
+}
+
+@import 'blank';
+@import 'checked';
+@import 'dir';
+@import 'disabled';
+@import 'enabled';
+@import 'focus';
+@import 'hover.scss';
+@import 'lang';
+@import 'link';
+@import 'only';
+@import 'optional';
+@import 'placeholder-shown';
+@import 'required';
+@import 'user-invalid';
+@import 'visited';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
 // TBD
 
 @import 'after';
@@ -3246,6 +3247,28 @@ $max: null
 
 // TBD
 
+// TBD
+
+@import 'active';
+@import 'any-link';
+@import 'invalid';
+@import 'not';
+@import 'nth';
+@import 'root';
+@import 'valid';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
 @mixin grid-layout-core(
   $gap: null,
   $cols: null,
@@ -3485,28 +3508,6 @@ $max: null
 @import 'grid-layout';
 @import 'table-layout';
 
-
-// TBD
-
-// TBD
-
-@import 'active';
-@import 'any-link';
-@import 'invalid';
-@import 'not';
-@import 'nth';
-@import 'root';
-@import 'valid';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
 
 @mixin hide(
   $media: null,

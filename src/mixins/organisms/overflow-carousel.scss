@@ -21,8 +21,9 @@
     flex-wrap: nowrap;
   }
 
-  @if $overflow-overlay-width or $overflow-overlay-color {
+  @if $overflow-overlay-width or $overflow-overlay-background {
     position: relative;
+  
     #{$viewport-classname}::after {
       content: '';
       position: absolute;

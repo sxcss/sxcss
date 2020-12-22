@@ -1,29 +1,6 @@
 @import 'map/map.scss';
 @import 'number/number.scss';
 
-@function map-deep-get($map, $submapKey, $keys...) {
-  $iterable: map-get($map, $submapKey);
-
-  @each $key in $keys {
-      $map: map-get($iterable, $key);
-  }
-
-  @return $map;
-}
-
-@function map-deep-has-key($map, $map-key, $keys...) {
-  @each $key in $keys {
-      $tmp: map-deep-get($map, $map-key, $key);
-      @if $tmp != null {
-        @return true;
-      }
-  }
-  @return false;
-}
-
-@import 'map-deep-get.scss';
-@import 'map-deep-has-key.scss';
-
 @import 'to-number.scss';
 
 @function to-number($string) {
@@ -87,3 +64,26 @@
   
   @return $number * nth($units, $index);
 }
+
+@function map-deep-get($map, $submapKey, $keys...) {
+  $iterable: map-get($map, $submapKey);
+
+  @each $key in $keys {
+      $map: map-get($iterable, $key);
+  }
+
+  @return $map;
+}
+
+@function map-deep-has-key($map, $map-key, $keys...) {
+  @each $key in $keys {
+      $tmp: map-deep-get($map, $map-key, $key);
+      @if $tmp != null {
+        @return true;
+      }
+  }
+  @return false;
+}
+
+@import 'map-deep-get.scss';
+@import 'map-deep-has-key.scss';
