@@ -1,3 +1,19 @@
+@function map-deep-get($map, $submapKey, $keys...) {
+  $iterable: map-get($map, $submapKey);
+  @each $key in $keys {
+	  $map: map-get($iterable, $key);
+  }
+  @return $map;
+}
+@function map-deep-has-key($map, $map-key, $keys...) {
+  @each $key in $keys {
+	  $tmp: map-deep-get($map, $map-key, $key);
+	  @if $tmp != null {
+		@return true;
+	  }
+  }
+  @return false;
+}
 @function to-number($string) {
   // Matrices
   $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
@@ -44,22 +60,6 @@
 	@return false;
   }
   @return $number * nth($units, $index);
-}
-@function map-deep-get($map, $submapKey, $keys...) {
-  $iterable: map-get($map, $submapKey);
-  @each $key in $keys {
-	  $map: map-get($iterable, $key);
-  }
-  @return $map;
-}
-@function map-deep-has-key($map, $map-key, $keys...) {
-  @each $key in $keys {
-	  $tmp: map-deep-get($map, $map-key, $key);
-	  @if $tmp != null {
-		@return true;
-	  }
-  }
-  @return false;
 }
 $scale: (
   percent: (
@@ -276,7 +276,7 @@ $z-index: (
 @mixin flexbox-carousel(
   $viewport-classname,
   $slide-classname,
-  $snapper-classname,
+  $navigation-classname,
   $pagination-classname,
   $wrapper-height,
   $wrapper-width,
@@ -346,7 +346,7 @@ $z-index: (
 	  margin: 0 0 0 $gap;
 	}
   }
-  #{$snapper-classname} {
+  #{$navigation-classname} {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -462,6 +462,34 @@ $z-index: (
 	}
   }
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+	opacity: $opacity;
+	transform: $transform;
+	scale: $scale;
+	animation: $animation;
+  }
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -2635,34 +2663,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-	opacity: $opacity;
-	transform: $transform;
-	scale: $scale;
-	animation: $animation;
-  }
-}
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 // TBD
 // TBD
 // TBD

@@ -34,7 +34,7 @@
 @mixin flexbox-carousel(
   $viewport-classname,
   $slide-classname,
-  $snapper-classname,
+  $navigation-classname,
   $pagination-classname,
   
   $wrapper-height,
@@ -113,7 +113,7 @@
     }
   }
 
-  #{$snapper-classname} {
+  #{$navigation-classname} {
     position: absolute;
     top: 0;
     left: 0;
@@ -247,6 +247,81 @@
     }
   }
 }
+
+// TBD
+
+// TBD
+
+// TBD
+
+
+// TBD
+
+// TBD
+
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+    opacity: $opacity;
+    transform: $transform;
+    scale: $scale;
+    animation: $animation;
+  }
+}
+
+@import 'blank';
+@import 'checked';
+@import 'dir';
+@import 'disabled';
+@import 'enabled';
+@import 'focus';
+@import 'hover.scss';
+@import 'lang';
+@import 'link';
+@import 'only';
+@import 'optional';
+@import 'placeholder-shown';
+@import 'required';
+@import 'user-invalid';
+@import 'visited';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'after';
+@import 'before';
+@import 'first-letter';
+@import 'first-line';
+@import 'marker';
+@import 'placeholder';
+@import 'selection';
+
+// TBD
+
+// TBD
+
+// TBD
+
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -2891,80 +2966,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-
-// TBD
-
-// TBD
-
-// TBD
-
-
-// TBD
-
-// TBD
-
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-    opacity: $opacity;
-    transform: $transform;
-    scale: $scale;
-    animation: $animation;
-  }
-}
-
-@import 'blank';
-@import 'checked';
-@import 'dir';
-@import 'disabled';
-@import 'enabled';
-@import 'focus';
-@import 'hover.scss';
-@import 'lang';
-@import 'link';
-@import 'only';
-@import 'optional';
-@import 'placeholder-shown';
-@import 'required';
-@import 'user-invalid';
-@import 'visited';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'after';
-@import 'before';
-@import 'first-letter';
-@import 'first-line';
-@import 'marker';
-@import 'placeholder';
-@import 'selection';
-
-// TBD
-
-// TBD
-
-// TBD
 
 // TBD
 
