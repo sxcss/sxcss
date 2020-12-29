@@ -57,6 +57,7 @@ export default {
     $viewport-classname: '.carousel__viewport',
     $viewport-width: 100%,
     $gap: 20px,
+    $viewport-padding-left: 20px,
     $slide-classname: '.carousel__slide',
     $slide-width: 300px,
     $slide-height: 300px,
