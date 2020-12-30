@@ -71,13 +71,14 @@ export default {
     $navigation-enabled: true,
 
     $wrapper-height: 450px,
-    $wrapper-width: 37.5rem,
+    $wrapper-width: 100%,
+    $wrapper-max-width: 37.5rem,
     $viewport-classname: '.carousel__viewport',
     $viewport-counter: true,
 
     $slide-classname: '.carousel__slide',
     $slide-flex: 0 0 100%,
-    $slide-width: 100%,
+    $slide-width: 25%,
     $slide-counter: true,
     
     $navigation-classname: '.carousel__navigation',
