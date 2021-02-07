@@ -64,13 +64,11 @@
     @include flex($direction: $viewport-direction);
     @include overflow($x: scroll);
     scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     &::-webkit-scrollbar {
       display: none;
     }
-    & {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    } 
   }
 
   #{$slide-classname} {

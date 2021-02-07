@@ -13,6 +13,11 @@
   
   #{$viewport-classname} {
     width: $viewport-width;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     @if $gap and $viewport-padding-left == 0 {
       padding-left: $gap;
     }
@@ -29,13 +34,6 @@
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    & {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    } 
   }
 
   @if $overflow-overlay-width or $overflow-overlay-background {
