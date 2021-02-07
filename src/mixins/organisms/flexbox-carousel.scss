@@ -36,18 +36,12 @@
   $navigation-enabled: false,
   $pagination-enabled: false
 ) {
-
-  @if $main-classname {
-
-    #{$main-classname} {
-      box-sizing: border-box;
-      scrollbar-color: transparent transparent;
-      scrollbar-width: 0px;
-      position: relative;
-      height: $wrapper-height;
-      width: $wrapper-width;
-    }
-  }
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: 0px;
+  position: relative;
+  height: $wrapper-height;
+  width: $wrapper-width;
 
   &, > #{$slide-classname} {
     list-style: none !important;
