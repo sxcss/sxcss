@@ -29,6 +29,13 @@
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    & {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    } 
   }
 
   @if $overflow-overlay-width or $overflow-overlay-background {
