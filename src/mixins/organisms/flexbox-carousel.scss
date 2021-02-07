@@ -43,7 +43,7 @@
   height: $wrapper-height;
   width: $wrapper-width;
 
-  &, > #{$slide-classname} {
+  #{$main-classname}, > #{$slide-classname} {
     list-style: none !important;
   }
 
@@ -142,12 +142,12 @@
       left: 0;
       text-align: center;
   
-      &-list,
-      &-item {
+      #{$main-classname}-list,
+      #{$main-classname}-item {
         display: inline-block;
       }
   
-      &-button {
+      #{$main-classname}-button {
         display: inline-block;
         width: 1.5rem;
         height: 1.5rem;
