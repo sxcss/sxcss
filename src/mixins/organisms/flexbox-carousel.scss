@@ -36,12 +36,18 @@
   $navigation-enabled: false,
   $pagination-enabled: false
 ) {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent;
-  scrollbar-width: 0px;
-  position: relative;
-  height: $wrapper-height;
-  width: $wrapper-width;
+
+  @if $main-classname {
+
+    #{$main-classname} {
+      box-sizing: border-box;
+      scrollbar-color: transparent transparent;
+      scrollbar-width: 0px;
+      position: relative;
+      height: $wrapper-height;
+      width: $wrapper-width;
+    }
+  }
 
   &, > #{$slide-classname} {
     list-style: none !important;
@@ -99,12 +105,12 @@
     scroll-snap-align: center;
   }
 
-  @if $navigation-enabled {
-    
+  @if $navigation-enabled and $main-classname {
+
     #{$main-classname}::before,
     #{$main-classname}::after,
-    &__prev,
-    &__next {
+    #{$main-classname}__prev,
+    #{$main-classname}__next {
       position: absolute;
       top: 0;
       top: 50%;
@@ -115,12 +121,12 @@
     }
 
     #{$main-classname}::before,
-    &__prev {
+    #{$main-classname}__prev {
       left: 0;
     }
 
     #{$main-classname}::after,
-    &__next {
+    #{$main-classname}__next {
       right: 0;
     }
 
