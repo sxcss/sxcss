@@ -69,12 +69,18 @@
   $navigation-enabled: false,
   $pagination-enabled: false
 ) {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent;
-  scrollbar-width: 0px;
-  position: relative;
-  height: $wrapper-height;
-  width: $wrapper-width;
+
+  @if $main-classname {
+
+    #{$main-classname} {
+      box-sizing: border-box;
+      scrollbar-color: transparent transparent;
+      scrollbar-width: 0px;
+      position: relative;
+      height: $wrapper-height;
+      width: $wrapper-width;
+    }
+  }
 
   &, > #{$slide-classname} {
     list-style: none !important;
@@ -132,12 +138,12 @@
     scroll-snap-align: center;
   }
 
-  @if $navigation-enabled {
-    
+  @if $navigation-enabled and $main-classname {
+
     #{$main-classname}::before,
     #{$main-classname}::after,
-    &__prev,
-    &__next {
+    #{$main-classname}__prev,
+    #{$main-classname}__next {
       position: absolute;
       top: 0;
       top: 50%;
@@ -148,12 +154,12 @@
     }
 
     #{$main-classname}::before,
-    &__prev {
+    #{$main-classname}__prev {
       left: 0;
     }
 
     #{$main-classname}::after,
-    &__next {
+    #{$main-classname}__next {
       right: 0;
     }
 
@@ -3221,6 +3227,102 @@ $max: null
 
 // TBD
 
+@mixin box(
+  $min-width: null,
+  $width: null,
+  $max-width: null,
+  $min-height: null,
+  $height: null,
+  $max-height: null,
+  $size: null,
+  $size-max: null,
+  $padding: null,
+  $padding-x: null,
+  $padding-y: null,
+  $padding-top: null,
+  $padding-right: null,
+  $padding-bottom: null,
+  $padding-left: null,
+  $margin: null,
+  $margin-x: auto,
+  $margin-y: null,
+  $margin-top: null,
+  $margin-right: null,
+  $margin-bottom: null,
+  $margin-left: null,
+  $display: null,
+  $place: null
+){
+  @include size(
+    $size: $size,
+    $min-x: $min-width,
+    $x: $width,
+    $max-x:$max-width,
+    $min-y: $min-height,
+    $y: $height,
+    $max-y: $max-height
+  );
+  @include padding(
+    $padding: $padding,
+    $y: $padding-y,
+    $x: $padding-x,
+    $top: $padding-top,
+    $right: $padding-right,
+    $bottom: $padding-bottom,
+    $left: $padding-left
+  );
+  @include margin(
+    $margin: $margin,
+    $y: $margin-y,
+    $x: $margin-x,
+    $top: $margin-top,
+    $right: $margin-right,
+    $bottom: $margin-bottom,
+    $left: $margin-left
+  );
+  @if $display == flex or $display == 'flex' {
+    @if $place {
+      @include flex($place: $place)
+    } @else {
+      @include flex;
+    }
+  }
+}
+
+@import '../../atoms/index.scss';
+
+@mixin boxed($width: null, $max-width: null) {
+  width: $width;
+  max-width: $max-width;
+  margin: auto !important;
+  @media all and (max-width: 767px) {
+    width: calc(100% - #{map-deep-get($scale, proportion, sm)});
+  }
+}
+
+@mixin fullwidth {
+  width: 100%;
+  max-width: 100vw;
+}
+
+@mixin container {
+  box-sizing: border-box;
+  @include width(100%);
+
+  &__inner {
+    @include height(100%);
+    @include width(100%);
+    @include margin(auto);
+    
+    &--boxed {
+      @include boxed;
+    }
+  }
+}
+
+@import 'box';
+@import 'container';
+
 // TBD
 
 @mixin grid-layout-core(
@@ -3462,102 +3564,6 @@ $max: null
 @import 'grid-layout';
 @import 'table-layout';
 
-
-@mixin box(
-  $min-width: null,
-  $width: null,
-  $max-width: null,
-  $min-height: null,
-  $height: null,
-  $max-height: null,
-  $size: null,
-  $size-max: null,
-  $padding: null,
-  $padding-x: null,
-  $padding-y: null,
-  $padding-top: null,
-  $padding-right: null,
-  $padding-bottom: null,
-  $padding-left: null,
-  $margin: null,
-  $margin-x: auto,
-  $margin-y: null,
-  $margin-top: null,
-  $margin-right: null,
-  $margin-bottom: null,
-  $margin-left: null,
-  $display: null,
-  $place: null
-){
-  @include size(
-    $size: $size,
-    $min-x: $min-width,
-    $x: $width,
-    $max-x:$max-width,
-    $min-y: $min-height,
-    $y: $height,
-    $max-y: $max-height
-  );
-  @include padding(
-    $padding: $padding,
-    $y: $padding-y,
-    $x: $padding-x,
-    $top: $padding-top,
-    $right: $padding-right,
-    $bottom: $padding-bottom,
-    $left: $padding-left
-  );
-  @include margin(
-    $margin: $margin,
-    $y: $margin-y,
-    $x: $margin-x,
-    $top: $margin-top,
-    $right: $margin-right,
-    $bottom: $margin-bottom,
-    $left: $margin-left
-  );
-  @if $display == flex or $display == 'flex' {
-    @if $place {
-      @include flex($place: $place)
-    } @else {
-      @include flex;
-    }
-  }
-}
-
-@import '../../atoms/index.scss';
-
-@mixin boxed($width: null, $max-width: null) {
-  width: $width;
-  max-width: $max-width;
-  margin: auto !important;
-  @media all and (max-width: 767px) {
-    width: calc(100% - #{map-deep-get($scale, proportion, sm)});
-  }
-}
-
-@mixin fullwidth {
-  width: 100%;
-  max-width: 100vw;
-}
-
-@mixin container {
-  box-sizing: border-box;
-  @include width(100%);
-
-  &__inner {
-    @include height(100%);
-    @include width(100%);
-    @include margin(auto);
-    
-    &--boxed {
-      @include boxed;
-    }
-  }
-}
-
-@import 'box';
-@import 'container';
 
 @mixin hide(
   $media: null,
