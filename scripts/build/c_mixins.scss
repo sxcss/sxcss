@@ -32,6 +32,7 @@
 @import 'misc/index.scss';
 
 @mixin flexbox-carousel(
+  $main-classname,
   $viewport-classname,
   $slide-classname,
   $navigation-classname,
@@ -133,8 +134,8 @@
 
   @if $navigation-enabled {
     
-    &::before,
-    &::after,
+    #{$main-classname}::before,
+    #{$main-classname}::after,
     &__prev,
     &__next {
       position: absolute;
@@ -146,18 +147,18 @@
       outline: 0;
     }
 
-    &::before,
+    #{$main-classname}::before,
     &__prev {
       left: 0;
     }
 
-    &::after,
+    #{$main-classname}::after,
     &__next {
       right: 0;
     }
 
-    &::before,
-    &::after {
+    #{$main-classname}::before,
+    #{$main-classname}::after {
       content: '';
       z-index: 1;
       background: #000;
@@ -206,7 +207,8 @@
   $slide-height: auto,
   $gap: 0,
   $overflow-overlay-width: null,
-  $overflow-overlay-background: null
+  $overflow-overlay-background: null,
+  $pagination-enabled: false
 ) {
   
   #{$viewport-classname} {
@@ -265,7 +267,87 @@
       }
     }
   }
+
+  @if $pagination-enabled {
+
+    #{$pagination-classname} {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+  
+      &-list,
+      &-item {
+        display: inline-block;
+      }
+  
+      &-button {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #333;
+        background-clip: content-box;
+        border: 0.25rem solid transparent;
+        border-radius: 50%;
+        font-size: 0;
+        transition: transform 0.1s;
+      }
+    }
+  }
 }
+
+// TBD
+
+// TBD
+
+// TBD
+
+
+// TBD
+
+// TBD
+
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+    opacity: $opacity;
+    transform: $transform;
+    scale: $scale;
+    animation: $animation;
+  }
+}
+
+@import 'blank';
+@import 'checked';
+@import 'dir';
+@import 'disabled';
+@import 'enabled';
+@import 'focus';
+@import 'hover.scss';
+@import 'lang';
+@import 'link';
+@import 'only';
+@import 'optional';
+@import 'placeholder-shown';
+@import 'required';
+@import 'user-invalid';
+@import 'visited';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
 
 @mixin align-content($align-content) {
   align-content: $align-content;
@@ -2918,58 +3000,6 @@ $max: null
 
 // TBD
 
-
-// TBD
-
-// TBD
-
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-    opacity: $opacity;
-    transform: $transform;
-    scale: $scale;
-    animation: $animation;
-  }
-}
-
-@import 'blank';
-@import 'checked';
-@import 'dir';
-@import 'disabled';
-@import 'enabled';
-@import 'focus';
-@import 'hover.scss';
-@import 'lang';
-@import 'link';
-@import 'only';
-@import 'optional';
-@import 'placeholder-shown';
-@import 'required';
-@import 'user-invalid';
-@import 'visited';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
 // TBD
 
 @import 'after';
@@ -3168,102 +3198,6 @@ $max: null
 
   @return if($minus, -$result, $result);;
 }
-
-@mixin box(
-  $min-width: null,
-  $width: null,
-  $max-width: null,
-  $min-height: null,
-  $height: null,
-  $max-height: null,
-  $size: null,
-  $size-max: null,
-  $padding: null,
-  $padding-x: null,
-  $padding-y: null,
-  $padding-top: null,
-  $padding-right: null,
-  $padding-bottom: null,
-  $padding-left: null,
-  $margin: null,
-  $margin-x: auto,
-  $margin-y: null,
-  $margin-top: null,
-  $margin-right: null,
-  $margin-bottom: null,
-  $margin-left: null,
-  $display: null,
-  $place: null
-){
-  @include size(
-    $size: $size,
-    $min-x: $min-width,
-    $x: $width,
-    $max-x:$max-width,
-    $min-y: $min-height,
-    $y: $height,
-    $max-y: $max-height
-  );
-  @include padding(
-    $padding: $padding,
-    $y: $padding-y,
-    $x: $padding-x,
-    $top: $padding-top,
-    $right: $padding-right,
-    $bottom: $padding-bottom,
-    $left: $padding-left
-  );
-  @include margin(
-    $margin: $margin,
-    $y: $margin-y,
-    $x: $margin-x,
-    $top: $margin-top,
-    $right: $margin-right,
-    $bottom: $margin-bottom,
-    $left: $margin-left
-  );
-  @if $display == flex or $display == 'flex' {
-    @if $place {
-      @include flex($place: $place)
-    } @else {
-      @include flex;
-    }
-  }
-}
-
-@import '../../atoms/index.scss';
-
-@mixin boxed($width: null, $max-width: null) {
-  width: $width;
-  max-width: $max-width;
-  margin: auto !important;
-  @media all and (max-width: 767px) {
-    width: calc(100% - #{map-deep-get($scale, proportion, sm)});
-  }
-}
-
-@mixin fullwidth {
-  width: 100%;
-  max-width: 100vw;
-}
-
-@mixin container {
-  box-sizing: border-box;
-  @include width(100%);
-
-  &__inner {
-    @include height(100%);
-    @include width(100%);
-    @include margin(auto);
-    
-    &--boxed {
-      @include boxed;
-    }
-  }
-}
-
-@import 'box';
-@import 'container';
 
 // TBD
 
@@ -3528,6 +3462,102 @@ $max: null
 @import 'grid-layout';
 @import 'table-layout';
 
+
+@mixin box(
+  $min-width: null,
+  $width: null,
+  $max-width: null,
+  $min-height: null,
+  $height: null,
+  $max-height: null,
+  $size: null,
+  $size-max: null,
+  $padding: null,
+  $padding-x: null,
+  $padding-y: null,
+  $padding-top: null,
+  $padding-right: null,
+  $padding-bottom: null,
+  $padding-left: null,
+  $margin: null,
+  $margin-x: auto,
+  $margin-y: null,
+  $margin-top: null,
+  $margin-right: null,
+  $margin-bottom: null,
+  $margin-left: null,
+  $display: null,
+  $place: null
+){
+  @include size(
+    $size: $size,
+    $min-x: $min-width,
+    $x: $width,
+    $max-x:$max-width,
+    $min-y: $min-height,
+    $y: $height,
+    $max-y: $max-height
+  );
+  @include padding(
+    $padding: $padding,
+    $y: $padding-y,
+    $x: $padding-x,
+    $top: $padding-top,
+    $right: $padding-right,
+    $bottom: $padding-bottom,
+    $left: $padding-left
+  );
+  @include margin(
+    $margin: $margin,
+    $y: $margin-y,
+    $x: $margin-x,
+    $top: $margin-top,
+    $right: $margin-right,
+    $bottom: $margin-bottom,
+    $left: $margin-left
+  );
+  @if $display == flex or $display == 'flex' {
+    @if $place {
+      @include flex($place: $place)
+    } @else {
+      @include flex;
+    }
+  }
+}
+
+@import '../../atoms/index.scss';
+
+@mixin boxed($width: null, $max-width: null) {
+  width: $width;
+  max-width: $max-width;
+  margin: auto !important;
+  @media all and (max-width: 767px) {
+    width: calc(100% - #{map-deep-get($scale, proportion, sm)});
+  }
+}
+
+@mixin fullwidth {
+  width: 100%;
+  max-width: 100vw;
+}
+
+@mixin container {
+  box-sizing: border-box;
+  @include width(100%);
+
+  &__inner {
+    @include height(100%);
+    @include width(100%);
+    @include margin(auto);
+    
+    &--boxed {
+      @include boxed;
+    }
+  }
+}
+
+@import 'box';
+@import 'container';
 
 @mixin hide(
   $media: null,
