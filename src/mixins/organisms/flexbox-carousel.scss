@@ -1,5 +1,4 @@
 @mixin flexbox-carousel(
-  $main-classname,
   $viewport-classname,
   $slide-classname,
   $navigation-classname,
@@ -43,7 +42,7 @@
   height: $wrapper-height;
   width: $wrapper-width;
 
-  #{$main-classname}, > #{$slide-classname} {
+  &, > #{$slide-classname} {
     list-style: none !important;
   }
 
@@ -99,12 +98,12 @@
     scroll-snap-align: center;
   }
 
-  @if $navigation-enabled and $main-classname {
-
-    #{$main-classname}::before,
-    #{$main-classname}::after,
-    #{$main-classname}__prev,
-    #{$main-classname}__next {
+  @if $navigation-enabled {
+    
+    &::before,
+    &::after,
+    &__prev,
+    &__next {
       position: absolute;
       top: 0;
       top: 50%;
@@ -114,18 +113,18 @@
       outline: 0;
     }
 
-    #{$main-classname}::before,
-    #{$main-classname}__prev {
+    &::before,
+    &__prev {
       left: 0;
     }
 
-    #{$main-classname}::after,
-    #{$main-classname}__next {
+    &::after,
+    &__next {
       right: 0;
     }
 
-    #{$main-classname}::before,
-    #{$main-classname}::after {
+    &::before,
+    &::after {
       content: '';
       z-index: 1;
       background: #000;
@@ -142,12 +141,12 @@
       left: 0;
       text-align: center;
   
-      #{$main-classname}-list,
-      #{$main-classname}-item {
+      &-list,
+      &-item {
         display: inline-block;
       }
   
-      #{$main-classname}-button {
+      &-button {
         display: inline-block;
         width: 1.5rem;
         height: 1.5rem;
