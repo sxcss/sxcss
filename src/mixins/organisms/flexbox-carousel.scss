@@ -1,4 +1,5 @@
 @mixin flexbox-carousel(
+  $base-classname,
   $viewport-classname,
   $slide-classname,
   $navigation-classname,
@@ -107,8 +108,8 @@
     
     &::before,
     &::after,
-    &__prev,
-    &__next {
+    #{$base-classname}__prev,
+    #{$base-classname}__next {
       position: absolute;
       top: 0;
       top: 50%;
@@ -119,12 +120,12 @@
     }
 
     &::before,
-    &__prev {
+    #{$base-classname}__prev {
       left: 0;
     }
 
     &::after,
-    &__next {
+    #{$base-classname}__next {
       right: 0;
     }
 
