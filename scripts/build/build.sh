@@ -17,3 +17,5 @@ rm index.min.scss;
 sass --stop-on-error index.scss:index.css;
 rm index.css;
 rm index.css.map;
+
+sass --style=compressed --no-source-map src/reset.scss reset.css
