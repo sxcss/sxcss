@@ -138,12 +138,14 @@
     left: 0;
     @include size(100%);
     scroll-snap-align: center;
+    pointer-events: none;
   }
 
   @if $navigation-enabled {
     
     #{$base-classname}__prev,
     #{$base-classname}__next {
+      pointer-events: all;
       position: absolute;
       top: 0;
       top: 50%;
@@ -151,6 +153,11 @@
       height: 4rem;
       transform: translateY(-50%);
       outline: 0;
+
+      &--disabled {
+        cursor: not-allowed;
+        opacity: .3;
+      }
     }
 
     #{$base-classname}__prev {
@@ -357,6 +364,44 @@
 // TBD
 
 // TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'after';
+@import 'before';
+@import 'first-letter';
+@import 'first-line';
+@import 'marker';
+@import 'placeholder';
+@import 'selection';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+@import 'default';
+@import 'empty';
+@import 'focus-within';
+@import 'range';
+@import 'target';
 
 // TBD
 
@@ -3007,44 +3052,6 @@ $max: null
   z-index: $z-index;
 }
 
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'after';
-@import 'before';
-@import 'first-letter';
-@import 'first-line';
-@import 'marker';
-@import 'placeholder';
-@import 'selection';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'default';
-@import 'empty';
-@import 'focus-within';
-@import 'range';
-@import 'target';
-
-// TBD
-
-// TBD
-
 @import 'keyframes.scss';
 @import 'media.scss';
 
@@ -3330,93 +3337,6 @@ $max: null
 @import 'box';
 @import 'container';
 
-@mixin hide(
-  $media: null,
-  $display: none !important,
-  $opacity: 0 !important,
-  $pointer-events: none !important
-) {
-  @if $media {
-    @include media($media) {
-      display: $display;
-      opacity: $opacity;
-      pointer-events: $pointer-events;
-    }
-  } @else {
-    display: $display;
-    opacity: $opacity;
-    pointer-events: $pointer-events;
-  }
-}
-
-@import 'hide';
-@import 'size';
-@import 'truncate';
-
-@mixin size(
-  $size: null,
-  $min: null,
-  $max: null,
-  $y: null,
-  $min-y: null,
-  $max-y: null,
-  $x: null,
-  $min-x: null,
-  $max-x: null
-) {
-  @if $size {
-    width: $size;
-    height: $size;
-  }
-  @if $size == '100v' or $size == 100v {
-    width: 100vw;
-    height: 100vh;
-  }
-  @if $min {
-    min-width: $min;
-    min-height: $min;
-  }
-  @if $min == '100v' or $min == 100v {
-    min-width: 100vw;
-    min-height: 100vh;
-  }
-  @if $max {
-    max-width: $max;
-    max-height: $max;
-  }
-  @if $max == '100v' or $max == 100v {
-    max-width: 100vw;
-    max-height: 100vh;
-  }
-  @if $y {
-    height: $y;
-  }
-  @if $min-y {
-    min-height: $min-y;
-  }
-  @if $max-y {
-    max-height: $max-y;
-  }
-  @if $x {
-    width: $x;
-  }
-  @if $min-x {
-    min-width: $min-x;
-  }
-  @if $max-x {
-    max-width: $max-x;
-  }
-}
-
-@mixin truncate($lines){
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: $lines;
-  /* autoprefixer: off */
-  -webkit-box-orient: vertical;
-}
-
 // TBD
 
 @mixin grid-layout-core(
@@ -3658,3 +3578,90 @@ $max: null
 @import 'grid-layout';
 @import 'table-layout';
 
+
+@mixin hide(
+  $media: null,
+  $display: none !important,
+  $opacity: 0 !important,
+  $pointer-events: none !important
+) {
+  @if $media {
+    @include media($media) {
+      display: $display;
+      opacity: $opacity;
+      pointer-events: $pointer-events;
+    }
+  } @else {
+    display: $display;
+    opacity: $opacity;
+    pointer-events: $pointer-events;
+  }
+}
+
+@import 'hide';
+@import 'size';
+@import 'truncate';
+
+@mixin size(
+  $size: null,
+  $min: null,
+  $max: null,
+  $y: null,
+  $min-y: null,
+  $max-y: null,
+  $x: null,
+  $min-x: null,
+  $max-x: null
+) {
+  @if $size {
+    width: $size;
+    height: $size;
+  }
+  @if $size == '100v' or $size == 100v {
+    width: 100vw;
+    height: 100vh;
+  }
+  @if $min {
+    min-width: $min;
+    min-height: $min;
+  }
+  @if $min == '100v' or $min == 100v {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  @if $max {
+    max-width: $max;
+    max-height: $max;
+  }
+  @if $max == '100v' or $max == 100v {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  @if $y {
+    height: $y;
+  }
+  @if $min-y {
+    min-height: $min-y;
+  }
+  @if $max-y {
+    max-height: $max-y;
+  }
+  @if $x {
+    width: $x;
+  }
+  @if $min-x {
+    min-width: $min-x;
+  }
+  @if $max-x {
+    max-width: $max-x;
+  }
+}
+
+@mixin truncate($lines){
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines;
+  /* autoprefixer: off */
+  -webkit-box-orient: vertical;
+}
