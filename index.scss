@@ -326,6 +326,9 @@ $z-index: (
 	@if $viewport-counter {
 	  counter-reset: item;
 	}
+	@include media('>md') {
+	  pointer-events: none;
+	}
 	width: $viewport-width;
 	height: $viewport-height;
 	max-width: $viewport-max-width;
@@ -370,8 +373,6 @@ $z-index: (
 	scroll-snap-align: center;
   }
   @if $navigation-enabled {
-	&::before,
-	&::after,
 	#{$base-classname}__prev,
 	#{$base-classname}__next {
 	  position: absolute;
@@ -382,20 +383,11 @@ $z-index: (
 	  transform: translateY(-50%);
 	  outline: 0;
 	}
-	&::before,
 	#{$base-classname}__prev {
 	  left: 0;
 	}
-	&::after,
 	#{$base-classname}__next {
 	  right: 0;
-	}
-	&::before,
-	&::after {
-	  content: '';
-	  z-index: 1;
-	  background: #000;
-	  pointer-events: none;
 	}
   }
   @if $pagination-enabled {
@@ -527,27 +519,6 @@ $z-index: (
 	}
   }
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-	opacity: $opacity;
-	transform: $transform;
-	scale: $scale;
-	animation: $animation;
-  }
-}
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -2721,6 +2692,27 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+	opacity: $opacity;
+	transform: $transform;
+	scale: $scale;
+	animation: $animation;
+  }
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // TBD
 // TBD
 // TBD
