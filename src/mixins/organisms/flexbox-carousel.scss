@@ -58,6 +58,9 @@
     @if $viewport-counter {
       counter-reset: item;
     }
+    @include media('>md') {
+      pointer-events: none;
+    }
     width: $viewport-width;
     height: $viewport-height;
     max-width: $viewport-max-width;
@@ -106,8 +109,6 @@
 
   @if $navigation-enabled {
     
-    &::before,
-    &::after,
     #{$base-classname}__prev,
     #{$base-classname}__next {
       position: absolute;
@@ -119,22 +120,12 @@
       outline: 0;
     }
 
-    &::before,
     #{$base-classname}__prev {
       left: 0;
     }
 
-    &::after,
     #{$base-classname}__next {
       right: 0;
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      z-index: 1;
-      background: #000;
-      pointer-events: none;
     }
   }
 
