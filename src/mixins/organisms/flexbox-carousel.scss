@@ -105,12 +105,14 @@
     left: 0;
     @include size(100%);
     scroll-snap-align: center;
+    pointer-events: none;
   }
 
   @if $navigation-enabled {
     
     #{$base-classname}__prev,
     #{$base-classname}__next {
+      pointer-events: all;
       position: absolute;
       top: 0;
       top: 50%;
@@ -118,6 +120,11 @@
       height: 4rem;
       transform: translateY(-50%);
       outline: 0;
+
+      &--disabled {
+        cursor: not-allowed;
+        opacity: .3;
+      }
     }
 
     #{$base-classname}__prev {
