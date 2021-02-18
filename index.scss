@@ -550,7 +550,7 @@ $z-index: (
   $item-direction: 'ltr',
   $item-flex: null,
   $item-counter: false,
-  $viitemsslides: 1,
+  $visible-items: 1,
   $navigation-enabled: false,
   $pagination-enabled: false
 ) {
@@ -837,6 +837,13 @@ $z-index: (
   }
   @return if($minus, -$result, $result);;
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -3010,13 +3017,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin box(
   $min-width: null,
   $width: null,

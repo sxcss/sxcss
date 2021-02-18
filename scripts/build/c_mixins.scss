@@ -27,10 +27,6 @@
 @import 'rules/index.scss';
 @import 'selectors/index.scss';
 
-@import 'blocks/index.scss';
-@import 'layouts/index.scss';
-@import 'misc/index.scss';
-
 @mixin flexbox-carousel(
   $base-classname,
   $viewport-classname,
@@ -344,7 +340,7 @@
   $item-flex: null,
   $item-counter: false,
 
-  $viitemsslides: 1,
+  $visible-items: 1,
 
   $navigation-enabled: false,
   $pagination-enabled: false
@@ -478,6 +474,10 @@
     }
   }
 }
+
+@import 'blocks/index.scss';
+@import 'layouts/index.scss';
+@import 'misc/index.scss';
 
 // TBD
 
@@ -735,6 +735,28 @@
 
   @return if($minus, -$result, $result);;
 }
+
+// TBD
+
+// TBD
+
+@import 'active';
+@import 'any-link';
+@import 'invalid';
+@import 'not';
+@import 'nth';
+@import 'root';
+@import 'valid';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
 
 @mixin align-content($align-content) {
   align-content: $align-content;
@@ -3380,28 +3402,6 @@ $max: null
 @mixin z-index($z-index) {
   z-index: $z-index;
 }
-
-// TBD
-
-// TBD
-
-@import 'active';
-@import 'any-link';
-@import 'invalid';
-@import 'not';
-@import 'nth';
-@import 'root';
-@import 'valid';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
 
 @mixin box(
   $min-width: null,
