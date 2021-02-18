@@ -1,7 +1,7 @@
 @mixin slider-carousel(
   $base-classname,
   $viewport-classname,
-  $slide-classname,
+  $item-classname,
   $navigation-classname,
   $pagination-classname,
   
@@ -24,16 +24,16 @@
   $viewport-direction: row,
   $viewport-counter: null,
   
-  $slide-size: null,
-  $slide-width: null,
-  $slide-height: null,
-  $slide-max-width: null,
-  $slide-max-height: null,
-  $slide-direction: 'ltr',
-  $slide-flex: null,
-  $slide-counter: false,
+  $item-size: null,
+  $item-width: null,
+  $item-height: null,
+  $item-max-width: null,
+  $item-max-height: null,
+  $item-direction: 'ltr',
+  $item-flex: null,
+  $item-counter: false,
 
-  $visible-slides: 1,
+  $viitemsslides: 1,
 
   $navigation-enabled: false,
   $pagination-enabled: false
@@ -45,7 +45,7 @@
   height: $wrapper-height;
   width: $wrapper-width;
 
-  &, > #{$slide-classname} {
+  &, > #{$item-classname} {
     list-style: none !important;
   }
 
@@ -77,26 +77,26 @@
     }
   }
 
-  #{$slide-classname} {
+  #{$item-classname} {
     position: relative;
-    width: $slide-width;
-    height: $slide-height;
-    max-width: $slide-max-width;
-    max-height: $slide-max-height;
+    width: $item-width;
+    height: $item-height;
+    max-width: $item-max-width;
+    max-height: $item-max-height;
     overflow: hidden;
-    @include size($slide-size);
-    flex: $slide-flex;
+    @include size($item-size);
+    flex: $item-flex;
     flex-shrink: 0;
     scroll-snap-align: start;
-    flex: 0 0 calc(100% / #{$visible-slides});
-    @if $slide-direction == 'ltr' {
+    flex: 0 0 calc(100% / #{$visible-items});
+    @if $item-direction == 'ltr' {
       float: left;
       margin: 0 $gap 0 0;
     }
-    @if $slide-counter {
+    @if $item-counter {
       counter-increment: item;
     }
-    @if $slide-direction == 'rtl' {
+    @if $item-direction == 'rtl' {
       float: right;
       margin: 0 0 0 $gap;
     }
