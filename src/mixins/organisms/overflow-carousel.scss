@@ -1,7 +1,7 @@
-@mixin overflow-carousel (
+@mixin overflow-carousel(
   $viewport-classname: null,
   $viewport-width: 100%,
-  $viewport-padding-left: 0,
+  $viewport-padding: null,
   $slide-classname: null,
   $slide-width: auto,
   $slide-height: auto,
@@ -10,15 +10,12 @@
   $overflow-overlay-background: null,
   $pagination-enabled: false
 ) {
-  
   #{$viewport-classname} {
     width: $viewport-width;
-    @if $gap and $viewport-padding-left == 0 {
+    @if $gap and $viewport-padding == 0 {
       padding-left: $gap;
     }
-    @if $viewport-padding-left > 0 {
-      padding-left: $viewport-padding-left;
-    }
+    padding-left: $viewport-padding;
     display: flex;
     flex-direction: row !important;
     flex-wrap: nowrap;
@@ -35,9 +32,9 @@
 
   @if $overflow-overlay-width or $overflow-overlay-background {
     position: relative;
-  
+
     #{$viewport-classname}::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -47,7 +44,6 @@
       pointer-events: none;
     }
   }
-
   #{$slide-classname} {
     display: flex;
     flex-shrink: 0;
@@ -57,7 +53,6 @@
     margin-right: $gap !important;
     width: $slide-width !important;
     height: $slide-height !important;
-
     &:last-of-type {
       &::after {
         content: "";
@@ -65,25 +60,24 @@
         left: 100%;
         top: 0;
         height: 100%;
-        width: $gap;
+        width: $viewport-padding;
       }
     }
   }
 
   @if $pagination-enabled {
-
     #{$pagination-classname} {
       position: absolute;
       right: 0;
       bottom: 0;
       left: 0;
       text-align: center;
-  
+
       &-list,
       &-item {
         display: inline-block;
       }
-  
+
       &-button {
         display: inline-block;
         width: 1.5rem;
