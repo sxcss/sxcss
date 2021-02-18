@@ -1,19 +1,3 @@
-@function map-deep-get($map, $submapKey, $keys...) {
-  $iterable: map-get($map, $submapKey);
-  @each $key in $keys {
-	  $map: map-get($iterable, $key);
-  }
-  @return $map;
-}
-@function map-deep-has-key($map, $map-key, $keys...) {
-  @each $key in $keys {
-	  $tmp: map-deep-get($map, $map-key, $key);
-	  @if $tmp != null {
-		@return true;
-	  }
-  }
-  @return false;
-}
 @function to-number($string) {
   // Matrices
   $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
@@ -50,6 +34,22 @@
 	}
   }
   @return if($minus, $result * -1, $result);
+}
+@function map-deep-get($map, $submapKey, $keys...) {
+  $iterable: map-get($map, $submapKey);
+  @each $key in $keys {
+	  $map: map-get($iterable, $key);
+  }
+  @return $map;
+}
+@function map-deep-has-key($map, $map-key, $keys...) {
+  @each $key in $keys {
+	  $tmp: map-deep-get($map, $map-key, $key);
+	  @if $tmp != null {
+		@return true;
+	  }
+  }
+  @return false;
 }
 @function _size($number, $unit) {
   $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
@@ -3064,18 +3064,6 @@ $max: null
 // TBD
 // TBD
 // TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
   &:hover {
 	opacity: $opacity;
@@ -3084,6 +3072,13 @@ $max: null
 	animation: $animation;
   }
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // TBD
 // TBD
 // TBD
@@ -3226,6 +3221,11 @@ $max: null
   }
   @return if($minus, -$result, $result);;
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // TBD
 // TBD
 // TBD
