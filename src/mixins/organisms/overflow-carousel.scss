@@ -16,10 +16,7 @@
     @if $gap and $viewport-padding-left == 0 {
       padding-left: $gap;
     }
-    @if $viewport-padding-left and $gap == 0 {
-      padding-left: $viewport-padding-left;
-    }
-    @if $gap > 0 and $viewport-padding-left {
+    @if $viewport-padding-left > 0 {
       padding-left: $viewport-padding-left;
     }
     display: flex;
