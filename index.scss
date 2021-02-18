@@ -1,3 +1,19 @@
+@function map-deep-get($map, $submapKey, $keys...) {
+  $iterable: map-get($map, $submapKey);
+  @each $key in $keys {
+	  $map: map-get($iterable, $key);
+  }
+  @return $map;
+}
+@function map-deep-has-key($map, $map-key, $keys...) {
+  @each $key in $keys {
+	  $tmp: map-deep-get($map, $map-key, $key);
+	  @if $tmp != null {
+		@return true;
+	  }
+  }
+  @return false;
+}
 @function to-number($string) {
   // Matrices
   $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
@@ -34,22 +50,6 @@
 	}
   }
   @return if($minus, $result * -1, $result);
-}
-@function map-deep-get($map, $submapKey, $keys...) {
-  $iterable: map-get($map, $submapKey);
-  @each $key in $keys {
-	  $map: map-get($iterable, $key);
-  }
-  @return $map;
-}
-@function map-deep-has-key($map, $map-key, $keys...) {
-  @each $key in $keys {
-	  $tmp: map-deep-get($map, $map-key, $key);
-	  @if $tmp != null {
-		@return true;
-	  }
-  }
-  @return false;
 }
 @function _size($number, $unit) {
   $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
@@ -520,27 +520,156 @@ $z-index: (
 	}
   }
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
-  &:hover {
-	opacity: $opacity;
-	transform: $transform;
-	scale: $scale;
-	animation: $animation;
+@mixin slider-carousel(
+  $base-classname,
+  $viewport-classname,
+  $slide-classname,
+  $navigation-classname,
+  $pagination-classname,
+  $wrapper-height,
+  $wrapper-width,
+  $wrapper-max-height: null,
+  $wrapper-max-width: null,
+  $gap: null,
+  $viewport-position: absolute,
+  $viewport-top: 0,
+  $viewport-right: 0,
+  $viewport-bottom: 0,
+  $viewport-left: 0,
+  $viewport-width: 100%,
+  $viewport-height: auto,
+  $viewport-max-width: null,
+  $viewport-max-height: null,
+  $viewport-direction: row,
+  $viewport-counter: null,
+  $slide-size: null,
+  $slide-width: null,
+  $slide-height: null,
+  $slide-max-width: null,
+  $slide-max-height: null,
+  $slide-direction: 'ltr',
+  $slide-flex: null,
+  $slide-counter: false,
+  $visible-slides: 1,
+  $navigation-enabled: false,
+  $pagination-enabled: false
+) {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: 0px;
+  position: relative;
+  height: $wrapper-height;
+  width: $wrapper-width;
+  &, > #{$slide-classname} {
+	list-style: none !important;
+  }
+  #{$viewport-classname} {
+	@if $viewport-position {
+	  position: $viewport-position;
+	  top: $viewport-top;
+	  right: $viewport-right;
+	  bottom: $viewport-bottom;
+	  left: $viewport-left;
+	}
+	@if $viewport-counter {
+	  counter-reset: item;
+	}
+	@include media('>md') {
+	  pointer-events: none;
+	}
+	width: $viewport-width;
+	height: $viewport-height;
+	max-width: $viewport-max-width;
+	max-height: $viewport-max-height;
+	@include flex($direction: $viewport-direction);
+	@include overflow($x: scroll);
+	scroll-snap-type: x mandatory;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+	  display: none;
+	}
+  }
+  #{$slide-classname} {
+	position: relative;
+	width: $slide-width;
+	height: $slide-height;
+	max-width: $slide-max-width;
+	max-height: $slide-max-height;
+	overflow: hidden;
+	@include size($slide-size);
+	flex: $slide-flex;
+	flex-shrink: 0;
+	scroll-snap-align: start;
+	flex: 0 0 calc(100% / #{$visible-slides});
+	@if $slide-direction == 'ltr' {
+	  float: left;
+	  margin: 0 $gap 0 0;
+	}
+	@if $slide-counter {
+	  counter-increment: item;
+	}
+	@if $slide-direction == 'rtl' {
+	  float: right;
+	  margin: 0 0 0 $gap;
+	}
+  }
+  #{$navigation-classname} {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include size(100%);
+	scroll-snap-align: center;
+	pointer-events: none;
+  }
+  @if $navigation-enabled {
+	#{$base-classname}__prev,
+	#{$base-classname}__next {
+	  pointer-events: all;
+	  position: absolute;
+	  top: 0;
+	  top: 50%;
+	  width: 4rem;
+	  height: 4rem;
+	  transform: translateY(-50%);
+	  outline: 0;
+	  &--disabled {
+		cursor: not-allowed;
+		opacity: .3;
+	  }
+	}
+	#{$base-classname}__prev {
+	  left: 0;
+	}
+	#{$base-classname}__next {
+	  right: 0;
+	}
+  }
+  @if $pagination-enabled {
+	#{$pagination-classname} {
+	  position: absolute;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  text-align: center;
+	  &-list,
+	  &-item {
+		display: inline-block;
+	  }
+	  &-button {
+		display: inline-block;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-color: #333;
+		background-clip: content-box;
+		border: 0.25rem solid transparent;
+		border-radius: 50%;
+		font-size: 0;
+		transition: transform 0.1s;
+	  }
+	}
   }
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin align-content($align-content) {
   align-content: $align-content;
 }
@@ -2719,6 +2848,13 @@ $max: null
 // TBD
 // TBD
 // TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 // This code is based on original code by Eduardo Borca, you can see it here: https://codepen.io/eduardoboucas/pen/emzRry
 // It was refactored to fit the SXCSS sizing convention
 @mixin media($conditions...) {
@@ -2860,6 +2996,27 @@ $max: null
 // TBD
 // TBD
 // TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+@mixin hover($opacity: null, $transform: null, $scale: null, $animation: null) {
+  &:hover {
+	opacity: $opacity;
+	transform: $transform;
+	scale: $scale;
+	animation: $animation;
+  }
+}
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin box(
   $min-width: null,
   $width: null,
@@ -2945,13 +3102,6 @@ $max: null
 	}
   }
 }
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 // TBD
 @mixin grid-layout-core(
   $gap: null,
