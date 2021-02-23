@@ -4,6 +4,9 @@
   $item-classname,
   $navigation-classname,
   $pagination-classname,
+  $pagination-list-classname,
+  $pagination-item-classname,
+  $pagination-input-classname,
   
   $wrapper-height,
   $wrapper-width,
@@ -147,22 +150,25 @@
       bottom: 0;
       left: 0;
       text-align: center;
+    }
   
-      &-list,
-      &-item {
-        display: inline-block;
-      }
-  
-      &-button {
-        display: inline-block;
-        width: 1.5rem;
-        height: 1.5rem;
-        background-color: #333;
-        background-clip: content-box;
-        border: 0.25rem solid transparent;
-        border-radius: 50%;
-        font-size: 0;
-        transition: transform 0.1s;
+    #{$pagination-list-classname},
+    #{$pagination-list-item-classname} {
+      display: inline-block;
+    }
+
+    #{$pagination-input-classname} {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #333;
+      background-clip: content-box;
+      border: 0.25rem solid transparent;
+      border-radius: 50%;
+      font-size: 0;
+      transition: transform 0.1s;
+      &:checked {
+        background-color: #fff;
       }
     }
   }
