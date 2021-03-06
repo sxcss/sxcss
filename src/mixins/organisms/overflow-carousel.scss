@@ -29,7 +29,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    @if $snap {
+    @if $snap == true {
       overscroll-behavior: contain;
       scroll-snap-type: x mandatory;
       -ms-overflow-style: none;
