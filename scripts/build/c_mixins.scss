@@ -245,7 +245,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    @if $snap {
+    @if $snap == true {
       overscroll-behavior: contain;
       scroll-snap-type: x mandatory;
       -ms-overflow-style: none;
@@ -493,28 +493,6 @@
     }
   }
 }
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-@import 'after';
-@import 'before';
-@import 'first-letter';
-@import 'first-line';
-@import 'marker';
-@import 'placeholder';
-@import 'selection';
-
-// TBD
-
-// TBD
-
-// TBD
 
 // TBD
 
@@ -3219,6 +3197,28 @@ $max: null
 
 // TBD
 
+// TBD
+
+@import 'after';
+@import 'before';
+@import 'first-letter';
+@import 'first-line';
+@import 'marker';
+@import 'placeholder';
+@import 'selection';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
 @import 'default';
 @import 'empty';
 @import 'focus-within';
@@ -3396,28 +3396,6 @@ $max: null
   @return if($minus, -$result, $result);;
 }
 
-// TBD
-
-// TBD
-
-@import 'active';
-@import 'any-link';
-@import 'invalid';
-@import 'not';
-@import 'nth';
-@import 'root';
-@import 'valid';
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
-// TBD
-
 @mixin box(
   $min-width: null,
   $width: null,
@@ -3513,6 +3491,28 @@ $max: null
 
 @import 'box';
 @import 'container';
+
+// TBD
+
+// TBD
+
+@import 'active';
+@import 'any-link';
+@import 'invalid';
+@import 'not';
+@import 'nth';
+@import 'root';
+@import 'valid';
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
+
+// TBD
 
 // TBD
 
