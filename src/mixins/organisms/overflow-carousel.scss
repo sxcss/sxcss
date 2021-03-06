@@ -8,7 +8,8 @@
   $gap: 0,
   $overflow-overlay-width: null,
   $overflow-overlay-background: null,
-  $pagination-enabled: false
+  $pagination-enabled: false,
+  $snap: false
 ) {
   #{$viewport-classname} {
     width: $viewport-width;
@@ -27,6 +28,14 @@
     scrollbar-width: none;
     &::-webkit-scrollbar {
       display: none;
+    }
+    @if $snap {
+      overscroll-behavior: contain;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none;
+      @if $viewport-padding {
+        scroll-padding: 0 $viewport-padding 0 $viewport-padding;
+      }
     }
   }
 
