@@ -54,7 +54,7 @@
     }
   }
   #{$slide-classname} {
-    display: flex;
+    display: grid;
     flex-shrink: 0;
     scroll-snap-align: start;
     position: relative;
