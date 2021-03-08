@@ -14,16 +14,6 @@
   }
   @return false;
 }
-@function _size($number, $unit) {
-  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
-  $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
-  $index: index($strings, $unit);
-  @if type-of($index) != 'number' {
-	@warn 'Unknown unit `#{$unit}`.';
-	@return false;
-  }
-  @return $number * nth($units, $index);
-}
 @function to-number($string) {
   // Matrices
   $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
@@ -60,6 +50,16 @@
 	}
   }
   @return if($minus, $result * -1, $result);
+}
+@function _size($number, $unit) {
+  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
+  $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
+  $index: index($strings, $unit);
+  @if type-of($index) != 'number' {
+	@warn 'Unknown unit `#{$unit}`.';
+	@return false;
+  }
+  @return $number * nth($units, $index);
 }
 $scale: (
   percent: (
@@ -485,7 +485,7 @@ $z-index: (
 	}
   }
   #{$slide-classname} {
-	display: flex;
+	display: grid;
 	flex-shrink: 0;
 	scroll-snap-align: start;
 	position: relative;
@@ -3111,13 +3111,6 @@ $max: null
   }
 }
 // TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
-// TBD
 @mixin grid-layout-core(
   $gap: null,
   $cols: null,
@@ -3316,6 +3309,13 @@ $max: null
 	}
   }
 }
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
+// TBD
 @mixin hide(
   $media: null,
   $display: none !important,
