@@ -13,8 +13,7 @@
     "version:major": "bash scripts/publish/major.sh"
   },
   "dependencies": {
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0"
+    "node-sass": "^6.0.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
@@ -22,7 +21,8 @@
     "gulp-remove-empty-lines": "^0.1.0",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-whitespace": "^0.1.0",
-    "vuepress": "^0.14.11"
+    "vuepress": "^0.14.11",
+    "sass-loader": "^7.1.0"
   },
   "repository": {
     "type": "git",
