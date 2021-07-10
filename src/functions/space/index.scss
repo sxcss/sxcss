@@ -1,0 +1,3 @@
+@function space($v) {
+	@return calc(var(--space) * #{$v});
+}

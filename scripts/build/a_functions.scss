@@ -87,3 +87,12 @@
   
   @return $number * nth($units, $index);
 }
+
+@function space($v) {
+	@return calc(var(--space) * #{$v});
+}
+
+@function vh($v) {
+	@return calc(var(--vh) * #{$v}px);
+}
+
